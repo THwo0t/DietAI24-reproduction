@@ -1,9 +1,8 @@
 name: Clean checkout demonstration
 on:
   push:
+    branches: [main]
   workflow_dispatch:
-  release:
-    types: [published]
 permissions:
   contents: read
 jobs:
@@ -11,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        os: [ubuntu-latest, macos-latest, macos-15-intel]
     runs-on: ${{ matrix.os }}
     timeout-minutes: 25
     env:

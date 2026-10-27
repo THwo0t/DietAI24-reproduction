@@ -14,7 +14,9 @@ This records delivery checks separately from the formal scientific results. The 
 - A genuinely fresh local Git clone, without `.env`, raw data or a virtual environment: bootstrap succeeded; 130 tests completed successfully, with 29 explicit full-data skips and 101 passes. The same clone restored the native index and passed live dry-run without a key or API calls.
 - Both Apple Silicon (`aarch64-apple-darwin`) and Intel (`x86_64-apple-darwin`) dependency resolution succeeded for Python 3.10.13, with binary wheels required for chroma-hnswlib and onnxruntime. This is a cross-platform resolution check on Linux, not an actual Mac execution.
 - The public snapshot contains no prior local Git objects or raw API/process logs. Its 123 files occupy approximately 3 MB; publication scope and file hashes are explicit.
-- Actual macOS GitHub Actions execution remains pending publication authorization. No Mac runtime success is claimed yet.
+- Actual Linux x86_64 and macOS 26 Apple Silicon (Darwin arm64) execution passed in [GitHub Actions run 40498743097](https://github.com/THwo0t/DietAI24-reproduction/actions/runs/40498743097): fresh bootstrap, 130 tests with 29 explicit full-data skips, release download/hash checks, native index restore and two-image no-key readiness all succeeded.
+- Initial push/release checks hit HTTP 404 while the runtime asset was still uploading. The completed-release run above passed. CI now triggers on main-branch pushes and explicit dispatch, avoiding tag/release events during incomplete uploads.
+- Intel Mac runtime execution is being checked separately on macos-15-intel; dependency resolution alone is not counted as an Intel runtime pass.
 
 ## Interpretation
 
