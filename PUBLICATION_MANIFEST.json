@@ -1,5 +1,5 @@
 {
-  "source_commit": "81343978dc814f126ca928ba81d28fdb1e718160",
+  "source_commit": "98531f8",
   "scope": "Current source, documentation, reports, selected archived measurements and four public image previews. No previous Git objects or raw API/process logs.",
   "files": {
     ".env.example": "adb06976180509d0a0aa426c5e5d151ce287c7871c05aa1d6cdcf57ca0ee1e0f",
@@ -117,7 +117,7 @@
     "tests/test_redaction.py": "955b7c55efe4c4888ff2795f986671a9e90b3a91ad515487982803a75223ee55",
     "tests/test_run_experiment.py": "f2b38934956fe21a23cde804c10d21527f29a2179a20db4b7b3842fa4fe8a410",
     "tests/test_temperature.py": "b3b172e33eeb4c720d1e8f6f7f310db9f398df1417d57e73ba93897bfeb08f5f",
-    "tests/test_validate_model_run.py": "d7350e27df833a54a042b1ac327b055a66551147104db7db2cc599a33b278b2d",
+    "tests/test_validate_model_run.py": "9dc8a86594c8709cdc5073560cbe38294ac28df875cd15ad1110550c3d912b64",
     "tools/check_publication.py": "e76356f19f5c9348909e3bc72378c36c6b345dc91aaef949ab5a21b2dd2e919a",
     "tools/demo.py": "60a0f407c298f1e24e1c9700f921a4715387e1ab67300736804d1510bdfe7bd6",
     "tools/export_public_snapshot.py": "89ca55b0e69fae3782a040d36c4065ecbdfa8e81061730972667b493b054d302",
