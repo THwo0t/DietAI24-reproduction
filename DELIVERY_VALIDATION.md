@@ -16,7 +16,14 @@ This records delivery checks separately from the formal scientific results. The 
 - The public snapshot contains no prior local Git objects or raw API/process logs. Its 123 files occupy approximately 3 MB; publication scope and file hashes are explicit.
 - Actual Linux x86_64 and macOS 26 Apple Silicon (Darwin arm64) execution passed in [GitHub Actions run 40498743097](https://github.com/THwo0t/DietAI24-reproduction/actions/runs/40498743097): fresh bootstrap, 130 tests with 29 explicit full-data skips, release download/hash checks, native index restore and two-image no-key readiness all succeeded.
 - Initial push/release checks hit HTTP 404 while the runtime asset was still uploading. The completed-release run above passed. CI now triggers on main-branch pushes and explicit dispatch, avoiding tag/release events during incomplete uploads.
-- Intel Mac runtime execution is being checked separately on macos-15-intel; dependency resolution alone is not counted as an Intel runtime pass.
+- All three platforms passed in [GitHub Actions run 40499158187](https://github.com/THwo0t/DietAI24-reproduction/actions/runs/40499158187), on functional source commit `c8663c2168a59904153b2b557c335514f219e5c3`: Linux x86_64, macOS 26 Apple Silicon and macOS 15 Intel. Each started from checkout, installed the frozen environment, ran 130 tests (101 passes and 29 explicit full-data skips), downloaded/verified the public runtime, restored 5,624 native vectors and passed the two-development-image no-key check. No paid API request was made.
+
+## Published delivery
+
+- Public repository: [THwo0t/DietAI24-reproduction](https://github.com/THwo0t/DietAI24-reproduction).
+- Fixed runtime: [mac-demo-v1](https://github.com/THwo0t/DietAI24-reproduction/releases/tag/mac-demo-v1), 61,363,315 bytes; GitHub's asset digest matches the pinned SHA256 `fe9948149c4bea168481daa09f02cb8a826d70ae682082fba6e0c2d7dc643393`.
+- An additional clone downloaded directly from the public GitHub URL passed the offline evidence check and restored its index using the public release URL.
+- Documentation-only completion records follow the successful functional CI commit; they do not change source behavior, saved measurements, runtime bytes or scientific report contents.
 
 ## Interpretation
 

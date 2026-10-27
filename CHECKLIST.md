@@ -613,6 +613,10 @@ per unit = MAE ÷ 参考均值（Table 1、Table 2 注释）。
 - **验证**：原 121 项加 9 项交付验收，共 130 项离线测试通过；例图、数据集/子集切换和报告入口已在浏览器验证。发布前还需全新环境与实际 Mac CI 记录；dry-run 不代表真实付费推理成功。
 - **交接**：`START_HERE_MAC.md`、`MAC_DEMO.md` 和 AGENTS 新入口防止 Mac Codex 执行历史 HANDOFF 重跑；来源与数据条款在 `THIRD_PARTY.md`，上游 README 原样保留。
 
-### G2 发布与干净拉取验证 — 状态：in progress
+### G2 发布与干净拉取验证 — 状态：fixed（已公开发布，三平台实际验收通过）
 - **范围**：扫描可达 Git 历史与待发布文件，不包含 `.env`、原始大数据、虚拟环境和 native index；公开仓库保存源码/结果/三版报告，固定 release 提供 runtime。
 - **验收**：全新 clone 自动安装、离线检查/页面、原生索引恢复、无 key dry-run；实际 Mac CI 与 Linux CI 的架构/状态明确记录，不把无 key 检查称为真实 API 演示。
+- **公开范围**：用户明确同意公开最小交付包及运行包；独立 Git 快照保留当前源码、三版报告、必要结果和例图，旧 Git 对象及 API/进程日志留在本机。清单与 SHA256 见 `PUBLICATION.md`、公开包的 `PUBLICATION_MANIFEST.json`。
+- **发布**：[THwo0t/DietAI24-reproduction](https://github.com/THwo0t/DietAI24-reproduction)，固定 [mac-demo-v1 runtime](https://github.com/THwo0t/DietAI24-reproduction/releases/tag/mac-demo-v1)。资产 61,363,315 字节，GitHub digest 与仓库固定 SHA256 一致。
+- **实测**：[CI 40499158187](https://github.com/THwo0t/DietAI24-reproduction/actions/runs/40499158187) 的功能提交 `c8663c2` 在 Linux x86_64、macOS 26 arm64、macOS 15 Intel 全部成功。每个平台自动装环境、130 项测试完成（101 通过，29 项原始全量数据缺失而明确跳过）、公开包下载校验、5624 向量原生恢复、两开发图无 key 检查通过。另从公开 GitHub 地址实际 clone 和下载 runtime 通过。
+- **界限**：没有新增付费调用，没有重跑正式测试；在线真实回答仍依赖 Mac 本地 key 和账户模型权限。完整记录见 `DELIVERY_VALIDATION.md`。初次包上传期间的 404 历史保留；后续完整资产与三平台检查均成功。

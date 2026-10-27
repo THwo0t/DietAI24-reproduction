@@ -55,6 +55,8 @@ The default live model is the historical GPT-4o configuration; use `--model gpt-
 
 The offline check verifies evidence hashes and independently recomputes own/shared weight MAEs from saved CSVs. Tests needing complete original raw data explicitly skip when absent; the historical full-data record remains in `REVIEW.md`. CI validates clean checkouts on Linux and macOS, without keys or paid calls. Check [Actions](https://github.com/THwo0t/DietAI24-reproduction/actions) for actual architecture and outcomes.
 
+Actual clean-checkout acceptance passed on **Apple Silicon Mac, Intel Mac and Linux**: pinned setup, offline tests, runtime download/verification, native index restoration and two-image no-key readiness. See [the successful run](https://github.com/THwo0t/DietAI24-reproduction/actions/runs/40499158187) and [delivery validation](DELIVERY_VALIDATION.md). This does not claim a new paid inference or a GUI test on the receiving user's Mac.
+
 ## Records and attribution
 
 - `code/`: original and reconstructed pipeline. ViT and commercial baselines are outside this reproduction's setup.
