@@ -1,0 +1,102 @@
+[
+  {
+    "dataset": "asa24",
+    "id": "102908117.png",
+    "image": "demo/images/asa24-102908117.png.png",
+    "reference_weight_g": 224.0,
+    "selection": "First saved row valid for both models.",
+    "predictions": [
+      {
+        "model": "GPT-4o",
+        "status": "Exact conditional estimate",
+        "weight_g": 84.0,
+        "description": "The image shows slices of ham.",
+        "food_codes": "['25230220']",
+        "portion": "3 ounces"
+      },
+      {
+        "model": "Sol",
+        "status": "Exact conditional estimate",
+        "weight_g": 168.0,
+        "description": "Thinly sliced ham, likely a pressed ham cold cut.",
+        "food_codes": "['25230220']",
+        "portion": "6 ounces"
+      }
+    ]
+  },
+  {
+    "dataset": "asa24",
+    "id": "080802272.png",
+    "image": "demo/images/asa24-080802272.png.png",
+    "reference_weight_g": 476.0,
+    "selection": "First saved row valid for GPT-4o but not Sol.",
+    "predictions": [
+      {
+        "model": "GPT-4o",
+        "status": "Exact conditional estimate",
+        "weight_g": 238.0,
+        "description": "This appears to be a plate of tuna salad. It typically includes canned tuna mixed with mayonnaise and sometimes other ingredients like celery, onions, or pickles.",
+        "food_codes": "[\"I'm unable to identify the food in the image. However, based on the context provided, here are the relevant food codes for tuna salad:\", '', '- 27450066', '- 27450060', '- 27450090', '- 27450100', '- 27450062', '- 27450061', '- 27450064']",
+        "portion": "1 cup"
+      },
+      {
+        "model": "Sol",
+        "status": "Excluded from main MAE",
+        "weight_g": null,
+        "description": "The dish appears to be tomato rice\u2014rice cooked in a tomato-based sauce.",
+        "food_codes": "['58161464']",
+        "portion": ""
+      }
+    ]
+  },
+  {
+    "dataset": "nutrition5k",
+    "id": "dish_1560444967",
+    "image": "demo/images/nutrition5k-dish_1560444967.png",
+    "reference_weight_g": 252.0,
+    "selection": "First saved row valid for both models.",
+    "predictions": [
+      {
+        "model": "GPT-4o",
+        "status": "Complete dish",
+        "weight_g": 50.0,
+        "description": "The plate contains scrambled eggs, pineapple chunks, watermelon cubes, honeydew melon pieces, and a mix of saut\u00e9ed vegetables including zucchini, carrots, and bell peppers.",
+        "food_codes": "Scrambled egg: 32131060, 32131070, 32130830, 32130460, 32130860, 32131030, 32131040, 32130660, 32130450",
+        "portion": ""
+      },
+      {
+        "model": "Sol",
+        "status": "Complete dish",
+        "weight_g": 295.0,
+        "description": "A deconstructed salad with chopped egg, pineapple, tomato, cucumber, shredded carrot, and leafy greens.",
+        "food_codes": "Scrambled eggs: 32130450; Lettuce salad with assorted vegetables, no dressing: 75143000; Fruit salad: 63311050",
+        "portion": ""
+      }
+    ]
+  },
+  {
+    "dataset": "nutrition5k",
+    "id": "dish_1562008476",
+    "image": "demo/images/nutrition5k-dish_1562008476.png",
+    "reference_weight_g": 120.0,
+    "selection": "First saved row valid for GPT-4o but not Sol.",
+    "predictions": [
+      {
+        "model": "GPT-4o",
+        "status": "Complete dish",
+        "weight_g": 140.0,
+        "description": "The image shows Brussels sprouts, slices of zucchini, and what appears to be a portion of cooked meat, possibly chicken or pork. The Brussels sprouts seem to be roasted or saut\u00e9ed.",
+        "food_codes": "Brussels sprouts: 75209021, 75209011, 75209020, 75209012; pork and vegetables: 27420400",
+        "portion": ""
+      },
+      {
+        "model": "Sol",
+        "status": "Excluded from main MAE",
+        "weight_g": null,
+        "description": "Cooked Brussels sprouts with browned meat pieces, served with cucumber slices. The type of meat isn\u2019t clear from the image.",
+        "food_codes": "Beef and vegetables, no potatoes, no sauce: 27410210",
+        "portion": ""
+      }
+    ]
+  }
+]

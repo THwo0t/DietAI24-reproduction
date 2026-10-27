@@ -1,0 +1,17 @@
+| reading | unit resampled | target | n (rows; codes or dishes) | MAE per dish | 95% interval | replicates without an estimate |
+|---|---|---|---|---|---|---|
+| ASA24 paper protocol, option | code, its three sizes | Weight (g) | 21; 10 codes | 92.7 | 37–153 | 0 |
+| ASA24 paper protocol, option | code, its three sizes | Energy (kcal) | 21; 10 codes | 93 | 46.1–146 | 0 |
+| ASA24 paper protocol, option | code, its three sizes | Total Fat (g) | 21; 10 codes | 3.61 | 0.407–8.55 | 0 |
+| ASA24 paper protocol, option | code, its three sizes | Carbohydrate (g) | 21; 10 codes | 11.9 | 4.31–19.6 | 0 |
+| ASA24 paper protocol, option | code, its three sizes | Protein (g) | 21; 10 codes | 3.54 | 1.06–7.46 | 0 |
+| ASA24 end to end | code, its three sizes | Weight (g) | 112; 47 codes | 131 | 80.7–216 | 0 |
+| ASA24 end to end | code, its three sizes | Energy (kcal) | 112; 47 codes | 367 | 137–797 | 0 |
+| ASA24 end to end | code, its three sizes | Total Fat (g) | 112; 47 codes | 19.9 | 7.14–42 | 0 |
+| ASA24 end to end | code, its three sizes | Carbohydrate (g) | 112; 47 codes | 42.1 | 13.3–98.5 | 0 |
+| ASA24 end to end | code, its three sizes | Protein (g) | 112; 47 codes | 9.79 | 5.73–15.2 | 0 |
+| Nutrition5k complete dishes | dish | Weight (g) | 86; 86 dishes | 95 | 80.1–111 | 0 |
+| Nutrition5k complete dishes | dish | Energy (kcal) | 86; 86 dishes | 123 | 99.4–150 | 0 |
+| Nutrition5k complete dishes | dish | Total Fat (g) | 86; 86 dishes | 7.69 | 5.94–9.72 | 0 |
+| Nutrition5k complete dishes | dish | Carbohydrate (g) | 86; 86 dishes | 11.9 | 9.51–14.4 | 0 |
+| Nutrition5k complete dishes | dish | Protein (g) | 86; 86 dishes | 9.91 | 7.3–12.9 | 0 |

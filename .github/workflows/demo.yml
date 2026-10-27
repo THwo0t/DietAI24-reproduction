@@ -1,0 +1,30 @@
+name: Clean checkout demonstration
+on:
+  push:
+  workflow_dispatch:
+  release:
+    types: [published]
+permissions:
+  contents: read
+jobs:
+  demo:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 25
+    env:
+      ANONYMIZED_TELEMETRY: 'False'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Record actual runner
+        run: uname -sm
+      - name: Bootstrap frozen environment
+        run: ./setup.sh offline
+      - name: Offline tests and evidence checks
+        run: .venv-demo/bin/python -m unittest discover -s tests -v
+      - name: Install pinned data and native index without an API key
+        run: .venv-demo/bin/python tools/runtime_bundle.py install
+      - name: Check actual inference imports and two development images without API calls
+        run: .venv-demo/bin/python tools/live_demo.py --dry-run

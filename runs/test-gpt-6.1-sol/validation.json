@@ -1,0 +1,54 @@
+{
+  "checks": "needs review",
+  "reconciliation_checks": "PASS",
+  "response_health": "needs review",
+  "health_issues": [
+    {
+      "request_id": "req_4daec2277b3a4b03b121a13a547af336",
+      "step": "asa24 food codes",
+      "problems": [
+        "non_200_status",
+        "missing_finish_metadata",
+        "missing_or_invalid_content_metadata"
+      ]
+    }
+  ],
+  "responses": 3234,
+  "status_counts": {
+    "200": 3233,
+    "500": 1
+  },
+  "finish_counts": {
+    "stop": 1391
+  },
+  "empty_chat_responses": 0,
+  "models_served": [
+    "gpt-6.1-sol",
+    "text-embedding-3-large"
+  ],
+  "run_cost": {
+    "requests": 3234,
+    "errors": 1,
+    "prompt_tokens": 564471,
+    "cached_tokens": 0,
+    "completion_tokens": 124310,
+    "reasoning_tokens": 64977,
+    "usd": 2.295947960000003,
+    "models_served": [
+      "gpt-6.1-sol",
+      "text-embedding-3-large"
+    ]
+  },
+  "global_cost_usd": 9.007963410000054,
+  "remaining_budget_usd": 10.992036589999946,
+  "average_per_image": {
+    "asa24": {
+      "usd": 0.007874282866666655,
+      "reasoning_tokens": 228.51333333333332
+    },
+    "nutrition5k": {
+      "usd": 0.007432036866666657,
+      "reasoning_tokens": 204.66666666666666
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "release_tag": "mac-demo-v1",
+  "url": "https://github.com/THwo0t/DietAI24-reproduction/releases/download/mac-demo-v1/mac-demo-runtime-v1.zip",
+  "sha256": "fe9948149c4bea168481daa09f02cb8a826d70ae682082fba6e0c2d7dc643393",
+  "manifest_sha256": "067ce7753a17ef88740773d8631614cc26d746e9b84a1b4cb4623abb1c41ae31",
+  "size_bytes": 61363315,
+  "files": 28,
+  "embedding_model": "text-embedding-3-large",
+  "vectors": 5624,
+  "dimensions": 3072
+}

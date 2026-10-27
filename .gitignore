@@ -1,0 +1,32 @@
+# secrets and local environments
+.env
+.venv*/
+__pycache__/
+*.pyc
+.tools/
+.demo/
+demo-runs/
+dist/
+.publication/
+.DS_Store
+
+# data stays where the original scripts look for it (../FNDDS, ../NHANES, ...),
+# but is not committed; CHECKLIST.md lists the official sources
+FNDDS/*
+!FNDDS/access.md
+NHANES/*
+!NHANES/access.md
+ASA24/
+Nutrition5k/
+*.xlsx
+*.XPT
+*.sas7bdat
+# tables the original scripts write next to code/ (../FoodWeights.csv, ../df_results.csv, ...)
+/*.csv
+
+# publisher PDFs: see paper/supplementary/SOURCES.md
+paper/supplementary/*.pdf
+
+# the persisted vector index (C1)
+index/
+logs/*.log

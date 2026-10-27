@@ -1,0 +1,589 @@
+{
+ "asa24": {
+  "images": 150,
+  "mae_protocol": {
+   "option": {
+    "Largest": {
+     "Weight (g)": {
+      "n": 4,
+      "per_dish": 106.5,
+      "per_unit": 0.27237851662404094
+     },
+     "Energy (kcal)": {
+      "n": 4,
+      "per_dish": 118.165,
+      "per_unit": 0.2828876493260875
+     },
+     "Total Fat (g)": {
+      "n": 4,
+      "per_dish": 3.0139500000000004,
+      "per_unit": 0.2568605225928514
+     },
+     "Carbohydrate (g)": {
+      "n": 4,
+      "per_dish": 17.7883,
+      "per_unit": 0.29443418212635236
+     },
+     "Protein (g)": {
+      "n": 4,
+      "per_dish": 5.0335,
+      "per_unit": 0.27781763991610553
+     }
+    },
+    "Medium": {
+     "Weight (g)": {
+      "n": 3,
+      "per_dish": 56.0,
+      "per_unit": 0.4827586206896552
+     },
+     "Energy (kcal)": {
+      "n": 3,
+      "per_dish": 92.02,
+      "per_unit": 0.7143300729700357
+     },
+     "Total Fat (g)": {
+      "n": 3,
+      "per_dish": 3.3482,
+      "per_unit": 0.9743903148827192
+     },
+     "Carbohydrate (g)": {
+      "n": 3,
+      "per_dish": 14.8496,
+      "per_unit": 0.636622423431766
+     },
+     "Protein (g)": {
+      "n": 3,
+      "per_dish": 1.2029999999999998,
+      "per_unit": 0.632159747766684
+     }
+    },
+    "Smallest": {
+     "Weight (g)": {
+      "n": 4,
+      "per_dish": 15.625,
+      "per_unit": 0.6329113924050633
+     },
+     "Energy (kcal)": {
+      "n": 4,
+      "per_dish": 8.593750000000004,
+      "per_unit": 0.22908266968778127
+     },
+     "Total Fat (g)": {
+      "n": 4,
+      "per_dish": 0.0125,
+      "per_unit": 0.009677169621429126
+     },
+     "Carbohydrate (g)": {
+      "n": 4,
+      "per_dish": 2.203125,
+      "per_unit": 0.38417106238284143
+     },
+     "Protein (g)": {
+      "n": 4,
+      "per_dish": 0.06406250000000005,
+      "per_unit": 0.06437795196462671
+     }
+    },
+    "Total": {
+     "Weight (g)": {
+      "n": 11,
+      "per_dish": 59.68181818181818,
+      "per_unit": 0.3264950888971777
+     },
+     "Energy (kcal)": {
+      "n": 11,
+      "per_dish": 71.19045454545454,
+      "per_unit": 0.3547662247350336
+     },
+     "Total Fat (g)": {
+      "n": 11,
+      "per_dish": 2.0136727272727275,
+      "per_unit": 0.35491406908441847
+     },
+     "Carbohydrate (g)": {
+      "n": 11,
+      "per_dish": 11.319499999999998,
+      "per_unit": 0.37215543465980583
+     },
+     "Protein (g)": {
+      "n": 11,
+      "per_dish": 2.1817499999999996,
+      "per_unit": 0.292098844469544
+     }
+    }
+   },
+   "amount": {
+    "Largest": {
+     "Weight (g)": {
+      "n": 4,
+      "per_dish": 109.0,
+      "per_unit": 0.27877237851662406
+     },
+     "Energy (kcal)": {
+      "n": 4,
+      "per_dish": 105.09,
+      "per_unit": 0.25158602858442464
+     },
+     "Total Fat (g)": {
+      "n": 4,
+      "per_dish": 0.8442000000000001,
+      "per_unit": 0.07194600214764185
+     },
+     "Carbohydrate (g)": {
+      "n": 4,
+      "per_dish": 19.2898,
+      "per_unit": 0.3192871992478714
+     },
+     "Protein (g)": {
+      "n": 4,
+      "per_dish": 5.086000000000001,
+      "per_unit": 0.2807153107406999
+     }
+    },
+    "Medium": {
+     "Weight (g)": {
+      "n": 3,
+      "per_dish": 7.5,
+      "per_unit": 0.06465517241379311
+     },
+     "Energy (kcal)": {
+      "n": 3,
+      "per_dish": 4.800000000000001,
+      "per_unit": 0.03726129482999535
+     },
+     "Total Fat (g)": {
+      "n": 3,
+      "per_dish": 0.03300000000000001,
+      "per_unit": 0.009603631918980272
+     },
+     "Carbohydrate (g)": {
+      "n": 3,
+      "per_dish": 1.0500000000000005,
+      "per_unit": 0.04501491923037352
+     },
+     "Protein (g)": {
+      "n": 3,
+      "per_dish": 0.07950000000000003,
+      "per_unit": 0.04177614293221231
+     }
+    },
+    "Smallest": {
+     "Weight (g)": {
+      "n": 4,
+      "per_dish": 15.625,
+      "per_unit": 0.6329113924050633
+     },
+     "Energy (kcal)": {
+      "n": 4,
+      "per_dish": 8.59375,
+      "per_unit": 0.22908266968778118
+     },
+     "Total Fat (g)": {
+      "n": 4,
+      "per_dish": 0.0125,
+      "per_unit": 0.009677169621429126
+     },
+     "Carbohydrate (g)": {
+      "n": 4,
+      "per_dish": 2.203125,
+      "per_unit": 0.38417106238284143
+     },
+     "Protein (g)": {
+      "n": 4,
+      "per_dish": 0.0640625,
+      "per_unit": 0.06437795196462666
+     }
+    },
+    "Total": {
+     "Weight (g)": {
+      "n": 11,
+      "per_dish": 47.36363636363637,
+      "per_unit": 0.2591072982717892
+     },
+     "Energy (kcal)": {
+      "n": 11,
+      "per_dish": 42.64863636363636,
+      "per_unit": 0.21253264653850426
+     },
+     "Total Fat (g)": {
+      "n": 11,
+      "per_dish": 0.32052727272727277,
+      "per_unit": 0.05649360845753768
+     },
+     "Carbohydrate (g)": {
+      "n": 11,
+      "per_dish": 8.101972727272727,
+      "per_unit": 0.26637158725386056
+     },
+     "Protein (g)": {
+      "n": 11,
+      "per_dish": 1.8944318181818183,
+      "per_unit": 0.2536318757956899
+     }
+    }
+   }
+  },
+  "match_levels": {
+   "Largest": {
+    "any": {
+     "n": 50,
+     "Exact": 0.08,
+     "Close": 0.38,
+     "Far": 0.58,
+     "Mismatch": 0.42
+    },
+    "first": {
+     "n": 50,
+     "Exact": 0.08,
+     "Close": 0.38,
+     "Far": 0.58,
+     "Mismatch": 0.42
+    }
+   },
+   "Medium": {
+    "any": {
+     "n": 50,
+     "Exact": 0.06,
+     "Close": 0.5,
+     "Far": 0.56,
+     "Mismatch": 0.44
+    },
+    "first": {
+     "n": 50,
+     "Exact": 0.06,
+     "Close": 0.5,
+     "Far": 0.56,
+     "Mismatch": 0.44
+    }
+   },
+   "Smallest": {
+    "any": {
+     "n": 50,
+     "Exact": 0.08,
+     "Close": 0.42,
+     "Far": 0.64,
+     "Mismatch": 0.36
+    },
+    "first": {
+     "n": 50,
+     "Exact": 0.08,
+     "Close": 0.42,
+     "Far": 0.64,
+     "Mismatch": 0.36
+    }
+   },
+   "Total": {
+    "any": {
+     "n": 150,
+     "Exact": 0.07333333333333333,
+     "Close": 0.43333333333333335,
+     "Far": 0.5933333333333334,
+     "Mismatch": 0.4066666666666667
+    },
+    "first": {
+     "n": 150,
+     "Exact": 0.07333333333333333,
+     "Close": 0.43333333333333335,
+     "Far": 0.5933333333333334,
+     "Mismatch": 0.4066666666666667
+    }
+   }
+  },
+  "portions": {
+   "Largest": {
+    "n": 4,
+    "classification_accuracy": 0.0,
+    "unit_error": {
+     "n": 4,
+     "per_dish": 1.0,
+     "per_unit": 0.26666666666666666
+    },
+    "gram_error_option": {
+     "n": 4,
+     "per_dish": 106.5,
+     "per_unit": 0.27237851662404094
+    },
+    "gram_error_amount": {
+     "n": 4,
+     "per_dish": 109.0,
+     "per_unit": 0.27877237851662406
+    }
+   },
+   "Medium": {
+    "n": 3,
+    "classification_accuracy": 0.0,
+    "unit_error": {
+     "n": 3,
+     "per_dish": 0.041666666666666664,
+     "per_unit": 0.06666666666666667
+    },
+    "gram_error_option": {
+     "n": 3,
+     "per_dish": 56.0,
+     "per_unit": 0.4827586206896552
+    },
+    "gram_error_amount": {
+     "n": 3,
+     "per_dish": 7.5,
+     "per_unit": 0.06465517241379311
+    }
+   },
+   "Smallest": {
+    "n": 4,
+    "classification_accuracy": 0.75,
+    "unit_error": {
+     "n": 4,
+     "per_dish": 0.0625,
+     "per_unit": 0.1
+    },
+    "gram_error_option": {
+     "n": 4,
+     "per_dish": 15.625,
+     "per_unit": 0.6329113924050633
+    },
+    "gram_error_amount": {
+     "n": 4,
+     "per_dish": 15.625,
+     "per_unit": 0.6329113924050633
+    }
+   },
+   "Total": {
+    "n": 11,
+    "classification_accuracy": 0.2727272727272727,
+    "unit_error": {
+     "n": 11,
+     "per_dish": 0.3977272727272727,
+     "per_unit": 0.2258064516129032
+    },
+    "gram_error_option": {
+     "n": 11,
+     "per_dish": 59.68181818181818,
+     "per_unit": 0.3264950888971777
+    },
+    "gram_error_amount": {
+     "n": 11,
+     "per_dish": 47.36363636363637,
+     "per_unit": 0.2591072982717892
+    }
+   }
+  },
+  "success_rates": {
+   "Largest": {
+    "images": 50,
+    "food_code": 1.0,
+    "asked_portion": 4,
+    "portion_option": 1.0,
+    "portion_amount": 1.0,
+    "nutrients": 0.08
+   },
+   "Medium": {
+    "images": 50,
+    "food_code": 1.0,
+    "asked_portion": 3,
+    "portion_option": 1.0,
+    "portion_amount": 1.0,
+    "nutrients": 0.06
+   },
+   "Smallest": {
+    "images": 50,
+    "food_code": 1.0,
+    "asked_portion": 4,
+    "portion_option": 1.0,
+    "portion_amount": 1.0,
+    "nutrients": 0.08
+   },
+   "Total": {
+    "images": 150,
+    "food_code": 1.0,
+    "asked_portion": 11,
+    "portion_option": 1.0,
+    "portion_amount": 1.0,
+    "nutrients": 0.07333333333333333
+   }
+  },
+  "mae_end_to_end": {
+   "Largest": {
+    "Weight (g)": {
+     "n": 50,
+     "per_dish": 127.90099999999998,
+     "per_unit": 0.43657433481815233
+    },
+    "Energy (kcal)": {
+     "n": 50,
+     "per_dish": 249.09444,
+     "per_unit": 0.62531050334226
+    },
+    "Total Fat (g)": {
+     "n": 50,
+     "per_dish": 18.4663027,
+     "per_unit": 0.8696178625227146
+    },
+    "Carbohydrate (g)": {
+     "n": 50,
+     "per_dish": 26.340128999999997,
+     "per_unit": 0.6743997476067465
+    },
+    "Protein (g)": {
+     "n": 50,
+     "per_dish": 9.2536212,
+     "per_unit": 0.6295521309075739
+    },
+    "images": 50,
+    "success_rate": 1.0
+   },
+   "Medium": {
+    "Weight (g)": {
+     "n": 49,
+     "per_dish": 58.342220408163264,
+     "per_unit": 0.518433421744352
+    },
+    "Energy (kcal)": {
+     "n": 49,
+     "per_dish": 95.91581102040814,
+     "per_unit": 0.5750960855768523
+    },
+    "Total Fat (g)": {
+     "n": 49,
+     "per_dish": 6.937507675102041,
+     "per_unit": 0.7615123663312848
+    },
+    "Carbohydrate (g)": {
+     "n": 49,
+     "per_dish": 10.535589488979591,
+     "per_unit": 0.666315304409662
+    },
+    "Protein (g)": {
+     "n": 49,
+     "per_dish": 4.0538112351020406,
+     "per_unit": 0.6435975120584936
+    },
+    "images": 50,
+    "success_rate": 0.98
+   },
+   "Smallest": {
+    "Weight (g)": {
+     "n": 50,
+     "per_dish": 39.7109664,
+     "per_unit": 1.4178622502402345
+    },
+    "Energy (kcal)": {
+     "n": 50,
+     "per_dish": 47.958500264,
+     "per_unit": 1.117344625283825
+    },
+    "Total Fat (g)": {
+     "n": 50,
+     "per_dish": 2.2793230500800004,
+     "per_unit": 0.9808595710517111
+    },
+    "Carbohydrate (g)": {
+     "n": 50,
+     "per_dish": 6.68357083768,
+     "per_unit": 1.5968667206536087
+    },
+    "Protein (g)": {
+     "n": 50,
+     "per_dish": 1.3410785600800004,
+     "per_unit": 0.8518547134379725
+    },
+    "images": 50,
+    "success_rate": 1.0
+   },
+   "Total": {
+    "Weight (g)": {
+     "n": 149,
+     "per_dish": 75.43199409395973,
+     "per_unit": 0.5212369105960764
+    },
+    "Energy (kcal)": {
+     "n": 149,
+     "per_dish": 131.22497820939597,
+     "per_unit": 0.6466618810134864
+    },
+    "Total Fat (g)": {
+     "n": 149,
+     "per_dish": 9.243081634791945,
+     "per_unit": 0.8478656380050215
+    },
+    "Carbohydrate (g)": {
+     "n": 149,
+     "per_dish": 14.54650252915436,
+     "per_unit": 0.7379981543747258
+    },
+    "Protein (g)": {
+     "n": 149,
+     "per_dish": 4.888400929691275,
+     "per_unit": 0.6490065935473076
+    },
+    "images": 150,
+    "success_rate": 0.9933333333333333
+   }
+  }
+ },
+ "nutrition5k": {
+  "dishes": 150,
+  "mae": {
+   "complete": {
+    "Weight (g)": {
+     "n": 118,
+     "per_dish": 69.41525423728814,
+     "per_unit": 0.27098289608628046
+    },
+    "Energy (kcal)": {
+     "n": 118,
+     "per_dish": 124.57427462429376,
+     "per_unit": 0.39931455220086104
+    },
+    "Total Fat (g)": {
+     "n": 118,
+     "per_dish": 8.990197601694916,
+     "per_unit": 0.5643410863179458
+    },
+    "Carbohydrate (g)": {
+     "n": 118,
+     "per_dish": 13.3010242259887,
+     "per_unit": 0.5214327412625359
+    },
+    "Protein (g)": {
+     "n": 118,
+     "per_dish": 10.711641237288134,
+     "per_unit": 0.5306818856482196
+    }
+   },
+   "any_estimate": {
+    "Weight (g)": {
+     "n": 118,
+     "per_dish": 69.41525423728814,
+     "per_unit": 0.27098289608628046
+    },
+    "Energy (kcal)": {
+     "n": 118,
+     "per_dish": 124.57427462429376,
+     "per_unit": 0.39931455220086104
+    },
+    "Total Fat (g)": {
+     "n": 118,
+     "per_dish": 8.990197601694916,
+     "per_unit": 0.5643410863179458
+    },
+    "Carbohydrate (g)": {
+     "n": 118,
+     "per_dish": 13.3010242259887,
+     "per_unit": 0.5214327412625359
+    },
+    "Protein (g)": {
+     "n": 118,
+     "per_dish": 10.711641237288134,
+     "per_unit": 0.5306818856482196
+    }
+   }
+  },
+  "success_rates": {
+   "dishes": 150,
+   "food_code_per_dish": 1.0,
+   "portion_per_dish": 0.7866666666666666,
+   "portion_per_food_item": 0.8454106280193237,
+   "food_items": 207
+  }
+ }
+}

@@ -1,0 +1,31 @@
+# Food codes: rows without a code after 5 passes
+ASA24 25 {'Medium': 12, 'Smallest': 8, 'Largest': 5}
+  declined in the code step: 19: 12210210 Medium, 12210210 Smallest, 14420200 Smallest, 81102020 Medium, 81102020 Smallest, 43104000 Medium, 74402110 Medium, 83105500 Largest, 91300100 Medium, 12120110 Medium, 81102010 Largest, 81102010 Medium, 12210420 Smallest, 91101000 Largest, 91101000 Medium, 91200040 Largest, 91200040 Medium, 94100200 Smallest, 58104710 Largest
+  No appropriate food codes found: 6: 14420200 Medium, 82101000 Medium, 83105500 Smallest, 12120110 Smallest, 81102010 Smallest, 12210420 Medium
+Nutrition5k 22
+  No appropriate food codes found: 16: dish_1561405008, dish_1562787983, dish_1562871363, dish_1561407283, dish_1565194906, dish_1562688482, dish_1560527191, dish_1562605411, dish_1564588859, dish_1563913741, dish_1561392430, dish_1561739265, dish_1565020926, dish_1563475953, dish_1562008813, dish_1563219056
+  declined in the code step: 6: dish_1561576707, dish_1565981848, dish_1568401233, dish_1566402232, dish_1562702892, dish_1562172643
+
+# Nutrition5k grams: the recognized foods without grams (WeightError)
+dishes asked 128, answers with a disclaimer paragraph 36
+foods without grams 38 in 34 dishes
+  a combined name answered as its parts: 20: dish_1566414754, dish_1566416421, dish_1563216412, dish_1567789190, dish_1561578603, dish_1563389626, dish_1562687554, dish_1563568025, dish_1563908996, dish_1564429894, dish_1565728453, dish_1568318316, dish_1561739649, dish_1566332040, dish_1559062082, dish_1562963033, dish_1560367698, dish_1565034661, dish_1567020340, dish_1567024252
+  renamed, or split or merged otherwise: 14: dish_1568666303, dish_1568318480, dish_1562180157, dish_1564170542, dish_1560441487, dish_1561574848, dish_1563997418, dish_1563997418, dish_1563997418, dish_1563997418, dish_1562687299, dish_1565204931, dish_1560203424, dish_1563389600
+  answered without a number of grams: 3: dish_1563555605, dish_1562615153, dish_1562615153
+  the whole grams answer declined, no number: 1: dish_1561574479
+foods with grams but no code (FoodCodeError): 10
+
+# ASA24 end to end
+with a code 125 | not asked (no FNDDS portion) 1 | portion answer not an option 12 | estimates 112
+  answers not an option: {'NFS': 1, 'The portion size is less than 1 cup.': 2, '1 scoop': 6, '2 scoops': 1, '1 teaspoon': 2}
+  Largest code 53206000 -> 53206000, '1 cup, bite size.' x 36 = 2916 g (reference 81 g), energy error 13948 kcal
+  Medium code 53206000 -> 53206000, '1 cup, bite size.' x 20 = 1620 g (reference 40 g), energy error 7771 kcal
+  Largest code 53104500 -> 13210110, '1 cup' x 1 = 200 g (reference 540 g), energy error 1859 kcal
+  Largest code 26305160 -> 26131121, '1 cubic inch' x 42 = 714 g (reference 340 g), energy error 1346 kcal
+  Largest code 43104000 -> 92191100, '1 teaspoon, dry.' x 3 = 3 g (reference 168 g), energy error 888 kcal
+without the two "1 cup, bite size." images: {'Weight (g)': 92.9, 'Energy (kcal)': 176.7} n 110
+median absolute errors: {'Weight (g)': 59.0, 'Energy (kcal)': 93.6} n 112
+
+# Candidates: codes in every candidate list (the empty query, C3)
+asa24_food_codes.csv 150 lists: ['71200230', '71200130', '53710600', '57241000']
+nutrition5k_food_codes.csv 150 lists: ['71200230', '71200130', '53710600', '57241000']

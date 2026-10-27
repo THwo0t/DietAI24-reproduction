@@ -1,0 +1,79 @@
+{
+ "asa24 food codes": {
+  "requests": 1396,
+  "errors": 1,
+  "prompt_tokens": 237771,
+  "cached_tokens": 0,
+  "completion_tokens": 42917,
+  "reasoning_tokens": 18425,
+  "usd": 0.8686004299999982,
+  "models_served": [
+   "gpt-6.1-sol",
+   "text-embedding-3-large"
+  ]
+ },
+ "nutrition5k food codes": {
+  "requests": 1368,
+  "errors": 0,
+  "prompt_tokens": 231846,
+  "cached_tokens": 0,
+  "completion_tokens": 48822,
+  "reasoning_tokens": 20585,
+  "usd": 0.9119295299999987,
+  "models_served": [
+   "gpt-6.1-sol",
+   "text-embedding-3-large"
+  ]
+ },
+ "asa24 portions (protocol)": {
+  "requests": 22,
+  "errors": 0,
+  "prompt_tokens": 4552,
+  "cached_tokens": 0,
+  "completion_tokens": 1712,
+  "reasoning_tokens": 1475,
+  "usd": 0.026223999999999997,
+  "models_served": [
+   "gpt-6.1-sol"
+  ]
+ },
+ "asa24 portions (end to end)": {
+  "requests": 298,
+  "errors": 0,
+  "prompt_tokens": 57269,
+  "cached_tokens": 0,
+  "completion_tokens": 17178,
+  "reasoning_tokens": 14377,
+  "usd": 0.28631799999999985,
+  "models_served": [
+   "gpt-6.1-sol"
+  ]
+ },
+ "nutrition5k grams": {
+  "requests": 150,
+  "errors": 0,
+  "prompt_tokens": 33033,
+  "cached_tokens": 0,
+  "completion_tokens": 13681,
+  "reasoning_tokens": 10115,
+  "usd": 0.20287599999999997,
+  "models_served": [
+   "gpt-6.1-sol"
+  ]
+ },
+ "run": {
+  "requests": 3234,
+  "errors": 1,
+  "prompt_tokens": 564471,
+  "cached_tokens": 0,
+  "completion_tokens": 124310,
+  "reasoning_tokens": 64977,
+  "usd": 2.295947960000003,
+  "models_served": [
+   "gpt-6.1-sol",
+   "text-embedding-3-large"
+  ]
+ },
+ "asa24 per image": 0.007874282866666655,
+ "nutrition5k per image": 0.007432036866666657
+}

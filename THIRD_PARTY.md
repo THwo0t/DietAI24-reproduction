@@ -1,0 +1,13 @@
+# Source attribution and data terms
+
+The reproduction starts from [Runz96/DietAI24](https://github.com/Runz96/DietAI24), linked as `Runz96/DietAI` in the paper; local baseline `5946365`. `UPSTREAM_README.md` preserves the upstream MIT statement. The upstream tree has no standalone LICENSE file. The paper's license is not asserted to cover unrelated code or datasets.
+
+- **DietAI24 paper**: Communications Medicine 5, 458 (2025), [doi:10.1038/s43856-025-01159-0](https://doi.org/10.1038/s43856-025-01159-0). Publisher PDFs are excluded; see `paper/supplementary/SOURCES.md`.
+- **ASA24 images and metadata**: [NCI source](https://epi.grants.cancer.gov/asa24/resources/portionsize.html), which states that the images are freely available for use. Images were developed by Children's Nutrition Research Center at Baylor College of Medicine, Westat and NCI. ASA24 is an HHS registered trademark. Offline delivery includes two resized previews; runtime includes ten unchanged development images. Original terms remain applicable.
+- **Nutrition5k**: Quin Thames et al., *Nutrition5k: Towards Automatic Nutritional Understanding of Generic Food*, CVPR 2021, pp. 8903–8911. [Official dataset and terms](https://github.com/google-research-datasets/Nutrition5k#license--contact), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Delivery includes two resized RGB previews and runtime includes ten unchanged development RGB images and prepared development labels. Attribution implies no endorsement by Google or the authors.
+- **FNDDS 2019–2020**: USDA Agricultural Research Service, Food Surveys Research Group, [official downloads](https://www.ars.usda.gov/northeast-area/beltsville-md-bhnrc/beltsville-human-nutrition-research-center/food-surveys-research-group/docs/fndds-download-databases/). Runtime includes the nutrient workbook and derived descriptions/portion mappings. Fingerprints and preparation choices are recorded in `CHECKLIST.md`.
+- **NHANES**: CDC/NCHS public-use survey data used for the historical sampling frame. Raw survey files are not in the Git tree or demo runtime; source periods remain in `NHANES/access.md` and `CHECKLIST.md`.
+- **Saved embeddings**: numeric vectors derived from the 5,624 FNDDS descriptions with `text-embedding-3-large`; no OpenAI model weights or credentials. Native ANN indices are rebuilt locally.
+- **Dependencies**: uv, Python, Chroma, LangChain, OpenAI SDK and other packages retain their respective licenses. Setup fetches them rather than bundling their installations.
+
+The runtime is a bounded demonstration package, not the complete original raw research dataset. Exact included files and hashes are in `demo/runtime-release.json` and the ZIP's `manifest.json`.

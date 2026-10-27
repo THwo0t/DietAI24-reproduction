@@ -1,0 +1,73 @@
+{
+ "asa24 food codes": {
+  "requests": 4326,
+  "errors": 0,
+  "prompt_tokens": 662209,
+  "cached_tokens": 15104,
+  "completion_tokens": 84399,
+  "usd": 2.305608000000003,
+  "models_served": [
+   "gpt-4o-2024-08-06",
+   "text-embedding-3-large"
+  ]
+ },
+ "nutrition5k food codes": {
+  "requests": 4135,
+  "errors": 0,
+  "prompt_tokens": 700543,
+  "cached_tokens": 10496,
+  "completion_tokens": 102459,
+  "usd": 2.5528692000000057,
+  "models_served": [
+   "gpt-4o-2024-08-06",
+   "text-embedding-3-large"
+  ]
+ },
+ "asa24 portions (protocol)": {
+  "requests": 42,
+  "errors": 0,
+  "prompt_tokens": 16270,
+  "cached_tokens": 0,
+  "completion_tokens": 107,
+  "usd": 0.041745,
+  "models_served": [
+   "gpt-4o-2024-08-06"
+  ]
+ },
+ "asa24 portions (end to end)": {
+  "requests": 236,
+  "errors": 0,
+  "prompt_tokens": 88193,
+  "cached_tokens": 0,
+  "completion_tokens": 536,
+  "usd": 0.22584249999999995,
+  "models_served": [
+   "gpt-4o-2024-08-06"
+  ]
+ },
+ "nutrition5k grams": {
+  "requests": 128,
+  "errors": 0,
+  "prompt_tokens": 51297,
+  "cached_tokens": 0,
+  "completion_tokens": 3026,
+  "usd": 0.1585025,
+  "models_served": [
+   "gpt-4o-2024-08-06"
+  ]
+ },
+ "run": {
+  "requests": 8867,
+  "errors": 0,
+  "prompt_tokens": 1518512,
+  "cached_tokens": 25600,
+  "completion_tokens": 190527,
+  "usd": 5.2845671999999855,
+  "models_served": [
+   "gpt-4o-2024-08-06",
+   "text-embedding-3-large"
+  ]
+ },
+ "asa24 per image": 0.017154636666666688,
+ "nutrition5k per image": 0.018075811333333372
+}

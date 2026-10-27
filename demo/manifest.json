@@ -1,0 +1,25 @@
+{
+  "description": "Archived evidence and derived image previews. No new model inference.",
+  "files": {
+    "REPORT.md": "d7832c47f9e3b631fdbf161175dd95aa735f04cbd7f1e917139097a87f8ac07f",
+    "demo/examples.json": "a9d2fc2546535f7c5717134685f04042187814afabb3138c705c00fb51b21819",
+    "runs/comparison-gpt-4o-vs-sol/comparison.json": "beab20438265d276137fadbf327a6ac49586325d3627c972efa1c3f0f34ce435",
+    "runs/test/metrics.json": "81eaa30d1b1375f4b96811e3e7e59170d27448866428afac6196b015c0de7001",
+    "runs/test/asa24_nutrition.csv": "2717212050996fd867ba86b0d89399d9d8617c5d8232a2d6ebf4a7c8e4c3b138",
+    "runs/test/nutrition5k_nutrition.csv": "067ae38260da76818aa08e92a7cb2c34d19eb36b1bc921ceee7a84577d1a5e41",
+    "runs/test/config.json": "85ddfaab26686df77dc73b318115824853a4b20fe1b9ef0f009f6782ea3755d7",
+    "runs/test/cost.json": "0ca0f851bdeca89e937b2c58f0036f109e5df52716b8b128b601eba2c3a3ff8d",
+    "runs/test-gpt-6.1-sol/metrics.json": "55b832a33bf39d99c4b98406a2af05affcb11f8c486c265bb5a2bf21e050cb23",
+    "runs/test-gpt-6.1-sol/asa24_nutrition.csv": "dbc57fb66c1e82bf12d9549dcc02e4154960cde5c402db8abcf89bfd12a62f69",
+    "runs/test-gpt-6.1-sol/nutrition5k_nutrition.csv": "fa81635e80011abf2de0555951f076b9eef8a7127af48ab19d0918bcfbce2389",
+    "runs/test-gpt-6.1-sol/config.json": "0d2cd4638524c2076842827ba5e9940318db688c3c861a80115e79813de1d017",
+    "runs/test-gpt-6.1-sol/cost.json": "bdb61ef29c0548ab00216a7a67c729639b993c44c0102756ba3c7b576d527936",
+    "demo/images/asa24-102908117.png.png": "364ef7f8e947a67f82ee63d802325e39e9e86cce09e266441c601d4f3f287599",
+    "demo/images/asa24-080802272.png.png": "b83dcc13c5331c6b9dcfd5672e36c483533aa576d470d7e1ec036d5b5aba7061",
+    "demo/images/nutrition5k-dish_1560444967.png": "0f2a887ca5309c4a314d7003cfe4460f21f5ff993b217994cfd1f3eab9e5217b",
+    "demo/images/nutrition5k-dish_1562008476.png": "23fd8b2f414d1290871a700667a42614fbe30c961d63d80151ea021fcf1ba0f5",
+    "output/report/REPORT.md": "d7832c47f9e3b631fdbf161175dd95aa735f04cbd7f1e917139097a87f8ac07f",
+    "output/report/REPORT.pdf": "dbb74db2286ecd368a9ba2ba968e6adefc7978728916f8bccf5f9ba430040f0d",
+    "output/report/REPORT.docx": "2b84bd9c5df1b8cd310f03b1075e3685b66fc652aa4b15e5d01e645a445694ab"
+  }
+}

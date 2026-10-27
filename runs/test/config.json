@@ -1,0 +1,101 @@
+{
+ "split": "test",
+ "models": {
+  "llm": "gpt-4o-2024-08-06",
+  "llm_vision": "gpt-4o-2024-08-06",
+  "embedding": "text-embedding-3-large"
+ },
+ "temperature": 0,
+ "image_size": [
+  256,
+  256
+ ],
+ "code_sha256": {
+  "rag_food_code.py": "540f30ca062e0c5f34be59df25383abf4d984d97cbeb831170a778f185c07039",
+  "rag_portion_size.py": "f00eb45afb1db81f7daf6e725be892df293a78c761882b8564678a7e9daabb8e",
+  "chagApp_openai.py": "c722bcc5aefd5d9aa8a3a1ade38822a8f4c1758171438a80b88cbf94edfc2a90",
+  "config.py": "dcc6ba5f80a6d6f169782e23e3af28192823edb0fef32fd6a4dc7cc8ba1c20fa",
+  "api_log.py": "fdb18a9b4610aeb911d439bc515349a2d33f4c5f3ce25caca6b52a2076464dda"
+ },
+ "inputs_sha256": {
+  "../df_results.csv": "ec7714cff6f358975dafaf1865ecadf3c57c90e848cf85def575f18f2b7866af",
+  "../dish_metadata.csv": "32fe942a4d3ce1d61f2674c27d17db9b0b4bcee9211760d21cf45d1099f78e96",
+  "../df_image_link.csv": "7a02cbe660a5284ef0d6f0759f4b299475b104c8fb6a89ec6317d419c2c66067",
+  "../FoodWeights.csv": "1c75899faa33a123e149391d4258eaa1f1051c10c1bab4bec89e0e58aff112b0",
+  "../FNDDS/2019-2020 FNDDS At A Glance - FNDDS Nutrient Values.xlsx": "5007ce9723eb77dc6c3423b3b95a5ef171c71d40ebe4725dc3cc1fe6f9d7161a",
+  "../FNDDS/2019-2020 FNDDS - Foods and Beverages.csv": "3ef27c4d9fef1f7da27e2ab541285f5a43644c0b5afa1a524c8469dec50c746c"
+ },
+ "invocations": [
+  {
+   "started": "2026-10-27T06:20:44+00:00",
+   "status": "completed",
+   "workers": 4,
+   "commit": "ea3c08b1dcadc61880e694dd21491ad8ed1c1d33",
+   "uncommitted_changes": false,
+   "steps": [
+    {
+     "name": "asa24 food codes",
+     "api_log_lines": [
+      1672,
+      5998
+     ]
+    },
+    {
+     "name": "nutrition5k food codes",
+     "api_log_lines": [
+      5998,
+      10133
+     ]
+    },
+    {
+     "name": "asa24 portions (protocol)",
+     "api_log_lines": [
+      10133,
+      10175
+     ]
+    },
+    {
+     "name": "asa24 portions (end to end)",
+     "api_log_lines": [
+      10175,
+      10411
+     ]
+    },
+    {
+     "name": "nutrition5k grams",
+     "api_log_lines": [
+      10411,
+      10539
+     ]
+    }
+   ],
+   "requests": 8867,
+   "usd": 5.2845671999999855,
+   "models_served": [
+    "gpt-4o-2024-08-06",
+    "text-embedding-3-large"
+   ],
+   "finished": "2026-10-27T07:01:30+00:00"
+  }
+ ],
+ "prices_usd_per_million_tokens": {
+  "gpt-4o-2024-08-06": [
+   2.5,
+   1.25,
+   10.0
+  ],
+  "text-embedding-3-large": [
+   0.13,
+   0.13,
+   0.0
+  ]
+ },
+ "models_served": [
+  "gpt-4o-2024-08-06",
+  "text-embedding-3-large"
+ ],
+ "images": {
+  "asa24": 150,
+  "nutrition5k": 150
+ }
+}

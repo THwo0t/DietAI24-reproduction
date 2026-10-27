@@ -1,0 +1,37 @@
+Test rows: 150; different image files: 117
+Image files that are the test image of more than one labeled code:
+  020309403.png (2): Margarine, tub; Margarine, stick
+  020309406.png (2): Margarine, tub; Margarine, stick
+  020309408.png (2): Margarine, tub; Margarine, stick
+  041008403.png (2): Coffee creamer, liquid, flavored; Cream, light
+  041008415.png (3): Coffee creamer, liquid, flavored; Cream, light; Cream, half and half, fat free
+  042108426.png (4): Coffee creamer, liquid, flavored; Cream, light; Cream, half and half, fat free; Coffee creamer, powder, flavored
+  070610109.png (2): Vegetable soup, home recipe; Vegetable soup, canned, prepared with water or ready-to-serve
+  070610111.png (2): Vegetable soup, home recipe; Vegetable soup, canned, prepared with water or ready-to-serve
+  070610116.png (2): Vegetable soup, home recipe; Vegetable soup, canned, prepared with water or ready-to-serve
+  071702112.png (2): Fruit salad, fresh or raw,  excluding citrus fruits, no dressing; Fruit cocktail, canned, NFS
+  071702115.png (2): Fruit salad, fresh or raw,  excluding citrus fruits, no dressing; Fruit cocktail, canned, NFS
+  071702119.png (2): Fruit salad, fresh or raw,  excluding citrus fruits, no dressing; Fruit cocktail, canned, NFS
+  121807120.png (7): Chocolate milk, ready to drink, low fat; Chocolate milk, made from syrup with whole milk; Tea, hot, herbal; Water, tap; Milk, reduced fat (2%); Coffee, instant, decaffeinated, reconstituted; Water, non-carbonated, flavored
+  121807125.png (7): Chocolate milk, ready to drink, low fat; Chocolate milk, made from syrup with whole milk; Tea, hot, herbal; Water, tap; Milk, reduced fat (2%); Coffee, instant, decaffeinated, reconstituted; Water, non-carbonated, flavored
+  121807129.png (7): Chocolate milk, ready to drink, low fat; Chocolate milk, made from syrup with whole milk; Tea, hot, herbal; Water, tap; Milk, reduced fat (2%); Coffee, instant, decaffeinated, reconstituted; Water, non-carbonated, flavored
+
+Rows whose photo the ASA24 metadata links to more than one FNDDS 2019-2020 code: 136 of 150 (46 of 50 codes); codes per photo: median 4, max 238
+
+Rows with a predicted code: 125; exact: 21; not exact: 104
+  label not among the retrieved candidates: 95
+  label retrieved, another code chosen: 9
+  predicted code linked by the ASA24 metadata to the same photo: 31 ({'Close': 23, 'Mismatch': 8})
+    Largest  label: Chocolate milk, ready to drink, low fat | predicted: Milk, whole
+    Largest  label: Chocolate milk, made from syrup with whole milk | predicted: Milk, whole
+    Largest  label: Tea, hot, herbal | predicted: Milk, whole
+    Largest  label: Fruit salad, fresh or raw,  excluding citrus fruits, no dressing | predicted: Fruit cocktail, canned, juice pack
+    Largest  label: Water, tap | predicted: Milk, whole
+    Largest  label: Milk, reduced fat (2%) | predicted: Milk, whole
+    Largest  label: Peppers and onions, cooked, fat added | predicted: Peppers, green, cooked
+    Largest  label: Fruit cocktail, canned, NFS | predicted: Fruit cocktail, canned, juice pack
+    Largest  label: Coffee, instant, decaffeinated, reconstituted | predicted: Milk, whole
+    Largest  label: Water, non-carbonated, flavored | predicted: Milk, whole
+    Largest  label: Macaroni or noodles with cheese and egg | predicted: Macaroni or noodles with cheese
+    Largest  label: Blueberries, frozen | predicted: Blueberries, raw
+    Largest  label: Cheese, cottage, low fat | predicted: Cheese, cottage, creamed, large or small curd

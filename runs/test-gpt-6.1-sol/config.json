@@ -1,0 +1,124 @@
+{
+ "split": "test",
+ "models": {
+  "llm": "gpt-6.1-sol",
+  "llm_vision": "gpt-6.1-sol",
+  "embedding": "text-embedding-3-large"
+ },
+ "temperature": 1,
+ "token_limits": {
+  "description": {
+   "extra_body": {
+    "max_completion_tokens": 4096
+   }
+  },
+  "portion": {
+   "extra_body": {
+    "max_completion_tokens": 600
+   }
+  }
+ },
+ "image_size": [
+  256,
+  256
+ ],
+ "code_sha256": {
+  "rag_food_code.py": "e5ec9f8bf508d3ad843a22493d5be1c812b2483e27ed7985fa5941e9a2ff1736",
+  "rag_portion_size.py": "f00eb45afb1db81f7daf6e725be892df293a78c761882b8564678a7e9daabb8e",
+  "chagApp_openai.py": "0a2a103c70771028fef5d6b2f606fb50a20233095637fda7730e4163e87a0023",
+  "config.py": "6fcbb19843ec543b57d22e6649f1be983b02e7272869b63b6f10ecabe7b56d9b",
+  "api_log.py": "4b689b88ef607d272cff1ad4b070598b871fe66df2661b0a329acba2502fffd2"
+ },
+ "inputs_sha256": {
+  "../df_results.csv": "ec7714cff6f358975dafaf1865ecadf3c57c90e848cf85def575f18f2b7866af",
+  "../dish_metadata.csv": "32fe942a4d3ce1d61f2674c27d17db9b0b4bcee9211760d21cf45d1099f78e96",
+  "../df_image_link.csv": "7a02cbe660a5284ef0d6f0759f4b299475b104c8fb6a89ec6317d419c2c66067",
+  "../FoodWeights.csv": "1c75899faa33a123e149391d4258eaa1f1051c10c1bab4bec89e0e58aff112b0",
+  "../FNDDS/2019-2020 FNDDS At A Glance - FNDDS Nutrient Values.xlsx": "5007ce9723eb77dc6c3423b3b95a5ef171c71d40ebe4725dc3cc1fe6f9d7161a",
+  "../FNDDS/2019-2020 FNDDS - Foods and Beverages.csv": "3ef27c4d9fef1f7da27e2ab541285f5a43644c0b5afa1a524c8469dec50c746c"
+ },
+ "invocations": [
+  {
+   "started": "2026-10-27T09:02:43+00:00",
+   "status": "completed",
+   "workers": 4,
+   "commit": "fbe51576d263029df1506f9e068895e8fdadd00d",
+   "uncommitted_changes": false,
+   "steps": [
+    {
+     "name": "asa24 food codes",
+     "api_log_lines": [
+      10962,
+      12358
+     ]
+    },
+    {
+     "name": "nutrition5k food codes",
+     "api_log_lines": [
+      12358,
+      13726
+     ]
+    },
+    {
+     "name": "asa24 portions (protocol)",
+     "api_log_lines": [
+      13726,
+      13748
+     ]
+    },
+    {
+     "name": "asa24 portions (end to end)",
+     "api_log_lines": [
+      13748,
+      14046
+     ]
+    },
+    {
+     "name": "nutrition5k grams",
+     "api_log_lines": [
+      14046,
+      14196
+     ]
+    }
+   ],
+   "requests": 3234,
+   "usd": 2.295947960000003,
+   "models_served": [
+    "gpt-6.1-sol",
+    "text-embedding-3-large"
+   ],
+   "finished": "2026-10-27T09:43:34+00:00"
+  }
+ ],
+ "prices_usd_per_million_tokens": {
+  "gpt-4o-2024-08-06": [
+   2.5,
+   1.25,
+   10.0
+  ],
+  "gpt-6.1-sol": [
+   2.0,
+   0.1,
+   10.0
+  ],
+  "text-embedding-3-large": [
+   0.13,
+   0.13,
+   0.0
+  ]
+ },
+ "price_source": {
+  "url": "https://developers.openai.com/api/docs/pricing",
+  "checked": "2026-10-27",
+  "tier": "standard",
+  "sol_max_input_tokens_at_this_rate": 272000
+ },
+ "models_served": [
+  "gpt-6.1-sol",
+  "text-embedding-3-large"
+ ],
+ "images": {
+  "asa24": 150,
+  "nutrition5k": 150
+ }
+}

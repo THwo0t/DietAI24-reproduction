@@ -1,0 +1,182 @@
+{
+  "asa24_code_failures": [],
+  "nutrition5k_code_failures": [],
+  "grams_failure_counts": {
+    "a combined name answered as its parts": 30,
+    "renamed, or split or merged otherwise": 2
+  },
+  "grams_failure_items": [
+    [
+      "dish_1566414754",
+      "chicken with rice and green vegetables in cream sauce",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1561405008",
+      "chicken with leafy green vegetables, no potatoes, no sauce",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1562787983",
+      "broccoli and carrots, cooked",
+      "renamed, or split or merged otherwise"
+    ],
+    [
+      "dish_1561407283",
+      "beef and vegetables including carrots and broccoli, no potatoes, no sauce",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1565194906",
+      "chicken or turkey, potatoes, and vegetables with gravy",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1561576707",
+      "broccoli salad with cauliflower, cheese, bacon bits, and dressing",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1566416421",
+      "beef, potatoes, and vegetables, excluding carrots, broccoli, and dark-green leafy, no sauce",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1560961385",
+      "scrambled eggs with tomatoes and dark-green vegetables",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1563216412",
+      "white rice with broccoli",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1567789190",
+      "sausage and vegetables including carrots and dark-green leafy vegetables",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1562008476",
+      "beef and vegetables, no potatoes, no sauce",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1561578603",
+      "beef, potatoes, and vegetables, no sauce",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1562605411",
+      "scrambled eggs with tomatoes and dark-green vegetables",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1568666303",
+      "chicken with rice, broccoli, and cream sauce",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1563908996",
+      "caesar garden salad with breaded fried chicken",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1568318480",
+      "chicken with broccoli and vegetables",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1562180157",
+      "breaded fried chicken garden salad with bacon and cheese",
+      "renamed, or split or merged otherwise"
+    ],
+    [
+      "dish_1562871537",
+      "chicken with rice and vegetables",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1561664061",
+      "chicken and vegetables, no potatoes, no sauce",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1561739649",
+      "broccoli, cauliflower and carrots, cooked",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1560888893",
+      "fish and rice with mushroom sauce",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1563997418",
+      "beef, potatoes, and vegetables including carrots and dark-green leafy vegetables, with gravy",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1559062082",
+      "scrambled eggs with bacon and tomatoes",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1559233144",
+      "scrambled eggs with bacon and spinach",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1560367698",
+      "chicken, rice, and broccoli, no sauce",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1561574479",
+      "broccoli, cauliflower and carrots, cooked",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1562959547",
+      "chicken with dark green vegetables",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1565034661",
+      "fish and vegetables including carrots and dark-green leafy vegetables, tomato-based sauce",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1565895966",
+      "fish with green beans and dark leafy vegetables",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1562008813",
+      "fish and vegetables including broccoli, no potatoes, soy-based sauce",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1563464480",
+      "sausage, potatoes, and vegetables including carrots and dark-green leafy vegetables",
+      "a combined name answered as its parts"
+    ],
+    [
+      "dish_1563219056",
+      "beef, rice, and vegetables with tomato-based sauce",
+      "a combined name answered as its parts"
+    ]
+  ],
+  "grams_failure_dishes": 32,
+  "food_code_error_items": 0,
+  "attempts": {
+    "asa24": {
+      "total": 155,
+      "more_than_one": 3
+    },
+    "nutrition5k": {
+      "total": 152,
+      "more_than_one": 2
+    }
+  }
+}
