@@ -1,5 +1,5 @@
 {
-  "source_commit": "98531f8",
+  "source_commit": "05532f8b4fa1a8a743c6a67009b4c07ea314fcc5",
   "scope": "Current source, documentation, reports, selected archived measurements and four public image previews. No previous Git objects or raw API/process logs.",
   "files": {
     ".env.example": "adb06976180509d0a0aa426c5e5d151ce287c7871c05aa1d6cdcf57ca0ee1e0f",
@@ -9,7 +9,7 @@
     ".python-version": "3817f125779f46c574b17c4adbdd0975ef8c32ae92509fed295212797d314d6a",
     "AGENTS.md": "415670c9a951d4e5933ef7bd98ca6919c733c123a528e3a2c32503b37c2ebb71",
     "CHECKLIST.md": "62447b6575bd25dd3f5e60189aae39416ebc2f27c6eb3f233a61e3c7640d4cf3",
-    "DELIVERY_VALIDATION.md": "06ade574a43ad69bbc94050bffd8837617598f01420af14038e167168e2513e9",
+    "DELIVERY_VALIDATION.md": "319a9d153088e10188a931187233e3e8e02d2917a9aeaae3f3136664e5b1c0ce",
     "FNDDS/access.md": "8852d70d10012887498525f9aab444f647b87ee7663901d8dc0742c720057162",
     "HANDOFF_CODEX.md": "e52bcef368bd0e771cfd4c42e99f31af5765a10a3463839b76e2101ded7f9cd0",
     "MAC_DEMO.md": "e05301fb613f5b5661ac836e59d29d9bf8ccc0dc1100f1dafb89534fe5fd950b",

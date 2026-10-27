@@ -10,7 +10,11 @@ This records delivery checks separately from the formal scientific results. The 
 - HTTP: explicitly whitelisted routes; `.env`, source code and traversal requests return 404.
 - Runtime: 28 files, 20 original development images, 5,624 saved 3,072-dimensional vectors. Export rejects any lossy float32 conversion. Every bundle member and the installed manifest is checksum-verified.
 - Native index restoration and live dry-run: PASS, two development rows, 5,624 vectors, zero API calls, no key required.
-- A new environment installation and the clean-checkout Linux/macOS CI checks are being completed; their final outcomes will be recorded below.
+- A second project-local environment created by `setup.sh offline`: all 130 offline tests passed.
+- A genuinely fresh local Git clone, without `.env`, raw data or a virtual environment: bootstrap succeeded; 130 tests completed successfully, with 29 explicit full-data skips and 101 passes. The same clone restored the native index and passed live dry-run without a key or API calls.
+- Both Apple Silicon (`aarch64-apple-darwin`) and Intel (`x86_64-apple-darwin`) dependency resolution succeeded for Python 3.10.13, with binary wheels required for chroma-hnswlib and onnxruntime. This is a cross-platform resolution check on Linux, not an actual Mac execution.
+- The public snapshot contains no prior local Git objects or raw API/process logs. Its 123 files occupy approximately 3 MB; publication scope and file hashes are explicit.
+- Actual macOS GitHub Actions execution remains pending publication authorization. No Mac runtime success is claimed yet.
 
 ## Interpretation
 
