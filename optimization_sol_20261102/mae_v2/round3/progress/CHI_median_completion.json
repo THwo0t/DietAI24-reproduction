@@ -1,0 +1,15 @@
+{
+  "candidate": "CHI_median",
+  "completed": "2026-11-02T18:27:21.041835+00:00",
+  "n": 84,
+  "groups": 78,
+  "binding_sha256": "1cac84d77f9e6d59756a078c5f2ad6cf4fee368925cc792c0e37cfbc24238bc8",
+  "artifact_sha256": {
+    "binding.json": "afc203a79c9dea951b46e489e7929e9b42115c9d57abbfeaa0eb0d54c3e914cf",
+    "records_sealed.json": "87e511af51c4c5f27ac03912931ed1fe7726068b725e75462232c60a0b980ad0",
+    "predictions.json": "fbaabf3d8147b07b3f8105e2007092ccac1f6aca86edd0fb3980752c9f530c90",
+    "metrics.json": "e08edb17de9a753f86328cd66176d60d44d4503647c802c8273cea22ec1f0c53"
+  },
+  "validation_opened": false,
+  "new_api_calls": 0
+}

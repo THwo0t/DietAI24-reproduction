@@ -15,12 +15,12 @@
       "sha256": "9657cfd44261114a116fead62313a165b947397c2b41dea7c467de1643bbbeaa"
     },
     "CHECKLIST.md": {
-      "bytes": 2333,
-      "sha256": "9d4fd1fc9770e996f3e9b8bbca50bca76bf316c638c9920e47048c7b75b184b7"
+      "bytes": 3497,
+      "sha256": "2c888fc025e68962183d9a522a76e9d16107bb3af97e1d95cb53b66a29bb1bf7"
     },
     "CONTINUATION.md": {
-      "bytes": 1351,
-      "sha256": "d24c2b5848d72905bb79d7d768ebb5225ccaea1dea308df0b8154d4123c856f4"
+      "bytes": 3435,
+      "sha256": "d04ec7328bb318af730c9dcc55769cf042995a93d4455f89617a0ca786b92666"
     },
     "MAC_DEMO.md": {
       "bytes": 13272,
@@ -49,6 +49,58 @@
     "analysis/historical_summary.json": {
       "bytes": 30825,
       "sha256": "4e722d88776002fb0e2c5e1c4937571c5fd461bbcef14d7751707e548fb711ce"
+    },
+    "analysis/next_round_allocation/README.md": {
+      "bytes": 4127,
+      "sha256": "a2ff2f8538527e4afc475dc1383ad38c9ccdde88ea3169f9104177167420d8fc"
+    },
+    "analysis/next_round_allocation/analyze.py": {
+      "bytes": 19768,
+      "sha256": "8136fbba273a19e6c24f2c3a5843618ccbf36cfa558eb1a5636f6f01ed9c8e24"
+    },
+    "analysis/next_round_allocation/test_analyze.py": {
+      "bytes": 3074,
+      "sha256": "f37ee3f377333d62126cac93bd3fda569e67e947cf011c0e9ee9718cac901784"
+    },
+    "analysis/next_round_exploratory/README.md": {
+      "bytes": 9239,
+      "sha256": "0d97079075d5c496bd199a53bd26b90733d31f438e34a0b23485199f7ca51b4d"
+    },
+    "analysis/next_round_exploratory/explore.py": {
+      "bytes": 19368,
+      "sha256": "0a46656875b661ec07693176896d928e0bb7b3a4688e51bdf7553282c167faf4"
+    },
+    "analysis/next_round_exploratory/test_explore.py": {
+      "bytes": 2981,
+      "sha256": "1dd696598244132d4f9786910394b0b545d001aa320214731d612b1a2f436e8b"
+    },
+    "analysis/next_round_nested/compute_H_oracle_bound.py": {
+      "bytes": 14164,
+      "sha256": "7a2274b1c8a94d3b767aaca757d1b3fa3ee56ebf0f5c93ffdf2b272c5cf9496d"
+    },
+    "analysis/next_round_nested/design.md": {
+      "bytes": 8075,
+      "sha256": "2add9adda970cd03be0fc871fce916bdcbc1cb9d993026a36091098ae3039d2b"
+    },
+    "analysis/next_round_semantic/PROTOCOL.md": {
+      "bytes": 3543,
+      "sha256": "79f978f3287f8d6f62c2e60478b5c32485f87bd828b3f84f48b6dd63b159c364"
+    },
+    "analysis/next_round_semantic/explore.py": {
+      "bytes": 16568,
+      "sha256": "78c250b16ba76d92158d7ea8d55ffc5164e6e5b8c3206331c06ec8b9f358b5ae"
+    },
+    "analysis/next_round_semantic/test_explore.py": {
+      "bytes": 8137,
+      "sha256": "20cf83571a4d4128a09f11b546e183cf8721829d6059b0b6777421baf89f98f8"
+    },
+    "analysis/next_round_visual/analyze_h.py": {
+      "bytes": 13171,
+      "sha256": "45ac655659c2092181ef78bce48893d572b9baf7bc57ee7e6d4bc4672be45d8e"
+    },
+    "analysis/next_round_visual/test_analyze_h.py": {
+      "bytes": 2053,
+      "sha256": "4701290d755403e6ea6e829e9da7f3315c4178acc5845f0eb27006b699ee118e"
     },
     "analysis/paper_targets.json": {
       "bytes": 9035,
@@ -102,6 +154,18 @@
       "bytes": 2776,
       "sha256": "1115e8e8eb0335def1aed4e0c24dfcde407ca8d7e78a190aba27579ff12b8b94"
     },
+    "round3/development_checkpoint.json": {
+      "bytes": 3235,
+      "sha256": "fa9ffb9b21152d7fd27c5dbc27def770a528e3cea0a2f1c428ccd3e5b113e718"
+    },
+    "round3/progress/CHI_median_completion.json": {
+      "bytes": 640,
+      "sha256": "24c3183d06f93e769f8be53f26a6052901ea911f8e1629a51ccc1bbc65e90372"
+    },
+    "round3/progress/CHI_median_metrics.json": {
+      "bytes": 39180,
+      "sha256": "e08edb17de9a753f86328cd66176d60d44d4503647c802c8273cea22ec1f0c53"
+    },
     "round3/progress/F_completion.json": {
       "bytes": 192,
       "sha256": "9e5b7c2c28eb2f50cd820a6297d0470002828cee10353467be1af18de2c48e36"
@@ -129,6 +193,14 @@
     "round3/progress/G_usage.json": {
       "bytes": 608,
       "sha256": "1d144b195393bd38b3996e3a8e7e66245e30fab585f48b1e5041fb413facab85"
+    },
+    "round3/progress/HI_mean_completion.json": {
+      "bytes": 637,
+      "sha256": "a1641db158354db4cee9fd8c1891f9dc62d9592d6ebee6c21f5396d5e38f070e"
+    },
+    "round3/progress/HI_mean_metrics.json": {
+      "bytes": 39034,
+      "sha256": "81c0efcea3ca0a2ca15d06ba2bc1f48b728167a295d77945771e2f6417a9e8ab"
     },
     "round3/progress/H_completion.json": {
       "bytes": 788,
@@ -162,6 +234,10 @@
       "bytes": 610,
       "sha256": "9aadb3d1586323756c782d4846a45d611bd2217b8977bf6b7401f1927a76960a"
     },
+    "round3/progress/ensemble_comparison.json": {
+      "bytes": 792,
+      "sha256": "ed06d7e8da6cc8dd7803fb48b45e6ca699cffa0dc07e15382e8a299ea29bac9a"
+    },
     "round3/src/audit_round3.py": {
       "bytes": 13207,
       "sha256": "70c153c5824b7c9a3a48c19a34deede65282379d89003959dcac4e2cdae1496f"
@@ -177,6 +253,10 @@
     "round3/src/direct_estimator.py": {
       "bytes": 6645,
       "sha256": "92b0074c9c6060c44ff13b1eba162ce1da81fc0aa59cf68eee93ffea6bede083"
+    },
+    "round3/src/evaluate_ensembles.py": {
+      "bytes": 29053,
+      "sha256": "6d6b849445e44380d123eb153ec3b4dfb204cb3fc5cc0ce40512ad6e20f8ec3a"
     },
     "round3/src/example_estimator.py": {
       "bytes": 5703,
@@ -225,6 +305,10 @@
     "round3/tests/test_direct_estimator.py": {
       "bytes": 10160,
       "sha256": "b5cf9be86298a2e815f54c75b547990331bde9d06032f9a9a57f222b5f9ef5ba"
+    },
+    "round3/tests/test_evaluate_ensembles.py": {
+      "bytes": 19062,
+      "sha256": "95d4fb1adc0f7eef3729233b9be6b3074ff03382efc9cdceb631954d8af7182f"
     },
     "round3/tests/test_example_estimator.py": {
       "bytes": 9543,
@@ -428,7 +512,8 @@
     "F": "completed 84; N5 0/10; rejected",
     "G": "completed 84; N5 0/10; rejected",
     "H": "completed 84; N5 0/10; retained as best individual round3 method by worst-cap ratio",
-    "I": "completed 84; N5 0/10; fixed-combination offline evaluation pending",
+    "I": "completed 84; N5 0/10; no failed-query fallback",
+    "ensembles": "both 84 complete; N5 0/10; fixed CHI_median has worst-cap ratio 1.9846, still failing",
     "validation": "sealed; no formal run"
   },
   "secret_scan": "PASS",

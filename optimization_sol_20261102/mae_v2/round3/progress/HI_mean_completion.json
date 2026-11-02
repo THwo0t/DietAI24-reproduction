@@ -1,0 +1,15 @@
+{
+  "candidate": "HI_mean",
+  "completed": "2026-11-02T18:27:10.339919+00:00",
+  "n": 84,
+  "groups": 78,
+  "binding_sha256": "1d5510eb4bd8c2d0c96bf397440dab652eac4c374349de00f55374edecf24509",
+  "artifact_sha256": {
+    "binding.json": "c7f37e36f663ba08b88d09b72cb0aed4948da277e29dc8a6a35661df6ccdb99b",
+    "records_sealed.json": "da49748e56dab2ad8fc583576e5d003f9e18ad14c9e114e29ddaab58ce7aec20",
+    "predictions.json": "5a031f9a069b2b40f1ad15d2649181a6cfd61fba556f017b0293860ea486759d",
+    "metrics.json": "81c0efcea3ca0a2ca15d06ba2bc1f48b728167a295d77945771e2f6417a9e8ab"
+  },
+  "validation_opened": false,
+  "new_api_calls": 0
+}

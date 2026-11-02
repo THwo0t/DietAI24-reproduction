@@ -1,0 +1,119 @@
+{
+  "scope": "completed_development_checkpoint_not_independent_validation",
+  "original_v2_selection_unchanged": true,
+  "asa24_conditional_passed_checks": 10,
+  "asa24_exact_n": 16,
+  "asa24_n": 99,
+  "n5_target_passed": false,
+  "validation_opened": false,
+  "formal_reports_deferred_by_user": true,
+  "ranked_methods": [
+    {
+      "candidate": "CHI_median",
+      "n": 84,
+      "groups": 78,
+      "n5_passed_checks": 0,
+      "mae": {
+        "weight": 72.96428571428571,
+        "energy": 110.32134758309802,
+        "fat": 7.896857410524722,
+        "carbs": 11.646936757586436,
+        "protein": 10.010237012457448
+      },
+      "worst_ratio": 1.9845830714626187,
+      "mean_ratio": 1.4806887739307208
+    },
+    {
+      "candidate": "HI_mean",
+      "n": 84,
+      "groups": 78,
+      "n5_passed_checks": 0,
+      "mae": {
+        "weight": 70.07142857142857,
+        "energy": 107.49958245238098,
+        "fat": 8.323778595238098,
+        "carbs": 10.856666678571429,
+        "protein": 10.053006273809526
+      },
+      "worst_ratio": 1.9930623064650133,
+      "mean_ratio": 1.4612524225803347
+    },
+    {
+      "candidate": "H",
+      "n": 84,
+      "groups": 78,
+      "n5_passed_checks": 0,
+      "mae": {
+        "weight": 69.01190476190476,
+        "energy": 114.98018021428567,
+        "fat": 9.209387500000002,
+        "carbs": 11.790584630952376,
+        "protein": 10.411120416666666
+      },
+      "worst_ratio": 2.064060352233677,
+      "mean_ratio": 1.548048442293959
+    },
+    {
+      "candidate": "I",
+      "n": 84,
+      "groups": 78,
+      "n5_passed_checks": 0,
+      "mae": {
+        "weight": 74.22619047619047,
+        "energy": 112.52800221428575,
+        "fat": 7.92226954761905,
+        "carbs": 11.297789011904761,
+        "protein": 10.683409964285715
+      },
+      "worst_ratio": 2.1180432125863833,
+      "mean_ratio": 1.5052624618353188
+    },
+    {
+      "candidate": "C_v2_selected",
+      "n": 84,
+      "groups": 78,
+      "n5_passed_checks": 0,
+      "mae": {
+        "weight": 78.39571428571428,
+        "energy": 118.50020073351921,
+        "fat": 8.31844498769888,
+        "carbs": 13.2010304135052,
+        "protein": 11.084973615436962
+      },
+      "worst_ratio": 2.1976553559549887,
+      "mean_ratio": 1.6149639902198074
+    },
+    {
+      "candidate": "G",
+      "n": 84,
+      "groups": 78,
+      "n5_passed_checks": 0,
+      "mae": {
+        "weight": 82.84523809523806,
+        "energy": 140.13114883333327,
+        "fat": 9.659082190476187,
+        "carbs": 17.272671916666674,
+        "protein": 10.659563559523809
+      },
+      "worst_ratio": 2.5351045578165805,
+      "mean_ratio": 1.8285278474944988
+    },
+    {
+      "candidate": "F",
+      "n": 84,
+      "groups": 78,
+      "n5_passed_checks": 0,
+      "mae": {
+        "weight": 121.01190476190474,
+        "energy": 190.7399421428571,
+        "fat": 11.801209523809522,
+        "carbs": 24.41255648809524,
+        "protein": 11.004790869047614
+      },
+      "worst_ratio": 3.583023143119386,
+      "mean_ratio": 2.363187804592666
+    }
+  ],
+  "descriptive_best_by_registered_ratios": "CHI_median",
+  "next_stage": "independent external training gallery; exact230 download proposal awaiting new approval"
+}

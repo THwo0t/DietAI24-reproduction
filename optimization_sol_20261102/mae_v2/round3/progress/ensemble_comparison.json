@@ -1,0 +1,29 @@
+{
+  "scope": "two_preregistered_development_ensembles_only_not_formal_selection",
+  "candidates": [
+    {
+      "candidate": "HI_mean",
+      "passed_n5_checks": 0,
+      "passed_joint_checks": 10,
+      "worst_ratio": 1.9930623064650133,
+      "mean_ratio": 1.4612524225803347,
+      "registration_index": 0
+    },
+    {
+      "candidate": "CHI_median",
+      "passed_n5_checks": 0,
+      "passed_joint_checks": 10,
+      "worst_ratio": 1.9845830714626187,
+      "mean_ratio": 1.4806887739307208,
+      "registration_index": 1
+    }
+  ],
+  "preferred_whole_method": "CHI_median",
+  "ranking": [
+    "CHI_median",
+    "HI_mean"
+  ],
+  "ranking_rule": "N5 worst ratio, mean ratio, equal shared C/H/I upstream requests, registration order",
+  "new_api_calls": 0,
+  "validation_opened": false
+}

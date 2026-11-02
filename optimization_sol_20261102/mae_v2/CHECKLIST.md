@@ -28,3 +28,21 @@ Methods describes image recognition, FNDDS retrieval and portion estimation.
 Nutrition5k documentation establishes incremental scans and motivates linkage
 auditing; our 600-second linkage rule is an engineering heuristic, not a
 published physical plate identifier.
+
+## Continued optimization requested on 2026-11-03
+
+| Item | Development experiment | Status |
+|---|---|---|
+| R3-1 | F: independent direct estimates | complete, all 84; N5 0/10 |
+| R3-2 | G: four training-fold RGB demonstrations | complete, all 84; N5 0/10 |
+| R3-3 | H: training-fold ingredient catalog and masses | complete, all 84; N5 0/10 |
+| R3-4 | I: isolated visual-check prompt ablation | complete, all 84; N5 0/10 |
+| R3-5 | Fixed HI mean and raw-CHI median | complete offline, all 84 each; N5 0/10 |
+| R3-6 | Calibration bounds and semantic-neighbor diagnostics | complete offline; no passing method |
+| R4-1 | Independent external training-gallery proposal | 230 fixed images; download awaits new user authorization |
+| R4-2 | Appearance retrieval and visual reranking pipeline | design preparation; no new data or paid run yet |
+
+`round3/development_checkpoint.json` records the whole-method comparison. The
+fixed CHI median improves all five MAEs relative to the original selected v2 C,
+but fails the acceptance gate. Original selection and all member records remain
+immutable. Continue development; do not open validation or generate final reports.
