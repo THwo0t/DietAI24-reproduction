@@ -1,0 +1,24 @@
+{
+  "providers": {
+    "chat": {
+      "requests": 86,
+      "errors": 0,
+      "prompt_tokens": 1603019,
+      "completion_tokens": 72407,
+      "reasoning_tokens": 45789,
+      "total_tokens": 1675426
+    },
+    "embedding": {
+      "requests": 0,
+      "errors": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "reasoning_tokens": 0,
+      "total_tokens": 0
+    }
+  },
+  "third_party_cost_usd": null,
+  "official_embedding_estimated_usd": 0.0,
+  "embedding_price_checked": "2026-11-02",
+  "cost_notice": "Third-party price unverified; reasoning tokens are included in completion tokens."
+}

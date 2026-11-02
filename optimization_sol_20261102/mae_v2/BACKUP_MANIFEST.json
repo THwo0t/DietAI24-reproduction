@@ -122,9 +122,21 @@
       "bytes": 608,
       "sha256": "1d144b195393bd38b3996e3a8e7e66245e30fab585f48b1e5041fb413facab85"
     },
+    "round3/progress/H_completion.json": {
+      "bytes": 788,
+      "sha256": "96535ed0ca36de623816d2c07990950d297cca84a99f2c280b2576ca8b9fcc1b"
+    },
+    "round3/progress/H_metrics.json": {
+      "bytes": 49818,
+      "sha256": "d2d765f1247a4dd0a552b45df95781535959584146834d0b0fe32d0557fc6d5a"
+    },
     "round3/progress/H_preflight.json": {
       "bytes": 733,
       "sha256": "1fef26770d585b50a2a3189602d5299ecd650ab3dd18b9ee97fb8f01fa855d9b"
+    },
+    "round3/progress/H_usage.json": {
+      "bytes": 610,
+      "sha256": "a32dbaf7669c4fe6d6d1c5f18ef177aae9e3f51fc72b6895e235a92d996bbb6c"
     },
     "round3/src/audit_round3.py": {
       "bytes": 13207,
@@ -375,7 +387,7 @@
   "round3": {
     "F": "completed 84; N5 0/10; rejected",
     "G": "completed 84; N5 0/10; rejected",
-    "H": "source frozen; training-fold ingredient catalog experiment in progress",
+    "H": "completed 84; N5 0/10; not selected; I prompt ablation in preparation",
     "validation": "sealed; no formal run"
   },
   "secret_scan": "PASS",

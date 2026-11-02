@@ -1,0 +1,16 @@
+{
+  "candidate": "H",
+  "completed": "2026-11-02T18:01:45+00:00",
+  "n": 84,
+  "groups": 78,
+  "binding_sha256": "2c41273545377bd51f6690dad1eb7307e2f00399e2455c7ecf8a3545c7b3b07b",
+  "artifact_sha256": {
+    "records_sealed.json": "24ac0459975ee4b0a4f66ee5a51d6636e42bdf85022a0a4d042d870c29823851",
+    "predictions.json": "25a492b51439cf6cff90e12557572802875f85b0c57d50c2db73c874b1341d4a",
+    "metrics.json": "d2d765f1247a4dd0a552b45df95781535959584146834d0b0fe32d0557fc6d5a",
+    "usage.json": "a32dbaf7669c4fe6d6d1c5f18ef177aae9e3f51fc72b6895e235a92d996bbb6c",
+    "binding.json": "9b6f54b942833ffc5b623e402cd67e4b87396a3904e1efcb470dce253f6ad304",
+    "example_assignments.json": "4b117a2c8852bc042ced4cc4ce8b0f52a8f73ab6f9f6983aeaa4915f3da56b1f"
+  },
+  "validation_opened": false
+}
