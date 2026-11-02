@@ -1,0 +1,25 @@
+{
+  "schema_version": 2,
+  "formal_test": false,
+  "provenance": "Two authorized historical v1 demo images; no reference labels; not research cohorts.",
+  "manifest": [
+    {
+      "sample_id": "historical-asa24",
+      "dataset": "asa24",
+      "split": "demo",
+      "group_id": "historical-asa24",
+      "fold": null,
+      "image_path": "tools/demo_images/asa24.png",
+      "image_sha256": "eb63c3c47075ceda6084188016d2d958cada70af8db92f1747202fc79a9cfb88"
+    },
+    {
+      "sample_id": "historical-nutrition5k",
+      "dataset": "nutrition5k",
+      "split": "demo",
+      "group_id": "historical-nutrition5k",
+      "fold": null,
+      "image_path": "tools/demo_images/nutrition5k.png",
+      "image_sha256": "9cb3264142a8d9fc89d7b5dad482bde2d1acd857e2dd7107709b6620308d94ae"
+    }
+  ]
+}

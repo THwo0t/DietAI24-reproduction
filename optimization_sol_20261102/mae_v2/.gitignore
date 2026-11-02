@@ -1,0 +1,11 @@
+.env
+__pycache__/
+*.pyc
+.venv*/
+runs/
+runtime_cache/
+data/
+evidence/*
+!evidence/README.md
+delivery/
+backups/

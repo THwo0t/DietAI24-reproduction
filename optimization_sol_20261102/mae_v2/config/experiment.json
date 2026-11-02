@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "seed": "dietai24-mae-v2-20261102",
+  "chat_model": "gpt-6.1-sol",
+  "vision_model": "gpt-6.1-sol",
+  "chat_base_url": "https://api.zicc.cc/v1",
+  "embedding_model": "text-embedding-3-large",
+  "embedding_base_url": "https://api.openai.com/v1",
+  "temperature": 1,
+  "legacy_completion_tokens": 4096,
+  "component_completion_tokens": 8192,
+  "asa24_minimum_exact_rate": 0.15,
+  "former_asa24_minimum_exact_rate": 0.18,
+  "validation_nutrition5k_images": 200,
+  "bootstrap_resamples": 10000,
+  "candidate_registration": [
+    "baseline",
+    "asa-retrieval-portion",
+    "examples-2",
+    "A",
+    "B",
+    "C",
+    "D",
+    "E"
+  ],
+  "mass_calibration": {
+    "raw_min": 0.8,
+    "raw_max": 1.25,
+    "step": 0.001,
+    "shrink": 0.5,
+    "minimum_training_groups": 5
+  },
+  "provider_transport_attempts": 3,
+  "stage_repairs": 1,
+  "historical_source_commit": "4707add",
+  "no_validation_tuning": true,
+  "monetary_cap": null,
+  "authorization": "User approved implementation of the MAE v2 plan on 2026-11-02; prior paid development authorization has no monetary cap; additional downloads require an exact proposal."
+}

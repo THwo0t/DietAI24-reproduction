@@ -1,0 +1,197 @@
+{
+  "version": 1,
+  "ratio_limit": 1.3,
+  "acceptance_statistics": [
+    "MAE per dish",
+    "MAE per unit"
+  ],
+  "acceptance_requires_all_20": true,
+  "scope": "Historical comparison thresholds; new holdout acceptance requires a frozen protocol and coverage reporting.",
+  "datasets": {
+    "asa24": {
+      "paper_table": 1,
+      "paper_sample_size": 3000,
+      "historical_run": "runs/test-gpt-6.1-sol",
+      "historical_protocol": "conditional exact-code, option reading",
+      "historical_total_records": 150,
+      "historical_evaluated_records": 11,
+      "metrics": {
+        "Weight (g)": {
+          "paper_per_dish": 49.4,
+          "paper_per_unit": 0.348,
+          "threshold_per_dish": 64.22,
+          "threshold_per_unit": 0.4524,
+          "historical_sol_per_dish": 59.68181818181818,
+          "historical_sol_per_unit": 0.3264950888971777,
+          "historical_sol_ratio_to_paper": 1.208133971291866,
+          "historical_sol_delta_to_threshold": -4.538181818181819,
+          "relative_reduction_needed": 0,
+          "historical_sol_pass": true,
+          "historical_sol_per_unit_ratio_to_paper": 0.9382042784401659,
+          "historical_sol_per_unit_delta_to_threshold": -0.12590491110282231,
+          "historical_sol_per_unit_pass": true
+        },
+        "Energy (kcal)": {
+          "paper_per_dish": 47.7,
+          "paper_per_unit": 0.196,
+          "threshold_per_dish": 62.01,
+          "threshold_per_unit": 0.2548,
+          "historical_sol_per_dish": 71.19045454545454,
+          "historical_sol_per_unit": 0.3547662247350336,
+          "historical_sol_ratio_to_paper": 1.4924623594434914,
+          "historical_sol_delta_to_threshold": 9.180454545454545,
+          "relative_reduction_needed": 0.12895625690369628,
+          "historical_sol_pass": false,
+          "historical_sol_per_unit_ratio_to_paper": 1.8100317588522121,
+          "historical_sol_per_unit_delta_to_threshold": 0.09996622473503358,
+          "historical_sol_per_unit_pass": false
+        },
+        "Total Fat (g)": {
+          "paper_per_dish": 1.8,
+          "paper_per_unit": 0.174,
+          "threshold_per_dish": 2.34,
+          "threshold_per_unit": 0.2262,
+          "historical_sol_per_dish": 2.0136727272727275,
+          "historical_sol_per_unit": 0.35491406908441847,
+          "historical_sol_ratio_to_paper": 1.1187070707070708,
+          "historical_sol_delta_to_threshold": -0.32632727272727236,
+          "relative_reduction_needed": 0,
+          "historical_sol_pass": true,
+          "historical_sol_per_unit_ratio_to_paper": 2.039736029220796,
+          "historical_sol_per_unit_delta_to_threshold": 0.12871406908441846,
+          "historical_sol_per_unit_pass": false
+        },
+        "Carbohydrate (g)": {
+          "paper_per_dish": 6.95,
+          "paper_per_unit": 0.208,
+          "threshold_per_dish": 9.035,
+          "threshold_per_unit": 0.2704,
+          "historical_sol_per_dish": 11.319499999999998,
+          "historical_sol_per_unit": 0.37215543465980583,
+          "historical_sol_ratio_to_paper": 1.6287050359712227,
+          "historical_sol_delta_to_threshold": 2.2844999999999978,
+          "relative_reduction_needed": 0.201819868368744,
+          "historical_sol_pass": false,
+          "historical_sol_per_unit_ratio_to_paper": 1.7892088204798358,
+          "historical_sol_per_unit_delta_to_threshold": 0.10175543465980585,
+          "historical_sol_per_unit_pass": false
+        },
+        "Protein (g)": {
+          "paper_per_dish": 1.38,
+          "paper_per_unit": 0.233,
+          "threshold_per_dish": 1.794,
+          "threshold_per_unit": 0.3029,
+          "historical_sol_per_dish": 2.1817499999999996,
+          "historical_sol_per_unit": 0.292098844469544,
+          "historical_sol_ratio_to_paper": 1.580978260869565,
+          "historical_sol_delta_to_threshold": 0.3877499999999996,
+          "relative_reduction_needed": 0.17772430388449623,
+          "historical_sol_pass": false,
+          "historical_sol_per_unit_ratio_to_paper": 1.2536431093113476,
+          "historical_sol_per_unit_delta_to_threshold": -0.01080115553045602,
+          "historical_sol_per_unit_pass": true
+        }
+      }
+    },
+    "nutrition5k": {
+      "paper_table": 2,
+      "paper_sample_size": 1000,
+      "historical_run": "runs/test-gpt-6.1-sol",
+      "historical_protocol": "complete predicted dish",
+      "historical_total_records": 150,
+      "historical_evaluated_records": 118,
+      "metrics": {
+        "Weight (g)": {
+          "paper_per_dish": 45.1,
+          "paper_per_unit": 0.156,
+          "threshold_per_dish": 58.63,
+          "threshold_per_unit": 0.2028,
+          "historical_sol_per_dish": 69.41525423728814,
+          "historical_sol_per_unit": 0.27098289608628046,
+          "historical_sol_ratio_to_paper": 1.539140892179338,
+          "historical_sol_delta_to_threshold": 10.785254237288136,
+          "relative_reduction_needed": 0.15537297033329267,
+          "historical_sol_pass": false,
+          "historical_sol_per_unit_ratio_to_paper": 1.737069846706926,
+          "historical_sol_per_unit_delta_to_threshold": 0.06818289608628045,
+          "historical_sol_per_unit_pass": false
+        },
+        "Energy (kcal)": {
+          "paper_per_dish": 68.2,
+          "paper_per_unit": 0.197,
+          "threshold_per_dish": 88.66,
+          "threshold_per_unit": 0.2561,
+          "historical_sol_per_dish": 124.57427462429376,
+          "historical_sol_per_unit": 0.39931455220086104,
+          "historical_sol_ratio_to_paper": 1.8266022672183835,
+          "historical_sol_delta_to_threshold": 35.91427462429377,
+          "relative_reduction_needed": 0.2882960766386833,
+          "historical_sol_pass": false,
+          "historical_sol_per_unit_ratio_to_paper": 2.026977422339396,
+          "historical_sol_per_unit_delta_to_threshold": 0.14321455220086104,
+          "historical_sol_per_unit_pass": false
+        },
+        "Total Fat (g)": {
+          "paper_per_dish": 4.01,
+          "paper_per_unit": 0.226,
+          "threshold_per_dish": 5.213,
+          "threshold_per_unit": 0.2938,
+          "historical_sol_per_dish": 8.990197601694916,
+          "historical_sol_per_unit": 0.5643410863179458,
+          "historical_sol_ratio_to_paper": 2.241944539076039,
+          "historical_sol_delta_to_threshold": 3.7771976016949163,
+          "relative_reduction_needed": 0.4201462269286277,
+          "historical_sol_pass": false,
+          "historical_sol_per_unit_ratio_to_paper": 2.4970844527342733,
+          "historical_sol_per_unit_delta_to_threshold": 0.27054108631794577,
+          "historical_sol_per_unit_pass": false
+        },
+        "Carbohydrate (g)": {
+          "paper_per_dish": 5.98,
+          "paper_per_unit": 0.212,
+          "threshold_per_dish": 7.774,
+          "threshold_per_unit": 0.2756,
+          "historical_sol_per_dish": 13.3010242259887,
+          "historical_sol_per_unit": 0.5214327412625359,
+          "historical_sol_ratio_to_paper": 2.2242515428074747,
+          "historical_sol_delta_to_threshold": 5.5270242259887,
+          "relative_reduction_needed": 0.4155337312437578,
+          "historical_sol_pass": false,
+          "historical_sol_per_unit_ratio_to_paper": 2.4595884021817733,
+          "historical_sol_per_unit_delta_to_threshold": 0.2458327412625359,
+          "historical_sol_per_unit_pass": false
+        },
+        "Protein (g)": {
+          "paper_per_dish": 3.88,
+          "paper_per_unit": 0.188,
+          "threshold_per_dish": 5.044,
+          "threshold_per_unit": 0.2444,
+          "historical_sol_per_dish": 10.711641237288134,
+          "historical_sol_per_unit": 0.5306818856482196,
+          "historical_sol_ratio_to_paper": 2.7607322776515812,
+          "historical_sol_delta_to_threshold": 5.667641237288135,
+          "relative_reduction_needed": 0.5291104427170874,
+          "historical_sol_pass": false,
+          "historical_sol_per_unit_ratio_to_paper": 2.82277598749053,
+          "historical_sol_per_unit_delta_to_threshold": 0.2862818856482196,
+          "historical_sol_per_unit_pass": false
+        }
+      }
+    }
+  },
+  "historical_pass_count_of_20": 4,
+  "acceptance_notes": [
+    "All 20 point estimates must be finite and at or below their thresholds.",
+    "Coverage, evaluated count, failure count and population must be reported alongside every metric.",
+    "ASA24 conditional option and end-to-end are separate protocols; do not choose the easier protocol after seeing results.",
+    "New holdout answers must remain isolated until prompts, calibration, parameters and protocol are frozen.",
+    "Oracle diagnosis is never an acceptance score or an inference feature."
+  ],
+  "source_references": {
+    "paper_text": "/home/lelouch/Documents/Codex/DietAI24_Claude_Handoff_20261023/workspace/work/paper/paper.txt:309-349",
+    "metric_definition": "code/evaluate.py:30-38",
+    "historical_metrics": "runs/test-gpt-6.1-sol/metrics.json",
+    "asa24_protocol": "code/evaluate.py:54-67",
+    "nutrition5k_protocol": "code/evaluate.py:168-175"
+  }
+}

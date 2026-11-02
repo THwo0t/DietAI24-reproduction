@@ -1,0 +1,31 @@
+{
+  "A": {
+    "crop_review": false,
+    "portion_mode": "direct",
+    "estimated_chat_calls": 3
+  },
+  "B": {
+    "crop_review": true,
+    "portion_mode": "direct",
+    "estimated_chat_calls": 4,
+    "layout_source": "A"
+  },
+  "C": {
+    "crop_review": "inherited",
+    "portion_mode": "total_ratio",
+    "estimated_chat_calls": "upstream",
+    "identity_source": "best_raw_A_B"
+  },
+  "D": {
+    "code_review": true,
+    "trigger": "any_nutrient_failed",
+    "source": "first_round_raw_winner",
+    "maximum_additional_chat_calls": 2
+  },
+  "E": {
+    "standard_units": true,
+    "trigger": "weight_failed_and_usable_options",
+    "source": "first_round_raw_winner",
+    "maximum_additional_chat_calls": 1
+  }
+}
