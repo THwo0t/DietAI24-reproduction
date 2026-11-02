@@ -82,6 +82,10 @@
       "bytes": 423,
       "sha256": "2b78834ad9edefc2f101c863b296bdbee7da273effcddccca8fa90d59d8ce83a"
     },
+    "round3/ENSEMBLE_PROTOCOL.md": {
+      "bytes": 2034,
+      "sha256": "4c25292886813fc7e87b8b199722b1ac08423a0487c60ec176096ca452ee5e56"
+    },
     "round3/G_PROTOCOL.md": {
       "bytes": 3044,
       "sha256": "37f0a53ce3ea3aa9044ce900855bb72812bb00a4334b71032658eecaeeb12b86"
@@ -89,6 +93,10 @@
     "round3/H_PROTOCOL.md": {
       "bytes": 3094,
       "sha256": "f26186c354ff95ef5e55785be2fc97cf546ba6cb77ffcb91d39b682c738e9fe0"
+    },
+    "round3/I_PROTOCOL.md": {
+      "bytes": 2560,
+      "sha256": "b15b8fcb83d8915906503dc2bf9374513232f4795fcd8e0f1e3c35ac7658fbe8"
     },
     "round3/PROTOCOL.md": {
       "bytes": 2776,
@@ -138,6 +146,22 @@
       "bytes": 610,
       "sha256": "a32dbaf7669c4fe6d6d1c5f18ef177aae9e3f51fc72b6895e235a92d996bbb6c"
     },
+    "round3/progress/I_completion.json": {
+      "bytes": 788,
+      "sha256": "0343b04c1f83be61c197f2bf9c9b4f1ce8663726702fa0bc7235ad0b62e25414"
+    },
+    "round3/progress/I_metrics.json": {
+      "bytes": 54959,
+      "sha256": "25ad756513622d2b18b22edd9f65d6484f9dd44738c1a66d89d3a4544c83fdaf"
+    },
+    "round3/progress/I_preflight.json": {
+      "bytes": 805,
+      "sha256": "c5d1e1a680c61451b88617f6db9e97afc1679648cad95ac60285ff6ac9d19773"
+    },
+    "round3/progress/I_usage.json": {
+      "bytes": 610,
+      "sha256": "9aadb3d1586323756c782d4846a45d611bd2217b8977bf6b7401f1927a76960a"
+    },
     "round3/src/audit_round3.py": {
       "bytes": 13207,
       "sha256": "70c153c5824b7c9a3a48c19a34deede65282379d89003959dcac4e2cdae1496f"
@@ -174,6 +198,14 @@
       "bytes": 7962,
       "sha256": "db45a1298a29b8b55017b969e4920794028585d2ba4f8462d274de67cfa3e1ce"
     },
+    "round3/src/run_visual.py": {
+      "bytes": 37631,
+      "sha256": "007ae8fe57bd74a56b78cdf80802483bb5aa4d9ccafd0b478fe10b1854a4a932"
+    },
+    "round3/src/visual_estimator.py": {
+      "bytes": 13980,
+      "sha256": "3a4055613200e1a47c6a3db3d675ab73388f65fa54eeb7ceb8b922bf9498b71d"
+    },
     "round3/tests/test_audit_round3.py": {
       "bytes": 13860,
       "sha256": "93e814b32bd4c958e3a1e035a17b3f944de61cdf3df77c2a16b616a6ef2abf88"
@@ -209,6 +241,14 @@
     "round3/tests/test_round3_driver.py": {
       "bytes": 5483,
       "sha256": "958a5340347344b2dcfb51be4d878f72fffe8c8a4540849b46d5c2ed630da947"
+    },
+    "round3/tests/test_visual_driver.py": {
+      "bytes": 41753,
+      "sha256": "baabb3b62b931f5a3983f9914ee55cb67fcfd40f86a0f2d2ff06f7a945c16166"
+    },
+    "round3/tests/test_visual_estimator.py": {
+      "bytes": 7766,
+      "sha256": "520a85aac8a0ff85811bbb74e1c20995360b190f78a90695f4cccefce6e1d7ed"
     },
     "setup.sh": {
       "bytes": 2619,
@@ -387,7 +427,8 @@
   "round3": {
     "F": "completed 84; N5 0/10; rejected",
     "G": "completed 84; N5 0/10; rejected",
-    "H": "completed 84; N5 0/10; not selected; I prompt ablation in preparation",
+    "H": "completed 84; N5 0/10; retained as best individual round3 method by worst-cap ratio",
+    "I": "completed 84; N5 0/10; fixed-combination offline evaluation pending",
     "validation": "sealed; no formal run"
   },
   "secret_scan": "PASS",

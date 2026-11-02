@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "candidate": "I",
+  "n": 84,
+  "groups": 78,
+  "support_slots": 336,
+  "binding_sha256": "b1cc63c68d119eed21c61b1c2053cea6f5aa03b1144db06b3ebb5a251822b50b",
+  "source_sha256": {
+    "run_visual.py": "007ae8fe57bd74a56b78cdf80802483bb5aa4d9ccafd0b478fe10b1854a4a932",
+    "examples.py": "e0780ec8b4ba7823fe5fbee098e384db05fc021e6e49c886a337e92ce7bd9c15",
+    "visual_estimator.py": "3a4055613200e1a47c6a3db3d675ab73388f65fa54eeb7ceb8b922bf9498b71d",
+    "dev_ingredients.py": "b246af2fa328e85407c6c48862139e6cd537d972c0b5083e152eb53d5ac43e35",
+    "catalog_estimator.py": "60a45538807567b5f2312b60f29430dc81d193a04a5da2705e17005021f55dbd"
+  },
+  "protocol_sha256": "b15b8fcb83d8915906503dc2bf9374513232f4795fcd8e0f1e3c35ac7658fbe8",
+  "validation_opened": false,
+  "api_calls": 0
+}
