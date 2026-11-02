@@ -86,6 +86,10 @@
       "bytes": 3044,
       "sha256": "37f0a53ce3ea3aa9044ce900855bb72812bb00a4334b71032658eecaeeb12b86"
     },
+    "round3/H_PROTOCOL.md": {
+      "bytes": 3094,
+      "sha256": "f26186c354ff95ef5e55785be2fc97cf546ba6cb77ffcb91d39b682c738e9fe0"
+    },
     "round3/PROTOCOL.md": {
       "bytes": 2776,
       "sha256": "1115e8e8eb0335def1aed4e0c24dfcde407ca8d7e78a190aba27579ff12b8b94"
@@ -102,13 +106,37 @@
       "bytes": 608,
       "sha256": "e89ec095e13ab7c2eeeef8d9debfabe6299121656160cc6ad7d60f91e41600c0"
     },
+    "round3/progress/G_completion.json": {
+      "bytes": 788,
+      "sha256": "a266137f510bec73bef72097322729eb48211197d667b9ad5d1be80efc392374"
+    },
+    "round3/progress/G_metrics.json": {
+      "bytes": 49807,
+      "sha256": "3d4446a44082c6290b7e872b6acc26be01f49309c4b06da6ffd64a96a28e548a"
+    },
     "round3/progress/G_preflight.json": {
       "bytes": 798,
       "sha256": "72006a3bc2bf9ee059058aad531b7ea04eba93ec0a62f6bdfac892ef52f9abdf"
     },
+    "round3/progress/G_usage.json": {
+      "bytes": 608,
+      "sha256": "1d144b195393bd38b3996e3a8e7e66245e30fab585f48b1e5041fb413facab85"
+    },
+    "round3/progress/H_preflight.json": {
+      "bytes": 733,
+      "sha256": "1fef26770d585b50a2a3189602d5299ecd650ab3dd18b9ee97fb8f01fa855d9b"
+    },
     "round3/src/audit_round3.py": {
       "bytes": 13207,
       "sha256": "70c153c5824b7c9a3a48c19a34deede65282379d89003959dcac4e2cdae1496f"
+    },
+    "round3/src/catalog_estimator.py": {
+      "bytes": 12295,
+      "sha256": "60a45538807567b5f2312b60f29430dc81d193a04a5da2705e17005021f55dbd"
+    },
+    "round3/src/dev_ingredients.py": {
+      "bytes": 18961,
+      "sha256": "b246af2fa328e85407c6c48862139e6cd537d972c0b5083e152eb53d5ac43e35"
     },
     "round3/src/direct_estimator.py": {
       "bytes": 6645,
@@ -122,6 +150,10 @@
       "bytes": 7376,
       "sha256": "e0780ec8b4ba7823fe5fbee098e384db05fc021e6e49c886a337e92ce7bd9c15"
     },
+    "round3/src/run_catalog.py": {
+      "bytes": 31504,
+      "sha256": "daf0f024fb7d0e9ef6f4e9227cfdd04e06f3d9740b6987ed9c4ef77e687e308e"
+    },
     "round3/src/run_examples.py": {
       "bytes": 25190,
       "sha256": "7dae469a9be30327cb300fe1b12d08c5255df8bfbff3a109f3526bbeba2d85d8"
@@ -133,6 +165,18 @@
     "round3/tests/test_audit_round3.py": {
       "bytes": 13860,
       "sha256": "93e814b32bd4c958e3a1e035a17b3f944de61cdf3df77c2a16b616a6ef2abf88"
+    },
+    "round3/tests/test_catalog_driver.py": {
+      "bytes": 34305,
+      "sha256": "3a3a7012fa9890992c9700cc364238d606493ffa22ae253ac0b7859ae3ffa704"
+    },
+    "round3/tests/test_catalog_estimator.py": {
+      "bytes": 14843,
+      "sha256": "b16d3b0ccccdb3538ebfac7af8f2cb81e011ed1af9ff909608e162e726a2e8ae"
+    },
+    "round3/tests/test_dev_ingredients.py": {
+      "bytes": 11223,
+      "sha256": "caacca99d8eb1d034fff3bf1c8801f0cea41048f6e5734edf4eb6dacd613e6a8"
     },
     "round3/tests/test_direct_estimator.py": {
       "bytes": 10160,
@@ -329,9 +373,10 @@
   "purpose": "preserve failed v2 and F; continue G optimization without intermediate final report",
   "raw_logs_included": false,
   "round3": {
-    "F": "completed 84/84; N5 zero of ten checks pass; candidate rejected",
-    "G": "registered, offline checked, inference in progress",
-    "formal_validation": "not_run_sealed"
+    "F": "completed 84; N5 0/10; rejected",
+    "G": "completed 84; N5 0/10; rejected",
+    "H": "source frozen; training-fold ingredient catalog experiment in progress",
+    "validation": "sealed; no formal run"
   },
   "secret_scan": "PASS",
   "source_state": "v2 checkpoint one resolved; F audited; G registered; delivery tools unfinished"
