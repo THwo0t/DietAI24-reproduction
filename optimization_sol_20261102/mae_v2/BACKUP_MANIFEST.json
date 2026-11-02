@@ -82,6 +82,78 @@
       "bytes": 423,
       "sha256": "2b78834ad9edefc2f101c863b296bdbee7da273effcddccca8fa90d59d8ce83a"
     },
+    "round3/G_PROTOCOL.md": {
+      "bytes": 3044,
+      "sha256": "37f0a53ce3ea3aa9044ce900855bb72812bb00a4334b71032658eecaeeb12b86"
+    },
+    "round3/PROTOCOL.md": {
+      "bytes": 2776,
+      "sha256": "1115e8e8eb0335def1aed4e0c24dfcde407ca8d7e78a190aba27579ff12b8b94"
+    },
+    "round3/progress/F_completion.json": {
+      "bytes": 192,
+      "sha256": "9e5b7c2c28eb2f50cd820a6297d0470002828cee10353467be1af18de2c48e36"
+    },
+    "round3/progress/F_metrics.json": {
+      "bytes": 39275,
+      "sha256": "6f3fc0c27a39ebcae38b117af9a99c94817265bfe1f2cafb810524b82a704f9d"
+    },
+    "round3/progress/F_usage.json": {
+      "bytes": 608,
+      "sha256": "e89ec095e13ab7c2eeeef8d9debfabe6299121656160cc6ad7d60f91e41600c0"
+    },
+    "round3/progress/G_preflight.json": {
+      "bytes": 798,
+      "sha256": "72006a3bc2bf9ee059058aad531b7ea04eba93ec0a62f6bdfac892ef52f9abdf"
+    },
+    "round3/src/audit_round3.py": {
+      "bytes": 13207,
+      "sha256": "70c153c5824b7c9a3a48c19a34deede65282379d89003959dcac4e2cdae1496f"
+    },
+    "round3/src/direct_estimator.py": {
+      "bytes": 6645,
+      "sha256": "92b0074c9c6060c44ff13b1eba162ce1da81fc0aa59cf68eee93ffea6bede083"
+    },
+    "round3/src/example_estimator.py": {
+      "bytes": 5703,
+      "sha256": "b4cfb6372c2f08d1e0f75ecc52e7437810d5ff21051c0366922c49c6b947da7a"
+    },
+    "round3/src/examples.py": {
+      "bytes": 7376,
+      "sha256": "e0780ec8b4ba7823fe5fbee098e384db05fc021e6e49c886a337e92ce7bd9c15"
+    },
+    "round3/src/run_examples.py": {
+      "bytes": 25190,
+      "sha256": "7dae469a9be30327cb300fe1b12d08c5255df8bfbff3a109f3526bbeba2d85d8"
+    },
+    "round3/src/run_round3.py": {
+      "bytes": 7962,
+      "sha256": "db45a1298a29b8b55017b969e4920794028585d2ba4f8462d274de67cfa3e1ce"
+    },
+    "round3/tests/test_audit_round3.py": {
+      "bytes": 13860,
+      "sha256": "93e814b32bd4c958e3a1e035a17b3f944de61cdf3df77c2a16b616a6ef2abf88"
+    },
+    "round3/tests/test_direct_estimator.py": {
+      "bytes": 10160,
+      "sha256": "b5cf9be86298a2e815f54c75b547990331bde9d06032f9a9a57f222b5f9ef5ba"
+    },
+    "round3/tests/test_example_estimator.py": {
+      "bytes": 9543,
+      "sha256": "aaa016f08d85f57c64d7e74ec841a4c47d959c6d39952904cd25a9cb6377c366"
+    },
+    "round3/tests/test_examples.py": {
+      "bytes": 8011,
+      "sha256": "3f9d92e533eea0e9e9e72684fcb8ac869da035d139c2ac4b39bb96c81187fbab"
+    },
+    "round3/tests/test_examples_driver.py": {
+      "bytes": 23277,
+      "sha256": "de571ca892f90a9855c2242946281ed22d97fb73b61265776def58a237da8181"
+    },
+    "round3/tests/test_round3_driver.py": {
+      "bytes": 5483,
+      "sha256": "958a5340347344b2dcfb51be4d878f72fffe8c8a4540849b46d5c2ed630da947"
+    },
     "setup.sh": {
       "bytes": 2619,
       "sha256": "660cba3b124519a4b1e8bf8355019d9897253c6939467863e83849b5e07f4058"
@@ -254,8 +326,13 @@
   "formal_validation": "not_run_sealed",
   "new_research_data_included": false,
   "old_local_git_history_included": false,
-  "purpose": "failed v2 source backup before continued optimization",
+  "purpose": "preserve failed v2 and F; continue G optimization without intermediate final report",
   "raw_logs_included": false,
+  "round3": {
+    "F": "completed 84/84; N5 zero of ten checks pass; candidate rejected",
+    "G": "registered, offline checked, inference in progress",
+    "formal_validation": "not_run_sealed"
+  },
   "secret_scan": "PASS",
-  "source_state": "checkpoint-one required findings resolved; delivery tools unfinished"
+  "source_state": "v2 checkpoint one resolved; F audited; G registered; delivery tools unfinished"
 }
