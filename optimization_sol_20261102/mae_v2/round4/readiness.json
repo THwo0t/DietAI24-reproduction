@@ -1,0 +1,81 @@
+{
+  "development_predictions_created": 0,
+  "download_dry_run": {
+    "actual_requests": 0,
+    "estimated_bytes": 104830902,
+    "files": 230,
+    "files_written": 0,
+    "original_four_freezes_verified": true,
+    "response_body_budget_bytes": 350000000
+  },
+  "engineering_findings": [
+    {
+      "evidence": "Pinned release artifact hashes are checked again when consumed.",
+      "finding": "Training inputs could change between verifier and loader.",
+      "id": "R4-ENG-1",
+      "status": "fixed"
+    },
+    {
+      "evidence": "Each outgoing ordered image payload is checked against encoding from verified bytes before provider access.",
+      "finding": "Encoded request pixels could differ from an earlier file check.",
+      "id": "R4-ENG-2",
+      "status": "fixed"
+    },
+    {
+      "evidence": "Completion digest is checked during stages and the entire gallery seal before finalization.",
+      "finding": "Gallery upstream artifacts required revalidation before base sealing.",
+      "id": "R4-ENG-3",
+      "status": "fixed"
+    },
+    {
+      "evidence": "Sealed pending result recovery publishes the original value without provider replay.",
+      "finding": "Crash recovery after a stage receipt could replay variable trace metadata.",
+      "id": "R4-ENG-4",
+      "status": "fixed"
+    }
+  ],
+  "formal_reports_deferred": true,
+  "new_method_accuracy_tested": false,
+  "original_development_groups": 78,
+  "original_development_images": 84,
+  "original_validation_images": 200,
+  "research_api_requests": 0,
+  "research_images_downloaded": 0,
+  "source_sha256": {
+    "round4/src/artifacts.py": "c80f55cfeeeca87d670f0e517e540c07a1206dd7fd2e902f3e2d403c6254653c",
+    "round4/src/capability_probe.py": "394d9f584f3a16c39b35beaae8d0c377061f100c3d4a816db96caefa07fe8917",
+    "round4/src/catalog_estimator.py": "53ab801e3fbe783501eec01cc0817912cbca677d1a25348ccbfa9b1e9e130468",
+    "round4/src/context.py": "e99a983e00c36bbe162bd6f9d13abffebf8d99ba2f346d5aad6d890553e0e0c3",
+    "round4/src/image_guard.py": "e2cf2a4cc4dc0b1b270da9ca30359ea7936b1d37159f3d97a540cd893e7e76b0",
+    "round4/src/pipeline.py": "719eecbe17550da6b7ea35f755b15c336ec6575a5cdc1c83a7fd8a5a07e6eb2b",
+    "round4/src/retrieval.py": "cba1ad40a23790ba4c44aec27a5dd3d61b6719e30ceeccafd7a9785d2af1fe29",
+    "round4/src/run_base.py": "66c2483aea5c77f68e48a70e1041f7a6c5071aeee8a7aa89c46e4f2a9ef33dfb",
+    "round4/src/score_dev.py": "0e84e173f11da66c13f822e69d8babff0e894c91c1dd8b6767fc2fd76180ae34",
+    "round4/src/trace_provider.py": "8adab7eca60e647e2f21d11c802507bc39e96dedf6fa04edaeee0d7404db6099",
+    "round4/src/train_data.py": "7a5c450dc5cc3918bb283e9a042e16db95e69ef5ee887b2f79763d525e4600a3",
+    "round4/src/vision_stages.py": "5b4377538fc03f1f18df4ca9614b56ba1a2e1cab3484ddf4bf779a5c5e058349",
+    "round4/tests/test_artifacts.py": "70f78290c4889c84f0421d1cdf6141de883437748d13b4e7fe155772a269b9ea",
+    "round4/tests/test_capability_probe.py": "817cd97161b49d5c067954fbce5d934d12c973c8c9586f0367173e381191acf2",
+    "round4/tests/test_catalog_estimator.py": "3b00c2e962607d3c8f7fc730b1c9e7351ba3d8e890a8403325d674ee34d1e7c4",
+    "round4/tests/test_context.py": "bd5f72dc86584b76d5037967411f8f29c8426fa4dc56cbc839b9ac74b3f96c85",
+    "round4/tests/test_download_train.py": "e821bcf62eb4651dfb7489c4c3536828dc9beee999a3b9b58b194e5f52bcb032",
+    "round4/tests/test_image_guard.py": "cff4abd4c9567a1e4f7c3bd4ae74672b86bbf45b07c74cdbfd46c91ff5efd4cc",
+    "round4/tests/test_pipeline.py": "d7aa1ca4e847ee3d3c7fb992d5372fee0ef84f82d8b260311ea6f699f622977c",
+    "round4/tests/test_retrieval.py": "0763a2a2e7a9e051e16f0d2b27cd5e709f39aef9c3f0f4f04dafc285c0e0f49f",
+    "round4/tests/test_run_base.py": "c65c0f70b95428de318aaaa5e6a72d05072be30a938cf74f065a6b137d983de9",
+    "round4/tests/test_score_dev.py": "9ec49bf6c34ae7fb38a5468bd23f29ef0ec4240cdc543b03ab5c1d559423a429",
+    "round4/tests/test_trace_provider.py": "3d340453c2e1e10c746b3540fdcda8ce14390327f18fd327fca8453b2daa1d8b",
+    "round4/tests/test_train_data.py": "1f428a021d729d7ab2b54786881a302eb6932115ad2e2e7964c0d71ba6835ec8",
+    "round4/tests/test_vision_stages.py": "5e81ffd62160da9a78aa81baa1961383bc070e29dcf4b597645dd24bf4bf66da",
+    "round4/tools/download_train.py": "e4547e9c20d6b09d7510332ad40570cd6d95a9b1745f830a364c48c98ee19dfb"
+  },
+  "status": "implemented_offline_awaiting_fixed_training_download_authorization",
+  "synthetic_tests": {
+    "command": "unshare -rn ../../.venv/bin/python -B -m unittest discover -s round4/tests",
+    "duration_seconds": 32.641,
+    "failed": 0,
+    "passed": 188
+  },
+  "updated_at_utc": "2026-11-02T19:10:30+00:00",
+  "validation_opened": false
+}

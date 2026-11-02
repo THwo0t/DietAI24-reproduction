@@ -40,7 +40,8 @@ published physical plate identifier.
 | R3-5 | Fixed HI mean and raw-CHI median | complete offline, all 84 each; N5 0/10 |
 | R3-6 | Calibration bounds and semantic-neighbor diagnostics | complete offline; no passing method |
 | R4-1 | Independent external training-gallery proposal | 230 fixed images; download awaits new user authorization |
-| R4-2 | Appearance retrieval and visual reranking pipeline | design preparation; no new data or paid run yet |
+| R4-2 | Appearance retrieval and visual reranking pipeline | implemented and tested offline, including complete synthetic batch and read-only resume; new download awaits authorization |
+| R4-3 | Training-only service probe and isolated complete-population scorer | implemented offline; real probe, training/gallery build and development run have not started |
 
 `round3/development_checkpoint.json` records the whole-method comparison. The
 fixed CHI median improves all five MAEs relative to the original selected v2 C,
