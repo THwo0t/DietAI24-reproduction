@@ -40,15 +40,26 @@ labels are reserved for scoring and any separately registered OOF calibration.
 The independent training proposal is exactly 230 images / 230 conservative
 screening groups, 104,830,902 cached bytes. SHA-256:
 `eddf9a644114f5b4aecc4d906dbdec6ee0eaecd80b97e23743d9edf663e03eb0`.
-It has not been downloaded or approved. The requested image-body transfer cap
-will be 350,000,000 bytes with three durable attempts per fixed URL. Keep all
+It has not been downloaded or approved. The exact download question has already
+been presented to the user and is pending; do not treat elapsed time as approval.
+The image-body transfer cap is 350,000,000 bytes with three durable attempts per fixed URL. Keep all
 incoming files unavailable to training until blind pixel deduplication and
 quarantine finish; never substitute a new image without approval. Paid project
 development already has unlimited user authorization; do not ask for it again.
 
+Round 4 implementation is now complete offline: pinned downloader, blind training
+release, training-only 13-image capability probe, image-bound external-gallery
+pipeline, persistent artifacts and a separate complete-population scorer.
+188 synthetic tests passed in the workspace and again in the public source copy
+with networking disabled. This establishes engineering behavior, not service
+capability or MAE improvement. No round 4 download, training release, capability
+call, gallery build or real development prediction has run. `round4/PROTOCOL.md`
+does not yet exist: finalize the draft only after approved acquisition, blind
+screening and the fixed capability check. See `round4/README.md` for commands.
+
 The public backup branch is `codex/mae-v2-backup-20261103` in
-`THwo0t/DietAI24-reproduction`. Commit `15bee27` preserves F/G/H/I aggregate results
-and source, with 103 explicitly allowlisted members. Later aggregate/source
-checkpoints may extend this backup. The reachable-history and
-working-file credential scan passed. New research data, per-query outputs and
-API logs remain private. Final reports remain deferred.
+`THwo0t/DietAI24-reproduction`. Source commit `4d37980` is confirmed pushed and
+contains completed round 3 comparisons plus tested round 4 source, with 163
+explicitly allowlisted members. Reachable-history/worktree scans and exact plus
+truncated checks against both actual credentials passed. New research data,
+per-query outputs and API logs remain private. Final reports remain deferred.
