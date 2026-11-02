@@ -1,0 +1,52 @@
+{
+  "ambiguous_components": 3,
+  "dev_freeze_sha256": "a5f5edbb6082e4c70a1bf6eccfcd2e11be1b3b1f5de5ac12e3bcc3a38f6c2681",
+  "development": {
+    "asa24_groups": 23,
+    "asa24_images": 99,
+    "nutrition5k_groups": 78,
+    "nutrition5k_images": 84,
+    "nutrition5k_retired_counts": {
+      "historical_component": 16
+    }
+  },
+  "development_ready": true,
+  "downloads": {
+    "estimate_basis": "mean encoded byte size of the 300 existing v1 RGB images",
+    "estimated_bytes": 0,
+    "exact_file_count": 0,
+    "maximum_file_bytes": 5000000,
+    "maximum_total_bytes": 0
+  },
+  "historical_exposed_scans": 185,
+  "independence_claim": "200 images, engineering linkage components; physical plate independence is not proved",
+  "link_evidence_counts": {
+    "adjacent_increment": 1700,
+    "ambiguous_adjacent_pairs": 3,
+    "exact_increment": 2081,
+    "same_complete_mass_vector": 691
+  },
+  "metadata_components": 2606,
+  "proposal_sha256": "8a02f7dd8f81026404dcd04b2b21210575dbe3157731ca28470cb736dc017357",
+  "raw_scans": 5006,
+  "rules_sha256": "4f97f6794d3c0930c7cd209664db55fbc5b997fb98804cf31e57a92389b774f2",
+  "status": "all_images_local",
+  "validation": {
+    "asa24_groups": 23,
+    "asa24_images": 78,
+    "nutrition5k_group_size_histogram": {
+      "1": 177,
+      "2": 10,
+      "3": 1
+    },
+    "nutrition5k_groups": 188,
+    "nutrition5k_max_group_fraction": 0.015,
+    "nutrition5k_retained_original_images": 142,
+    "nutrition5k_retired_counts": {
+      "historical_component": 37,
+      "original_development_component": 21
+    },
+    "nutrition5k_target_images": 200
+  },
+  "validation_ready": true
+}

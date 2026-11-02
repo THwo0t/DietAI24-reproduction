@@ -1,0 +1,13 @@
+{
+  "model": "text-embedding-3-large",
+  "route": "https://api.openai.com/v1/embeddings",
+  "verified_on": "2026-11-02",
+  "usd_per_million_input_tokens": 0.13,
+  "source_url": "https://developers.openai.com/api/docs/models/text-embedding-3-large",
+  "source_title": "OpenAI text-embedding-3-large model documentation",
+  "cost_classification": "estimate_not_invoice",
+  "third_party_chat_pricing_applicable": false,
+  "verification_note": "Official documentation verified by the coordinating agent on 2026-11-02; fetched web lines 975-987.",
+  "estimate_formula": "official embedding input tokens * 0.13 / 1000000",
+  "scope": "Standard official API input-token price; does not establish billed spend, imported-inference acquisition cost, or third-party chat pricing."
+}
