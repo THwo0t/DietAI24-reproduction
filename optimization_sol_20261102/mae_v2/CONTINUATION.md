@@ -577,3 +577,196 @@ score existed at this checkpoint. Check round10/launch receipts and live process
 state before any continuation. The same new core must freshly score both99ASA
 and84N5; R9 oracle and historical16Exact ASA scores cannot be reused as results.
 Validation stays sealed; no formal report until a qualified method exists.
+
+O freeze0815819980716aa6be5a5e77a71de6c007f8985566bf5503f5b007d201164d92
+pins42 files. Post-freeze guarded preflight passed183tasks/8616slots with0
+query-label/key/validation/Provider/API access. Source checkpoint0221228 is
+remote-verified at d49a3872b5549b9a13b29caa8761aefcb00bc2ed on the same backup
+branch:337payloads,461public files/19archive members actual key scan0,
+525reachable blobs generic scan0,43public-copy tests. Private receipt exists
+round10/evidence/github_frozen_O_backup.json; do not overwrite it.
+
+O launched ONCE: host basePID463390, offline followerPID463392. Inspect
+round10/launch/O_process.json and automatic_followup_launch.json, and use
+an escalated read-only process check: the restricted sandbox's /proc does NOT
+see these host PIDs. An initial non-escalated status falsely showed absent;
+host check confirmed both sleeping/live and7 successful HTTP200 outcomes.
+Never infer death from sandbox-only /proc or idle UI, and do NOT relaunch.
+Existing launch receipts refuse duplication. Base/follower logs and immutable
+service ledger are private; new embedding queries use the official credential.
+Wait for this same183-row base, offline replay and full-cohort score. No
+predictive accuracy result exists at this launch checkpoint. Do not edit any
+frozen O source/protocol/review/gate or M/N/R9. Source backups omit private
+prepared/runs/provider/launch/evidence and all new research data.
+
+While the same O base runs, a separate postscore helper was added3c06416 and
+received one bounded independent Sol check (not a repeat of O's formal review).
+R-O-D-1 P2 global read-allowlist fix is cbce1b9; private diagnostic directory
+ignore is fe8474e. All6 unique helper tests pass in unshare -Urn; all42 frozen O
+source pins/review remain unchanged. No real diagnostic/label analysis ran.
+After automatic_followup status development_scored, use only
+`unshare -Urn .venv/bin/python -B optimization_sol_20261102/mae_v2/round10/postscore/guarded_diagnose_o.py`
+once. It reproduces already sealed point errors (no bootstrap/newfit), checks
+physical standard/unit mappings, and computes aggregate symmetric mass/density
+algebra. The terms are not additive MAE shares or ingredient causes. Only the
+diagnostic/guard receipt can be written, old M/N/R9/O prepared/run/service files
+are protected, and images/keys/validation/Provider/network are prohibited.
+Do not run it on the partial batch or blindly rerun after a completion receipt.
+Then inspect aggregates, perform full-project review, safely back up and continue
+if O is rejected; do not write a final report or expose validation prematurely.
+
+Latest trusted Dot steering from coordinator thread
+01a1a0b8-5a13-758f-97f2-cd54530bb002: user confirmed that AFTER this same O
+run completes, the next phase may use more API allowance and download testing
+images to broaden BOTH ASA24 and N5 development coverage. Do not change or
+restart O. First score it; then preregister scale, selection and provenance/
+historical-exposure/association/validation-isolation rules before downloading.
+Keep independent validation sealed and each candidate common to both datasets;
+record usage and verifiable actual money. This is not permission to treat old
+exposed engineering images as new independent acceptance data. A fresh explicit
+Sol readonly expanded_dev_inventory agent is investigating source/prep metadata
+only, no image/label/val/API/download and no new predictor selection. Confirmed
+receipt/arrangement to the user in commentary; no outgoing app-thread message.
+
+P-A next-phase preparation is fca0ab4/813fc36 under round11. Read
+EXPANSION_DRAFT.md: N5 core84 plus216 proposed additions toward300; ASA original
+safe46 groups already assigned23/23, so expand currentdev legal portions plus
+separately audited broader-frame target20 new safe groups. No actual source
+metadata/image audit, sample selection, download, model run or validation access
+has occurred. Proposal/counts are not a completed eligibility proof. Include
+cohorts_v2 full raw scan/ambiguity/RGB linkage, not recipe signatures alone;
+new links joining core and validation must stop preparation, not silently remove
+the new bridge. A fresh Sol readonly inventory agent supplied source locations.
+
+Next-phase verified_identity.py/identity_gate.py are NOT installed into O.
+They perform one full identity semantic proof and content/admission-projection
+checks per cached use; normal per-task Gate validation remains.13 unique
+network-disabled synthetic tests pass, including actual temporary ArtifactStore
+and original TaskGate/MockTransport, equal conditional payloads, terminal full
+verification, valid whole-task append, and image/catalog/rows/outcome tamper.
+These are prototypes awaiting the complete next-phase integration and bounded
+review, not actual performance evidence or a ready paid runner.
+
+O is still the SAME host base463390/follower463392. Identity183/183 is sealed,
+adapter is complete. Portion progress last observed10/183;682→684 reservations
+shows two newly successful conditional answers after a long proof interval.
+All684 outcomes logged (682 HTTP200 successes,2 recovered transport errors),
+0unknown at that observation. Full identity proofs are repeatedly rebuilt
+before/after conditional requests; live CPU advances although the completed-row
+count can stay unchanged for many minutes. Root has acknowledged this avoidable
+engineering overhead and prepared the next-phase cache, but must NOT patch,
+restart or hot-swap the frozen current batch. Keep waiting for its complete
+score, then diagnostic/review/backup and user-authorized broader phase.
+
+Read-only host monitor command: .venv/bin/python -B /tmp/dietai24_o_status.py
+with require_escalated (sandbox /proc cannot see host PIDs). An existing
+read-only monitor exec session61144 prints every40s and ends after120 samples;
+ending/restarting that monitor is NOT restarting the paid O base. Monitor source
+and wrapper are /tmp/dietai24_o_status.py and /tmp/dietai24_o_monitor.py. Current
+root HEAD813fc36; CONTINUATION changes after5cfaf3d have not yet been committed.
+Latest remote source backup remains d49a387, no new P files published yet.
+
+P-A engineering component review was done once by a fresh explicit Sol agent,
+only round11/engineering/REVIEW.md changed by that reviewer. Findings0P1/1P2/
+1P3 handled:2d9e286 R-P-A-1 freezes the ENTIRE identity slot universe plus
+repairs/absence and checks actual parser authorization at factory/terminal
+verification; real identity-repair edit/remove/add refuses, real whole-task
+repair appends remain allowed. Old813fc36 projection catches3 synthetic failures.
+63bd763 R-P-A-2 rejects any missing pair-image SHA before association counts;
+old813fc36 catches one negative failure.17 component tests passed; no re-review.
+This review does NOT approve a real preparer, expanded cohort or paid runner.
+
+13461f0 P-B adds pure n5_pool.py and six synthetic eligibility/selection tests.
+23 combined preparation tests pass. It requires complete raw graph and five
+exposure roles, blocks protected components/recipes and ambiguity, refuses
+active-validation intersections, retains original missing-label/recipe rules,
+and selects one fixed dish per component without filling a shortfall with
+related scans. No real pool/metadata/label distribution has been opened. P-B real
+I/O adapter remains unimplemented and its complete scope is not reviewed.
+
+Latest O observation remains SAME base463390/follower463392:21/183 quantities,
+691 reservations/outcomes (689 success,2 recovered transport errors), stages
+identify162/select163/embedding345/whole19/conditional2,3 format repairs.
+CPU continues advancing during long full-proof intervals; no error/unknown.
+Do not interpret slow completed-row counts or a monitor ending as O termination.
+O is now known to have substantial repeated full-cohort validation overhead;
+user explicitly requested this frozen batch stay unchanged, so keep it running.
+No MAE score or formal validation exists. Wait through the same full run/replay/
+score before actual new data preparation. Next source HEAD13461f0; CONTINUATION
+is still dirty. /tmp status monitor now includes timestamps and stage counts.
+
+Next-phase bounded synthetic runner evidence is now24 unique passing tests.
+The new test_runner_equivalence.py compares complete cached/uncached records
+and service counts for success, whole fallback and conditional fallback; each
+cached case is replayed in a distinct process with Provider construction
+forbidden. Nonempty source/import/legacy file drift refuses cached use. This
+is coordinator evidence for the existing P-A review limits, not a new formal
+review, actual embedding-corpus audit or expanded runtime approval. The O42
+source pins remain unchanged; this snapshot is still NOT installed into O.
+
+User asked to check Dot's other paragraph; re-read coordinator thread directly
+and confirmed the explicit after-O expanded dual-dataset authorization, more
+API allowance/downloads, preregistration and isolation, full-project review/
+safe-backup-on-failure. Acknowledged in Chinese; no outgoing thread message.
+Fresh explicit Sol source-only advice sol_expansion_io_advice is complete:
+old load_asa_sources filters before closure, so broader ASA must construct the
+raw graph first. Never run old cohorts_v2.prepare (it reads sealed labels and
+contains obsolete validation repair); reuse only pure rules. Actual exposure
+completeness must cover interrupted/selected proposals, not just completed
+runs or five formally present but empty role lists. No real adapter I/O yet.
+
+Latest host readonly observation2026-11-03T17:28:56Z still same463390/463392,
+21/183 quantities,693 reservations/outcomes,691 HTTP200 and2 recovered
+transport errors,4 conditional requests. CPU advances; no score/val opening.
+Keep waiting for this same batch, no patch/restart or partial-score inspection.
+
+P-B pure pool hardened to screen protected components/recipes BEFORE inspecting
+any numeric targets. A poison target object for all protected/related rows is
+never touched; old9f9c759 catches1 failure0errors, current7 pool tests pass.
+Total next-phase synthetic coverage is now25 unique tests (24 previous +1).
+No source data was read. This remains outside P-A's completed engineering
+review; review the full future preparer once when its whole scope is ready.
+
+Additional Sol source-only advice: R4 fixed audit index is a prior identity/
+pixel anchor, not proof of latest complete exposure. Merge the complete230
+proposal and candidate_audit fingerprints, not only accepted training rows.
+Rebuild raw components and the stricter recipe/byte screening closure. Index
+source_sha256 includes protected paths, so do NOT blindly rehash all entries.
+Use the seal-bound identity snapshots and permitted hashes only; unmodified
+seal bytes are not a live integrity proof for unopened validation files. No
+old prepare/verify_train_only call should read labels/images inadvertently.
+
+P-B adds pure n5_identity.py reconciliation, with6 new synthetic tests and31
+combined unique passing tests under unshare -Urn. It verifies the supplied raw/
+screening partitions against the old identity snapshot, registered population
+counts, all selected training pixel fingerprints, five roles and the stricter
+recipe/byte/RGB closure. It retains every old blocked component and refuses a
+new validation bridge. No real I/O/selection/audit/labels/API occurred; a trusted
+reader and complete latest exposure registry are still unimplemented. This
+new full preparation scope is not yet formally reviewed. Do not run on real
+data until the same O batch completes and scores, then preregister actual rules.
+
+O host observation17:36:53UTC: same463390/463392,53/183 quantities,719 outcomes
+and reservations,717 HTTP200 successes,2 recovered transport errors,0unknown.
+Still4 conditional calls,3format repairs; long identity-proof CPU interval.
+No development seal, no accuracy result, no validation opening. Snapshot NOT
+installed into O. Fresh explicit Sol source-only sol_asa_source_contract is
+investigating the missing-byte metadata-bridge contract; no actual source I/O.
+
+P-B ASA source advice is complete; added pure asa_identity.py with6 new
+synthetic tests,37 combined unique tests pass. It keeps full supplied metadata
+code/photo edges before eligibility, real supplied SHA edges only, exact unknown
+names and conflicting-basename rejection. Unknown/unmatched coverage means the
+FULL byte claim is incomplete globally, not merely for the unknown component.
+It never authenticates external source completeness or authorizes selection.
+Existing qualification.associations remains unchanged. Actual I/O audit might
+find missing source bytes or new cross-set/cross-fold bridges; report and stop
+preparation for registered repair, never silently delete a bridge/rewrite O.
+round11/.gitignore excludes all future data/run/service/private state. No real
+source files, old target values, validation or API were opened by these tests.
+
+Latest readonly host observation17:40:58UTC: O still53/183,719 reservations/
+outcomes,717 HTTP200 and2 recovered transports. CPU4507s and increasing; same
+463390/463392. No full score. The original readonly monitor61144 is due to end
+around17:41; that is not termination of either O process. Renew only the
+readonly monitor if needed, never the experiment or follower.

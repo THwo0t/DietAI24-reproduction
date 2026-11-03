@@ -9,7 +9,7 @@
       24
     ],
     "status": "PASS",
-    "working_files_scanned": 461
+    "working_files_scanned": 482
   },
   "credentials_included": false,
   "development_mae_pass": {
@@ -18,7 +18,7 @@
     "scope": "completed common M method; M0 passes6/20; neither passes coding guard or numerical tolerance",
     "total": 20
   },
-  "file_count": 337,
+  "file_count": 358,
   "files": {
     ".gitignore": {
       "bytes": 109,
@@ -33,8 +33,8 @@
       "sha256": "5deafa048129decb19bcad702e7e2f938ba9e9fa3d9033d6037dc8916014052e"
     },
     "CONTINUATION.md": {
-      "bytes": 38703,
-      "sha256": "8cfb32d7101f376145f4db3d25f4d114107e308f311e38d534ea2e0b3df1affc"
+      "bytes": 52048,
+      "sha256": "516d70beddcd940b85fbc54768302cd59a9283f5c476fc458e81ecf0fc68fb7b"
     },
     "MAC_DEMO.md": {
       "bytes": 13272,
@@ -204,6 +204,26 @@
       "bytes": 2693,
       "sha256": "bb4aaf76dfa82a6e88e3426e0565e344365fbf86cbfd4db08d7906f5e49ea424"
     },
+    "round10/postscore/README.md": {
+      "bytes": 1451,
+      "sha256": "abf005a172e500b67d49c0dc47fb960511f591890a351d39aee2d74a60b89618"
+    },
+    "round10/postscore/REVIEW.md": {
+      "bytes": 5182,
+      "sha256": "2c2d36a0af8147764ebd8a6bd31e962886ff313862f6f85b444ca58f9ed96aba"
+    },
+    "round10/postscore/diagnose_o.py": {
+      "bytes": 12245,
+      "sha256": "6eb2802b313bf0f04859db1f9cc95d42e6e1f253dd4510ff33af6b01dc83f2bc"
+    },
+    "round10/postscore/guarded_diagnose_o.py": {
+      "bytes": 5345,
+      "sha256": "b150cd6f30672e2d92feadda03477613a2c0fc95e13fc51cf0dc14571c30174f"
+    },
+    "round10/postscore/test_diagnose_o.py": {
+      "bytes": 6647,
+      "sha256": "7aed48469c6b2c52c3ede1b224baf9e99c89d17b63579a474bbb93629d59b799"
+    },
     "round10/records_o.py": {
       "bytes": 4097,
       "sha256": "b672de6de4a17890f2c345b6cf76f833b87eb5d5d4bec75cfa417af06e486d34"
@@ -271,6 +291,70 @@
     "round10/watch_o.py": {
       "bytes": 2957,
       "sha256": "9fe5ec5ebf83a3abf25f1203a2b63fd65fc2d5922dcb172724f25ca688517a9a"
+    },
+    "round11/.gitignore": {
+      "bytes": 188,
+      "sha256": "f419b33bdb4d3aa2b1579ffcc3faa64dfb1f4e3b3be0cbab3766879652fc8ef1"
+    },
+    "round11/EXPANSION_DRAFT.md": {
+      "bytes": 12712,
+      "sha256": "74bd877b499f12cb3427f52a999a8099b18cb63661cb3238eda2bc8f9e8da4d2"
+    },
+    "round11/asa_identity.py": {
+      "bytes": 4781,
+      "sha256": "c35806b698020506c9424594a02d13707d0bd1ea65edb4733af2f749341caa63"
+    },
+    "round11/engineering/REVIEW.md": {
+      "bytes": 8914,
+      "sha256": "ed230637c401af49ad3e7bc0f40af914f8f5ae9a0bff72f4caa44be477b28158"
+    },
+    "round11/identity_gate.py": {
+      "bytes": 5002,
+      "sha256": "a635b87d7920bcc41bebc56471b530cd3f7820dd688ccf37a526e7cf2dd0eb7f"
+    },
+    "round11/n5_identity.py": {
+      "bytes": 8052,
+      "sha256": "c7686101e45975a45291f58bd00797e1e129b03c6b3709cc86fc9349493f47d8"
+    },
+    "round11/n5_pool.py": {
+      "bytes": 4368,
+      "sha256": "221e163bda4d1be2b340442e2fc3036611ffaa6835480c22830d1b53fb9706ee"
+    },
+    "round11/qualification.py": {
+      "bytes": 4333,
+      "sha256": "b6ceea7613a29c847c4879b71a6ed54edce2cc8e6f2e39897fde484c6f16e510"
+    },
+    "round11/test_asa_identity.py": {
+      "bytes": 3767,
+      "sha256": "7f6e55d04555ad9a8de657eba0fa770f39b21b052751eb76abaca78adea9c00e"
+    },
+    "round11/test_identity_gate.py": {
+      "bytes": 8327,
+      "sha256": "0bab4116bd2485549b55dd787e5afcf68940e08c38b559c1b627e3d72d7ddbd9"
+    },
+    "round11/test_n5_identity.py": {
+      "bytes": 5748,
+      "sha256": "a6301b8bf6d1859715004430ca496d3299908c1af289335ed2f4aa9cbba16045"
+    },
+    "round11/test_n5_pool.py": {
+      "bytes": 4749,
+      "sha256": "422ddb3296ec1362ebcbe6c96b73aa96b41e6773238636b71eac66625842b04b"
+    },
+    "round11/test_qualification.py": {
+      "bytes": 3319,
+      "sha256": "6df5a9b3b0fa2fb2934fa29f91ff6a52050ac2c022d9ca49dbcedb61e1adae6b"
+    },
+    "round11/test_runner_equivalence.py": {
+      "bytes": 7780,
+      "sha256": "070df1bc8d01c58999ca0f774f63a6b5a12559383914aa5160a07a0305e2d5e0"
+    },
+    "round11/test_verified_identity.py": {
+      "bytes": 4096,
+      "sha256": "a517a805cf6e4f83c1b86195a3e221f62d4785c75bd87da68d33ddbe3c8874bd"
+    },
+    "round11/verified_identity.py": {
+      "bytes": 3817,
+      "sha256": "9743a718e82383a7a2ade10dd1402b1520c1a848aae3d0bc7b53e252bfe83580"
     },
     "round3/ENSEMBLE_PROTOCOL.md": {
       "bytes": 2034,
@@ -1388,7 +1472,7 @@
     "reachable_blobs_scanned": 429,
     "status": "PASS"
   },
-  "latest_local_checkpoint": "02212283d39d8237e4ac2fead66a25116d7e852d",
+  "latest_local_checkpoint": "e74eb29eefe3c635bf8283bf8565c2bda86f9d36",
   "new_research_data_included": false,
   "old_local_git_history_included": false,
   "purpose": "Preserve completed failed development methods, full J and K scoring, and aggregate diagnostics; continue optimization with validation sealed and final reports deferred.",
@@ -1403,6 +1487,26 @@
     "private_inputs_or_outputs_included": false,
     "stage": "reviewed_fixed_frozen_before_paid_development",
     "unresolved_p1_p2": 0,
+    "validation": "sealed"
+  },
+  "round10_postscore": {
+    "bounded_reviews": 1,
+    "offline_unique_tests": 6,
+    "real_diagnostics_executed": false,
+    "stage": "helper_reviewed_fixed_not_executed_on_real_O",
+    "unresolved_p1_p2": 0
+  },
+  "round11": {
+    "actual_data_audit": false,
+    "cache_component_formal_reviews": 1,
+    "cache_component_unresolved_p1_p2": 0,
+    "full_preparer_formal_reviews": 0,
+    "new_api_calls": 0,
+    "new_downloads": 0,
+    "offline_unique_tests": 37,
+    "private_inputs_or_outputs_included": false,
+    "selected_new_samples": 0,
+    "stage": "synthetic_preparation_only_not_approved_for_real_run",
     "validation": "sealed"
   },
   "round3": {
@@ -1702,7 +1806,7 @@
     "validation": "sealed"
   },
   "secret_scan": "PASS_reachable_history_and_worktree_generic_scan_plus_coordinator_reported_actual_credentials_in_memory",
-  "source_state": "M/N rejected; R9 reference-informed bound is not prediction. O common source-grounded method reviewed, fixed and frozen; no O accuracy result yet. Both development cohorts must run anew. Validation sealed.",
+  "source_state": "O remains unchanged and running; no O accuracy result yet. Next-phase coverage preparation consists of synthetic prototypes only. Actual source audit, selection, downloads and enlarged predictor are pending. Validation sealed.",
   "subagent_model_policy": {
     "astra_allowed": false,
     "explicit_spawn_model_required": true,

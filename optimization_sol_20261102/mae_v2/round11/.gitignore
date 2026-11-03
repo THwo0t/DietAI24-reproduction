@@ -1,0 +1,13 @@
+# Private source inventories, downloaded research data and experiment state.
+/data/
+/prepared/
+/runs/
+/provider/
+/launch/
+/evidence/
+/diagnostics/
+/private/
+__pycache__/
+*.pyc
+.env
+.env.*
