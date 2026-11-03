@@ -1,15 +1,16 @@
 {
   "actual_credential_scan": {
+    "archive_members_scanned": 19,
     "credential_values_printed": false,
-    "evidence": "Coordinator-provided in-memory scan of full credential values and 12/24-character prefix/suffix fragments; coordinator will rescan final manifest.",
-    "files_scanned": 342,
+    "files_scanned": 359,
     "findings": 0,
     "full_and_prefix_suffix_lengths": [
       12,
       24
     ],
-    "status": "PASS",
-    "zip_members_scanned": 19
+    "new_payload_generic_scans": "PASS",
+    "row_level_aggregate_check": "PASS",
+    "status": "PASS"
   },
   "credentials_included": false,
   "development_mae_pass": {
@@ -17,7 +18,7 @@
     "nutrition5k": 0,
     "total": 20
   },
-  "file_count": 218,
+  "file_count": 235,
   "files": {
     ".gitignore": {
       "bytes": 109,
@@ -627,6 +628,10 @@
       "bytes": 16072,
       "sha256": "b8ac43c2658565d709b76ee11f58939c713c79b24d06d480ef4ab3087d8c5858"
     },
+    "round5/error_concentration.json": {
+      "bytes": 1311,
+      "sha256": "5c7f08135637f30df9865fcf1ad917311a8cc1a0371986366f88e03e2fa61b8c"
+    },
     "round5/readiness.json": {
       "bytes": 2912,
       "sha256": "549fab086ca1d9bbf792ce493c725054a358acd27b2b3b0a01ede2bcd4b0c722"
@@ -719,9 +724,73 @@
       "bytes": 3523,
       "sha256": "21c9390da4c0706a08b66573db42789312a12395cda2591c5ba6af210d29d4af"
     },
+    "round6/CHECKLIST.md": {
+      "bytes": 2047,
+      "sha256": "bd069f3a407cbfc998d689052033e25f07cd0bb309257b8b081ebf98725bb2b4"
+    },
     "round6/PROTOCOL.md": {
-      "bytes": 8620,
-      "sha256": "e089aac8655f602af0c2c46c8ef16e28838eb2fea77d550d47d9c5bd39217284"
+      "bytes": 8884,
+      "sha256": "7b2308a8e59486c8da5bd2afbf3de7910164427e795a87978adb329b4dcb38a7"
+    },
+    "round6/README.md": {
+      "bytes": 1470,
+      "sha256": "e58434a2fc0c251e6dc7f6a05bc0c4bf58629e91559f604fa32523bbc9ede2a7"
+    },
+    "round6/src/atlas_estimator.py": {
+      "bytes": 17472,
+      "sha256": "0ee7899abd5199ee09c060a6a6a27802a3a4d90bc4a54e92a8767c376e395962"
+    },
+    "round6/src/run_pilot.py": {
+      "bytes": 15717,
+      "sha256": "964cc2c87440ef1a344f77e049acafeabc21d8e6f854602dd2e980f3169344c7"
+    },
+    "round6/src/runtime.py": {
+      "bytes": 7583,
+      "sha256": "fe008e210e1825900d3fb1fb0e7a23d03b3944d40e4f54e5cc998935d6edf607"
+    },
+    "round6/src/score_pilot.py": {
+      "bytes": 18418,
+      "sha256": "321965441a150289c182961d4b7c552b19e346dacb3e00dff6c85ea5bf0dfcd9"
+    },
+    "round6/src/service_evidence.py": {
+      "bytes": 13625,
+      "sha256": "5e910d10bd402ee88d113f8c96efe718ed25ed1e4e4a8b1b8f2f80e7bef0c5c6"
+    },
+    "round6/src/train_context.py": {
+      "bytes": 13014,
+      "sha256": "1c7dd70ac13a215da7d3582f5a31c77f62d37d4ff4f7c612be5199f760548de7"
+    },
+    "round6/tests/test_atlas_estimator.py": {
+      "bytes": 25837,
+      "sha256": "6470a56907fefe5dc7fab9bff2c2de529b580961cc556daabd786a3856d8a26b"
+    },
+    "round6/tests/test_run_pilot.py": {
+      "bytes": 11342,
+      "sha256": "e1576c28289594f4c4a6be3de6408c575735bd741951629d8b801c0f486d21a5"
+    },
+    "round6/tests/test_runtime.py": {
+      "bytes": 20035,
+      "sha256": "5130006406e9bb40374f76c001e71ac5c7ae2993ae894f4336482732f097b28e"
+    },
+    "round6/tests/test_score_pilot.py": {
+      "bytes": 10271,
+      "sha256": "2c312ccac32a4190310fa7dfeae8b2488f07ac362f3bcde5ee3c9d6b727961f3"
+    },
+    "round6/tests/test_service_evidence.py": {
+      "bytes": 18642,
+      "sha256": "6f6a6a0ad47cf354c2d3154b52e9bd10fa9e3aa8c1be0aced817942a8f51539c"
+    },
+    "round6/tests/test_shelved_cli.py": {
+      "bytes": 850,
+      "sha256": "03fb3a96b84bc80d4638d7757a4522dd27a0a52f014b99a7289a1e6b2d824713"
+    },
+    "round6/tests/test_train_context.py": {
+      "bytes": 5279,
+      "sha256": "e3095cd3ce4df95610afac3c8f3d1d4e86044dcc3d687a673b1fe24e1b15cd50"
+    },
+    "round7/PROJECT_REVIEW.md": {
+      "bytes": 7716,
+      "sha256": "893fba704c29f3f88740b1f2a05d2d3ec90df19fc92b38f4cd6ab6c2b131a663"
     },
     "setup.sh": {
       "bytes": 2619,
@@ -896,11 +965,12 @@
   "formal_validation": "not_run_sealed",
   "generic_publication_scan": {
     "issues": 0,
-    "publishable_files_scanned": 342,
-    "reachable_blobs_scanned": 374,
+    "phase": "precommit_history_and_complete_worktree",
+    "publishable_files_scanned": 359,
+    "reachable_blobs_scanned": 383,
     "status": "PASS"
   },
-  "latest_local_checkpoint": "23ae0a5",
+  "latest_local_checkpoint": "26a9d88",
   "new_research_data_included": false,
   "old_local_git_history_included": false,
   "purpose": "Preserve completed failed development methods, full J and K scoring, and aggregate diagnostics; continue optimization with validation sealed and final reports deferred.",
@@ -1067,10 +1137,51 @@
     "new_downloads": 0,
     "new_embeddings": 0,
     "paid_requests_started": 0,
-    "pilot_queries": 25,
-    "status": "training_only_paired_pilot_protocol_registered_source_implementation_in_progress",
+    "private_offline_tests": [
+      {
+        "count": 95,
+        "network_disabled": true,
+        "scope": "complete_implementation_before_CLI_guard",
+        "seconds": 58.096,
+        "status": "PASS"
+      },
+      {
+        "count": 1,
+        "network_disabled": true,
+        "scope": "added_shelved_paid_CLI_guard",
+        "seconds": 0.001,
+        "status": "PASS"
+      }
+    ],
+    "public_copy_tests": {
+      "count": 96,
+      "network_disabled": true,
+      "real_api_calls": 0,
+      "seconds": 58.522,
+      "status": "PASS"
+    },
+    "real_preflight_started": false,
+    "status": "source_preserved_unexecuted_N5_only_paid_CLI_shelved",
+    "training_annotations_started": 0,
+    "validation_opened": false
+  },
+  "round7": {
+    "fresh_same_method_ASA_and_N5_required": true,
+    "historical_joint_scores": "old_ASA_plus_new_N5_are_not_common_method_evidence",
+    "new_user_target": "at_most_two_failed_absolute_or_per_unit_checks_out_of_ten_per_dataset",
+    "paid_requests_started": 0,
+    "project_review": "round7/PROJECT_REVIEW.md",
+    "status": "whole_project_review_and_shared_method_design_only",
+    "strict_20_of_20_target_retained_for_reporting": true,
     "validation_opened": false
   },
   "secret_scan": "PASS_reachable_history_and_worktree_generic_scan_plus_coordinator_reported_actual_credentials_in_memory",
-  "source_state": "K completed all 84 and full scoring; N5 0/10, combined 10/20, rejected. Its complete posthoc diagnostic does not support the proposed mechanism. Raw J remains the failed selected baseline. L is a registered 25-group external-training paired pilot only; sources not yet frozen or run. Validation remains sealed and final reports deferred."
+  "source_state": "K rejected and safely backed up. L engineering source passed synthetic tests but was never run on real data; N5-only paid CLI now refuses execution. User requires a common method tested separately on ASA24 and N5, full project retrospectives after failures, and an explicit per-dataset failure tolerance. Whole-project review recorded; new shared FNDDS method not yet frozen or paid. Validation sealed; formal reports deferred.",
+  "subagent_model_policy": {
+    "astra_allowed": false,
+    "explicit_spawn_model_required": true,
+    "global_local_config_not_published": true,
+    "repository_instructions": "AGENTS.md",
+    "required_model": "gpt-6.1-sol"
+  }
 }

@@ -1,0 +1,43 @@
+{
+  "api_calls": 0,
+  "n": 84,
+  "scope": "posthoc_completed_K_development_error_concentration_not_candidate_selection",
+  "targets": {
+    "carbs": {
+      "max_absolute_error": 59.33584,
+      "mean_signed_error": 2.76520855952381,
+      "overprediction_n": 48,
+      "top_10_absolute_error_fraction": 0.40932066186672816,
+      "underprediction_n": 36
+    },
+    "energy": {
+      "max_absolute_error": 596.0503535,
+      "mean_signed_error": -19.193651303571432,
+      "overprediction_n": 39,
+      "top_10_absolute_error_fraction": 0.36385139536444705,
+      "underprediction_n": 45
+    },
+    "fat": {
+      "max_absolute_error": 48.185,
+      "mean_signed_error": -2.5772767559523806,
+      "overprediction_n": 34,
+      "top_10_absolute_error_fraction": 0.3649620700839266,
+      "underprediction_n": 50
+    },
+    "protein": {
+      "max_absolute_error": 61.877004,
+      "mean_signed_error": -2.9409804226190475,
+      "overprediction_n": 39,
+      "top_10_absolute_error_fraction": 0.42000214008926356,
+      "underprediction_n": 45
+    },
+    "weight": {
+      "max_absolute_error": 378.0,
+      "mean_signed_error": -21.19047619047619,
+      "overprediction_n": 42,
+      "top_10_absolute_error_fraction": 0.3620739043254082,
+      "underprediction_n": 42
+    }
+  },
+  "validation_opened": false
+}

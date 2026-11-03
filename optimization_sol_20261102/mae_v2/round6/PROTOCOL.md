@@ -44,10 +44,14 @@ fallback are built from the other 184 groups only. Ingredient densities are
 Preserve official targets and the registered 2 g source discrepancy unchanged.
 The cached query description/embedding is label-blind and may be reused.
 The train-only preparation adapter may read the frozen 230-row supervision to
-construct these five isolated training views. Its prediction context exposes
-only fold-training assets and label-free query metadata/vectors; it must not
-retain or forward pilot query targets. This is supervised OOF preparation, not
-access to the separately sealed development or validation cohorts.
+construct these five isolated training views. Each active query receives only
+its selected fold-training assets and label-free query metadata/vectors; no
+reference from that query's held-out fold may affect that request. A pilot image
+may legitimately serve as a labeled support for a query in another fold, so the
+coordinator's collection of all five views is not a claim of global absence of
+labels in memory. It retains no separate pilot scoring-target map. This is
+supervised OOF preparation, not access to the sealed development or validation
+cohorts.
 
 ## Shared baseline and region candidate
 
@@ -109,7 +113,7 @@ requires verified pricing or bills. Reasoning tokens are inside completion.
 
 ## Scoring and fixed advance gate
 
-After preparation, the prediction context contains no held-out target reader.
+After preparation, each query's active fold view contains no held-out target reader.
 The scoring reader cannot open held-out references until all 25 paired
 predictions seal.
 Score all 25, including fallbacks, against unchanged official five dish targets.
