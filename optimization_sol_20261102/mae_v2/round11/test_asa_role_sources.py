@@ -83,6 +83,24 @@ class RoleSourcesTests(unittest.TestCase):
         self.persist()
         with self.assertRaisesRegex(ValueError,'image_binding'):self.load()
 
+    def test_v1_shared_photo_preserves_records_and_old_group_annotations(self):
+        rows = [dict(r) for r in self.dev[:2]]
+        rows[1]['image_path'] = rows[0]['image_path']
+        raw = b''.join(encoded(r).replace(b'\n', b'') + b'\n' for r in rows)
+        result = s._rows(raw, 'dev', {'asa24': 2, 'nutrition5k': 0}, generation=1)
+        self.assertEqual(result, rows)
+        self.assertNotEqual(result[0]['sample_id'], result[1]['sample_id'])
+        self.assertNotEqual(result[0]['group_id'], result[1]['group_id'])
+        self.assertNotEqual(result[0]['fold'], result[1]['fold'])
+
+    def test_v1_shared_photo_cannot_have_conflicting_bytes(self):
+        rows = [dict(r) for r in self.dev[:2]]
+        rows[1]['image_path'] = rows[0]['image_path']
+        rows[1]['image_sha256'] = 'b' * 64
+        raw = b''.join(encoded(r).replace(b'\n', b'') + b'\n' for r in rows)
+        with self.assertRaisesRegex(ValueError, 'conflicting_shared_manifest_image_binding'):
+            s._rows(raw, 'dev', {'asa24': 2, 'nutrition5k': 0}, generation=1)
+
     def test_v2_unhashed_image_path_refused(self):
         self.v2val[0]['image_path']='data/asa24/validation/images/arbitrary.png'
         raw=b''.join(encoded(r).replace(b'\n',b'')+b'\n' for r in self.v2val)

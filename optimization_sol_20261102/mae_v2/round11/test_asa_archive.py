@@ -58,10 +58,21 @@ class ArchiveTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'basename_content'):
                 a.capture_archive(root,digest)
 
+    def test_jpeg_content_under_png_member_name_uses_v3(self):
+        out=io.BytesIO();Image.new('RGB',(3,2),(7,8,9)).save(out,format='JPEG')
+        raw=out.getvalue()
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);_,digest=self.write(root,[('folder/disguised.png',raw)])
+            private,summary=a.capture_archive(root,digest)
+            self.assertEqual(summary['algorithm'],'image-model-input-rgb-u32be-v3')
+            self.assertEqual(private['image_fingerprints'][0],
+                             {'image':'disguised.png',**c.image_fingerprint(raw)})
+            self.assertEqual(summary['png_members'],1)
+
     def test_wrong_pin_refuses_before_decoder(self):
         with tempfile.TemporaryDirectory() as temp:
             root=Path(temp);self.write(root,[('a.png',png())])
-            with patch.object(a,'png_fingerprint',side_effect=AssertionError('decoder must not run')):
+            with patch.object(a,'image_fingerprint',side_effect=AssertionError('decoder must not run')):
                 with self.assertRaisesRegex(ValueError,'source_hash'):
                     a.capture_archive(root,'f'*64)
 
@@ -110,14 +121,14 @@ class ArchiveTests(unittest.TestCase):
     def test_same_size_mtime_restoration_during_capture_does_not_hide_drift(self):
         with tempfile.TemporaryDirectory() as temp:
             root=Path(temp);path,digest=self.write(root,[('a.png',png())]);before=path.stat()
-            original=a.png_fingerprint
+            original=a.image_fingerprint
             def mutate(raw):
                 result=original(raw);data=bytearray(path.read_bytes());data[-1]^=1
                 path.write_bytes(data)
                 import os
                 os.utime(path,ns=(before.st_atime_ns,before.st_mtime_ns))
                 return result
-            with patch.object(a,'png_fingerprint',side_effect=mutate):
+            with patch.object(a,'image_fingerprint',side_effect=mutate):
                 with self.assertRaisesRegex(ValueError,'changed_during_capture'):
                     a.capture_archive(root,digest)
 
@@ -131,11 +142,11 @@ class ArchiveTests(unittest.TestCase):
             _,digest=self.write(root,[('a.png',raw),('b.png',raw)])
             for limit,code in [('MAX_MEMBERS','member_count'),('MAX_BYTES','member_size')]:
                 with self.subTest(limit=limit),patch.object(a,limit,1),\
-                     patch.object(a,'png_fingerprint',side_effect=AssertionError('no decoder')):
+                     patch.object(a,'image_fingerprint',side_effect=AssertionError('no decoder')):
                     with self.assertRaisesRegex(ValueError,code):a.capture_archive(root,digest)
 
     def test_corrupt_or_unsupported_png_member_fails_whole_capture(self):
-        stream=io.BytesIO();Image.new('RGB',(2,2)).save(stream,format='JPEG')
+        stream=io.BytesIO();Image.new('RGB',(2,2)).save(stream,format='GIF')
         for raw in (b'not PNG',png()[:-12],stream.getvalue()):
             with self.subTest(length=len(raw)),tempfile.TemporaryDirectory() as temp:
                 root=Path(temp);_,digest=self.write(root,[('a.png',raw)])

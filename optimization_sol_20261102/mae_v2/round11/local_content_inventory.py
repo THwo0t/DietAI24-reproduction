@@ -52,13 +52,13 @@ def _read(repo, path, size):
         os.close(parent)
 
 
-def _fingerprint(raw):
+def _fingerprint(raw, *, allow_dependency_gif=False):
     sc.require(isinstance(raw, bytes) and 0 < len(raw) <= MAX_BYTES, 'bounded_image_bytes_required')
     try:
         with warnings.catch_warnings():
             warnings.simplefilter('error', Image.DecompressionBombWarning)
             with Image.open(io.BytesIO(raw)) as image:
-                sc.require(image.format in ('PNG', 'JPEG'), 'unsupported_image_format')
+                sc.require(image.format in (('PNG', 'JPEG', 'GIF') if allow_dependency_gif else ('PNG', 'JPEG')), 'unsupported_image_format')
                 width, height = image.size
                 sc.require(width > 0 and height > 0 and width * height <= MAX_PIXELS,
                            'image_pixel_bound_exceeded')
@@ -77,9 +77,7 @@ def _fingerprint(raw):
         raise
     except Exception:
         raise ValueError('image_decode_failed') from None
-    registered = None
-    if fmt == 'PNG':
-        registered = asa.png_fingerprint(raw)['rgb_sha256']
+    registered = None if fmt == 'GIF' else asa.image_fingerprint(raw)['rgb_sha256']
     return {'bytes_sha256': sc.sha(raw), 'rgb_sha256': digest,
             'rgb_algorithm': RGB_ALGORITHM, 'width': width, 'height': height,
             'mode': mode, 'format': fmt, 'nontrivial_render_semantics': bool(semantics),
@@ -102,7 +100,8 @@ def _load_at(repo, projected):
     rows, bindings = [], []
     for path, size in frozen:
         body, signature = _read(repo, path, size)
-        rows.append({'path': path, 'classification': classes[path], **_fingerprint(body)})
+        rows.append({'path': path, 'classification': classes[path], **_fingerprint(body, allow_dependency_gif=(
+            classes[path] == 'dependency' and inventory.dependency_gif_path(path)))})
         bindings.append((path, size, signature, sc.sha(body)))
     # Reopen recorded paths and rehash fresh bytes, not the retained decode buffer.
     for path, size, signature, digest in bindings:

@@ -83,6 +83,27 @@ class PotentialOverlayTests(LineageTests):
         self.assertEqual(summary['local_image_rows'],2);self.assertEqual(summary['unassigned_local_rows'],2)
         self.assertTrue(out['postdownload_blind_collision_check_required'])
 
+    def test_dependency_gif_preserves_paths_hashes_and_aliases(self):
+        from local_input_inventory import DEPENDENCY_GIF_LIB_ROOTS
+        rows = [self.row(root + 'tk8.6/images/asset.gif', classification='dependency',
+                         format='GIF', mode='P',
+                         rgb_sha256=self.pixel(self.ids['core'])['rgb_sha256'])
+                for root in DEPENDENCY_GIF_LIB_ROOTS]
+        out, summary = self.overlay(rows)
+        self.assertEqual(out['potential_local_rows_private'], rows)
+        self.assertEqual(out['potential_path_aliases_private'][self.ids['core']],
+                         sorted(r['path'] for r in rows))
+        self.assertEqual(summary['local_image_rows'], 5)
+        for row in (self.row('research/x.gif', format='GIF'),
+                    self.row('.tools/other/x.gif', format='GIF', classification='dependency'),
+                    dict(rows[0], classification='research_potential'),
+                    dict(rows[0], asa_compatible=True), dict(rows[0], rgb_sha256='bad')):
+            with self.assertRaises(ValueError):
+                self.overlay([row])
+        poison = dict(rows[0], target=object())
+        with self.assertRaisesRegex(ValueError, 'identity_only_local_row'):
+            self.overlay([poison])
+
     def test_unknown_path_dish_and_target_fields_refused_without_touching(self):
         with self.assertRaisesRegex(ValueError,'path_dish_outside'):
             self.overlay([self.row('dish_9999999999/x.png')])

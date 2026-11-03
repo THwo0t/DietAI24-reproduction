@@ -8,8 +8,8 @@ run is claimed here. Independent validation remains sealed.
 |---|---|---|
 | P-A | Verified identity cache and strict graph primitives, synthetic runner/restart equivalence | fixed; one bounded engineering review completed |
 | P-B | Restricted N5 identity sources and pure pool computation; ASA metadata/byte inventory and legal portion eligibility | fixed; one bounded review, R-PB-1 corrected and confirmed offline |
-| P-C | Actual source/ZIP readers and latest exposure discovery, phase guard, cohort/fold registration, private freeze and post-download closure | pending; source-only ASA RGB graph prototype added, no real data run |
-| P-D | Common predictor chosen after complete O diagnosis; expanded runtime/slots, provenance, fallback, OOF and stopping rules | pending |
+| P-C | Actual source/ZIP readers and latest exposure discovery, phase guard, cohort/fold registration, private freeze and post-download closure | partial mechanical audits and provisional repair; complete inventory/roles/cohorts pending |
+| P-D | Common predictor chosen after complete O diagnosis; expanded runtime/slots, provenance, fallback, OOF and stopping rules | blind stages, pure composition and ledger/engine prototypes; full runtime/freeze pending |
 | P-E | Independent full-scope run review/fixes, frozen paid development on both datasets, offline replay and scoring | pending |
 | P-F | Qualification decision, independent acceptance if warranted, final reports and Mac transfer package | pending |
 
@@ -246,3 +246,97 @@ checks pass offline. ASA role projection now preserves original manifest
 bindings and exactly normalizes CSV integer codes without truncating fractions.
 An actual post-v2 inventory still stopped without output; cause isolation is
 pending. No new samples, downloads or model calls were produced.
+
+A restricted whole-archive header inventory explains the post-v2 stop: of17135
+.png-named members,17134 encodePNG and one encodesJPEG. Maximum dimensions and
+byte sizes remain within existing bounds;97carryICC,noneareanimated orheader
+decode failures. No food analysis/targets/model calls. Generic PNG/JPEG
+model-input identity v3 is proposed with a distinct version before retry;
+`evidence/source_encoding_header_inventory.json` preserves the ID-free evidence.
+
+The generic PNG/JPEG v3 delta is ready for its first bounded review;45 decoder/
+archive/local tests and12 composition tests pass. The source inventory now
+stores nonimage path dispositions by pinned-census reconstruction rather than
+duplicating the complete dependency inventory, and rejects an unreadably large
+artifact before writing. No inventory artifact has yet completed.
+
+P-C4's pure ASA phase graph and fixed role sources are ready for their first
+bounded review under `preparation/ASA_ROLE_AUDIT_DESIGN.md`. It reports full
+association/fold/core-validation bridges and unresolved roles; it performs no
+actual fold repair, selection or model call. The graph's13 synthetic checks
+pass; current bindings include original and renamed identity-only manifests.
+
+P-D3 `service_p.py` is a controlled new-namespace ledger prototype, preserving
+old O. It registers six chat stages and exact freeze-bound slots, transport cap
+and parser pins, with durable failure/repair/recovery accounting. Eighteen
+synthetic tests pass. No P gate/runtime/context or paid entry is yet available.
+
+V3 encoding/storage, ASA role/graph, and P ledger each completed their first
+bounded independent review with zero findings. Root confirmed307 then-current
+distinct offline unittest IDs (including historical inherited cases). A local
+suffix preflight found175 fixed Tk/IDLE GIF assets; the pending mechanical
+invocation was interrupted without output. Their local-only static dependency
+rule is submitted separately; ASA v3 remains PNG/JPEG. No samples or API calls.
+
+The new source-only GitHub backup is remote-verified ataded37b from sourcea3ba045;
+its271 public-checkout tests and650 reachable-blob credential scan passed.
+`evidence/github_source_a3ba045_backup_aded37b.json` is the exact new receipt.
+The preexisting `github_preparation_backup.json` describes earliere74eb29 and
+is preserved as history; it must not be used as the new backup evidence.
+
+The finite dependency-GIF supplement completed its one independent bounded
+review at8057af2: approved, zero findings,55 scoped executions. Root separately
+confirmed323 then-current distinct offline unittest IDs, including inherited
+regressions. The fixed mechanical inventory invocation is underway; no output,
+source/role closure, selected samples or new MAE is yet claimed.
+
+D-PC3-GIF-1: the actual capture still refused unsupported local format. A
+complete3168-image header inventory isolated60 static runtime GIFs whose exact
+child directories had been summarized as parents. Correct only the two fixed
+directory constants (Icons and demos/images); explicitly reject broad parents.
+56 scoped offline executions pass. Preserve the stopped captures and the
+private header receipt; no inventory/cohort/MAE success is yet claimed.
+P-C5 role-audit entry also completed its one bounded review atd45b970 with
+zero findings and seven synthetic tests; input receipt registration is pending.
+
+Mechanical inventory completed at203bbb7c (47,848,040 bytes, file0600 and
+parent0700). It binds17135 ASA source images and3168 local images; no targets,
+sampling/download/API or fresh O replay. N5 provisional repaired core has63
+screening/fold units, one ambiguity-containment unit and nine old-fold bridges.
+The aggregate receipt is `evidence/source_inventory.json`; do not rerun capture.
+Root registered its exact SHA in the previously approved role-audit entry and
+confirmed seven offline tests. Role/caller closure and cohort eligibility remain
+pending; the first actual ASA phase graph is now being built from held identity
+projections, with old manifests/folds unchanged.
+
+ASA phase audit completed at075931a1 (file0600,parent0700), with one
+core/history/validation bridge affecting3/78 old validation records; zero
+old-core cross-fold bridges and all original photo bindings verified.114 source
+image names across18 components remain unavailable. All old validation stays
+sealed; a prospective bounded missing-component quarantine and concrete three-
+record replacement proposal are registered separately, not silently applied.
+Do not rerun the completed mechanical audit.
+
+Finite read-only caller identity registration completed atc3320f04:16 caller
+entries,61 current code pins, conservative183 dev and230 proposal identities.
+It is prospective source evidence, not actual API execution completeness; all
+closure/action grants remain false. Private local disposition e529b277 retains
+all248 unmatched digests (including9 unknown research files) for collision
+checks. Source-scope adapter and first complete preparation review are pending.
+
+P source prototypes now include context, full-coding identity replay, isolated
+code-only adapter, four-profile records and resumable runner. Root confirmed420
+then-current distinct offline unittest IDs, including inherited regressions.
+Production entry remains closed; no new inference, scoring or MAE occurred.
+
+P-C7 capacity amendment was registered before new target eligibility: only57
+untouched official-RGB components remain (98 original-frame or137 full-raw
+observations), so the old216+200 independent-representative expansion is
+impossible. New development uses all314 core/historical-support observations
+(84+230), explicitly reused rather than fresh. The independent200-record
+proposal targets102 unlinked old rows plus98 new, with grouped dependence and
+explicit full-raw frame deviation. It is not yet selected or designated; boundary
+confirmation is still required. See CAPACITY_AMENDMENT.md and ID-free capacity
+evidence. Root confirmed19 scoped source-scope/ASA/capacity helper tests.
+The complete reviewed preparation entry and integrated P runner remain pending;
+no candidate target interpretation, new image download or model call occurred.

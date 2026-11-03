@@ -23,7 +23,7 @@ from n5_potential_identity import overlay_potential_identity
 from n5_preparation import raw_scans
 from source_capture import plain
 from source_census import (BASE, REPO, PREFIX, CONTROL_PINS, bounded_read,
-    control_evidence, decode, encoded, sha, require, isolated_network, _write_at)
+    control_evidence, decode, encoded, sha, require, isolated_network, _write_at, MAX_FILE)
 
 OUTPUT = PREFIX + 'round11/preparation/source_inventory/source_inventory.json'
 IMPLEMENTATION_FILES = tuple('round11/' + name + '.py' for name in (
@@ -69,6 +69,19 @@ def verify_legacy_bindings(root, legacy):
         except FileNotFoundError:
             raise ValueError('legacy_inventory_source_changed') from None
         require(sha(raw) == source['sha256'], 'legacy_inventory_source_changed')
+
+
+def compact_metadata(metadata):
+    """Keep research/link dispositions, bind other paths to the existing census."""
+    result = deepcopy(metadata)
+    full = metadata['projection']
+    result['full_projection_sha256'] = sha(encoded(full))
+    result['ordinary_nonimage_dispositions_reconstructible_from_pinned_census'] = True
+    result['projection']['entries'] = [deepcopy(row) for row in full['entries']
+        if row.get('image') or row.get('kind') in ('symlink_unresolved', 'excluded', 'special_unresolved')]
+    result['ordinary_nonimage_entries_omitted_from_duplicate_storage'] = (
+        len(full['entries']) - len(result['projection']['entries']))
+    return result
 
 
 def _collect_at(repo, base, *, controls=CONTROL_PINS, n5_anchors=None,
@@ -139,9 +152,10 @@ def _collect_at(repo, base, *, controls=CONTROL_PINS, n5_anchors=None,
             'openpyxl': openpyxl.__version__, 'n5_rgb_algorithm': local_content_inventory.RGB_ALGORITHM},
         'n5_source_sha256': n5['source_hashes'],
         'development_identity': development, 'asa_mechanical_sources': asa,
-        'legacy_inputs_private': legacy, 'local_metadata_private': metadata,
+        'legacy_inputs_private': legacy, 'local_metadata_private': compact_metadata(metadata),
         'local_content_private': content, 'n5_identity_state_private': identities,
         'core_fold_proposal_private': core_folds})
+    require(len(encoded(value)) <= MAX_FILE, 'bounded_inventory_artifact_required')
     return value, plain(summary)
 
 

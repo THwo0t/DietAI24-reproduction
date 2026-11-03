@@ -1,4 +1,4 @@
-"""Fixed-path ASA PNG archive reader prototype, not a phase entry point.
+"""Fixed-path ASA .png-named archive reader prototype, not a phase entry point.
 
 Only a later reviewed phase runner may call this on real data, after complete O
 scoring/retrospective and registered source pins. This module neither grants
@@ -11,7 +11,7 @@ from pathlib import Path,PurePosixPath
 import stat
 import zipfile
 
-from asa_content_identity import ALGORITHM,MAX_BYTES,png_fingerprint,image_name
+from asa_content_identity import ALGORITHM,MAX_BYTES,image_fingerprint,image_name
 from asa_identity import require,sha_value
 from source_census import directory_fd,same_directory
 
@@ -68,12 +68,12 @@ def _member(info):
 
 
 def capture_archive(repo,expected_sha256):
-    """PRIVATE all-PNG fingerprint/member records plus an ID-free aggregate.
+    """PRIVATE all-.png-named fingerprint/member records plus an ID-free aggregate.
 
-    Every PNG is read by its ZipInfo, retaining duplicate-member evidence. The
+    Every .png-named member is read by its ZipInfo, retaining duplicate-member evidence. The
     exact source hash is verified before parsing and again through the same fd
     and current fixed path afterwards. No extraction or basename overwrite.
-    Unsupported PNGs/CRC faults are fatal, never silently treated as missing.
+    Unsupported image encodings/CRC faults are fatal, never silently treated as missing.
     """
     expected=sha_value(expected_sha256);rows=[];members=[];by_name={};others=0
     try:
@@ -94,7 +94,7 @@ def capture_archive(repo,expected_sha256):
                         raw=image.read(MAX_BYTES+1)
                     require(len(raw)==info.file_size and len(raw)<=MAX_BYTES,
                             'png_member_size_mismatch')
-                    fingerprint=png_fingerprint(raw)
+                    fingerprint=image_fingerprint(raw)
                     require(basename not in by_name or by_name[basename]==fingerprint,
                             'conflicting_archive_basename_content')
                     by_name[basename]=fingerprint

@@ -40,7 +40,7 @@ def _rows(raw, split, counts, *, generation):
     require(generation in (1, 2), 'registered_manifest_generation_required')
     rows = [decode(line) for line in raw.splitlines()]
     require(len(rows) == sum(counts.values()), 'exact_manifest_population_required')
-    seen = set(); images = set(); populations = {k: [] for k in counts}
+    seen = set(); images = {}; populations = {k: [] for k in counts}
     for row in rows:
         require(isinstance(row, dict) and set(row) == FIELDS, 'identity_only_manifest_required')
         dataset = row['dataset']; sample = row['sample_id']
@@ -61,9 +61,15 @@ def _rows(raw, split, counts, *, generation):
             valid_path = (isinstance(path, str) and
                 re.fullmatch(r'data/asa24/' + split + r'/images/[A-Za-z0-9_.-]+\.png', path) is not None
                 and '..' not in path.split('/'))
-        require(valid_path and path not in images and HEX.fullmatch(row['image_sha256']),
+        require(valid_path and HEX.fullmatch(row['image_sha256']),
                 'manifest_image_binding_required')
-        seen.add(sample); images.add(path); populations[dataset].append(row)
+        # The frozen v1 ASA writer can bind several records to the same photo.
+        # Preserve those observations and their old groups/folds for the graph
+        # audit; only conflicting byte bindings are forbidden here.
+        binding = (dataset, row['image_sha256'])
+        require(path not in images or images[path] == binding,
+                'conflicting_shared_manifest_image_binding')
+        seen.add(sample); images[path] = binding; populations[dataset].append(row)
     require(all(len(populations[d]) == n for d,n in counts.items()), 'dataset_population_required')
     return populations['asa24']
 

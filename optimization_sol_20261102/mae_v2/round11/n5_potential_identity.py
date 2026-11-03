@@ -11,6 +11,7 @@ import re
 
 from n5_identity import require, fingerprints, identities, screening_closure, HEX
 from cohorts_v2 import build_components
+from local_input_inventory import dependency_gif_path
 
 RGB_ALGORITHM = 'pillow-convert-RGB-size-tuple-nul-v1'
 LOCAL_FIELDS = frozenset(('path','classification','bytes_sha256','rgb_sha256','rgb_algorithm',
@@ -69,7 +70,9 @@ def overlay_potential_identity(scans, state, known_fingerprints, training_finger
         require(isinstance(row,dict) and set(row)==LOCAL_FIELDS,'identity_only_local_row_required')
         require(all(isinstance(row[k],str) and row[k] for k in ('path','classification','mode'))
                 and row['path'] not in paths,'unique_local_path_required')
-        require(row['rgb_algorithm']==RGB_ALGORITHM and row['format'] in ('PNG','JPEG')
+        require(row['rgb_algorithm']==RGB_ALGORITHM and (row['format'] in ('PNG','JPEG') or
+                    (row['format']=='GIF' and row['classification']=='dependency'
+                     and dependency_gif_path(row['path']) and not row['asa_compatible']))
                 and all(type(row[k]) is int and row[k]>0 for k in ('width','height'))
                 and all(type(row[k]) is bool for k in ('nontrivial_render_semantics','asa_compatible')),
                 'registered_local_rgb_contract_required')

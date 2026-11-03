@@ -104,7 +104,7 @@ class ContentIdentityTests(unittest.TestCase):
         bad['rgb_sha256']=first['rgb_sha256'];bad['width']+=1
         with self.assertRaisesRegex(ValueError,'pixel_dimensions'):
             self.graph(rows=[first,bad])
-        for field,value in [('algorithm','png-rgb-u32be-v1'),('algorithm','unknown-v0'),('width',True),('height',float('nan'))]:
+        for field,value in [('algorithm','png-rgb-u32be-v1'),('algorithm','png-model-input-rgb-u32be-v2'),('algorithm','unknown-v0'),('width',True),('height',float('nan'))]:
             bad=deepcopy(first);bad[field]=value
             with self.subTest(field=field),self.assertRaisesRegex(ValueError,'pixel_semantics'):
                 self.graph(rows=[bad])
@@ -181,12 +181,38 @@ class ContentIdentityTests(unittest.TestCase):
                             +struct.pack('>II',3,2)+image.convert('RGB').tobytes()).hexdigest()
                     self.assertEqual(fa['rgb_sha256'],expected)
 
+    def test_jpeg_and_png_decoded_model_input_identity_matches_actual_encoder(self):
+        sys.path.insert(0,str(Path(__file__).resolve().parents[1] / 'src'))
+        from opt_pipeline import encode_image
+        image=Image.new('RGB',(7,5));image.putdata([(i*7%256,i*13%256,i*19%256) for i in range(35)])
+        out=io.BytesIO();image.save(out,format='JPEG');jpeg=out.getvalue()
+        with Image.open(io.BytesIO(jpeg)) as decoded:
+            out=io.BytesIO();decoded.convert('RGB').save(out,format='PNG');png_raw=out.getvalue()
+        a,b=(c.image_fingerprint(raw) for raw in (jpeg,png_raw))
+        self.assertNotEqual(a['bytes_sha256'],b['bytes_sha256'])
+        self.assertEqual(a['rgb_sha256'],b['rgb_sha256'])
+        self.assertEqual(a['algorithm'],'image-model-input-rgb-u32be-v3')
+        with tempfile.TemporaryDirectory() as temp:
+            paths=[Path(temp)/'jpeg-disguised.png',Path(temp)/'decoded.png']
+            for path,raw in zip(paths,(jpeg,png_raw)):path.write_bytes(raw)
+            for mode in ('native','square256'):
+                self.assertEqual(encode_image(paths[0],mode),encode_image(paths[1],mode))
+        with self.assertRaisesRegex(ValueError,'bounded_png'):
+            c.png_fingerprint(jpeg)
+        for truncated in (jpeg[:len(jpeg)//2],jpeg[:-2]):
+            with self.subTest(length=len(truncated)),self.assertRaises(ValueError):
+                c.image_fingerprint(truncated)
+        out=io.BytesIO();image.save(out,format='GIF')
+        with self.assertRaisesRegex(ValueError,'bounded_image'):
+            c.image_fingerprint(out.getvalue())
+
     def test_animation_crc_bounds_and_pixel_permutation_refuse_or_differ(self):
         image=Image.new('RGB',(2,2));stream=io.BytesIO()
         image.save(stream,format='PNG',save_all=True,
                    append_images=[Image.new('RGB',(2,2),(1,2,3))])
-        with self.assertRaisesRegex(ValueError,'animated_png'):
-            c.png_fingerprint(stream.getvalue())
+        for decoder in (c.png_fingerprint,c.image_fingerprint):
+            with self.assertRaisesRegex(ValueError,'animated_'):
+                decoder(stream.getvalue())
         corrupt=bytearray(png());corrupt[29]^=1  # IHDR CRC, not image pixels
         with self.assertRaises(ValueError):c.png_fingerprint(bytes(corrupt))
         with patch.object(c,'MAX_PIXELS',1),self.assertRaisesRegex(ValueError,'bounded_png'):

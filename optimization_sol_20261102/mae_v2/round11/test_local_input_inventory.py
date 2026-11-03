@@ -79,5 +79,27 @@ class Tests(unittest.TestCase):
                 inv.load_projected(Path('/synthetic'))
 
 
+class DependencyGifPolicyTests(unittest.TestCase):
+    def test_actual_runtime_child_directories_without_parent_admission(self):
+        for root in inv.DEPENDENCY_GIF_LIB_ROOTS:
+            for directory in ('Tix8.4.3/bitmaps', 'python3.10/idlelib/Icons',
+                              'tk8.6/demos/images', 'tk8.6/images'):
+                self.assertTrue(inv.dependency_gif_path(root + directory + '/asset.gif'))
+            for directory in ('python3.10/idlelib', 'tk8.6/demos',
+                              'python3.10/idlelib/Icons/other', 'tk8.6/demos/images/other'):
+                self.assertFalse(inv.dependency_gif_path(root + directory + '/asset.gif'))
+
+    def test_exact_five_roots_and_directories_only(self):
+        for root in inv.DEPENDENCY_GIF_LIB_ROOTS:
+            for directory in inv.DEPENDENCY_GIF_DIRECTORIES:
+                self.assertTrue(inv.dependency_gif_path(root + directory + '/asset.gif'))
+                self.assertFalse(inv.dependency_gif_path(root + directory + '/nested/asset.gif'))
+                self.assertFalse(inv.dependency_gif_path(root + directory + '/asset.png'))
+        for path in ('.tools/other/a.gif', 'research/a.gif',
+                     'other/' + inv.DEPENDENCY_GIF_LIB_ROOTS[0] + 'tk8.6/images/a.gif'):
+            self.assertFalse(inv.dependency_gif_path(path))
+        self.assertEqual(len(inv.DEPENDENCY_GIF_LIB_ROOTS), 5)
+
+
 if __name__ == '__main__':
     unittest.main()

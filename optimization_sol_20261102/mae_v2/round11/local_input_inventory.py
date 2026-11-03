@@ -29,6 +29,24 @@ def canonical(path):
     return path
 
 
+# Finite bundled Tk/IDLE directory policy, independent of broad dependency classification.
+_TK_LIB = '.tools/python/cpython-3.10.13-linux-x86_64-gnu/lib/'
+DEPENDENCY_GIF_LIB_ROOTS = (_TK_LIB,) + tuple(
+    DELIVERY + folder + '/' + _TK_LIB
+    for folder in ('clean-final', 'clean-review-v1', 'clean-review-v3', 'environment-preflight'))
+DEPENDENCY_GIF_DIRECTORIES = ('Tix8.4.3/bitmaps', 'python3.10/idlelib/Icons',
+                              'tk8.6/demos/images', 'tk8.6/images')
+
+
+def dependency_gif_path(path):
+    """Pure exact-root/direct-directory policy; never grants exposure or eligibility."""
+    canonical(path)
+    return any(path.startswith(root) and
+               posixpath.dirname(path[len(root):]) in DEPENDENCY_GIF_DIRECTORIES
+               and Path(path).suffix.lower() == '.gif'
+               for root in DEPENDENCY_GIF_LIB_ROOTS)
+
+
 def contract():
     return {key: False for key in ('exposure_complete', 'source_association_complete',
         'identity_complete', 'candidate_eligibility', 'grants_sampling_download_or_inference',

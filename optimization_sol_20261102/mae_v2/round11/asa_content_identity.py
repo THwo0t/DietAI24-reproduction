@@ -19,7 +19,7 @@ from PIL import Image
 from asa_identity import ROLES,image_name as original_image_name,require,sha_value
 from qualification import code8
 
-ALGORITHM='png-model-input-rgb-u32be-v2'
+ALGORITHM='image-model-input-rgb-u32be-v3'
 MAX_BYTES=8*1024*1024
 MAX_PIXELS=16*1024*1024
 ANCHOR_TYPES={'codes','images','hashes','rgb_hashes'}
@@ -32,36 +32,46 @@ def image_name(value):
     return value
 
 
-def png_fingerprint(raw):
-    """Fingerprint supplied PNG bytes only; unsupported decoding is fatal.
+def _image_fingerprint(raw,formats,kind):
+    """Fingerprint bounded supported image bytes; unsupported decoding is fatal.
 
     Match opt_pipeline.encode_image's pre-resize PIL.convert('RGB') exactly:
-    no alpha compositing, color management, or EXIF rotation. Single-frame PNG
+    no alpha compositing, color management, or EXIF rotation. Single-frame PNG/JPEG
     modes supported by Pillow conversion are accepted. Alpha/profile/orientation
     differences may intentionally join; this is not universal rendered appearance
     or physical-plate identity. Dimensions and the version prefix bind the digest.
     Text chunks and compression level do not change this model-input identity.
     """
-    require(isinstance(raw,bytes) and 0<len(raw)<=MAX_BYTES,'bounded_png_bytes_required')
+    require(isinstance(raw,bytes) and 0<len(raw)<=MAX_BYTES,'bounded_'+kind+'_bytes_required')
     with warnings.catch_warnings():
         warnings.simplefilter('error',Image.DecompressionBombWarning)
         try:
             with Image.open(io.BytesIO(raw)) as image:
                 width,height=image.size
-                require(image.format=='PNG' and width>0 and height>0
-                        and width*height<=MAX_PIXELS,'supported_bounded_png_required')
+                require(image.format in formats and width>0 and height>0
+                        and width*height<=MAX_PIXELS,'supported_bounded_'+kind+'_required')
                 image.verify()
             with Image.open(io.BytesIO(raw)) as image:
-                require(getattr(image,'n_frames',1)==1,'animated_png_out_of_scope')
+                require(getattr(image,'n_frames',1)==1,'animated_'+kind+'_out_of_scope')
                 rgb=image.convert('RGB');rgb.load()
                 payload=ALGORITHM.encode()+b'\0'+struct.pack('>II',width,height)+rgb.tobytes()
         except ValueError:
             raise
         except Exception:
-            raise ValueError('png_decode_failed') from None
+            raise ValueError(kind+'_decode_failed') from None
     return {'bytes_sha256':hashlib.sha256(raw).hexdigest(),
             'rgb_sha256':hashlib.sha256(payload).hexdigest(),
             'width':width,'height':height,'algorithm':ALGORITHM}
+
+
+def image_fingerprint(raw):
+    """Content-detected PNG/JPEG model-input identity, independent of extension."""
+    return _image_fingerprint(raw,('PNG','JPEG'),'image')
+
+
+def png_fingerprint(raw):
+    """PNG-only compatibility entry point using the registered v3 identity."""
+    return _image_fingerprint(raw,('PNG',),'png')
 
 
 def build_asa_content_inventory(pairs,image_fingerprints,protected,*,metadata_images,

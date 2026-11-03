@@ -62,14 +62,21 @@ class Tests(unittest.TestCase):
     def test_alpha_is_registered_model_input_with_semantics_flag(self):
         got = content._fingerprint(image_bytes('RGBA'))
         self.assertTrue(got['asa_compatible'])
-        self.assertEqual(got['asa_algorithm'], 'png-model-input-rgb-u32be-v2')
+        self.assertEqual(got['asa_algorithm'], 'image-model-input-rgb-u32be-v3')
         self.assertTrue(got['nontrivial_render_semantics'])
         self.assertIsNotNone(got['rgb_sha256'])
 
     def test_jpeg(self):
         got = content._fingerprint(image_bytes(fmt='JPEG'))
         self.assertEqual(got['format'], 'JPEG')
-        self.assertFalse(got['asa_compatible'])
+        self.assertTrue(got['asa_compatible'])
+        self.assertEqual(got['asa_algorithm'], 'image-model-input-rgb-u32be-v3')
+
+    def test_truncated_jpeg_refuses(self):
+        raw = image_bytes(fmt='JPEG')
+        for truncated in (raw[:len(raw)//2], raw[:-2]):
+            with self.subTest(length=len(truncated)), self.assertRaises(ValueError):
+                content._fingerprint(truncated)
 
     def test_animated_png_refuses_and_crc_is_checked(self):
         out = io.BytesIO()
@@ -84,6 +91,41 @@ class Tests(unittest.TestCase):
     def test_unknown_format(self):
         with self.assertRaisesRegex(ValueError, 'unsupported_image_format'):
             content._fingerprint(image_bytes(fmt='GIF'))
+
+    def test_registered_dependency_gif_only_and_asa_never_called(self):
+        files = {root + directory + '/asset.gif': image_bytes('P', 'GIF')
+                 for root in inv.DEPENDENCY_GIF_LIB_ROOTS
+                 for directory in inv.DEPENDENCY_GIF_DIRECTORIES}
+        files['labels.csv'] = b'poison target'
+        projected = self.setup_inventory(files)
+        with patch.object(content.asa, 'image_fingerprint', side_effect=AssertionError('ASA GIF forbidden')):
+            got = content._load_at(self.repo, projected)
+        self.assertEqual(len(got['rows_private']), 20)
+        self.assertEqual({r['path'] for r in got['rows_private']}, set(files) - {'labels.csv'})
+        self.assertTrue(all(r['format'] == 'GIF' and not r['asa_compatible']
+                            and r['asa_rgb_sha256'] is None for r in got['rows_private']))
+        self.assertEqual(got['counts']['asa_compatible'], 0)
+        self.assertEqual(got['rows_private'][0]['rgb_sha256'],
+                         hashlib.sha256(b'(3, 2)\0' + bytes(18)).hexdigest())
+
+    def test_unregistered_gif_fails_closed(self):
+        for path in ('research/a.gif', '.tools/unrelated/a.gif'):
+            with self.subTest(path=path):
+                projected = self.setup_inventory({path: image_bytes('P', 'GIF')})
+                with self.assertRaisesRegex(ValueError, 'unsupported_image_format'):
+                    content._load_at(self.repo, projected)
+
+    def test_dependency_gif_bounds_and_animation(self):
+        raw = image_bytes('P', 'GIF')
+        with patch.object(content, 'MAX_BYTES', 1), self.assertRaisesRegex(ValueError, 'bounded_image_bytes'):
+            content._fingerprint(raw, allow_dependency_gif=True)
+        with patch.object(content, 'MAX_PIXELS', 1), self.assertRaisesRegex(ValueError, 'pixel_bound'):
+            content._fingerprint(raw, allow_dependency_gif=True)
+        out = io.BytesIO()
+        Image.new('RGB', (2, 2)).save(out, format='GIF', save_all=True,
+            append_images=[Image.new('RGB', (2, 2), (255, 0, 0))])
+        with self.assertRaisesRegex(ValueError, 'animated_image'):
+            content._fingerprint(out.getvalue(), allow_dependency_gif=True)
 
     def test_decode_failure(self):
         with self.assertRaisesRegex(ValueError, 'image_decode_failed'):
@@ -137,7 +179,7 @@ class Tests(unittest.TestCase):
     def test_fresh_path_content_recapture(self):
         projected = self.setup_inventory({'a.png': image_bytes()})
         original = content._fingerprint
-        def mutate(raw):
+        def mutate(raw, **kwargs):
             result = original(raw)
             body = bytearray(raw)
             body[-1] ^= 1

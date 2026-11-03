@@ -91,6 +91,22 @@ class SourceInventoryCaptureTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'local_inventory_image_changed'):
                 self.mocked_collection(drift)
 
+    def test_duplicate_nonimage_storage_is_reconstructibly_bound_to_the_full_projection(self):
+        self.metadata['projection']['entries'].append({'path':'dependency/source.py','kind':'file',
+                                                      'bytes':20,'image':False})
+        value,_ = self.mocked_collection()
+        saved = value['local_metadata_private']
+        self.assertEqual(saved['full_projection_sha256'],s.sha(s.encoded(self.metadata['projection'])))
+        self.assertEqual(saved['ordinary_nonimage_entries_omitted_from_duplicate_storage'],1)
+        self.assertEqual(len(saved['projection']['entries']),1)
+        self.assertEqual(len(self.metadata['projection']['entries']),2)
+        self.assertTrue(saved['ordinary_nonimage_dispositions_reconstructible_from_pinned_census'])
+
+    def test_unreadably_large_output_refuses_before_private_write(self):
+        with patch.object(s,'MAX_FILE',1), patch.object(s,'_write_at',side_effect=AssertionError):
+            with self.assertRaisesRegex(ValueError,'bounded_inventory_artifact_required'):
+                self.mocked_collection()
+
     def test_implementation_drift_refuses(self):
         def drift(*a):
             (self.base / s.IMPLEMENTATION_FILES[0]).write_bytes(b'CHANGED')
