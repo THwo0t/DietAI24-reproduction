@@ -3,6 +3,8 @@ downloads/
 provider/
 runs/
 scoring/
+calibration/
+launch/
 __pycache__/
 *.pyc
 proposal/private_*.json

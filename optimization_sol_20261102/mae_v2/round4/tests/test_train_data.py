@@ -27,11 +27,12 @@ def png(index, annotation=None):
 
 
 class Fixture:
-    def __init__(self, parent, count=14, payloads=None, protected=None, incomplete=False):
+    def __init__(self, parent, count=14, payloads=None, protected=None, incomplete=False, mass_exception=False):
         self.base = Path(parent) / 'repo/optimization_sol_20261102/mae_v2'
         self.base.mkdir(parents=True)
         self.repo = self.base.parents[1]
         self.count = count
+        self.expected_exception_count = int(mass_exception)
         self.entries, self.receipts, ledger, rows = [], [], [], []
         originals, screening, recipes = {}, {}, {}
         self.freezes = {}
@@ -50,6 +51,8 @@ class Fixture:
             name = 'Synthetic food ' + str(index)
             grams = Decimal(100 + index)
             targets = [grams * 2, grams, grams * Decimal('.03'), grams * Decimal('.3'), grams * Decimal('.1')]
+            if mass_exception and index == 6:
+                targets[1] -= Decimal(2)
             # Raw header order energy, weight, fat, carbs, protein.
             fields = [dish, *map(str, targets), ingredient, name, str(grams),
                       str(targets[0]), str(targets[2]), str(targets[3]), str(targets[4])]
@@ -131,7 +134,8 @@ class Fixture:
         stack = ExitStack()
         for key, value in {'PROPOSAL_SHA256': self.proposal_sha, 'SUMMARY_SHA256': self.summary_sha,
                            'INDEX_SHA256': self.index_sha, 'DOWNLOADER_SHA256': self.downloader_sha,
-                           'FILE_COUNT': self.count, 'CACHED_BYTES': self.total_bytes}.items():
+                           'FILE_COUNT': self.count, 'CACHED_BYTES': self.total_bytes,
+                           'EXPECTED_EXCEPTION_COUNT': self.expected_exception_count}.items():
             stack.enter_context(mock.patch.object(t, key, value))
         return stack
 
@@ -329,6 +333,94 @@ class TrainReleaseTests(unittest.TestCase):
         rows[1] = (','.join(parts) + '\n').encode()
         with self.assertRaisesRegex(t.TrainDataError, 'ingredient_target_total_mismatch'):
             t.extract_accepted([('synthetic', io.BytesIO(b''.join(rows)))], {entry['dish_id']: entry}, helpers)
+
+    def exception_fixture(self):
+        f = self.fixture(mass_exception=True)
+        raw = f.raw_bytes.splitlines(keepends=True)[7]
+        policy = dict(t.TRAINING_DATA_EXCEPTION, raw_source_relative_path=t.RAW_NAMES[0],
+                      raw_source_sha256=t.digest(f.raw_bytes), raw_record_sha256=t.digest(raw))
+        return f, policy
+
+    def test_exact_registered_mass_exception_preserves_original_values_and_binds_evidence(self):
+        f, policy = self.exception_fixture()
+        with f.patch(), mock.patch.object(t, 'TRAINING_DATA_EXCEPTION', policy):
+            summary = t.prepare(f.base)
+            self.assertEqual(summary['data_quality_exception_count'], 1)
+            labels = t.decode((f.base / t.TRAIN / 'labels.json').read_bytes())
+            ingredients = t.decode((f.base / t.TRAIN / 'ingredients.json').read_bytes())
+            sid = 'nutrition5k-' + f.entries[6]['dish_id']
+            self.assertEqual(labels[sid]['truth']['weight'], 104)
+            row = next(row for row in ingredients['records'] if row['sample_id'] == sid)
+            self.assertEqual(row['ingredients'][0]['grams'], 106)
+            fallback = t.decode((f.base / t.TRAIN / 'fallback.json').read_bytes())
+            self.assertEqual(fallback['prediction']['weight'], 106)
+            audit = t.decode((f.base / t.TRAIN / 'audit.json').read_bytes())
+            self.assertEqual(audit['data_quality_exceptions'], [t.exception_record()])
+            self.assertEqual(audit['target_sum_max_abs_residual']['weight'], '2')
+            freeze = t.decode((f.base / t.TRAIN / 'freeze.json').read_bytes())
+            self.assertIn('round4/TRAINING_DATA_EXCEPTION.md', freeze['binding']['source_sha256'])
+            self.assertEqual(freeze['binding']['policy']['data_quality_exception'], policy)
+            self.assertEqual(t.verify_train_only(f.base), summary)
+
+    def test_mass_exception_wrong_source_path_rejected(self):
+        f, policy = self.exception_fixture()
+        with mock.patch.object(t, 'TRAINING_DATA_EXCEPTION', policy):
+            with self.assertRaisesRegex(t.TrainDataError, 'ingredient_target_total_mismatch'):
+                t.extract_accepted([(t.RAW_NAMES[1], io.BytesIO(f.raw_bytes))],
+                    {e['dish_id']: e for e in f.entries}, t.load_ingredient_helpers(f.base))
+
+    def test_missing_expected_production_exception_blocks_release(self):
+        f = self.fixture()
+        with f.patch(), mock.patch.object(t, 'EXPECTED_EXCEPTION_COUNT', 1):
+            with self.assertRaisesRegex(t.TrainDataError, 'registered_exception_expected_count_mismatch'):
+                t.prepare(f.base)
+        self.assertFalse((f.base / t.TRAIN).exists())
+
+    def test_mass_exception_wrong_source_hash_rejected(self):
+        f, policy = self.exception_fixture()
+        with mock.patch.object(t, 'TRAINING_DATA_EXCEPTION', policy):
+            with self.assertRaisesRegex(t.TrainDataError, 'registered_exception_source_hash_mismatch'):
+                t.extract_accepted([(t.RAW_NAMES[0], io.BytesIO(f.raw_bytes + b'unmatched,extra\n'))],
+                    {e['dish_id']: e for e in f.entries}, t.load_ingredient_helpers(f.base))
+
+    def test_mass_exception_wrong_raw_record_hash_rejected(self):
+        f, policy = self.exception_fixture()
+        policy['raw_record_sha256'] = '0' * 64
+        with mock.patch.object(t, 'TRAINING_DATA_EXCEPTION', policy):
+            with self.assertRaisesRegex(t.TrainDataError, 'ingredient_target_total_mismatch'):
+                t.extract_accepted([(t.RAW_NAMES[0], io.BytesIO(f.raw_bytes))],
+                    {e['dish_id']: e for e in f.entries}, t.load_ingredient_helpers(f.base))
+
+    def test_mass_exception_wrong_signed_delta_rejected_even_with_matching_hashes(self):
+        f, policy = self.exception_fixture()
+        lines = f.raw_bytes.splitlines(keepends=True)
+        parts = lines[7].decode().rstrip('\n').split(',')
+        parts[2] = '108'  # ingredient mass 106 -> signed difference -2, not +2.
+        lines[7] = (','.join(parts) + '\n').encode()
+        raw = b''.join(lines)
+        policy.update(raw_source_sha256=t.digest(raw), raw_record_sha256=t.digest(lines[7]))
+        with mock.patch.object(t, 'TRAINING_DATA_EXCEPTION', policy):
+            with self.assertRaisesRegex(t.TrainDataError, 'ingredient_target_total_mismatch'):
+                t.extract_accepted([(t.RAW_NAMES[0], io.BytesIO(raw))],
+                    {e['dish_id']: e for e in f.entries}, t.load_ingredient_helpers(f.base))
+
+    def test_mass_exception_never_waives_nutrient_mismatch(self):
+        f, policy = self.exception_fixture()
+        for position in (1, 3, 4, 5):
+            with self.subTest(nutrient_field=position):
+                lines = f.raw_bytes.splitlines(keepends=True)
+                parts = lines[7].decode().rstrip('\n').split(',')
+                parts[position] = str(Decimal(parts[position]) + Decimal('.0011'))
+                lines[7] = (','.join(parts) + '\n').encode()
+                raw = b''.join(lines)
+                policy.update(raw_source_sha256=t.digest(raw), raw_record_sha256=t.digest(lines[7]))
+                applied = []
+                with mock.patch.object(t, 'TRAINING_DATA_EXCEPTION', policy):
+                    with self.assertRaisesRegex(t.TrainDataError, 'ingredient_target_total_mismatch'):
+                        t.extract_accepted([(t.RAW_NAMES[0], io.BytesIO(raw))],
+                            {e['dish_id']: e for e in f.entries}, t.load_ingredient_helpers(f.base),
+                            exception_audit=applied)
+                self.assertEqual(applied, [])
 
     def test_matched_nonfinite_numeric_is_not_silent(self):
         f = self.fixture()

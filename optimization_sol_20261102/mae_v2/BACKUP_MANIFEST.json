@@ -1,10 +1,21 @@
 {
+  "actual_credential_scan": {
+    "credential_values_printed": false,
+    "files_scanned": 293,
+    "findings": 0,
+    "full_and_prefix_suffix_lengths": [
+      12,
+      24
+    ],
+    "status": "PASS"
+  },
   "credentials_included": false,
   "development_mae_pass": {
     "asa24": 10,
     "nutrition5k": 0,
     "total": 20
   },
+  "file_count": 169,
   "files": {
     ".gitignore": {
       "bytes": 109,
@@ -15,12 +26,12 @@
       "sha256": "9657cfd44261114a116fead62313a165b947397c2b41dea7c467de1643bbbeaa"
     },
     "CHECKLIST.md": {
-      "bytes": 3746,
-      "sha256": "ce42b3ada4e2b569fe2775110f9fd13c7b4d95aee6d2e68883a2d7591042167a"
+      "bytes": 3969,
+      "sha256": "b65b0cecf546735a4eb786b4472abc044f1ff7f301f7cac02e5df8db80b498c5"
     },
     "CONTINUATION.md": {
-      "bytes": 4287,
-      "sha256": "cbb7421e8d6b2626d4d6acef3f3c14a05bcb2d08f2b47f79c60508b01e92f5e2"
+      "bytes": 4770,
+      "sha256": "3d116977f9b1fecf2b993665a14723ae9ae1b2fa51049b86307d2111ed96ebe5"
     },
     "MAC_DEMO.md": {
       "bytes": 13272,
@@ -335,20 +346,36 @@
       "sha256": "520a85aac8a0ff85811bbb74e1c20995360b190f78a90695f4cccefce6e1d7ed"
     },
     "round4/.gitignore": {
-      "bytes": 85,
-      "sha256": "f0e799dce900405f7a70f41a1c93b43d0253e31145f2088e27a34af9727665ca"
+      "bytes": 106,
+      "sha256": "bfe05f2cceffab979402550fa2a5f776d105399669d6211533d6453fa9ee4bfb"
+    },
+    "round4/CALIBRATION_PROTOCOL.md": {
+      "bytes": 6595,
+      "sha256": "2f921d76f6f08ada8faa87648638fd17c4bff7d78aa0099bacb1318ce81d6e5b"
     },
     "round4/DESIGN.md": {
       "bytes": 18193,
       "sha256": "2ff95f13266735f7f96a978fbc1aeb7731292959ca49ddb52d850425cd5d111c"
+    },
+    "round4/PROTOCOL.md": {
+      "bytes": 8497,
+      "sha256": "d1a749793739f2360bc327f06f7613fbf9d84f3675fccb476f1d14f51bf9607a"
     },
     "round4/PROTOCOL_DRAFT.md": {
       "bytes": 11834,
       "sha256": "83518727c63bd371e6fce4d398ed31b45ca8a12639ce50c3222250ea2043a79a"
     },
     "round4/README.md": {
-      "bytes": 3769,
-      "sha256": "29f8e61a2bad16f86107975deb67197f6284efba14d966160c428f7e29044706"
+      "bytes": 4219,
+      "sha256": "c54cc831da215346c996333b90e7a4cd4dbcb14664c8eccf6b8d2e4cddbd77de"
+    },
+    "round4/TRAINING_DATA_EXCEPTION.md": {
+      "bytes": 3062,
+      "sha256": "8ed93e2e2b3ddd86241142ad32ad232b4992f8c26df052ccb6c037d109380874"
+    },
+    "round4/execution_readiness.json": {
+      "bytes": 4564,
+      "sha256": "38f983675d7d0521c4b2916b7a5ebd044672130166e4f5cbe8f514f7f28aa370"
     },
     "round4/proposal/.gitignore": {
       "bytes": 28,
@@ -390,6 +417,10 @@
       "bytes": 21952,
       "sha256": "c80f55cfeeeca87d670f0e517e540c07a1206dd7fd2e902f3e2d403c6254653c"
     },
+    "round4/src/calibrate_j.py": {
+      "bytes": 18683,
+      "sha256": "ebb8940f812317ac5046caf5e21f5000e382770a9d42e0ff2bc1752d4dbdf3cc"
+    },
     "round4/src/capability_probe.py": {
       "bytes": 12416,
       "sha256": "394d9f584f3a16c39b35beaae8d0c377061f100c3d4a816db96caefa07fe8917"
@@ -427,8 +458,8 @@
       "sha256": "8adab7eca60e647e2f21d11c802507bc39e96dedf6fa04edaeee0d7404db6099"
     },
     "round4/src/train_data.py": {
-      "bytes": 34980,
-      "sha256": "7a5c450dc5cc3918bb283e9a042e16db95e69ef5ee887b2f79763d525e4600a3"
+      "bytes": 39272,
+      "sha256": "27bfd2ba455cc36a495b5ebcf112c9d5630c6fbc891e33b2483a5f73f7788f74"
     },
     "round4/src/vision_stages.py": {
       "bytes": 10491,
@@ -437,6 +468,10 @@
     "round4/tests/test_artifacts.py": {
       "bytes": 19581,
       "sha256": "70f78290c4889c84f0421d1cdf6141de883437748d13b4e7fe155772a269b9ea"
+    },
+    "round4/tests/test_calibrate_j.py": {
+      "bytes": 19119,
+      "sha256": "573d43421ae91fe556a0ad4e9a05068800d7d98af405f61b52d8586c9807a2b4"
     },
     "round4/tests/test_capability_probe.py": {
       "bytes": 13551,
@@ -479,8 +514,8 @@
       "sha256": "3d340453c2e1e10c746b3540fdcda8ce14390327f18fd327fca8453b2daa1d8b"
     },
     "round4/tests/test_train_data.py": {
-      "bytes": 19436,
-      "sha256": "1f428a021d729d7ab2b54786881a302eb6932115ad2e2e7964c0d71ba6835ec8"
+      "bytes": 25291,
+      "sha256": "1749dd2ed6c16c97a28ec6d43879ffcb0e5711983a54ef3ea960c4b55d1215b6"
     },
     "round4/tests/test_vision_stages.py": {
       "bytes": 13002,
@@ -660,9 +695,10 @@
     }
   },
   "formal_validation": "not_run_sealed",
+  "latest_local_checkpoint": "af80b04",
   "new_research_data_included": false,
   "old_local_git_history_included": false,
-  "purpose": "preserve failed v2 and F; continue G optimization without intermediate final report",
+  "purpose": "Preserve completed failed development methods and the active independent-training J implementation; final reports remain deferred.",
   "raw_logs_included": false,
   "round3": {
     "F": "completed 84; N5 0/10; rejected",
@@ -674,13 +710,37 @@
   },
   "round4": {
     "accuracy_tested": false,
+    "calibration_status": "registered_and_implemented_not_executed",
+    "capability_probe_images": 13,
+    "capability_probe_status": "passed",
+    "capability_request_count": 1,
     "formal_reports_deferred": true,
-    "new_images_downloaded": 0,
-    "research_api_requests": 0,
-    "status": "source_implemented_offline_awaiting_fixed_training_download_authorization",
-    "synthetic_tests_passed": 188,
+    "implementation_commit": "27a31bd",
+    "latest_local_checkpoint": "af80b04",
+    "new_images_downloaded": 230,
+    "public_copy_offline_tests": {
+      "actual_api_calls": 0,
+      "actual_research_images_read": false,
+      "command": "PYTHONDONTWRITEBYTECODE=1 unshare -rn <existing-project-venv>/bin/python -B -m unittest discover -s round4/tests",
+      "count": 213,
+      "fixtures": "synthetic only",
+      "network_disabled": true,
+      "network_isolation": "unshare -rn",
+      "passed": 213,
+      "platform": "Linux",
+      "seconds": 39.31,
+      "status": "PASS"
+    },
+    "registered_source_mass_exceptions": 1,
+    "research_api_request_note": "J is active; usage totals are not final. Completed training-only probe used one request.",
+    "research_api_requests": null,
+    "status": "J_running_unscored_training_release_and_probe_complete",
+    "synthetic_tests_passed": 213,
+    "training_catalog_size": 164,
+    "training_groups": 230,
+    "training_images": 230,
     "validation_opened": false
   },
-  "secret_scan": "PASS",
-  "source_state": "Completed round 3 results plus tested round 4 source; pending new training-data authorization."
+  "secret_scan": "PASS_reachable_history_and_worktree_generic_scan_plus_actual_credentials_in_memory",
+  "source_state": "Completed round 3 plus frozen round 4 external-training source. J is running and has not been scored."
 }

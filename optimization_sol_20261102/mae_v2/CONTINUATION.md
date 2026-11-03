@@ -40,8 +40,13 @@ labels are reserved for scoring and any separately registered OOF calibration.
 The independent training proposal is exactly 230 images / 230 conservative
 screening groups, 104,830,902 cached bytes. SHA-256:
 `eddf9a644114f5b4aecc4d906dbdec6ee0eaecd80b97e23743d9edf663e03eb0`.
-It has not been downloaded or approved. The exact download question has already
-been presented to the user and is pending; do not treat elapsed time as approval.
+The user approved it by replying “确认”. All 230 files downloaded successfully
+in 230 attempts, totaling 104,830,902 body bytes. Blind screening retained all
+230 images/groups and a 164-class ingredient catalogue. The initial preparation
+failed on one official 2 g mass discrepancy; its exact source/row-hash exception
+is documented before J, preserving every original field and the strict general
+0.001 threshold. The release freeze is
+`885f8d1a0573313e9e09771f3c38ec938b807e9ffcc9525d706867d3d0d081cb`.
 The image-body transfer cap is 350,000,000 bytes with three durable attempts per fixed URL. Keep all
 incoming files unavailable to training until blind pixel deduplication and
 quarantine finish; never substitute a new image without approval. Paid project
@@ -50,12 +55,14 @@ development already has unlimited user authorization; do not ask for it again.
 Round 4 implementation is now complete offline: pinned downloader, blind training
 release, training-only 13-image capability probe, image-bound external-gallery
 pipeline, persistent artifacts and a separate complete-population scorer.
-188 synthetic tests passed in the workspace and again in the public source copy
-with networking disabled. This establishes engineering behavior, not service
-capability or MAE improvement. No round 4 download, training release, capability
-call, gallery build or real development prediction has run. `round4/PROTOCOL.md`
-does not yet exist: finalize the draft only after approved acquisition, blind
-screening and the fixed capability check. See `round4/README.md` for commands.
+The earlier 188 synthetic tests passed in the public source copy; the expanded
+213-test suite now passes in the workspace with networking disabled. The fixed
+training-only 13-image probe passed with one successful request, no repair.
+`round4/PROTOCOL.md` is frozen in commit `27a31bd` before gallery/development
+inference. This establishes engineering/service behavior, not MAE improvement.
+See `round4/README.md` for the resumable command sequence. Raw J is followed only
+by the separately preregistered grouped OOF aggregate calibration candidate;
+formal validation stays sealed and reports remain deferred.
 
 The public backup branch is `codex/mae-v2-backup-20261103` in
 `THwo0t/DietAI24-reproduction`. Source commit `4d37980` is confirmed pushed and

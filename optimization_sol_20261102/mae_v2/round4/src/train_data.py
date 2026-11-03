@@ -43,12 +43,26 @@ MAX_IMAGE_BYTES = 5000000
 MAX_TRANSFER_BYTES = 350000000
 MAX_ATTEMPTS = 3
 TOTAL_TOLERANCE = Decimal('0.001')
+EXPECTED_EXCEPTION_COUNT = 1
+TRAINING_DATA_EXCEPTION = {
+    'version': 'official-single-record-mass-discrepancy-r4.1',
+    'raw_source_relative_path': 'Nutrition5k/metadata/dish_metadata_cafe1.csv',
+    'raw_source_sha256': '881df31f27c2343d0ce219964527e0796f6ddadd60701ce6840fa801e8c2a960',
+    'raw_record_sha256': '6924b964d0da3b5dbed4bfe055f1f9c0cac0f072fac732c46393b418ad9e5201',
+    'target': 'weight',
+    'signed_residual_definition': 'ingredient_sum_minus_official_target',
+    'signed_residual': '2.000000',
+    'strict_default_abs_tolerance': '0.001',
+    'preserve_original_targets_and_ingredient_masses': True,
+    'pre_exception_train_data_sha256': '7a5c450dc5cc3918bb283e9a042e16db95e69ef5ee887b2f79763d525e4600a3',
+}
 TARGETS = ('weight', 'energy', 'fat', 'carbs', 'protein')
 BASE_URL = 'https://storage.googleapis.com/nutrition5k_dataset/nutrition5k_dataset/imagery/realsense_overhead'
 TRAIN = 'round4/data/train'
 DOWNLOADS = 'round4/downloads'
 RAW_NAMES = ('Nutrition5k/metadata/dish_metadata_cafe1.csv', 'Nutrition5k/metadata/dish_metadata_cafe2.csv')
-SOURCE_NAMES = ('round4/src/train_data.py', 'round3/src/dev_ingredients.py', 'round4/tools/download_train.py')
+SOURCE_NAMES = ('round4/src/train_data.py', 'round3/src/dev_ingredients.py', 'round4/tools/download_train.py',
+                'round4/TRAINING_DATA_EXCEPTION.md')
 FREEZE_NAMES = {'data/freeze/source_snapshot.json', 'data/freeze/final_source_snapshot.json',
                 'data/freeze/validation_freeze.json', 'data/cohorts/dev_freeze.json'}
 HEX = re.compile(r'[0-9a-f]{64}\Z')
@@ -330,14 +344,23 @@ def quarantine(entries, fingerprints, protected):
     return {entry['dish_id']: sorted(reasons[entry['dish_id']]) for entry in entries}
 
 
-def extract_accepted(streams, accepted, helpers):
+def exception_record():
+    """Safe evidence for the sole source-pinned exception, never a row ID."""
+    return {key: TRAINING_DATA_EXCEPTION[key] for key in (
+        'version', 'raw_source_relative_path', 'raw_source_sha256',
+        'raw_record_sha256', 'target', 'signed_residual_definition', 'signed_residual')}
+
+
+def extract_accepted(streams, accepted, helpers, *, exception_audit=None):
     """Unmatched physical tails are never UTF-8/CSV decoded or numerically parsed."""
     allowed = {dish.encode('ascii'): dish for dish in accepted}
     records, labels, hashes = {}, {}, {}
     max_residual = {key: Decimal(0) for key in TARGETS}
+    applied = []
     for name, stream in streams:
         require(name not in hashes, 'duplicate_metadata_source')
         h = hashlib.sha256()
+        source_exception_count = 0
         for position, raw in enumerate(stream):
             require(isinstance(raw, bytes), 'binary_metadata_required')
             h.update(raw)
@@ -365,8 +388,16 @@ def extract_accepted(streams, accepted, helpers):
                     for key, value in zip(TARGETS, row[offset + 2:offset + 7]):
                         totals[key] += helpers.number(value)
                 for key in TARGETS:
-                    residual = abs(truth[key] - totals[key])
-                    require(residual <= TOTAL_TOLERANCE, 'ingredient_target_total_mismatch')
+                    signed_residual = totals[key] - truth[key]
+                    residual = abs(signed_residual)
+                    if residual > TOTAL_TOLERANCE:
+                        require(key == TRAINING_DATA_EXCEPTION['target'] == 'weight'
+                                and name == TRAINING_DATA_EXCEPTION['raw_source_relative_path']
+                                and digest(raw) == TRAINING_DATA_EXCEPTION['raw_record_sha256']
+                                and signed_residual == Decimal(TRAINING_DATA_EXCEPTION['signed_residual']),
+                                'ingredient_target_total_mismatch')
+                        applied.append(exception_record())
+                        source_exception_count += 1
                     max_residual[key] = max(max_residual[key], residual)
             except TrainDataError:
                 raise
@@ -377,7 +408,16 @@ def extract_accepted(streams, accepted, helpers):
             records[dish] = {**meta, 'ingredients': ingredients}
             labels[meta['sample_id']] = {'truth': {key: float(truth[key]) for key in TARGETS}}
         hashes[name] = h.hexdigest()
+        # Source SHA is checked after consuming the complete byte stream and
+        # before any records can leave this function. A matching row in a
+        # changed source file is never sufficient to authorize the exception.
+        if source_exception_count:
+            require(hashes[name] == TRAINING_DATA_EXCEPTION['raw_source_sha256'],
+                    'registered_exception_source_hash_mismatch')
     require(set(records) == set(accepted), 'accepted_metadata_missing')
+    require(len(applied) <= 1, 'registered_exception_count_exceeded')
+    if exception_audit is not None:
+        exception_audit.extend(applied)
     return [records[dish] for dish in sorted(records)], labels, hashes, {key: str(value) for key, value in max_residual.items()}
 
 
@@ -456,7 +496,11 @@ def prepare(base=None):
     from contextlib import ExitStack
     with ExitStack() as stack:
         streams = [(name, stack.enter_context(raw_paths[name].open('rb'))) for name in RAW_NAMES]
-        records, labels, raw_hashes, residuals = extract_accepted(streams, accepted, helpers)
+        applied_exceptions = []
+        records, labels, raw_hashes, residuals = extract_accepted(
+            streams, accepted, helpers, exception_audit=applied_exceptions)
+    require(len(applied_exceptions) == EXPECTED_EXCEPTION_COUNT,
+            'registered_exception_expected_count_mismatch')
     for name, value in raw_hashes.items():
         require(index['source_sha256'].get(name) == value, 'frozen_raw_metadata_changed')
         guards[repo / name] = value
@@ -480,6 +524,10 @@ def prepare(base=None):
         'candidate_audit': [{'dish_id': entry['dish_id'], 'screening_component_id': entry['screening_component_id'],
                             **fp, 'quarantine_reasons': reasons[entry['dish_id']]} for entry, fp in zip(entries, fingerprints)],
         'target_sum_max_abs_residual': residuals, 'target_sum_abs_tolerance': str(TOTAL_TOLERANCE),
+        'data_quality_exception_policy': TRAINING_DATA_EXCEPTION,
+        'expected_data_quality_exception_count': EXPECTED_EXCEPTION_COUNT,
+        'data_quality_exception_count': len(applied_exceptions),
+        'data_quality_exceptions': applied_exceptions,
         'protected_images_or_labels_opened': False, 'automatic_replacements': 0,
         'physical_plate_independence_proved': False}
     payloads = {'manifest.jsonl': b''.join((json.dumps(row, sort_keys=True) + '\n').encode() for row in manifest),
@@ -490,9 +538,12 @@ def prepare(base=None):
         'source_sha256': source_hashes,
         'inputs_sha256': {str(path.relative_to(base)): value for path, value in guards.items() if path.is_relative_to(base)},
         'raw_metadata_sha256': raw_hashes,
+        'data_quality_exception_count': len(applied_exceptions),
         'policy': {'candidate_collisions': 'quarantine_all_endpoints_and_their_screening_components',
             'protected_collisions': 'quarantine_entire_screening_component', 'minimum_groups': MIN_GROUPS,
-            'target_sum_abs_tolerance': str(TOTAL_TOLERANCE), 'no_replacements': True}}
+            'target_sum_abs_tolerance': str(TOTAL_TOLERANCE), 'no_replacements': True,
+            'expected_data_quality_exception_count': EXPECTED_EXCEPTION_COUNT,
+            'data_quality_exception': TRAINING_DATA_EXCEPTION}}
     verify_guards(guards)
     data_dir = child(base, 'round4/data')
     data_dir.mkdir(mode=0o700, parents=True, exist_ok=True)
@@ -521,7 +572,8 @@ def prepare(base=None):
             freeze = {'schema_version': 1, 'status': 'accepted_external_training_frozen',
                 'binding': binding, 'artifacts': artifacts,
                 'accepted_images': len(manifest), 'accepted_groups': audit['accepted_groups'],
-                'quarantined_images': audit['quarantined_images'], 'training_catalog_size': len(catalog['ingredients'])}
+                'quarantined_images': audit['quarantined_images'], 'training_catalog_size': len(catalog['ingredients']),
+                'data_quality_exception_count': len(applied_exceptions)}
             write_private(staging / 'freeze.json', encoded(freeze))
             verify_guards(guards)
             os.rename(staging, release)
@@ -584,6 +636,20 @@ def verify_train_only(base=None):
             'training_directory_inventory_changed')
     actual = {str(path.relative_to(release)) for path in inventory if path.is_file()}
     require(actual == set(artifacts) | {'freeze.json'}, 'training_inventory_changed')
+    audit = decode(read_bytes(release / 'audit.json', private=True))
+    exception_count = freeze.get('data_quality_exception_count')
+    require(type(exception_count) is int and exception_count == EXPECTED_EXCEPTION_COUNT
+            and binding.get('policy', {}).get('data_quality_exception') == TRAINING_DATA_EXCEPTION
+            and binding.get('policy', {}).get('expected_data_quality_exception_count') == EXPECTED_EXCEPTION_COUNT
+            and binding.get('data_quality_exception_count') == exception_count
+            and audit.get('data_quality_exception_policy') == TRAINING_DATA_EXCEPTION
+            and audit.get('expected_data_quality_exception_count') == EXPECTED_EXCEPTION_COUNT
+            and audit.get('data_quality_exception_count') == exception_count
+            and audit.get('data_quality_exceptions') == [exception_record()] * exception_count,
+            'training_data_quality_exception_binding_changed')
+    if exception_count:
+        require(binding['raw_metadata_sha256'].get(TRAINING_DATA_EXCEPTION['raw_source_relative_path'])
+                == TRAINING_DATA_EXCEPTION['raw_source_sha256'], 'registered_exception_source_hash_mismatch')
     rows = [decode(line) for line in read_bytes(release / 'manifest.jsonl').splitlines()]
     require(len(rows) == freeze.get('accepted_images') and len(rows) >= MIN_GROUPS
             and len({row['group_id'] for row in rows}) == freeze.get('accepted_groups')
@@ -594,6 +660,7 @@ def verify_train_only(base=None):
     return {'status': 'accepted_external_training_verified', 'accepted_images': freeze['accepted_images'],
         'accepted_groups': freeze['accepted_groups'], 'quarantined_images': freeze['quarantined_images'],
         'training_catalog_size': freeze['training_catalog_size'], 'freeze_sha256': digest(freeze_raw),
+        'data_quality_exception_count': exception_count,
         'proposal_sha256': PROPOSAL_SHA256, 'protected_images_or_labels_opened': False,
         'api_calls': 0, 'automatic_replacements': 0}
 
