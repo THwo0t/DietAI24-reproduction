@@ -19,7 +19,8 @@ GATE='round11/review_gate.json'
 PREPARATION_GATE='round11/preparation/preparation_review_gate.json'
 CLOSURE='round11/prepared/cohort/source_closure.json'
 COMMON='round11/prepared/common.json'
-EXTRA={'round11/verified_identity.py','round11/freeze_p.py','round11/FREEZE_PROTOCOL.md','round11/scoring_p.py',
+EXTRA={'round11/INTEGRITY_CACHE_PROTOCOL.md','round11/integrity_review/REVIEW.md',
+       'round11/verified_identity.py','round11/freeze_p.py','round11/FREEZE_PROTOCOL.md','round11/scoring_p.py',
        'round11/postscore_p.py','round11/POSTSCORE_PROTOCOL.md',
        'round11/postscore/review_gate.json','round11/postscore/REVIEW.md'}
 

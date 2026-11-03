@@ -107,3 +107,36 @@ R-P-2 is **fixed; unresolved P1/P2 = 0**. The separately source-bound runtime an
 postscore receipts may now be registered, followed by offline science freezing
 and the already authorized development batch. No scientific pass, independent
 acceptance population approval or Mac hardware acceptance is implied.
+
+## Coordinator amendment — equivalent integrity-cache engineering phase
+
+The first P engineering freeze admitted four paid requests. At a zero-inflight
+boundary the coordinator stopped and preserved the original freeze, source
+snapshot, gates, ledger, partial artifacts and launch records under
+`stopped/P_before_integrity_cache`. No answers, errors against targets or MAE
+were inspected for choosing this amendment. Its receipt is
+`evidence/P_integrity_performance_transition.json`.
+
+Each fresh request previously re-converted all 843 cohort images at least three
+times. The new Gate checks full frozen source bytes, environment and live
+context on every validation, but retains the initially verified deterministic
+conversion fingerprints. It reconstructs each actual query payload normally.
+`INTEGRITY_CACHE_PROTOCOL.md` gives the equivalence premises and limits; it
+makes no measured wall-time or scientific-performance claim.
+
+The first bounded review in `integrity_review/REVIEW.md` found only R-PI-1 P2,
+a missing construction-root anchor. This is fixed and confirmed offline;
+the coordinator's complete isolated suite passed 523 distinct tests in 51.904
+seconds. The independent original bounded review passed 176 P tests plus two
+root probes; the implementer's fixed P scope passed 178. This is the single
+review of a new engineering amendment, not a second review of the original
+complete P implementation. All R-P-1, R-P-2 and R-PI-1 findings are fixed;
+unresolved P1/P2 = 0.
+
+Both the amendment protocol and bounded review are mandatory source pins in the
+context and freezer. A replacement freeze and fresh provider/run roots are
+required; the scientific prompts, models, task namespace, cohort/preparation,
+OOF scoring and selection rules remain unchanged. Old partial results are not
+imported or pooled; eventual accounting must include the archived four requests
+as well as the replacement batch. The previously authorized paid development
+batch may proceed after replacement receipts and offline freezing succeed.

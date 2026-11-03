@@ -40,6 +40,7 @@ REQUIRED = set(PARSER_SOURCES) | {
     'round11/paired_failure.py','round11/paired_stage_pipeline.py','round11/paired_accounting.py',
     'round11/DESIGN.md','round11/PAIRED_CONTEXT_DESIGN.md','round11/PAIRED_FAILURE_DESIGN.md',
     'round11/PAIRED_ASA_ADAPTER_DESIGN.md','round11/REVIEW.md','round11/review_gate.json',
+    'round11/INTEGRITY_CACHE_PROTOCOL.md','round11/integrity_review/REVIEW.md',
     'src/opt_provider.py','src/opt_pipeline.py','src/pipeline_v2.py',
     'round7/src/context_m.py','round7/src/historical_m.py','round7/src/service_m.py',
     'round7/src/runtime_m.py','round8/src/uncertain_portions.py','round4/src/artifacts.py'}

@@ -387,3 +387,15 @@ namespace child reached a synthetic sentinel before any real context load; this
 checks actual isolation/launch plumbing without claiming a complete real adapter
 run. Runtime/postscore receipts and development science freeze are the next
 authorized engineering step. No new MAE or paid P request is yet claimed.
+
+P engineering continuation: the first freeze admitted four requests, then the
+coordinator stopped at a zero-inflight boundary and preserved the old freeze,
+ledger, gates, partial artifacts and source snapshot. No response accuracy or MAE
+was inspected. Equivalent conversion-proof caching retains complete content and
+environment checks while removing repeated full-cohort conversions. Its first
+bounded review found R-PI-1 P2 only; the canonical root binding is fixed and
+confirmed by 523 distinct isolated tests. The protocol and bounded review are
+new mandatory source pins. A distinct replacement freeze/fresh ledger and
+correctly network-isolated postscore child are being registered before paid
+resumption; the original four requests stay in eventual usage accounting.
+Independent acceptance boundaries and old validation remain sealed/pending.

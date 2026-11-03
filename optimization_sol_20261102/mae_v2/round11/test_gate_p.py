@@ -1,6 +1,7 @@
 """Source/synthetic-only P frozen-task reconstruction; no transport or real data."""
 from copy import deepcopy
 import json
+import hashlib
 from pathlib import Path
 import sys
 import tempfile
@@ -71,6 +72,16 @@ class GateTests(unittest.TestCase):
                      for code,desc in [('12345678','rice'),('12345679','other rice')]},
             'standard_options':{'12345678':option},'asa_options':{'12345678':deepcopy(option)}})
         slots=allowed_slots([self.row],image_hashes={'a':fingerprint(encode_image(image,'square256'))})
+        self.source_state={'source':'frozen','environment':'frozen'}
+        self.source_checks=0
+        image_digest=hashlib.sha256(image.read_bytes()).hexdigest()
+        def verify_sources():
+            self.source_checks+=1
+            if (hashlib.sha256(image.read_bytes()).hexdigest()!=image_digest
+                    or self.source_state!={'source':'frozen','environment':'frozen'}):
+                raise ValueError('synthetic_source_or_environment_changed')
+            return True
+        self.ctx.verify_sources=verify_sources
         self.ledger=MemoryLedger(slots);self.sealed={};self.context={}
         self.gate=Gate(self.ctx,self.ledger,root=self.root,
             identity_loader=lambda:(deepcopy(self.sealed),{'complete':True}),
@@ -172,6 +183,95 @@ class GateTests(unittest.TestCase):
         self.ctx.retriever.hybrid=lambda *args,**kwargs:['12345679','12345678']
         with self.assertRaisesRegex(ValueError,'previous_exact_request'):
             engine_p.density(self.ctx,self.row,identity,Client(self,[]),root=self.root)
+
+    def test_conversion_cache_operation_counts_and_source_checks(self):
+        # Two synthetic rows prove N conversions at construction, zero global
+        # conversions/slot rebuilds during subsequent context/task validations.
+        second={**self.row,'sample_id':'b'}
+        self.ctx.rows.append(second)
+        self.ledger.slots=allowed_slots(self.ctx.rows,image_hashes={
+            r['sample_id']:fingerprint(encode_image(self.root/r['image_path'])) for r in self.ctx.rows})
+        with patch('gate_p.encode_image',wraps=encode_image) as encode, \
+                patch('service_p.allowed_slots',wraps=allowed_slots) as slots:
+            gate=Gate(self.ctx,self.ledger,root=self.root)
+            self.assertEqual(encode.call_count,2)
+            self.assertEqual(slots.call_count,1)
+            before=self.source_checks
+            for _ in range(3):gate.verify_context()
+            self.assertEqual(self.source_checks-before,3)
+            self.assertEqual(encode.call_count,2)
+            self.assertEqual(slots.call_count,1)
+        self.ctx.rows.pop()
+        self.ledger.slots=allowed_slots([self.row],image_hashes={
+            'a':fingerprint(encode_image(self.root/'synthetic.png'))})
+        client,_=self.identify();sid,value=client.values[0]
+        before=self.source_checks
+        with patch('gate_p.encode_image',wraps=encode_image) as encode:
+            self.assertTrue(self.gate.validate(sid,value))
+            self.assertTrue(self.gate.validate(sid,value))
+            self.assertEqual(encode.call_count,0)
+        self.assertEqual(self.source_checks-before,2)
+
+    def test_conversion_cache_and_slot_tamper_rejected(self):
+        original=self.gate._image_fingerprints
+        self.gate._image_fingerprints=(('a','0'*64),)
+        with self.assertRaisesRegex(ValueError,'rows_or_slots'):self.gate.verify_context()
+        self.gate._image_fingerprints=original
+        sid=next(iter(self.ledger.slots))
+        self.ledger.slots[sid]['image_payload_sha256']='0'*64
+        with self.assertRaisesRegex(ValueError,'rows_or_slots'):self.gate.verify_context()
+
+    def test_gate_root_mutation_refused_without_conversion(self):
+        other=self.root/'other';other.mkdir()
+        Image.new('RGB',(31,17),'blue').save(other/'synthetic.png')
+        client,_=self.identify();sid,value=client.values[0]
+        with patch('gate_p.encode_image',wraps=encode_image) as encode:
+            self.gate.root=other
+            with self.assertRaisesRegex(ValueError,'frozen_root'):self.gate.verify_context()
+            with self.assertRaisesRegex(ValueError,'frozen_root'):self.gate.validate(sid,value)
+            self.gate.root=self.root
+            self.assertTrue(self.gate.validate(sid,value))
+            self.assertEqual(encode.call_count,0)
+
+    def test_context_root_binding_and_noncanonical_root(self):
+        other=self.root/'other';other.mkdir()
+        self.ctx.root=other
+        with patch('gate_p.encode_image',wraps=encode_image) as encode:
+            with self.assertRaisesRegex(ValueError,'frozen_root'):
+                Gate(self.ctx,self.ledger,root=self.root)
+            self.assertEqual(encode.call_count,0)
+        self.ctx.root=self.root
+        gate=Gate(self.ctx,self.ledger,root=self.root)
+        with patch('gate_p.encode_image',wraps=encode_image) as encode:
+            gate.verify_context()
+            self.ctx.root=other
+            with self.assertRaisesRegex(ValueError,'frozen_root'):gate.verify_context()
+            self.ctx.root=self.root
+            del self.ctx.root
+            with self.assertRaisesRegex(ValueError,'frozen_root'):gate.verify_context()
+            self.assertEqual(encode.call_count,0)
+        alias=self.root/'alias';alias.symlink_to(self.root,target_is_directory=True)
+        with self.assertRaisesRegex(ValueError,'frozen_root'):
+            Gate(self.ctx,self.ledger,root=alias)
+        self.gate.root=alias
+        with self.assertRaisesRegex(ValueError,'frozen_root'):self.gate.verify_context()
+
+    def test_duplicate_row_and_frozen_slot_digest_drift_rejected(self):
+        self.ctx.rows.append(deepcopy(self.row))
+        with self.assertRaisesRegex(ValueError,'rows_or_slots'):self.gate.verify_context()
+        self.ctx.rows.pop()
+        self.ctx.binding={'allowed_slots_sha256':'0'*64}
+        with self.assertRaisesRegex(ValueError,'rows_or_slots'):self.gate.verify_context()
+        with self.assertRaisesRegex(ValueError,'rows_or_slots'):
+            Gate(self.ctx,self.ledger,root=self.root)
+
+    def test_source_and_environment_changes_refuse_cached_conversion(self):
+        for key in ('source','environment'):
+            self.source_state[key]='changed'
+            with self.subTest(key=key),self.assertRaisesRegex(ValueError,'source_or_environment'):
+                self.gate.verify_context()
+            self.source_state[key]='frozen'
+        self.gate.verify_context()
 
     def test_production_entry_requires_review_and_exact_ledger_science_root(self):
         with patch('context_p.runtime_context',side_effect=ValueError('synthetic_missing_review')):

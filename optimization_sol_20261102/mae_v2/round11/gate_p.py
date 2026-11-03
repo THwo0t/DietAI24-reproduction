@@ -1,5 +1,6 @@
 """Reconstruct actual frozen Pipeline tasks from durable earlier answers."""
 from copy import deepcopy
+from pathlib import Path
 
 from opt_provider import ROOT,sha,fingerprint
 from opt_pipeline import ContractError,encode_image
@@ -80,14 +81,39 @@ class Machine:
         raise ValueError('P_unknown_gate_stage')
 
 
+def _canonical_root(value):
+    try:
+        root=Path(value)
+        if root!=root.resolve() or root.is_symlink():raise ValueError('P_frozen_root_changed')
+    except (TypeError,OSError,RuntimeError) as exc:
+        raise ValueError('P_frozen_root_changed') from exc
+    return str(root)
+
+
 class Gate:
     def __init__(self,ctx,ledger,*,root=ROOT,identity_loader=None,context_loader=None):
+        self._root_anchor=_canonical_root(root)
+        self._context_has_root=hasattr(ctx,'root')
+        if self._context_has_root and _canonical_root(ctx.root)!=self._root_anchor:
+            raise ValueError('P_frozen_root_changed')
+        root=Path(self._root_anchor)
         self.ctx,self.ledger,self.root=ctx,ledger,root
         from service_p import allowed_slots
+        ctx.verify_sources()
         images={r['sample_id']:fingerprint(encode_image(root/r['image_path'],'square256')) for r in ctx.rows}
         if allowed_slots(ctx.rows,image_hashes=images)!=ledger.slots:
             raise ValueError('P_frozen_rows_or_slots_changed')
+        ctx.verify_sources()
+        # Content/code/environment checks remain mandatory on every use. Only the
+        # deterministic image conversion is memoized, after the full slot bind.
+        self._image_fingerprints=tuple(sorted(images.items()))
+        self._image_fingerprints_sha256=fingerprint(self._image_fingerprints)
+        self._slots_sha256=fingerprint(ledger.slots)
+        frozen_slots=getattr(ctx,'binding',{}).get('allowed_slots_sha256',self._slots_sha256)
+        if frozen_slots!=self._slots_sha256:
+            raise ValueError('P_frozen_rows_or_slots_changed')
         self.rows={r['sample_id']:deepcopy(r) for r in ctx.rows}
+        self._rows_sha256=fingerprint(ctx.rows)
         self.parser_sha256=ledger.parser_sha256
         self.manifest_sha256=getattr(ctx,'manifest_sha256',None)
         if (type(self.manifest_sha256) is not str or len(self.manifest_sha256)!=64
@@ -100,14 +126,20 @@ class Gate:
 
     def verify_context(self):
         self.ctx.verify_sources()
+        if (_canonical_root(self.root)!=self._root_anchor
+                or hasattr(self.ctx,'root')!=self._context_has_root
+                or (self._context_has_root and _canonical_root(self.ctx.root)!=self._root_anchor)):
+            raise ValueError('P_frozen_root_changed')
         if (getattr(self.ctx,'manifest_sha256',None)!=self.manifest_sha256
                 or fingerprint(self.ctx.catalog)!=self.catalog_sha256
                 or fingerprint(self.ctx.imports)!=self.imports_sha256):
             raise ValueError('P_frozen_context_changed')
-        from service_p import allowed_slots
-        images={r['sample_id']:fingerprint(encode_image(self.root/r['image_path'],'square256')) for r in self.ctx.rows}
-        if ({r['sample_id']:r for r in self.ctx.rows}!=self.rows
-                or allowed_slots(self.ctx.rows,image_hashes=images)!=self.ledger.slots):
+        if (type(self._image_fingerprints) is not tuple
+                or fingerprint(self._image_fingerprints)!=self._image_fingerprints_sha256
+                or fingerprint(self.ledger.slots)!=self._slots_sha256
+                or getattr(self.ctx,'binding',{}).get('allowed_slots_sha256',self._slots_sha256)!=self._slots_sha256
+                or fingerprint(self.ctx.rows)!=self._rows_sha256
+                or {r['sample_id']:r for r in self.ctx.rows}!=self.rows):
             raise ValueError('P_frozen_rows_or_slots_changed')
 
     def identities(self):

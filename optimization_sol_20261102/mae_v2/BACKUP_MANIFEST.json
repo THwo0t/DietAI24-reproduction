@@ -9,7 +9,7 @@
       24
     ],
     "status": "PASS",
-    "working_files_scanned": 637
+    "working_files_scanned": 641
   },
   "completed_O": {
     "ASA_Exact": 17,
@@ -33,7 +33,7 @@
     "scope": "completed common M method; M0 passes6/20; neither passes coding guard or numerical tolerance",
     "total": 20
   },
-  "file_count": 513,
+  "file_count": 517,
   "files": {
     ".gitignore": {
       "bytes": 109,
@@ -332,8 +332,8 @@
       "sha256": "bb70cacd7892b64baa3ce69f4b17988f642806d81fc395f17708f48a8e34bc45"
     },
     "round11/CHECKLIST.md": {
-      "bytes": 26551,
-      "sha256": "89771a2953bf78dfa0740fb29e7b744b7b49245a7c528b2828a0d6631c1d2fb5"
+      "bytes": 27403,
+      "sha256": "98076fb887efe489deaff494e4caa4233d590c1376b20031201bcb2d4e59580f"
     },
     "round11/COHORT_REPAIR_DESIGN.md": {
       "bytes": 5948,
@@ -350,6 +350,10 @@
     "round11/FREEZE_PROTOCOL.md": {
       "bytes": 2519,
       "sha256": "cc3e715e3e6ffdccd595390b555f4a680f073a9fb401195dc57e39990790dd72"
+    },
+    "round11/INTEGRITY_CACHE_PROTOCOL.md": {
+      "bytes": 4662,
+      "sha256": "8b9e7743269e43cf5e6f0f98e142df4e83b068e981a2123e6c3887979b626b81"
     },
     "round11/PAIRED_ASA_ADAPTER_DESIGN.md": {
       "bytes": 2485,
@@ -372,8 +376,8 @@
       "sha256": "f935178f1f7556f3495e54c16a593b4a471e5d2e1b32ca1627cb0a936abfb1ac"
     },
     "round11/REVIEW.md": {
-      "bytes": 13644,
-      "sha256": "679a2a86e3138fff9b24e749fadafbf88c24bba62551c034a33e171c18c92063"
+      "bytes": 15678,
+      "sha256": "4a9a2ee129a13074b760828087257961825c59142e036dc53df9b5075f3d2a91"
     },
     "round11/adapter_p.py": {
       "bytes": 6783,
@@ -436,8 +440,8 @@
       "sha256": "a52386f42eae7df0f22a18a8a5b177996b3fa2234eb3c95eb2229e5537872ab1"
     },
     "round11/context_p.py": {
-      "bytes": 16631,
-      "sha256": "fd32d7f6fead363c0e2f1ee78719913bc0e890db078602f7c052cea5c5b2ab7f"
+      "bytes": 16711,
+      "sha256": "ef028d6f5f0f0ccaf115406cd7be9c965e0b665ce256cb47bc9ff0d8848becd3"
     },
     "round11/development_identity.py": {
       "bytes": 4585,
@@ -450,6 +454,14 @@
     "round11/engineering/REVIEW.md": {
       "bytes": 8914,
       "sha256": "ed230637c401af49ad3e7bc0f40af914f8f5ae9a0bff72f4caa44be477b28158"
+    },
+    "round11/evidence/P_integrity_cache_fix.json": {
+      "bytes": 1164,
+      "sha256": "6fcd9da5b5561a56b9f9073cf6bccaea0e83ae4eaaf4cfe702cb7dfb77d1d117"
+    },
+    "round11/evidence/P_integrity_performance_transition.json": {
+      "bytes": 1007,
+      "sha256": "deac2a658b841bae60c5ce2e63045a0bda84b2d1c3be663f624b44507e23e990"
     },
     "round11/evidence/acceptance_boundary_proposal.json": {
       "bytes": 579,
@@ -524,12 +536,12 @@
       "sha256": "e85161f29d6b0ab7aeca4280a621bee4c3e6c463ee7e6beef9fa9ba10509c845"
     },
     "round11/freeze_p.py": {
-      "bytes": 6316,
-      "sha256": "c3bea7e8d5ccaebab25b74ee1bd09c4ec216441b6de6118913debef3992392ef"
+      "bytes": 6399,
+      "sha256": "34ac7f96d4ef8f8a2ed27052b67139416fd94f38e957168d7812aac09860bd5a"
     },
     "round11/gate_p.py": {
-      "bytes": 10554,
-      "sha256": "e86a6db3ca5e563afe71fabd94549d81747bca4929e49ac8369ae36a52074816"
+      "bytes": 12242,
+      "sha256": "a7f4b94acf60423802927182e403da3f0ff417673dcbe795089c21a38de5d11e"
     },
     "round11/identity_gate.py": {
       "bytes": 5002,
@@ -538,6 +550,10 @@
     "round11/identity_gate_p.py": {
       "bytes": 8282,
       "sha256": "a2e37f403543feddbe7f99f3d56dc78281012aec531765aee7049fed8ccb2bc6"
+    },
+    "round11/integrity_review/REVIEW.md": {
+      "bytes": 7979,
+      "sha256": "251948253df89d9d0f3773ca8add4c208f5bb7cd1cd59b8d4cea15e7e66b910a"
     },
     "round11/legacy_input_identity.py": {
       "bytes": 6460,
@@ -840,8 +856,8 @@
       "sha256": "c9b4d8d050ec50545b3f3a8396f00075d6f1033f2337d91afe9bb0627ba89ba1"
     },
     "round11/test_gate_p.py": {
-      "bytes": 10750,
-      "sha256": "d33426f0b9d36943455464159b3fcb7a26a103c40e844ee912d885fe4cec9b10"
+      "bytes": 16195,
+      "sha256": "c2046f8ea3d49aa9bff1b601716bf3ccec4cd43d1036e5799591d0ac860d48ba"
     },
     "round11/test_identity_gate.py": {
       "bytes": 8327,
@@ -2107,7 +2123,7 @@
     "reachable_blobs_scanned": 429,
     "status": "PASS"
   },
-  "latest_local_checkpoint": "20c748572d50cc2149f509e95c1a5691c6c10c24",
+  "latest_local_checkpoint": "5011091717797cb567d0345c119d03bf285452ed",
   "manifest_coverage_history": [
     {
       "cause": "Ignored round11/evidence JSON files were copied and listed but excluded from ordinary git add. Exact safe whitelist files are now explicitly staged with -f.",
@@ -2164,6 +2180,8 @@
       "nutrition5k": 102
     },
     "actual_data_audit": "843 development rows privately prepared with no group crossing folds; global exposure completeness remains false",
+    "api_count_scope": "four archived P requests before the source checkpoint; excludes the active replacement batch and historical O",
+    "archived_prior_P_requests": 4,
     "cache_component_formal_reviews": 1,
     "cache_component_unresolved_p1_p2": 0,
     "completed_O_evidence_component_formal_reviews": 1,
@@ -2188,28 +2206,31 @@
     "first_integrated_runtime_scoring_formal_reviews": 1,
     "full_pc_formal_reviews": 0,
     "full_preparer_formal_reviews": 1,
-    "new_api_calls": 0,
+    "integrity_cache_first_scoped_reviews": 1,
+    "integrity_cache_unresolved_p1_p2": 0,
+    "new_api_calls": 4,
     "new_downloads": 0,
-    "offline_unique_tests": 517,
+    "offline_unique_tests": 523,
     "pc_components_formal_reviews": 6,
     "pc_source_preparer_components_formal_reviews": 6,
     "postscore_offline_tests": 15,
     "preparation_component_formal_reviews": 1,
     "preparation_component_unresolved_p1_p2": 0,
     "private_inputs_or_outputs_included": false,
-    "public_checkout_offline_test_ids": 517,
+    "public_checkout_offline_test_ids": 523,
     "recovery_formal_reviews": 1,
+    "replacement_batch_results_included": false,
     "review_fix": "R-PB-1",
     "round11_test_execution": {
-      "distinct_unittest_ids": 517,
+      "distinct_unittest_ids": 523,
       "network": "isolated unshare -Urn",
-      "runtime_seconds": 55.196,
-      "scope": "committed source snapshot 20c7485; public checkout; no research data or provider calls",
+      "runtime_seconds": 51.645,
+      "scope": "committed source snapshot 5011091; public checkout; no research data or provider calls",
       "status": "PASS"
     },
     "selected_new_samples": 0,
-    "stage": "reviewed_843_row_development_prepared_before_P_inference",
-    "total_offline_unique_tests": 517,
+    "stage": "reviewed_integrity_cache_after_four_archived_requests",
+    "total_offline_unique_tests": 523,
     "unresolved_integrated_p1_p2": 0,
     "unresolved_preparation_p1_p2": 0,
     "validation": "labels and images sealed; population amendment pending user boundary confirmation",
@@ -2512,7 +2533,7 @@
     "validation": "sealed"
   },
   "secret_scan": "PASS_reachable_history_and_worktree_generic_scan_plus_coordinator_reported_actual_credentials_in_memory",
-  "source_state": "O remains rejected at10/20. Capacity-amended actual development preparation completed843rows (ASA529/N5314), with historical support reuse explicit. The first complete preparation and integrated runtime/scoring reviews completed, and R-PC6-1/R-P-1/R-P-2 are fixed with root offline confirmation. Four-arm O/Q/D/Q+D runner, source-bound science freezing, exact completed replay and OOF scoring are implemented. Independent acceptance proposals have genuine shortfalls (N5102/0new,ASA75/0new) and await user boundary confirmation. This backup claims no new model run or MAE improvement. Committed source/tests/reviews/designs and explicit ID-free aggregates only; private preparation, labels, images, request logs and private Git history excluded.",
+  "source_state": "Source-only engineering snapshot after four archived P requests. The unchanged843-row O/Q/D/Q+D method has an equivalent integrity-cache amendment. Its first bounded review R-PI-1 is fixed; all523 root offline tests pass. Previous requests/freezes/ledgers remain private and are not pooled. No response accuracy or new MAE was inspected for this amendment. Replacement inference is separately authorized; this snapshot does not claim completed inference, better MAE, independent acceptance or Mac hardware verification. Explicit ID-free evidence only; no private data, targets, predictions, raw logs or private Git history.",
   "subagent_model_policy": {
     "astra_allowed": false,
     "explicit_spawn_model_required": true,

@@ -1,0 +1,21 @@
+{
+  "all_existing_artifacts_preserved": true,
+  "bound_slots": 4,
+  "datasets_and_preparation_unchanged": true,
+  "freeze_sha256": "c23c5968a8769fb44307b18c996bdd5d23d872b0b7b9a49567c2c2f290701435",
+  "new_batch_not_authorized_by_this_receipt": true,
+  "no_inflight_requests": true,
+  "outcomes": 4,
+  "paid_responses_or_accuracy_values_inspected": false,
+  "pending_requests": 0,
+  "pid": 658071,
+  "preserved_freeze_sha256": "c23c5968a8769fb44307b18c996bdd5d23d872b0b7b9a49567c2c2f290701435",
+  "reason": "equivalent integrity-check performance optimization before cohort completion or scoring",
+  "reservations": 4,
+  "science_sha256": "a55484a9655ee5e3f704930f1a69d75a8dded6eb1f80937551272a803c80ccfd",
+  "scoring_or_accuracy_values_inspected": false,
+  "source_snapshot_checkpoint": "20c748572d50cc2149f509e95c1a5691c6c10c24",
+  "source_snapshot_public_backup": "807d5147b5b7aadec8375882bf4e4c4ee7401be9",
+  "status": "P_pre_acceleration_batch_preserved",
+  "utc": "2026-11-03T23:36:17.928875+00:00"
+}

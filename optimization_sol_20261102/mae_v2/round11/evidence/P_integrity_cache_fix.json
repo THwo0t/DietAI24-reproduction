@@ -1,0 +1,31 @@
+{
+  "actual_api_calls": 0,
+  "fixed_implementer_scope_tests": 178,
+  "full_suite": {
+    "distinct_tests": 523,
+    "network_isolated": true,
+    "passed": true,
+    "seconds": 51.904
+  },
+  "independent_first_bounded_review": {
+    "p1": 0,
+    "p2": 1,
+    "p3": 0,
+    "synthetic_root_probes": 2,
+    "tests": 176
+  },
+  "response_accuracy_inspected": false,
+  "source_sha256": {
+    "INTEGRITY_CACHE_PROTOCOL.md": "8b9e7743269e43cf5e6f0f98e142df4e83b068e981a2123e6c3887979b626b81",
+    "REVIEW.md": "4a9a2ee129a13074b760828087257961825c59142e036dc53df9b5075f3d2a91",
+    "context_p.py": "ef028d6f5f0f0ccaf115406cd7be9c965e0b665ce256cb47bc9ff0d8848becd3",
+    "freeze_p.py": "34ac7f96d4ef8f8a2ed27052b67139416fd94f38e957168d7812aac09860bd5a",
+    "gate_p.py": "a7f4b94acf60423802927182e403da3f0ff417673dcbe795089c21a38de5d11e",
+    "integrity_review/REVIEW.md": "251948253df89d9d0f3773ca8add4c208f5bb7cd1cd59b8d4cea15e7e66b910a",
+    "test_gate_p.py": "c2046f8ea3d49aa9bff1b601716bf3ccec4cd43d1036e5799591d0ac860d48ba"
+  },
+  "status": "R_PI_1_fixed_offline",
+  "unresolved_p1_p2": 0,
+  "utc": "2026-11-03T23:45:49.520229+00:00",
+  "validation_opened": false
+}
