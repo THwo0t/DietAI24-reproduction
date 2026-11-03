@@ -15,6 +15,18 @@ from opt_metrics import option_prediction
 
 
 class DiagnosticTests(unittest.TestCase):
+    def test_namespace_check_uses_strict_kernel_process_view_and_rejects_other_interfaces(self):
+        headers=(b'Inter-|   Receive |  Transmit\n'
+                 b' face |bytes packets errs drop fifo frame compressed multicast|bytes packets errs drop fifo colls carrier compressed\n')
+        loop=b' lo: '+b' '.join([b'0']*16)+b'\n'
+        self.assertTrue(g.kernel_loopback_only(headers+loop))
+        for raw in (b'',headers,headers+loop+loop,headers+loop.replace(b'lo:',b'eth0:'),
+                    headers+loop+loop.replace(b'lo:',b'eth0:'),headers+loop.replace(b'0',b'-1',1),
+                    headers+loop.replace(b'0',b'NaN',1),headers+loop.replace(b' lo:',b' lo'),
+                    b'wrong headers\n'+loop,headers+loop+b'\xff'):
+            with self.subTest(raw=raw):
+                self.assertFalse(g.kernel_loopback_only(raw))
+
     def test_global_read_allowlist_blocks_external_credentials_labels_and_other_images(self):
         with tempfile.TemporaryDirectory() as temp:
             root=Path(temp)/'experiment';output=root/'diagnostics'
@@ -80,6 +92,12 @@ class DiagnosticTests(unittest.TestCase):
             changed=deepcopy(record);changed['portion_result']['portions'][0]['grams']+=1
             with self.assertRaisesRegex(ValueError,'quantity_mapping_changed'):
                 d.physical_audit([row],{'synthetic':f.identity},{'synthetic':changed},f.catalog)
+
+    def test_physical_audit_is_json_stable_before_immutable_seal_comparison(self):
+        f,row,record=self.fixture()
+        result=d.physical_audit([row],{'synthetic':f.identity},{'synthetic':record},f.catalog)
+        self.assertEqual(result,json.loads(json.dumps(result,allow_nan=False)))
+        self.assertEqual(result['asa24']['physical_item_counts_on_successful_identities'],{'1':1})
 
     def test_mass_density_hand_identity_separates_signed_terms_without_claiming_MAE_shares(self):
         rows=[{'sample_id':'x','group_id':'g'}]

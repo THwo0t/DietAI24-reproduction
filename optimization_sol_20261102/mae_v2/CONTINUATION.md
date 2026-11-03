@@ -990,3 +990,107 @@ has occurred. References: https://developers.openai.com/api/docs/models/gpt-6.1-
 and https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6.1-sol
 and https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create
 and https://developers.openai.com/api/docs/guides/images-vision .
+
+The source-only backup is now remote-verified at
+4db861557b674406cc60b271d158447fd8ca365e, normalFF fromb1d3da3, source1b11e18.
+It contains377 nested payloads and passes104 public-copy offline tests;
+501workingfiles/19archive members and584reachableblobs/19archive members were
+scanned against both credentials and generic patterns,0matches. Private receipt
+round11/evidence/github_pc_completion_backup.json. No actual new data or logs
+were published. This source backup predates the complete O score below.
+
+O original offline replay and scorer have now completed. Observed20:22:53UTC:
+development_scored, zero new paid requests from followup, validation sealed.
+ASA17/99Exact in9groups (17.17%, below original18% target),15first,27retrieval;
+all10 conditional MAE checks pass both raw andOOF. It is not full99 E2E success.
+N5all84 complete,81native/3format-repaired/0fallback; all10 MAE checks fail in
+both profiles. Raw MAEs weight106.7414/energy142.5901/fat9.8077/carbs14.3029/
+protein13.3896; OOF105.2217/143.1608/9.8774/14.5623/13.3615. Strict10/20 and
+relaxed acceptancefalse. The selectedOOF profile is not an accepted method.
+Do not repeat original inference, verification or scoring.
+
+The separate diagnostic initially refused BEFORE labels or output creation:
+O_network_namespace_required. Runtime negative evidence found fresh `unshare
+-Urn` has exactly1loopback in /proc/self/net/dev while sharedsysfs lists4parent
+interfaces; querying netlink is also sandbox-denied. D-NS-1 corrects the
+diagnostic wrapper to strictly parse the process's kernel proc network view,
+not sharedsysfs. Additional/malformed interfaces still refuse, and Provider /
+socket / global read allowlists remain. All7diagnostic synthetic tests pass;
+actual namespace proof newconditiontrue/oldconditionfalse. This is a root
+runtime correction, not a new formal review or a change to frozen O. Commit it
+before the first successful guarded diagnosis; confirm its final receipt before
+starting the full-project retrospective and actual expansion integration.
+
+The first namespace-corrected diagnostic actually SEALED its aggregate, then
+failed its final return comparison: physical_audit emitted integer item-count
+keys, ArtifactStore JSON normalization produced string keys, and the raw out
+could never equal the verified normalized aggregate for a nonempty identity
+population. Independent source consultation confirmed this exact control flow.
+D-JSON-1 makes future item-count keys JSON-stable. Its new synthetic negative
+catches1 old-source failure/0errors; all8base diagnostic tests pass. The existing
+diagnostic is NOT recomputed or overwritten; its binding pins legacy source
+6eb2802b313bf0f04859db1f9cc95d42e6e1f253dd4510ff33af6b01dc83f2bc,
+verified equal to gitb88ee2b's pre-fix file. Originalguard did NOT return/pass
+or write its receipt. A separate read-only existing-seal recovery is being
+prepared for its first bounded review; never backfill the originalguard receipt.
+
+The sealed supplementary aggregate indicates N5 raw59/84 weight underestimates
+(mean signed-60.3455g),58/84 protein underestimates(-9.6300g), but mixed signed
+errors remain. Global OOF scaling barely changes MAE. Effective density
+discrepancy is substantial alongside totalmass discrepancy; symmetric algebra
+is not an additive error-share or a causal ingredient/code omission measure.
+N5 portion mass is47.56%standard,50.33%adjusted units,2.11%directgrams; fixed
+mapping replay found0join inconsistencies. Do not attribute the worse O weight
+MAE versus J solely to units: identity/density also changed, requiring paired
+controlled comparisons. The independent whole-project O failure retrospective
+is now in round11/retrospective/REVIEW.md; its findings still require root
+responses, and it does not approve P-C preparation or a new paid batch.
+
+Separate existing-seal recovery source is now prepared in
+round10/postscore/reverify_sealed_o.py. It verifies the fixed original O evidence,
+the legacy diagnostic seal/source/helper, exact closed input bindings and all
+aggregate point values without opening labels/catalogue or recomputing. An
+exclusive new recovery receipt explicitly preserves originalguard_passed=false,
+unrecoverable prior counters/mtime and unopened-file integrity limits. A fresh
+process audit policy blocks nonallowlisted opens, earlier artifact mutations,
+child processes and socket events. Seven recovery tests include full synthetic
+entry success, a forbidden label attempt in a distinct process, valid-seal point
+mismatch, source drift and extra-secret refusal before body read. All15postscore
+tests pass; the existing9completed-O barrier tests also cover its dependency.
+This new integration awaits its first bounded review before real invocation;
+it is not approval of the real cohort preparer or new paid inference.
+
+O-REC1 single bounded review completed:0P1/1P2. R-O-REC1-1 closes omitted
+truncate/metadata/xattr audit events and remaining documented launch/native
+paths. Fresh-child label/truncate/utime/chmod/chown/setxattr negatives preserve
+all victim bytes/mode/owner/mtime/ctime and refuse receipts. Pre-fix58c2f76
+truncate+utime evidence catches2failures/0errors; current15postscore tests pass.
+No re-review. Review/response is postscore/recovery/REVIEW.md. Perform the
+fixed read-only recovery once, never the already sealed diagnosis again.
+
+Whole-project retrospective R11-R-1..4 are each handled in isolated English
+design commits, with root dispositions appended once. round11/DESIGN.md now
+registers MAE-first N5 focus, conditionalASA controls, finite O/Q/D/Q+D paired
+quantity/density profiles and seed
+DietAI24-Sol-expanded-dev-20261104-O-completed-v1 BEFORE expanded target access.
+The plans are design-level fixes, not implemented candidate/freeze/run claims.
+R11-R-5 accepted: engineering counts are not accuracy gains; L never had a real
+accuracy run; no formal report per failed iteration. P-C/P-D integration and
+the first full run review remain pending; actual new audit/download/API still0.
+
+Fixed production recovery has now succeeded ONCE in fresh unshare-Urn:
+O_sealed_diagnostic_reverified, original_guard_passed=false, recomputed=false,
+no labels/catalogue or validation opened,0API,14957open-policy checks,
+0forbidden opens/mutations and0socket events. It verified the full original O
+source/three-store/replay/score/checkpoint consistency twice around the legacy
+diagnostic check. Receipt: round10/evidence/postscore_guard_recovery.json.
+Do not rerun diagnosis, original verify/score or overwrite either receipt.
+
+round11/retrospective/O_AGGREGATES.json is an ID-free export of the original
+public checkpoint plus sealed supplementary aggregates, tied to the recovery
+and record/source hashes. It preserves rejection10/20, Exact17/99/9groups,
+original18%miss, development-only status and the missing-originalguard limitation.
+It includes no images, row targets/predictions, provider responses, oracle
+weights or credentials. Publish this with the retrospective/design/source
+snapshot as the failed-O backup before actual expansion work. It is not a new
+formal report and does not grant P-C/P-D/run approval.

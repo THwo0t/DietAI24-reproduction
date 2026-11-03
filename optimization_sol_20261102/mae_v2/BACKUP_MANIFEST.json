@@ -9,7 +9,22 @@
       24
     ],
     "status": "PASS",
-    "working_files_scanned": 501
+    "working_files_scanned": 507
+  },
+  "completed_O": {
+    "ASA_Exact": 17,
+    "ASA_Exact_groups": 9,
+    "ASA_records": 99,
+    "N5_records": 84,
+    "accepted": false,
+    "all_records": 183,
+    "diagnostic_recomputed": false,
+    "original18_pass": false,
+    "original_guard_passed": false,
+    "sealed_diagnostic_reverified": true,
+    "strict_passed_checks": 10,
+    "total_checks": 20,
+    "validation_opened": false
   },
   "credentials_included": false,
   "development_mae_pass": {
@@ -18,7 +33,7 @@
     "scope": "completed common M method; M0 passes6/20; neither passes coding guard or numerical tolerance",
     "total": 20
   },
-  "file_count": 377,
+  "file_count": 383,
   "files": {
     ".gitignore": {
       "bytes": 109,
@@ -33,8 +48,8 @@
       "sha256": "5deafa048129decb19bcad702e7e2f938ba9e9fa3d9033d6037dc8916014052e"
     },
     "CONTINUATION.md": {
-      "bytes": 67518,
-      "sha256": "29de3ce9623cbed693df31261917e055af337bfa23c98936a76b64274bb65d8a"
+      "bytes": 74653,
+      "sha256": "161b9e661a5fd2aae05eb1c9d19392263a1f6b0ad57ee5f44c164a7129e9c2eb"
     },
     "MAC_DEMO.md": {
       "bytes": 13272,
@@ -205,24 +220,36 @@
       "sha256": "bb4aaf76dfa82a6e88e3426e0565e344365fbf86cbfd4db08d7906f5e49ea424"
     },
     "round10/postscore/README.md": {
-      "bytes": 1451,
-      "sha256": "abf005a172e500b67d49c0dc47fb960511f591890a351d39aee2d74a60b89618"
+      "bytes": 3702,
+      "sha256": "21c77ceb1259c48e14843a793602b22e9cf50678221b61e4d1e448a029e63850"
     },
     "round10/postscore/REVIEW.md": {
       "bytes": 5182,
       "sha256": "2c2d36a0af8147764ebd8a6bd31e962886ff313862f6f85b444ca58f9ed96aba"
     },
     "round10/postscore/diagnose_o.py": {
-      "bytes": 12245,
-      "sha256": "6eb2802b313bf0f04859db1f9cc95d42e6e1f253dd4510ff33af6b01dc83f2bc"
+      "bytes": 12269,
+      "sha256": "cacc4d958980a6bb61cd57cc95ba2c572434bdb897020b5e3b9bf736b67f2eb1"
     },
     "round10/postscore/guarded_diagnose_o.py": {
-      "bytes": 5345,
-      "sha256": "b150cd6f30672e2d92feadda03477613a2c0fc95e13fc51cf0dc14571c30174f"
+      "bytes": 6308,
+      "sha256": "27c06dca5863e704605761a26389ee6246a8c97340b92f4230ae39abefbfd2a5"
+    },
+    "round10/postscore/recovery/REVIEW.md": {
+      "bytes": 6054,
+      "sha256": "2edd2070499076fb492b9a2f16648026ccb3de57dd539b2156faa34dbdc47901"
+    },
+    "round10/postscore/reverify_sealed_o.py": {
+      "bytes": 10793,
+      "sha256": "e701bad797ada42d13de04f6ea339789268abad035ade92ee56af3ba447b950a"
     },
     "round10/postscore/test_diagnose_o.py": {
-      "bytes": 6647,
-      "sha256": "7aed48469c6b2c52c3ede1b224baf9e99c89d17b63579a474bbb93629d59b799"
+      "bytes": 7893,
+      "sha256": "f4929a22acd766073aece421078cac0a35d50285f5bba5b9944c0c2959d3bf09"
+    },
+    "round10/postscore/test_reverify_sealed_o.py": {
+      "bytes": 10231,
+      "sha256": "2906889e98a9a7afe44cdee94f9f3125a99f779f31a06fb2537eaaefc9215918"
     },
     "round10/records_o.py": {
       "bytes": 4097,
@@ -300,6 +327,10 @@
       "bytes": 6360,
       "sha256": "9e969af17f87400dc0c5362724849d44814d130b0c184a49335c6773153c7b91"
     },
+    "round11/DESIGN.md": {
+      "bytes": 8431,
+      "sha256": "63d0690e20f463fff2f74e697e4d72901947a1af6c31bcce4c571b72dd78370a"
+    },
     "round11/EXPANSION_DRAFT.md": {
       "bytes": 21654,
       "sha256": "46056fc22ba4a73bf4c3d3ae6bc6f0852c62a87ec3d3243c7c9fbc93b378e491"
@@ -363,6 +394,14 @@
     "round11/qualification.py": {
       "bytes": 4333,
       "sha256": "b6ceea7613a29c847c4879b71a6ed54edce2cc8e6f2e39897fde484c6f16e510"
+    },
+    "round11/retrospective/O_AGGREGATES.json": {
+      "bytes": 179656,
+      "sha256": "694518d7f321e490e313913425cda115455df922d3d0585b7e9b723c0915aac1"
+    },
+    "round11/retrospective/REVIEW.md": {
+      "bytes": 14353,
+      "sha256": "b82782a6858caeae195acb89037f4bf72604d8d30bcbcbd67a2d994f3907e20e"
     },
     "round11/test_asa_archive.py": {
       "bytes": 7477,
@@ -1548,7 +1587,7 @@
     "reachable_blobs_scanned": 429,
     "status": "PASS"
   },
-  "latest_local_checkpoint": "1b11e18651f7e09e4f2bf56382568833b2a0cd56",
+  "latest_local_checkpoint": "b132782d7328208f13e1fd7c5de54fda7d8cb181",
   "new_research_data_included": false,
   "old_local_git_history_included": false,
   "purpose": "Preserve completed failed development methods, full J and K scoring, and aggregate diagnostics; continue optimization with validation sealed and final reports deferred.",
@@ -1578,18 +1617,25 @@
     "actual_data_audit": false,
     "cache_component_formal_reviews": 1,
     "cache_component_unresolved_p1_p2": 0,
+    "completed_O_evidence_component_formal_reviews": 1,
+    "full_pc_formal_reviews": 0,
     "full_preparer_formal_reviews": 0,
     "new_api_calls": 0,
     "new_downloads": 0,
     "offline_unique_tests": 104,
     "pc_components_formal_reviews": 0,
+    "pc_source_preparer_components_formal_reviews": 0,
+    "postscore_offline_tests": 15,
     "preparation_component_formal_reviews": 1,
     "preparation_component_unresolved_p1_p2": 0,
     "private_inputs_or_outputs_included": false,
+    "recovery_formal_reviews": 1,
     "review_fix": "R-PB-1",
     "selected_new_samples": 0,
-    "stage": "synthetic_preparation_only_not_approved_for_real_run",
-    "validation": "sealed"
+    "stage": "prospective_design_registered_actual_preparer_and_run_pending",
+    "total_offline_unique_tests": 119,
+    "validation": "sealed",
+    "whole_project_O_retrospective_reviews": 1
   },
   "round3": {
     "F": "completed 84; N5 0/10; rejected",
@@ -1888,7 +1934,7 @@
     "validation": "sealed"
   },
   "secret_scan": "PASS_reachable_history_and_worktree_generic_scan_plus_coordinator_reported_actual_credentials_in_memory",
-  "source_state": "O inference is sealed; its original offline verifier is running, and no complete O accuracy score is yet available. P-C source-only ASA archive/content/workbook/table and completed-O evidence prototypes plus concurrent cache checks use synthetic inputs only. Actual source/exposure audits, action permissions, selection, downloads and predictor integration remain pending. Validation sealed.",
+  "source_state": "O inference, original zero-Provider replay and scoring are complete: only 10 of 20 MAE checks pass, so O is rejected. Existing diagnostic seal was reverified without recomputation; the missing original guard receipt is explicit. Whole-project retrospective findings have design-level dispositions, and finite O/Q/D/Q+D comparisons and sampling rules are registered prospectively. Actual expanded-source/exposure audit, cohort preparation, predictor implementation and new run remain pending. Validation sealed.",
   "subagent_model_policy": {
     "astra_allowed": false,
     "explicit_spawn_model_required": true,

@@ -71,7 +71,7 @@ def physical_audit(rows,identities,records,catalog):
                     and replay['raw_leaves']==record['raw_leaves'],'O_diagnostic_main_aggregation_changed')
         total=sum(mass.values())
         out[ds]={'population_n':len(population),'complete_n':sum(not records[r['sample_id']]['fallback'] for r in population),
-            'physical_item_counts_on_successful_identities':dict(item_counts),'mode_item_counts':dict(counts),
+            'physical_item_counts_on_successful_identities':{str(k):v for k,v in item_counts.items()},'mode_item_counts':dict(counts),
             'mode_grams':dict(mass),'mode_mass_fractions':{k:v/total for k,v in mass.items()} if total else {},
             'excluded_canonical_unit_conflicts':conflicts,'multiple_items_sharing_primary_code_n':multi_primary,
             'mapping_or_join_inconsistencies':0,

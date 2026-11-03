@@ -13,6 +13,23 @@ import diagnose_o as d
 import httpx,opt_provider,runtime_o
 
 
+def kernel_loopback_only(raw):
+    """Parse the calling process's proc network view, not shared sysfs."""
+    try:
+        lines=raw.decode('ascii').strip().splitlines()
+    except (AttributeError,UnicodeDecodeError):
+        return False
+    if len(lines)!=3 or [s.strip() for s in lines[0].split('|')]!=['Inter-','Receive','Transmit']:
+        return False
+    header=[s.split() for s in lines[1].split('|')]
+    if header!=[['face'],['bytes','packets','errs','drop','fifo','frame','compressed','multicast'],
+                ['bytes','packets','errs','drop','fifo','colls','carrier','compressed']]:
+        return False
+    name,separator,counters=lines[2].rpartition(':')
+    values=counters.split()
+    return bool(separator) and name.strip()=='lo' and len(values)==16 and all(v.isdecimal() for v in values)
+
+
 def allowed_path(path,write,*,allowed_files,read_trees,write_tree,receipt,label_path,labels_allowed):
     p=Path(path).absolute().resolve()
     inside=lambda parent:p==parent or parent in p.parents
@@ -27,7 +44,9 @@ def allowed_path(path,write,*,allowed_files,read_trees,write_tree,receipt,label_
 
 def main():
     d.prerequisites(d.ROUND)
-    d.require({p.name for p in Path('/sys/class/net').iterdir()}<={'lo'},'O_network_namespace_required')
+    # /sys may retain the parent mount's network view after unshare -n.
+    # /proc/self/net/dev is resolved in this process's network namespace.
+    d.require(kernel_loopback_only(Path('/proc/self/net/dev').read_bytes()),'O_network_namespace_required')
     d.require(not (d.ROUND/'evidence/postscore_guard.json').exists(),'O_guard_receipt_exists')
     frozen=json.loads((d.ROUND/'prepared/freeze.json').read_text())
     allowed_files={d.ROOT/p for p in frozen['source_files']}

@@ -1,0 +1,4714 @@
+{
+  "checkpoint": {
+    "OOF_mass": {
+      "metrics": {
+        "all_mae_pass": false,
+        "checks": [
+          {
+            "dataset": "asa24",
+            "pass": true,
+            "statistic": "mae",
+            "target": "weight",
+            "threshold": 64.22,
+            "value": 21.838235294117645
+          },
+          {
+            "dataset": "asa24",
+            "pass": true,
+            "statistic": "per_unit",
+            "target": "weight",
+            "threshold": 0.4524,
+            "value": 0.2007462081271798
+          },
+          {
+            "dataset": "asa24",
+            "pass": true,
+            "statistic": "mae",
+            "target": "energy",
+            "threshold": 62.01,
+            "value": 33.660294117647055
+          },
+          {
+            "dataset": "asa24",
+            "pass": true,
+            "statistic": "per_unit",
+            "target": "energy",
+            "threshold": 0.2548,
+            "value": 0.16308305272892828
+          },
+          {
+            "dataset": "asa24",
+            "pass": true,
+            "statistic": "mae",
+            "target": "fat",
+            "threshold": 2.34,
+            "value": 0.7749485294117645
+          },
+          {
+            "dataset": "asa24",
+            "pass": true,
+            "statistic": "per_unit",
+            "target": "fat",
+            "threshold": 0.2262,
+            "value": 0.1008974341054829
+          },
+          {
+            "dataset": "asa24",
+            "pass": true,
+            "statistic": "mae",
+            "target": "carbs",
+            "threshold": 9.035,
+            "value": 6.513029411764706
+          },
+          {
+            "dataset": "asa24",
+            "pass": true,
+            "statistic": "per_unit",
+            "target": "carbs",
+            "threshold": 0.2704,
+            "value": 0.20601641272864246
+          },
+          {
+            "dataset": "asa24",
+            "pass": true,
+            "statistic": "mae",
+            "target": "protein",
+            "threshold": 1.794,
+            "value": 0.8900588235294117
+          },
+          {
+            "dataset": "asa24",
+            "pass": true,
+            "statistic": "per_unit",
+            "target": "protein",
+            "threshold": 0.3029,
+            "value": 0.14582336666457213
+          },
+          {
+            "dataset": "nutrition5k",
+            "pass": false,
+            "statistic": "mae",
+            "target": "weight",
+            "threshold": 58.63,
+            "value": 105.22166547619048
+          },
+          {
+            "dataset": "nutrition5k",
+            "pass": false,
+            "statistic": "per_unit",
+            "target": "weight",
+            "threshold": 0.2028,
+            "value": 0.34383489846728404
+          },
+          {
+            "dataset": "nutrition5k",
+            "pass": false,
+            "statistic": "mae",
+            "target": "energy",
+            "threshold": 88.66,
+            "value": 143.1607928204365
+          },
+          {
+            "dataset": "nutrition5k",
+            "pass": false,
+            "statistic": "per_unit",
+            "target": "energy",
+            "threshold": 0.2561,
+            "value": 0.41830370288120455
+          },
+          {
+            "dataset": "nutrition5k",
+            "pass": false,
+            "statistic": "mae",
+            "target": "fat",
+            "threshold": 5.213,
+            "value": 9.877431964732144
+          },
+          {
+            "dataset": "nutrition5k",
+            "pass": false,
+            "statistic": "per_unit",
+            "target": "fat",
+            "threshold": 0.2938,
+            "value": 0.5853487769005407
+          },
+          {
+            "dataset": "nutrition5k",
+            "pass": false,
+            "statistic": "mae",
+            "target": "carbs",
+            "threshold": 7.774,
+            "value": 14.562302854255949
+          },
+          {
+            "dataset": "nutrition5k",
+            "pass": false,
+            "statistic": "per_unit",
+            "target": "carbs",
+            "threshold": 0.2756,
+            "value": 0.5890411349370434
+          },
+          {
+            "dataset": "nutrition5k",
+            "pass": false,
+            "statistic": "mae",
+            "target": "protein",
+            "threshold": 5.044,
+            "value": 13.361461867886906
+          },
+          {
+            "dataset": "nutrition5k",
+            "pass": false,
+            "statistic": "per_unit",
+            "target": "protein",
+            "threshold": 0.2444,
+            "value": 0.5166824117251375
+          }
+        ],
+        "datasets": {
+          "asa24": {
+            "average_final_code_count": 2.0505050505050506,
+            "bootstrap": {
+              "confidence": 0.95,
+              "empty_exact_fraction": 0.0,
+              "empty_exact_replicates": 0,
+              "group_count": 23,
+              "intervals": {
+                "carbs.mae": {
+                  "high": 12.882221308876804,
+                  "low": 1.4925000000000002,
+                  "valid_replicates": 10000
+                },
+                "carbs.per_unit": {
+                  "high": 0.2907805589301285,
+                  "low": 0.07277463489268728,
+                  "valid_replicates": 10000
+                },
+                "energy.mae": {
+                  "high": 54.31195312499999,
+                  "low": 13.759999999999996,
+                  "valid_replicates": 10000
+                },
+                "energy.per_unit": {
+                  "high": 0.2840203866650812,
+                  "low": 0.0648645312596433,
+                  "valid_replicates": 10000
+                },
+                "exact_rate": {
+                  "high": 0.2963293650793646,
+                  "low": 0.07936507936507936,
+                  "valid_replicates": 10000
+                },
+                "fat.mae": {
+                  "high": 1.494171026785714,
+                  "low": 0.1609406808035714,
+                  "valid_replicates": 10000
+                },
+                "fat.per_unit": {
+                  "high": 0.29179118559322575,
+                  "low": 0.030100882214151293,
+                  "valid_replicates": 10000
+                },
+                "first_rate": {
+                  "high": 0.27586206896551724,
+                  "low": 0.06481481481481481,
+                  "valid_replicates": 10000
+                },
+                "protein.mae": {
+                  "high": 2.0536363636363637,
+                  "low": 0.1527659090909091,
+                  "valid_replicates": 10000
+                },
+                "protein.per_unit": {
+                  "high": 0.26918960225274335,
+                  "low": 0.03454613571814125,
+                  "valid_replicates": 10000
+                },
+                "weight.mae": {
+                  "high": 33.461647727272734,
+                  "low": 9.140625,
+                  "valid_replicates": 10000
+                },
+                "weight.per_unit": {
+                  "high": 0.2776252545182368,
+                  "low": 0.09688928942126969,
+                  "valid_replicates": 10000
+                }
+              },
+              "replicates": 10000,
+              "seed": 20261102,
+              "unit": "manifest_group_id"
+            },
+            "by_size": {
+              "largest": {
+                "conditional": {
+                  "available_n": 7,
+                  "complete_population": true,
+                  "metrics": {
+                    "carbs": {
+                      "mae": 7.86375,
+                      "pass_mae": true,
+                      "pass_per_unit": true,
+                      "per_unit": 0.15479638263030834,
+                      "reference_mean": 50.800605714285716,
+                      "threshold_mae": 9.035,
+                      "threshold_per_unit": 0.2704
+                    },
+                    "energy": {
+                      "mae": 30.77857142857143,
+                      "pass_mae": true,
+                      "pass_per_unit": true,
+                      "per_unit": 0.0961126675112864,
+                      "reference_mean": 320.23428571428565,
+                      "threshold_mae": 62.01,
+                      "threshold_per_unit": 0.2548
+                    },
+                    "fat": {
+                      "mae": 0.17389285714285713,
+                      "pass_mae": true,
+                      "pass_per_unit": true,
+                      "per_unit": 0.014436350784644869,
+                      "reference_mean": 12.045485714285714,
+                      "threshold_mae": 2.34,
+                      "threshold_per_unit": 0.2262
+                    },
+                    "protein": {
+                      "mae": 0.2382857142857143,
+                      "pass_mae": true,
+                      "pass_per_unit": true,
+                      "per_unit": 0.03333751717841488,
+                      "reference_mean": 7.147674285714286,
+                      "threshold_mae": 1.794,
+                      "threshold_per_unit": 0.3029
+                    },
+                    "weight": {
+                      "mae": 30.714285714285715,
+                      "pass_mae": true,
+                      "pass_per_unit": true,
+                      "per_unit": 0.18226517463546962,
+                      "reference_mean": 168.51428571428573,
+                      "threshold_mae": 64.22,
+                      "threshold_per_unit": 0.4524
+                    }
+                  },
+                  "n": 7
+                },
+                "e2e": {
+                  "available_n": 33,
+                  "complete_population": true,
+                  "metrics": {
+                    "carbs": {
+                      "mae": 24.43045404040404,
+                      "pass_mae": false,
+                      "pass_per_unit": false,
+                      "per_unit": 0.5461765381063658,
+                      "reference_mean": 44.72995878787877,
+                      "threshold_mae": 9.035,
+                      "threshold_per_unit": 0.2704
+                    },
+                    "energy": {
+                      "mae": 206.46960606060605,
+                      "pass_mae": false,
+                      "pass_per_unit": false,
+                      "per_unit": 0.4750749236051852,
+                      "reference_mean": 434.6043030303032,
+                      "threshold_mae": 62.01,
+                      "threshold_per_unit": 0.2548
+                    },
+                    "fat": {
+                      "mae": 13.611325757575754,
+                      "pass_mae": false,
+                      "pass_per_unit": false,
+                      "per_unit": 0.6384231986871476,
+                      "reference_mean": 21.320224242424246,
+                      "threshold_mae": 2.34,
+                      "threshold_per_unit": 0.2262
+                    },
+                    "protein": {
+                      "mae": 11.365319595959592,
+                      "pass_mae": false,
+                      "pass_per_unit": false,
+                      "per_unit": 0.6191883076699902,
+                      "reference_mean": 18.355190909090915,
+                      "threshold_mae": 1.794,
+                      "threshold_per_unit": 0.3029
+                    },
+                    "weight": {
+                      "mae": 134.87272727272727,
+                      "pass_mae": false,
+                      "pass_per_unit": false,
+                      "per_unit": 0.5673133301042648,
+                      "reference_mean": 237.739393939394,
+                      "threshold_mae": 64.22,
+                      "threshold_per_unit": 0.4524
+                    }
+                  },
+                  "n": 33
+                },
+                "exact_n": 7,
+                "exact_rate": 0.21212121212121213,
+                "first_n": 7,
+                "first_rate": 0.21212121212121213,
+                "n": 33
+              },
+              "medium": {
+                "conditional": {
+                  "available_n": 6,
+                  "complete_population": true,
+                  "metrics": {
+                    "carbs": {
+                      "mae": 9.279208333333335,
+                      "pass_mae": false,
+                      "pass_per_unit": false,
+                      "per_unit": 0.3463214974955175,
+                      "reference_mean": 26.793625,
+                      "threshold_mae": 9.035,
+                      "threshold_per_unit": 0.2704
+                    },
+                    "energy": {
+                      "mae": 59.4625,
+                      "pass_mae": true,
+                      "pass_per_unit": false,
+                      "per_unit": 0.32309991170277796,
+                      "reference_mean": 184.0375,
+                      "threshold_mae": 62.01,
+                      "threshold_per_unit": 0.2548
+                    },
+                    "fat": {
+                      "mae": 1.9928125000000003,
+                      "pass_mae": true,
+                      "pass_per_unit": false,
+                      "per_unit": 0.29099853063310555,
+                      "reference_mean": 6.8481875,
+                      "threshold_mae": 2.34,
+                      "threshold_per_unit": 0.2262
+                    },
+                    "protein": {
+                      "mae": 2.243833333333333,
+                      "pass_mae": false,
+                      "pass_per_unit": false,
+                      "per_unit": 0.30577921119275014,
+                      "reference_mean": 7.338083333333333,
+                      "threshold_mae": 1.794,
+                      "threshold_per_unit": 0.3029
+                    },
+                    "weight": {
+                      "mae": 26.041666666666664,
+                      "pass_mae": true,
+                      "pass_per_unit": true,
+                      "per_unit": 0.26205450733752617,
+                      "reference_mean": 99.375,
+                      "threshold_mae": 64.22,
+                      "threshold_per_unit": 0.4524
+                    }
+                  },
+                  "n": 6
+                },
+                "e2e": {
+                  "available_n": 33,
+                  "complete_population": true,
+                  "metrics": {
+                    "carbs": {
+                      "mae": 13.365987705050507,
+                      "pass_mae": false,
+                      "pass_per_unit": false,
+                      "per_unit": 0.6716111940760818,
+                      "reference_mean": 19.901377199999995,
+                      "threshold_mae": 9.035,
+                      "threshold_per_unit": 0.2704
+                    },
+                    "energy": {
+                      "mae": 87.89822454545453,
+                      "pass_mae": false,
+                      "pass_per_unit": false,
+                      "per_unit": 0.47551449102264354,
+                      "reference_mean": 184.848676969697,
+                      "threshold_mae": 62.01,
+                      "threshold_per_unit": 0.2548
+                    },
+                    "fat": {
+                      "mae": 5.604296111111111,
+                      "pass_mae": false,
+                      "pass_per_unit": false,
+                      "per_unit": 0.6189649377047131,
+                      "reference_mean": 9.054303030303032,
+                      "threshold_mae": 2.34,
+                      "threshold_per_unit": 0.2262
+                    },
+                    "protein": {
+                      "mae": 4.0177482070707065,
+                      "pass_mae": false,
+                      "pass_per_unit": false,
+                      "per_unit": 0.5647561571809053,
+                      "reference_mean": 7.114129090909092,
+                      "threshold_mae": 1.794,
+                      "threshold_per_unit": 0.3029
+                    },
+                    "weight": {
+                      "mae": 45.45660606060606,
+                      "pass_mae": true,
+                      "pass_per_unit": true,
+                      "per_unit": 0.45180974732329926,
+                      "reference_mean": 100.6100606060606,
+                      "threshold_mae": 64.22,
+                      "threshold_per_unit": 0.4524
+                    }
+                  },
+                  "n": 33
+                },
+                "exact_n": 6,
+                "exact_rate": 0.18181818181818182,
+                "first_n": 5,
+                "first_rate": 0.15151515151515152,
+                "n": 33
+              },
+              "smallest": {
+                "conditional": {
+                  "available_n": 4,
+                  "complete_population": true,
+                  "metrics": {
+                    "carbs": {
+                      "mae": 0.0,
+                      "pass_mae": true,
+                      "pass_per_unit": true,
+                      "per_unit": 0.0,
+                      "reference_mean": 5.268549999999999,
+                      "threshold_mae": 9.035,
+                      "threshold_per_unit": 0.2704
+                    },
+                    "energy": {
+                      "mae": 0.0,
+                      "pass_mae": true,
+                      "pass_per_unit": true,
+                      "per_unit": 0.0,
+                      "reference_mean": 40.732499999999995,
+                      "threshold_mae": 62.01,
+                      "threshold_per_unit": 0.2548
+                    },
+                    "fat": {
+                      "mae": 0.0,
+                      "pass_mae": true,
+                      "pass_per_unit": true,
+                      "per_unit": 0.0,
+                      "reference_mean": 1.2904875000000002,
+                      "threshold_mae": 2.34,
+                      "threshold_per_unit": 0.2262
+                    },
+                    "protein": {
+                      "mae": 0.0,
+                      "pass_mae": true,
+                      "pass_per_unit": true,
+                      "per_unit": 0.0,
+                      "reference_mean": 2.425075,
+                      "threshold_mae": 1.794,
+                      "threshold_per_unit": 0.3029
+                    },
+                    "weight": {
+                      "mae": 0.0,
+                      "pass_mae": true,
+                      "pass_per_unit": true,
+                      "per_unit": 0.0,
+                      "reference_mean": 18.375,
+                      "threshold_mae": 64.22,
+                      "threshold_per_unit": 0.4524
+                    }
+                  },
+                  "n": 4
+                },
+                "e2e": {
+                  "available_n": 33,
+                  "complete_population": true,
+                  "metrics": {
+                    "carbs": {
+                      "mae": 6.037599532323232,
+                      "pass_mae": true,
+                      "pass_per_unit": false,
+                      "per_unit": 1.2188531845431607,
+                      "reference_mean": 4.953508436363637,
+                      "threshold_mae": 9.035,
+                      "threshold_per_unit": 0.2704
+                    },
+                    "energy": {
+                      "mae": 44.0772097979798,
+                      "pass_mae": true,
+                      "pass_per_unit": false,
+                      "per_unit": 1.0551308283091922,
+                      "reference_mean": 41.77416545454546,
+                      "threshold_mae": 62.01,
+                      "threshold_per_unit": 0.2548
+                    },
+                    "fat": {
+                      "mae": 2.703223477777778,
+                      "pass_mae": false,
+                      "pass_per_unit": false,
+                      "per_unit": 1.3913354321677773,
+                      "reference_mean": 1.9428984666666664,
+                      "threshold_mae": 2.34,
+                      "threshold_per_unit": 0.2262
+                    },
+                    "protein": {
+                      "mae": 1.2586716303030303,
+                      "pass_mae": true,
+                      "pass_per_unit": false,
+                      "per_unit": 0.9306669856231967,
+                      "reference_mean": 1.3524403999999999,
+                      "threshold_mae": 1.794,
+                      "threshold_per_unit": 0.3029
+                    },
+                    "weight": {
+                      "mae": 21.707181818181816,
+                      "pass_mae": true,
+                      "pass_per_unit": false,
+                      "per_unit": 1.0294446488313536,
+                      "reference_mean": 21.086303030303036,
+                      "threshold_mae": 64.22,
+                      "threshold_per_unit": 0.4524
+                    }
+                  },
+                  "n": 33
+                },
+                "exact_n": 4,
+                "exact_rate": 0.12121212121212122,
+                "first_n": 3,
+                "first_rate": 0.09090909090909091,
+                "n": 33
+              }
+            },
+            "coded_n": 99,
+            "complete_n": 99,
+            "complete_rate": 1.0,
+            "conditional_fallback_n": 0,
+            "conditional_fallback_rate": 0.0,
+            "conditional_missing_n": 0,
+            "e2e": {
+              "available_n": 99,
+              "complete_population": true,
+              "metrics": {
+                "carbs": {
+                  "mae": 14.611347092592597,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.6299366139346659,
+                  "reference_mean": 23.19494814141414,
+                  "threshold_mae": 9.035,
+                  "threshold_per_unit": 0.2704
+                },
+                "energy": {
+                  "mae": 112.81501346801345,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.5118438387331848,
+                  "reference_mean": 220.40904848484837,
+                  "threshold_mae": 62.01,
+                  "threshold_per_unit": 0.2548
+                },
+                "fat": {
+                  "mae": 7.306281782154888,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.6782361170477224,
+                  "reference_mean": 10.772475246464646,
+                  "threshold_mae": 2.34,
+                  "threshold_per_unit": 0.2262
+                },
+                "protein": {
+                  "mae": 5.5472464777777795,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.6204566436039496,
+                  "reference_mean": 8.940586800000005,
+                  "threshold_mae": 1.794,
+                  "threshold_per_unit": 0.3029
+                },
+                "weight": {
+                  "mae": 67.34550505050507,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.562093533804667,
+                  "reference_mean": 119.8119191919192,
+                  "threshold_mae": 64.22,
+                  "threshold_per_unit": 0.4524
+                }
+              },
+              "n": 99
+            },
+            "e2e_fallback_n": 0,
+            "enhancement_native_n": 99,
+            "enhancement_native_rate": 1.0,
+            "exact_among_coded": 0.1717171717171717,
+            "exact_groups": 9,
+            "exact_n": 17,
+            "exact_rate": 0.1717171717171717,
+            "fallback_n": 0,
+            "fallback_rate": 0.0,
+            "first_n": 15,
+            "first_rate": 0.15151515151515152,
+            "groups": 23,
+            "method_fallback_n": 0,
+            "method_fallback_rate": 0.0,
+            "minimum_exact_n": 15,
+            "n": 99,
+            "native_complete_n": 99,
+            "native_complete_rate": 1.0,
+            "primary": {
+              "available_n": 17,
+              "complete_population": true,
+              "metrics": {
+                "carbs": {
+                  "mae": 6.513029411764706,
+                  "pass_mae": true,
+                  "pass_per_unit": true,
+                  "per_unit": 0.20601641272864246,
+                  "reference_mean": 31.61412882352941,
+                  "threshold_mae": 9.035,
+                  "threshold_per_unit": 0.2704
+                },
+                "energy": {
+                  "mae": 33.660294117647055,
+                  "pass_mae": true,
+                  "pass_per_unit": true,
+                  "per_unit": 0.16308305272892828,
+                  "reference_mean": 206.39970588235295,
+                  "threshold_mae": 62.01,
+                  "threshold_per_unit": 0.2548
+                },
+                "fat": {
+                  "mae": 0.7749485294117645,
+                  "pass_mae": true,
+                  "pass_per_unit": true,
+                  "per_unit": 0.1008974341054829,
+                  "reference_mean": 7.680557352941177,
+                  "threshold_mae": 2.34,
+                  "threshold_per_unit": 0.2262
+                },
+                "protein": {
+                  "mae": 0.8900588235294117,
+                  "pass_mae": true,
+                  "pass_per_unit": true,
+                  "per_unit": 0.14582336666457213,
+                  "reference_mean": 6.103677647058824,
+                  "threshold_mae": 1.794,
+                  "threshold_per_unit": 0.3029
+                },
+                "weight": {
+                  "mae": 21.838235294117645,
+                  "pass_mae": true,
+                  "pass_per_unit": true,
+                  "per_unit": 0.2007462081271798,
+                  "reference_mean": 108.78529411764706,
+                  "threshold_mae": 64.22,
+                  "threshold_per_unit": 0.4524
+                }
+              },
+              "n": 17
+            },
+            "recognition_pass": true,
+            "repair_success_n": 0,
+            "repair_success_rate": 0.0,
+            "retrieval_exact_n": 27,
+            "retrieval_exact_rate": 0.2727272727272727
+          },
+          "nutrition5k": {
+            "bootstrap": {
+              "confidence": 0.95,
+              "empty_exact_fraction": null,
+              "empty_exact_replicates": null,
+              "group_count": 78,
+              "intervals": {
+                "carbs.mae": {
+                  "high": 18.84091307580146,
+                  "low": 11.20795471674827,
+                  "valid_replicates": 10000
+                },
+                "carbs.per_unit": {
+                  "high": 0.7496653928808193,
+                  "low": 0.45744934049635083,
+                  "valid_replicates": 10000
+                },
+                "energy.mae": {
+                  "high": 170.98769354001718,
+                  "low": 119.21893911907851,
+                  "valid_replicates": 10000
+                },
+                "energy.per_unit": {
+                  "high": 0.48573897096649443,
+                  "low": 0.3593926070764146,
+                  "valid_replicates": 10000
+                },
+                "fat.mae": {
+                  "high": 11.945177148371824,
+                  "low": 8.064294697859577,
+                  "valid_replicates": 10000
+                },
+                "fat.per_unit": {
+                  "high": 0.6851746405191919,
+                  "low": 0.49965572797639424,
+                  "valid_replicates": 10000
+                },
+                "protein.mae": {
+                  "high": 17.331130179912364,
+                  "low": 9.941233101992307,
+                  "valid_replicates": 10000
+                },
+                "protein.per_unit": {
+                  "high": 0.5889601008504102,
+                  "low": 0.438638966467114,
+                  "valid_replicates": 10000
+                },
+                "weight.mae": {
+                  "high": 124.84284031183562,
+                  "low": 87.22744196406313,
+                  "valid_replicates": 10000
+                },
+                "weight.per_unit": {
+                  "high": 0.3993805544534015,
+                  "low": 0.29194004369919313,
+                  "valid_replicates": 10000
+                }
+              },
+              "replicates": 10000,
+              "seed": 20261102,
+              "unit": "manifest_group_id"
+            },
+            "complete_n": 84,
+            "complete_rate": 1.0,
+            "complete_subset": {
+              "available_n": 84,
+              "complete_population": true,
+              "metrics": {
+                "carbs": {
+                  "mae": 14.562302854255949,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.5890411349370434,
+                  "reference_mean": 24.72204739285715,
+                  "threshold_mae": 7.774,
+                  "threshold_per_unit": 0.2756
+                },
+                "energy": {
+                  "mae": 143.1607928204365,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.41830370288120455,
+                  "reference_mean": 342.2412755000001,
+                  "threshold_mae": 88.66,
+                  "threshold_per_unit": 0.2561
+                },
+                "fat": {
+                  "mae": 9.877431964732144,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.5853487769005407,
+                  "reference_mean": 16.874438547619047,
+                  "threshold_mae": 5.213,
+                  "threshold_per_unit": 0.2938
+                },
+                "protein": {
+                  "mae": 13.361461867886906,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.5166824117251375,
+                  "reference_mean": 25.860105869047615,
+                  "threshold_mae": 5.044,
+                  "threshold_per_unit": 0.2444
+                },
+                "weight": {
+                  "mae": 105.22166547619048,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.34383489846728404,
+                  "reference_mean": 306.0238095238094,
+                  "threshold_mae": 58.63,
+                  "threshold_per_unit": 0.2028
+                }
+              },
+              "n": 84
+            },
+            "enhancement_native_n": 81,
+            "enhancement_native_rate": 0.9642857142857143,
+            "fallback_n": 0,
+            "fallback_rate": 0.0,
+            "groups": 78,
+            "method_fallback_n": 0,
+            "method_fallback_rate": 0.0,
+            "n": 84,
+            "native_complete_n": 81,
+            "native_complete_rate": 0.9642857142857143,
+            "native_subset": {
+              "available_n": 81,
+              "complete_population": true,
+              "metrics": {
+                "carbs": {
+                  "mae": 13.852663323549383,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.5674601314171903,
+                  "reference_mean": 24.411694419753093,
+                  "threshold_mae": 7.774,
+                  "threshold_per_unit": 0.2756
+                },
+                "energy": {
+                  "mae": 141.8915732952675,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.42256128222341643,
+                  "reference_mean": 335.7893381728396,
+                  "threshold_mae": 88.66,
+                  "threshold_per_unit": 0.2561
+                },
+                "fat": {
+                  "mae": 9.860412939351853,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.5886659936922908,
+                  "reference_mean": 16.750437506172844,
+                  "threshold_mae": 5.213,
+                  "threshold_per_unit": 0.2938
+                },
+                "protein": {
+                  "mae": 12.670118919166665,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.5073330693737668,
+                  "reference_mean": 24.97396618518519,
+                  "threshold_mae": 5.044,
+                  "threshold_per_unit": 0.2444
+                },
+                "weight": {
+                  "mae": 106.22590617283949,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.3502095486181775,
+                  "reference_mean": 303.32098765432085,
+                  "threshold_mae": 58.63,
+                  "threshold_per_unit": 0.2028
+                }
+              },
+              "n": 81
+            },
+            "primary": {
+              "available_n": 84,
+              "complete_population": true,
+              "metrics": {
+                "carbs": {
+                  "mae": 14.562302854255949,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.5890411349370434,
+                  "reference_mean": 24.72204739285715,
+                  "threshold_mae": 7.774,
+                  "threshold_per_unit": 0.2756
+                },
+                "energy": {
+                  "mae": 143.1607928204365,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.41830370288120455,
+                  "reference_mean": 342.2412755000001,
+                  "threshold_mae": 88.66,
+                  "threshold_per_unit": 0.2561
+                },
+                "fat": {
+                  "mae": 9.877431964732144,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.5853487769005407,
+                  "reference_mean": 16.874438547619047,
+                  "threshold_mae": 5.213,
+                  "threshold_per_unit": 0.2938
+                },
+                "protein": {
+                  "mae": 13.361461867886906,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.5166824117251375,
+                  "reference_mean": 25.860105869047615,
+                  "threshold_mae": 5.044,
+                  "threshold_per_unit": 0.2444
+                },
+                "weight": {
+                  "mae": 105.22166547619048,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.34383489846728404,
+                  "reference_mean": 306.0238095238094,
+                  "threshold_mae": 58.63,
+                  "threshold_per_unit": 0.2028
+                }
+              },
+              "n": 84
+            },
+            "repair_success_n": 3,
+            "repair_success_rate": 0.03571428571428571
+          }
+        },
+        "joint_pass": false,
+        "passed_checks": 10,
+        "recognition_pass": true,
+        "total_checks": 20,
+        "version": 2
+      },
+      "tolerance": {
+        "accepted": false,
+        "defined": {
+          "asa24": true,
+          "nutrition5k": true
+        },
+        "failed_checks": {
+          "asa24": 0,
+          "nutrition5k": 10
+        },
+        "original18_pass": false,
+        "original18_target_n": 18,
+        "rank": [
+          10,
+          2.6489813378047,
+          10,
+          1.2301535587167272
+        ],
+        "recognition_floor_n": 15,
+        "recognition_guard_pass": true,
+        "strict20_pass": false,
+        "target_pairs_pass": {
+          "asa24": {
+            "carbs": true,
+            "energy": true,
+            "fat": true,
+            "protein": true,
+            "weight": true
+          },
+          "nutrition5k": {
+            "carbs": false,
+            "energy": false,
+            "fat": false,
+            "protein": false,
+            "weight": false
+          }
+        }
+      }
+    },
+    "api_calls": 0,
+    "calibration": {
+      "asa24": {
+        "calibrated_primary": {
+          "available_n": 17,
+          "complete_population": true,
+          "metrics": {
+            "carbs": {
+              "mae": 6.513029411764706,
+              "pass_mae": true,
+              "pass_per_unit": true,
+              "per_unit": 0.20601641272864246,
+              "reference_mean": 31.61412882352941,
+              "threshold_mae": 9.035,
+              "threshold_per_unit": 0.2704
+            },
+            "energy": {
+              "mae": 33.660294117647055,
+              "pass_mae": true,
+              "pass_per_unit": true,
+              "per_unit": 0.16308305272892828,
+              "reference_mean": 206.39970588235295,
+              "threshold_mae": 62.01,
+              "threshold_per_unit": 0.2548
+            },
+            "fat": {
+              "mae": 0.7749485294117645,
+              "pass_mae": true,
+              "pass_per_unit": true,
+              "per_unit": 0.1008974341054829,
+              "reference_mean": 7.680557352941177,
+              "threshold_mae": 2.34,
+              "threshold_per_unit": 0.2262
+            },
+            "protein": {
+              "mae": 0.8900588235294117,
+              "pass_mae": true,
+              "pass_per_unit": true,
+              "per_unit": 0.14582336666457213,
+              "reference_mean": 6.103677647058824,
+              "threshold_mae": 1.794,
+              "threshold_per_unit": 0.3029
+            },
+            "weight": {
+              "mae": 21.838235294117645,
+              "pass_mae": true,
+              "pass_per_unit": true,
+              "per_unit": 0.2007462081271798,
+              "reference_mean": 108.78529411764706,
+              "threshold_mae": 64.22,
+              "threshold_per_unit": 0.4524
+            }
+          },
+          "n": 17
+        },
+        "enabled": true,
+        "raw_primary": {
+          "available_n": 17,
+          "complete_population": true,
+          "metrics": {
+            "carbs": {
+              "mae": 8.260834705882353,
+              "pass_mae": true,
+              "pass_per_unit": true,
+              "per_unit": 0.2613019878546858,
+              "reference_mean": 31.61412882352941,
+              "threshold_mae": 9.035,
+              "threshold_per_unit": 0.2704
+            },
+            "energy": {
+              "mae": 40.3514705882353,
+              "pass_mae": true,
+              "pass_per_unit": true,
+              "per_unit": 0.19550158957704855,
+              "reference_mean": 206.39970588235295,
+              "threshold_mae": 62.01,
+              "threshold_per_unit": 0.2548
+            },
+            "fat": {
+              "mae": 0.7919367647058824,
+              "pass_mae": true,
+              "pass_per_unit": true,
+              "per_unit": 0.10310928339108355,
+              "reference_mean": 7.680557352941177,
+              "threshold_mae": 2.34,
+              "threshold_per_unit": 0.2262
+            },
+            "protein": {
+              "mae": 0.9121011764705882,
+              "pass_mae": true,
+              "pass_per_unit": true,
+              "per_unit": 0.14943468990537237,
+              "reference_mean": 6.103677647058824,
+              "threshold_mae": 1.794,
+              "threshold_per_unit": 0.3029
+            },
+            "weight": {
+              "mae": 27.19705882352941,
+              "pass_mae": true,
+              "pass_per_unit": true,
+              "per_unit": 0.25000675913158676,
+              "reference_mean": 108.78529411764706,
+              "threshold_mae": 64.22,
+              "threshold_per_unit": 0.4524
+            }
+          },
+          "n": 17
+        },
+        "reason": "strict_worst_improvement_without_lost_pass"
+      },
+      "nutrition5k": {
+        "calibrated_primary": {
+          "available_n": 84,
+          "complete_population": true,
+          "metrics": {
+            "carbs": {
+              "mae": 14.562302854255949,
+              "pass_mae": false,
+              "pass_per_unit": false,
+              "per_unit": 0.5890411349370434,
+              "reference_mean": 24.72204739285715,
+              "threshold_mae": 7.774,
+              "threshold_per_unit": 0.2756
+            },
+            "energy": {
+              "mae": 143.1607928204365,
+              "pass_mae": false,
+              "pass_per_unit": false,
+              "per_unit": 0.41830370288120455,
+              "reference_mean": 342.2412755000001,
+              "threshold_mae": 88.66,
+              "threshold_per_unit": 0.2561
+            },
+            "fat": {
+              "mae": 9.877431964732144,
+              "pass_mae": false,
+              "pass_per_unit": false,
+              "per_unit": 0.5853487769005407,
+              "reference_mean": 16.874438547619047,
+              "threshold_mae": 5.213,
+              "threshold_per_unit": 0.2938
+            },
+            "protein": {
+              "mae": 13.361461867886906,
+              "pass_mae": false,
+              "pass_per_unit": false,
+              "per_unit": 0.5166824117251375,
+              "reference_mean": 25.860105869047615,
+              "threshold_mae": 5.044,
+              "threshold_per_unit": 0.2444
+            },
+            "weight": {
+              "mae": 105.22166547619048,
+              "pass_mae": false,
+              "pass_per_unit": false,
+              "per_unit": 0.34383489846728404,
+              "reference_mean": 306.0238095238094,
+              "threshold_mae": 58.63,
+              "threshold_per_unit": 0.2028
+            }
+          },
+          "n": 84
+        },
+        "enabled": true,
+        "raw_primary": {
+          "available_n": 84,
+          "complete_population": true,
+          "metrics": {
+            "carbs": {
+              "mae": 14.302940200396824,
+              "pass_mae": false,
+              "pass_per_unit": false,
+              "per_unit": 0.5785499871070274,
+              "reference_mean": 24.72204739285715,
+              "threshold_mae": 7.774,
+              "threshold_per_unit": 0.2756
+            },
+            "energy": {
+              "mae": 142.59013956349202,
+              "pass_mae": false,
+              "pass_per_unit": false,
+              "per_unit": 0.416636302430716,
+              "reference_mean": 342.2412755000001,
+              "threshold_mae": 88.66,
+              "threshold_per_unit": 0.2561
+            },
+            "fat": {
+              "mae": 9.807722742063492,
+              "pass_mae": false,
+              "pass_per_unit": false,
+              "per_unit": 0.5812177225563065,
+              "reference_mean": 16.874438547619047,
+              "threshold_mae": 5.213,
+              "threshold_per_unit": 0.2938
+            },
+            "protein": {
+              "mae": 13.38955798412699,
+              "pass_mae": false,
+              "pass_per_unit": false,
+              "per_unit": 0.5177688773561121,
+              "reference_mean": 25.860105869047615,
+              "threshold_mae": 5.044,
+              "threshold_per_unit": 0.2444
+            },
+            "weight": {
+              "mae": 106.74142857142856,
+              "pass_mae": false,
+              "pass_per_unit": false,
+              "per_unit": 0.34880105811872725,
+              "reference_mean": 306.0238095238094,
+              "threshold_mae": 58.63,
+              "threshold_per_unit": 0.2028
+            }
+          },
+          "n": 84
+        },
+        "reason": "strict_worst_improvement_without_lost_pass"
+      }
+    },
+    "conditional_success": {
+      "fallback_n": 0,
+      "n": 17,
+      "native_n": 17,
+      "repair_success_n": 0
+    },
+    "full_development_parameters": {
+      "asa24": {
+        "dataset": "asa24",
+        "eligible_groups": 9,
+        "eligible_n": 17,
+        "enabled": true,
+        "fallback": {
+          "carbs": 12.3424,
+          "energy": 106.4,
+          "fat": 1.83,
+          "protein": 2.664375,
+          "weight": 51.0
+        },
+        "grid": {
+          "maximum": 1.25,
+          "minimum": 0.8,
+          "step": 0.001
+        },
+        "mass_factor": 1.107,
+        "raw_factor": 1.214,
+        "reason": "fitted",
+        "shrinkage_toward_one": 0.5,
+        "training_objective": {
+          "mean_ratio": 0.3923075611135189,
+          "worst_ratio": 0.6374986929039551
+        }
+      },
+      "nutrition5k": {
+        "dataset": "nutrition5k",
+        "eligible_groups": 78,
+        "eligible_n": 84,
+        "enabled": true,
+        "fallback": {
+          "carbs": 23.353388000000002,
+          "energy": 309.56904599999996,
+          "fat": 13.3508025,
+          "protein": 24.041379499999998,
+          "weight": 302.5
+        },
+        "grid": {
+          "maximum": 1.25,
+          "minimum": 0.8,
+          "step": 0.001
+        },
+        "mass_factor": 1.025,
+        "raw_factor": 1.05,
+        "reason": "fitted",
+        "shrinkage_toward_one": 0.5,
+        "training_objective": {
+          "mean_ratio": 1.9471467309899382,
+          "worst_ratio": 2.6420976267182135
+        }
+      }
+    },
+    "new_service_usage": {
+      "notice": "Reported token usage only; money unverified. Reasoning is already included in completion.",
+      "official_embedding_cost_usd": null,
+      "old_import_logical_hits": {
+        "M": 7,
+        "legacy": 308
+      },
+      "providers": {
+        "chat": {
+          "completion_tokens": 129311,
+          "errors": 0,
+          "logged_transmissions": 503,
+          "missing_usage_responses": 0,
+          "prompt_tokens": 1070245,
+          "reasoning_tokens": 80257,
+          "total_tokens": 1199556
+        },
+        "embedding": {
+          "completion_tokens": 0,
+          "errors": 2,
+          "logged_transmissions": 345,
+          "missing_usage_responses": 345,
+          "prompt_tokens": 3335,
+          "reasoning_tokens": 0,
+          "total_tokens": 3335
+        }
+      },
+      "third_party_cost_usd": null,
+      "unknown_reservations": 0
+    },
+    "pure_median_baselines": {
+      "asa24_all_population_median": {
+        "available_n": 99,
+        "complete_population": true,
+        "metrics": {
+          "carbs": {
+            "mae": 19.342430646464646,
+            "pass_mae": false,
+            "pass_per_unit": false,
+            "per_unit": 0.8339070442640526,
+            "reference_mean": 23.19494814141414,
+            "threshold_mae": 9.035,
+            "threshold_per_unit": 0.2704
+          },
+          "energy": {
+            "mae": 180.2451333333334,
+            "pass_mae": false,
+            "pass_per_unit": false,
+            "per_unit": 0.8177755612684116,
+            "reference_mean": 220.40904848484837,
+            "threshold_mae": 62.01,
+            "threshold_per_unit": 0.2548
+          },
+          "fat": {
+            "mae": 10.672880687878783,
+            "pass_mae": false,
+            "pass_per_unit": false,
+            "per_unit": 0.9907547191980275,
+            "reference_mean": 10.772475246464646,
+            "threshold_mae": 2.34,
+            "threshold_per_unit": 0.2262
+          },
+          "protein": {
+            "mae": 8.359217846464649,
+            "pass_mae": false,
+            "pass_per_unit": false,
+            "per_unit": 0.9349741838493916,
+            "reference_mean": 8.940586800000005,
+            "threshold_mae": 1.794,
+            "threshold_per_unit": 0.3029
+          },
+          "weight": {
+            "mae": 113.69287878787877,
+            "pass_mae": false,
+            "pass_per_unit": false,
+            "per_unit": 0.9489279493617098,
+            "reference_mean": 119.8119191919192,
+            "threshold_mae": 64.22,
+            "threshold_per_unit": 0.4524
+          }
+        },
+        "n": 99
+      },
+      "asa24_fixed_Exact_median_legal_option": {
+        "available_n": 17,
+        "complete_population": true,
+        "metrics": {
+          "carbs": {
+            "mae": 14.203830588235295,
+            "pass_mae": false,
+            "pass_per_unit": false,
+            "per_unit": 0.44928742675533817,
+            "reference_mean": 31.61412882352941,
+            "threshold_mae": 9.035,
+            "threshold_per_unit": 0.2704
+          },
+          "energy": {
+            "mae": 90.04529411764705,
+            "pass_mae": false,
+            "pass_per_unit": false,
+            "per_unit": 0.43626658154722625,
+            "reference_mean": 206.39970588235295,
+            "threshold_mae": 62.01,
+            "threshold_per_unit": 0.2548
+          },
+          "fat": {
+            "mae": 3.1183794117647055,
+            "pass_mae": false,
+            "pass_per_unit": false,
+            "per_unit": 0.40600952098490084,
+            "reference_mean": 7.680557352941177,
+            "threshold_mae": 2.34,
+            "threshold_per_unit": 0.2262
+          },
+          "protein": {
+            "mae": 2.6575505882352943,
+            "pass_mae": false,
+            "pass_per_unit": false,
+            "per_unit": 0.43540153034062784,
+            "reference_mean": 6.103677647058824,
+            "threshold_mae": 1.794,
+            "threshold_per_unit": 0.3029
+          },
+          "weight": {
+            "mae": 47.48823529411764,
+            "pass_mae": true,
+            "pass_per_unit": true,
+            "per_unit": 0.43653175440019465,
+            "reference_mean": 108.78529411764706,
+            "threshold_mae": 64.22,
+            "threshold_per_unit": 0.4524
+          }
+        },
+        "n": 17
+      },
+      "nutrition5k_all_population_median": {
+        "available_n": 84,
+        "complete_population": true,
+        "metrics": {
+          "carbs": {
+            "mae": 13.101158238095234,
+            "pass_mae": false,
+            "pass_per_unit": false,
+            "per_unit": 0.5299382381202175,
+            "reference_mean": 24.72204739285715,
+            "threshold_mae": 7.774,
+            "threshold_per_unit": 0.2756
+          },
+          "energy": {
+            "mae": 166.83850328571424,
+            "pass_mae": false,
+            "pass_per_unit": false,
+            "per_unit": 0.48748796603206385,
+            "reference_mean": 342.2412755000001,
+            "threshold_mae": 88.66,
+            "threshold_per_unit": 0.2561
+          },
+          "fat": {
+            "mae": 9.9899915,
+            "pass_mae": false,
+            "pass_per_unit": false,
+            "per_unit": 0.5920191935161938,
+            "reference_mean": 16.874438547619047,
+            "threshold_mae": 5.213,
+            "threshold_per_unit": 0.2938
+          },
+          "protein": {
+            "mae": 15.948705488095229,
+            "pass_mae": false,
+            "pass_per_unit": false,
+            "per_unit": 0.616730092632161,
+            "reference_mean": 25.860105869047615,
+            "threshold_mae": 5.044,
+            "threshold_per_unit": 0.2444
+          },
+          "weight": {
+            "mae": 126.71428571428574,
+            "pass_mae": false,
+            "pass_per_unit": false,
+            "per_unit": 0.41406675484322747,
+            "reference_mean": 306.0238095238094,
+            "threshold_mae": 58.63,
+            "threshold_per_unit": 0.2028
+          }
+        },
+        "n": 84
+      }
+    },
+    "raw": {
+      "metrics": {
+        "all_mae_pass": false,
+        "checks": [
+          {
+            "dataset": "asa24",
+            "pass": true,
+            "statistic": "mae",
+            "target": "weight",
+            "threshold": 64.22,
+            "value": 27.19705882352941
+          },
+          {
+            "dataset": "asa24",
+            "pass": true,
+            "statistic": "per_unit",
+            "target": "weight",
+            "threshold": 0.4524,
+            "value": 0.25000675913158676
+          },
+          {
+            "dataset": "asa24",
+            "pass": true,
+            "statistic": "mae",
+            "target": "energy",
+            "threshold": 62.01,
+            "value": 40.3514705882353
+          },
+          {
+            "dataset": "asa24",
+            "pass": true,
+            "statistic": "per_unit",
+            "target": "energy",
+            "threshold": 0.2548,
+            "value": 0.19550158957704855
+          },
+          {
+            "dataset": "asa24",
+            "pass": true,
+            "statistic": "mae",
+            "target": "fat",
+            "threshold": 2.34,
+            "value": 0.7919367647058824
+          },
+          {
+            "dataset": "asa24",
+            "pass": true,
+            "statistic": "per_unit",
+            "target": "fat",
+            "threshold": 0.2262,
+            "value": 0.10310928339108355
+          },
+          {
+            "dataset": "asa24",
+            "pass": true,
+            "statistic": "mae",
+            "target": "carbs",
+            "threshold": 9.035,
+            "value": 8.260834705882353
+          },
+          {
+            "dataset": "asa24",
+            "pass": true,
+            "statistic": "per_unit",
+            "target": "carbs",
+            "threshold": 0.2704,
+            "value": 0.2613019878546858
+          },
+          {
+            "dataset": "asa24",
+            "pass": true,
+            "statistic": "mae",
+            "target": "protein",
+            "threshold": 1.794,
+            "value": 0.9121011764705882
+          },
+          {
+            "dataset": "asa24",
+            "pass": true,
+            "statistic": "per_unit",
+            "target": "protein",
+            "threshold": 0.3029,
+            "value": 0.14943468990537237
+          },
+          {
+            "dataset": "nutrition5k",
+            "pass": false,
+            "statistic": "mae",
+            "target": "weight",
+            "threshold": 58.63,
+            "value": 106.74142857142856
+          },
+          {
+            "dataset": "nutrition5k",
+            "pass": false,
+            "statistic": "per_unit",
+            "target": "weight",
+            "threshold": 0.2028,
+            "value": 0.34880105811872725
+          },
+          {
+            "dataset": "nutrition5k",
+            "pass": false,
+            "statistic": "mae",
+            "target": "energy",
+            "threshold": 88.66,
+            "value": 142.59013956349202
+          },
+          {
+            "dataset": "nutrition5k",
+            "pass": false,
+            "statistic": "per_unit",
+            "target": "energy",
+            "threshold": 0.2561,
+            "value": 0.416636302430716
+          },
+          {
+            "dataset": "nutrition5k",
+            "pass": false,
+            "statistic": "mae",
+            "target": "fat",
+            "threshold": 5.213,
+            "value": 9.807722742063492
+          },
+          {
+            "dataset": "nutrition5k",
+            "pass": false,
+            "statistic": "per_unit",
+            "target": "fat",
+            "threshold": 0.2938,
+            "value": 0.5812177225563065
+          },
+          {
+            "dataset": "nutrition5k",
+            "pass": false,
+            "statistic": "mae",
+            "target": "carbs",
+            "threshold": 7.774,
+            "value": 14.302940200396824
+          },
+          {
+            "dataset": "nutrition5k",
+            "pass": false,
+            "statistic": "per_unit",
+            "target": "carbs",
+            "threshold": 0.2756,
+            "value": 0.5785499871070274
+          },
+          {
+            "dataset": "nutrition5k",
+            "pass": false,
+            "statistic": "mae",
+            "target": "protein",
+            "threshold": 5.044,
+            "value": 13.38955798412699
+          },
+          {
+            "dataset": "nutrition5k",
+            "pass": false,
+            "statistic": "per_unit",
+            "target": "protein",
+            "threshold": 0.2444,
+            "value": 0.5177688773561121
+          }
+        ],
+        "datasets": {
+          "asa24": {
+            "average_final_code_count": 2.0505050505050506,
+            "bootstrap": {
+              "confidence": 0.95,
+              "empty_exact_fraction": 0.0,
+              "empty_exact_replicates": 0,
+              "group_count": 23,
+              "intervals": {
+                "carbs.mae": {
+                  "high": 16.401176470588233,
+                  "low": 2.122838641176471,
+                  "valid_replicates": 10000
+                },
+                "carbs.per_unit": {
+                  "high": 0.3733655624579238,
+                  "low": 0.09897879979772402,
+                  "valid_replicates": 10000
+                },
+                "energy.mae": {
+                  "high": 66.8827888655462,
+                  "low": 17.281382440476193,
+                  "valid_replicates": 10000
+                },
+                "energy.per_unit": {
+                  "high": 0.3537649386011166,
+                  "low": 0.07883092388182718,
+                  "valid_replicates": 10000
+                },
+                "exact_rate": {
+                  "high": 0.2963293650793646,
+                  "low": 0.07936507936507936,
+                  "valid_replicates": 10000
+                },
+                "fat.mae": {
+                  "high": 1.498497039473684,
+                  "low": 0.189503125,
+                  "valid_replicates": 10000
+                },
+                "fat.per_unit": {
+                  "high": 0.31407335956069826,
+                  "low": 0.03180424743150007,
+                  "valid_replicates": 10000
+                },
+                "first_rate": {
+                  "high": 0.27586206896551724,
+                  "low": 0.06481481481481481,
+                  "valid_replicates": 10000
+                },
+                "protein.mae": {
+                  "high": 2.0613884786096257,
+                  "low": 0.18305875,
+                  "valid_replicates": 10000
+                },
+                "protein.per_unit": {
+                  "high": 0.2888876214292002,
+                  "low": 0.03893083549391217,
+                  "valid_replicates": 10000
+                },
+                "weight.mae": {
+                  "high": 45.10227272727269,
+                  "low": 11.238660714285714,
+                  "valid_replicates": 10000
+                },
+                "weight.per_unit": {
+                  "high": 0.37720099144196834,
+                  "low": 0.1194780708175712,
+                  "valid_replicates": 10000
+                }
+              },
+              "replicates": 10000,
+              "seed": 20261102,
+              "unit": "manifest_group_id"
+            },
+            "by_size": {
+              "largest": {
+                "conditional": {
+                  "available_n": 7,
+                  "complete_population": true,
+                  "metrics": {
+                    "carbs": {
+                      "mae": 12.108419999999999,
+                      "pass_mae": false,
+                      "pass_per_unit": true,
+                      "per_unit": 0.2383518824184998,
+                      "reference_mean": 50.800605714285716,
+                      "threshold_mae": 9.035,
+                      "threshold_per_unit": 0.2704
+                    },
+                    "energy": {
+                      "mae": 47.02857142857143,
+                      "pass_mae": true,
+                      "pass_per_unit": true,
+                      "per_unit": 0.14685676558234154,
+                      "reference_mean": 320.23428571428565,
+                      "threshold_mae": 62.01,
+                      "threshold_per_unit": 0.2548
+                    },
+                    "fat": {
+                      "mae": 0.21514999999999998,
+                      "pass_mae": true,
+                      "pass_per_unit": true,
+                      "per_unit": 0.01786146321562079,
+                      "reference_mean": 12.045485714285714,
+                      "threshold_mae": 2.34,
+                      "threshold_per_unit": 0.2262
+                    },
+                    "protein": {
+                      "mae": 0.29181714285714283,
+                      "pass_mae": true,
+                      "pass_per_unit": true,
+                      "per_unit": 0.04082686636132592,
+                      "reference_mean": 7.147674285714286,
+                      "threshold_mae": 1.794,
+                      "threshold_per_unit": 0.3029
+                    },
+                    "weight": {
+                      "mae": 43.72857142857143,
+                      "pass_mae": true,
+                      "pass_per_unit": true,
+                      "per_unit": 0.25949474398101047,
+                      "reference_mean": 168.51428571428573,
+                      "threshold_mae": 64.22,
+                      "threshold_per_unit": 0.4524
+                    }
+                  },
+                  "n": 7
+                },
+                "e2e": {
+                  "available_n": 33,
+                  "complete_population": true,
+                  "metrics": {
+                    "carbs": {
+                      "mae": 24.43045404040404,
+                      "pass_mae": false,
+                      "pass_per_unit": false,
+                      "per_unit": 0.5461765381063658,
+                      "reference_mean": 44.72995878787877,
+                      "threshold_mae": 9.035,
+                      "threshold_per_unit": 0.2704
+                    },
+                    "energy": {
+                      "mae": 206.46960606060605,
+                      "pass_mae": false,
+                      "pass_per_unit": false,
+                      "per_unit": 0.4750749236051852,
+                      "reference_mean": 434.6043030303032,
+                      "threshold_mae": 62.01,
+                      "threshold_per_unit": 0.2548
+                    },
+                    "fat": {
+                      "mae": 13.611325757575754,
+                      "pass_mae": false,
+                      "pass_per_unit": false,
+                      "per_unit": 0.6384231986871476,
+                      "reference_mean": 21.320224242424246,
+                      "threshold_mae": 2.34,
+                      "threshold_per_unit": 0.2262
+                    },
+                    "protein": {
+                      "mae": 11.365319595959592,
+                      "pass_mae": false,
+                      "pass_per_unit": false,
+                      "per_unit": 0.6191883076699902,
+                      "reference_mean": 18.355190909090915,
+                      "threshold_mae": 1.794,
+                      "threshold_per_unit": 0.3029
+                    },
+                    "weight": {
+                      "mae": 134.87272727272727,
+                      "pass_mae": false,
+                      "pass_per_unit": false,
+                      "per_unit": 0.5673133301042648,
+                      "reference_mean": 237.739393939394,
+                      "threshold_mae": 64.22,
+                      "threshold_per_unit": 0.4524
+                    }
+                  },
+                  "n": 33
+                },
+                "exact_n": 7,
+                "exact_rate": 0.21212121212121213,
+                "first_n": 7,
+                "first_rate": 0.21212121212121213,
+                "n": 33
+              },
+              "medium": {
+                "conditional": {
+                  "available_n": 6,
+                  "complete_population": true,
+                  "metrics": {
+                    "carbs": {
+                      "mae": 9.279208333333335,
+                      "pass_mae": false,
+                      "pass_per_unit": false,
+                      "per_unit": 0.3463214974955175,
+                      "reference_mean": 26.793625,
+                      "threshold_mae": 9.035,
+                      "threshold_per_unit": 0.2704
+                    },
+                    "energy": {
+                      "mae": 59.4625,
+                      "pass_mae": true,
+                      "pass_per_unit": false,
+                      "per_unit": 0.32309991170277796,
+                      "reference_mean": 184.0375,
+                      "threshold_mae": 62.01,
+                      "threshold_per_unit": 0.2548
+                    },
+                    "fat": {
+                      "mae": 1.9928125000000003,
+                      "pass_mae": true,
+                      "pass_per_unit": false,
+                      "per_unit": 0.29099853063310555,
+                      "reference_mean": 6.8481875,
+                      "threshold_mae": 2.34,
+                      "threshold_per_unit": 0.2262
+                    },
+                    "protein": {
+                      "mae": 2.243833333333333,
+                      "pass_mae": false,
+                      "pass_per_unit": false,
+                      "per_unit": 0.30577921119275014,
+                      "reference_mean": 7.338083333333333,
+                      "threshold_mae": 1.794,
+                      "threshold_per_unit": 0.3029
+                    },
+                    "weight": {
+                      "mae": 26.041666666666664,
+                      "pass_mae": true,
+                      "pass_per_unit": true,
+                      "per_unit": 0.26205450733752617,
+                      "reference_mean": 99.375,
+                      "threshold_mae": 64.22,
+                      "threshold_per_unit": 0.4524
+                    }
+                  },
+                  "n": 6
+                },
+                "e2e": {
+                  "available_n": 33,
+                  "complete_population": true,
+                  "metrics": {
+                    "carbs": {
+                      "mae": 13.365987705050507,
+                      "pass_mae": false,
+                      "pass_per_unit": false,
+                      "per_unit": 0.6716111940760818,
+                      "reference_mean": 19.901377199999995,
+                      "threshold_mae": 9.035,
+                      "threshold_per_unit": 0.2704
+                    },
+                    "energy": {
+                      "mae": 87.89822454545453,
+                      "pass_mae": false,
+                      "pass_per_unit": false,
+                      "per_unit": 0.47551449102264354,
+                      "reference_mean": 184.848676969697,
+                      "threshold_mae": 62.01,
+                      "threshold_per_unit": 0.2548
+                    },
+                    "fat": {
+                      "mae": 5.604296111111111,
+                      "pass_mae": false,
+                      "pass_per_unit": false,
+                      "per_unit": 0.6189649377047131,
+                      "reference_mean": 9.054303030303032,
+                      "threshold_mae": 2.34,
+                      "threshold_per_unit": 0.2262
+                    },
+                    "protein": {
+                      "mae": 4.0177482070707065,
+                      "pass_mae": false,
+                      "pass_per_unit": false,
+                      "per_unit": 0.5647561571809053,
+                      "reference_mean": 7.114129090909092,
+                      "threshold_mae": 1.794,
+                      "threshold_per_unit": 0.3029
+                    },
+                    "weight": {
+                      "mae": 45.45660606060606,
+                      "pass_mae": true,
+                      "pass_per_unit": true,
+                      "per_unit": 0.45180974732329926,
+                      "reference_mean": 100.6100606060606,
+                      "threshold_mae": 64.22,
+                      "threshold_per_unit": 0.4524
+                    }
+                  },
+                  "n": 33
+                },
+                "exact_n": 6,
+                "exact_rate": 0.18181818181818182,
+                "first_n": 5,
+                "first_rate": 0.15151515151515152,
+                "n": 33
+              },
+              "smallest": {
+                "conditional": {
+                  "available_n": 4,
+                  "complete_population": true,
+                  "metrics": {
+                    "carbs": {
+                      "mae": 0.0,
+                      "pass_mae": true,
+                      "pass_per_unit": true,
+                      "per_unit": 0.0,
+                      "reference_mean": 5.268549999999999,
+                      "threshold_mae": 9.035,
+                      "threshold_per_unit": 0.2704
+                    },
+                    "energy": {
+                      "mae": 0.0,
+                      "pass_mae": true,
+                      "pass_per_unit": true,
+                      "per_unit": 0.0,
+                      "reference_mean": 40.732499999999995,
+                      "threshold_mae": 62.01,
+                      "threshold_per_unit": 0.2548
+                    },
+                    "fat": {
+                      "mae": 0.0,
+                      "pass_mae": true,
+                      "pass_per_unit": true,
+                      "per_unit": 0.0,
+                      "reference_mean": 1.2904875000000002,
+                      "threshold_mae": 2.34,
+                      "threshold_per_unit": 0.2262
+                    },
+                    "protein": {
+                      "mae": 0.0,
+                      "pass_mae": true,
+                      "pass_per_unit": true,
+                      "per_unit": 0.0,
+                      "reference_mean": 2.425075,
+                      "threshold_mae": 1.794,
+                      "threshold_per_unit": 0.3029
+                    },
+                    "weight": {
+                      "mae": 0.0,
+                      "pass_mae": true,
+                      "pass_per_unit": true,
+                      "per_unit": 0.0,
+                      "reference_mean": 18.375,
+                      "threshold_mae": 64.22,
+                      "threshold_per_unit": 0.4524
+                    }
+                  },
+                  "n": 4
+                },
+                "e2e": {
+                  "available_n": 33,
+                  "complete_population": true,
+                  "metrics": {
+                    "carbs": {
+                      "mae": 6.037599532323232,
+                      "pass_mae": true,
+                      "pass_per_unit": false,
+                      "per_unit": 1.2188531845431607,
+                      "reference_mean": 4.953508436363637,
+                      "threshold_mae": 9.035,
+                      "threshold_per_unit": 0.2704
+                    },
+                    "energy": {
+                      "mae": 44.0772097979798,
+                      "pass_mae": true,
+                      "pass_per_unit": false,
+                      "per_unit": 1.0551308283091922,
+                      "reference_mean": 41.77416545454546,
+                      "threshold_mae": 62.01,
+                      "threshold_per_unit": 0.2548
+                    },
+                    "fat": {
+                      "mae": 2.703223477777778,
+                      "pass_mae": false,
+                      "pass_per_unit": false,
+                      "per_unit": 1.3913354321677773,
+                      "reference_mean": 1.9428984666666664,
+                      "threshold_mae": 2.34,
+                      "threshold_per_unit": 0.2262
+                    },
+                    "protein": {
+                      "mae": 1.2586716303030303,
+                      "pass_mae": true,
+                      "pass_per_unit": false,
+                      "per_unit": 0.9306669856231967,
+                      "reference_mean": 1.3524403999999999,
+                      "threshold_mae": 1.794,
+                      "threshold_per_unit": 0.3029
+                    },
+                    "weight": {
+                      "mae": 21.707181818181816,
+                      "pass_mae": true,
+                      "pass_per_unit": false,
+                      "per_unit": 1.0294446488313536,
+                      "reference_mean": 21.086303030303036,
+                      "threshold_mae": 64.22,
+                      "threshold_per_unit": 0.4524
+                    }
+                  },
+                  "n": 33
+                },
+                "exact_n": 4,
+                "exact_rate": 0.12121212121212122,
+                "first_n": 3,
+                "first_rate": 0.09090909090909091,
+                "n": 33
+              }
+            },
+            "coded_n": 99,
+            "complete_n": 99,
+            "complete_rate": 1.0,
+            "conditional_fallback_n": 0,
+            "conditional_fallback_rate": 0.0,
+            "conditional_missing_n": 0,
+            "e2e": {
+              "available_n": 99,
+              "complete_population": true,
+              "metrics": {
+                "carbs": {
+                  "mae": 14.611347092592597,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.6299366139346659,
+                  "reference_mean": 23.19494814141414,
+                  "threshold_mae": 9.035,
+                  "threshold_per_unit": 0.2704
+                },
+                "energy": {
+                  "mae": 112.81501346801345,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.5118438387331848,
+                  "reference_mean": 220.40904848484837,
+                  "threshold_mae": 62.01,
+                  "threshold_per_unit": 0.2548
+                },
+                "fat": {
+                  "mae": 7.306281782154888,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.6782361170477224,
+                  "reference_mean": 10.772475246464646,
+                  "threshold_mae": 2.34,
+                  "threshold_per_unit": 0.2262
+                },
+                "protein": {
+                  "mae": 5.5472464777777795,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.6204566436039496,
+                  "reference_mean": 8.940586800000005,
+                  "threshold_mae": 1.794,
+                  "threshold_per_unit": 0.3029
+                },
+                "weight": {
+                  "mae": 67.34550505050507,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.562093533804667,
+                  "reference_mean": 119.8119191919192,
+                  "threshold_mae": 64.22,
+                  "threshold_per_unit": 0.4524
+                }
+              },
+              "n": 99
+            },
+            "e2e_fallback_n": 0,
+            "enhancement_native_n": 99,
+            "enhancement_native_rate": 1.0,
+            "exact_among_coded": 0.1717171717171717,
+            "exact_groups": 9,
+            "exact_n": 17,
+            "exact_rate": 0.1717171717171717,
+            "fallback_n": 0,
+            "fallback_rate": 0.0,
+            "first_n": 15,
+            "first_rate": 0.15151515151515152,
+            "groups": 23,
+            "method_fallback_n": 0,
+            "method_fallback_rate": 0.0,
+            "minimum_exact_n": 15,
+            "n": 99,
+            "native_complete_n": 99,
+            "native_complete_rate": 1.0,
+            "primary": {
+              "available_n": 17,
+              "complete_population": true,
+              "metrics": {
+                "carbs": {
+                  "mae": 8.260834705882353,
+                  "pass_mae": true,
+                  "pass_per_unit": true,
+                  "per_unit": 0.2613019878546858,
+                  "reference_mean": 31.61412882352941,
+                  "threshold_mae": 9.035,
+                  "threshold_per_unit": 0.2704
+                },
+                "energy": {
+                  "mae": 40.3514705882353,
+                  "pass_mae": true,
+                  "pass_per_unit": true,
+                  "per_unit": 0.19550158957704855,
+                  "reference_mean": 206.39970588235295,
+                  "threshold_mae": 62.01,
+                  "threshold_per_unit": 0.2548
+                },
+                "fat": {
+                  "mae": 0.7919367647058824,
+                  "pass_mae": true,
+                  "pass_per_unit": true,
+                  "per_unit": 0.10310928339108355,
+                  "reference_mean": 7.680557352941177,
+                  "threshold_mae": 2.34,
+                  "threshold_per_unit": 0.2262
+                },
+                "protein": {
+                  "mae": 0.9121011764705882,
+                  "pass_mae": true,
+                  "pass_per_unit": true,
+                  "per_unit": 0.14943468990537237,
+                  "reference_mean": 6.103677647058824,
+                  "threshold_mae": 1.794,
+                  "threshold_per_unit": 0.3029
+                },
+                "weight": {
+                  "mae": 27.19705882352941,
+                  "pass_mae": true,
+                  "pass_per_unit": true,
+                  "per_unit": 0.25000675913158676,
+                  "reference_mean": 108.78529411764706,
+                  "threshold_mae": 64.22,
+                  "threshold_per_unit": 0.4524
+                }
+              },
+              "n": 17
+            },
+            "recognition_pass": true,
+            "repair_success_n": 0,
+            "repair_success_rate": 0.0,
+            "retrieval_exact_n": 27,
+            "retrieval_exact_rate": 0.2727272727272727
+          },
+          "nutrition5k": {
+            "bootstrap": {
+              "confidence": 0.95,
+              "empty_exact_fraction": null,
+              "empty_exact_replicates": null,
+              "group_count": 78,
+              "intervals": {
+                "carbs.mae": {
+                  "high": 18.442367155735294,
+                  "low": 11.075768689199656,
+                  "valid_replicates": 10000
+                },
+                "carbs.per_unit": {
+                  "high": 0.7326871125210186,
+                  "low": 0.4515321659769055,
+                  "valid_replicates": 10000
+                },
+                "energy.mae": {
+                  "high": 170.27498287165693,
+                  "low": 118.64413019561557,
+                  "valid_replicates": 10000
+                },
+                "energy.per_unit": {
+                  "high": 0.4824544738129794,
+                  "low": 0.35869999082056403,
+                  "valid_replicates": 10000
+                },
+                "fat.mae": {
+                  "high": 11.860618723384835,
+                  "low": 8.0000114329891,
+                  "valid_replicates": 10000
+                },
+                "fat.per_unit": {
+                  "high": 0.6775100196847764,
+                  "low": 0.49795984349288924,
+                  "valid_replicates": 10000
+                },
+                "protein.mae": {
+                  "high": 17.3990379368128,
+                  "low": 9.907013925502012,
+                  "valid_replicates": 10000
+                },
+                "protein.per_unit": {
+                  "high": 0.5899137092626732,
+                  "low": 0.43923910963923407,
+                  "valid_replicates": 10000
+                },
+                "weight.mae": {
+                  "high": 126.92604611302357,
+                  "low": 88.47201534911716,
+                  "valid_replicates": 10000
+                },
+                "weight.per_unit": {
+                  "high": 0.4029333335558992,
+                  "low": 0.2974395374489231,
+                  "valid_replicates": 10000
+                }
+              },
+              "replicates": 10000,
+              "seed": 20261102,
+              "unit": "manifest_group_id"
+            },
+            "complete_n": 84,
+            "complete_rate": 1.0,
+            "complete_subset": {
+              "available_n": 84,
+              "complete_population": true,
+              "metrics": {
+                "carbs": {
+                  "mae": 14.302940200396824,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.5785499871070274,
+                  "reference_mean": 24.72204739285715,
+                  "threshold_mae": 7.774,
+                  "threshold_per_unit": 0.2756
+                },
+                "energy": {
+                  "mae": 142.59013956349202,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.416636302430716,
+                  "reference_mean": 342.2412755000001,
+                  "threshold_mae": 88.66,
+                  "threshold_per_unit": 0.2561
+                },
+                "fat": {
+                  "mae": 9.807722742063492,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.5812177225563065,
+                  "reference_mean": 16.874438547619047,
+                  "threshold_mae": 5.213,
+                  "threshold_per_unit": 0.2938
+                },
+                "protein": {
+                  "mae": 13.38955798412699,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.5177688773561121,
+                  "reference_mean": 25.860105869047615,
+                  "threshold_mae": 5.044,
+                  "threshold_per_unit": 0.2444
+                },
+                "weight": {
+                  "mae": 106.74142857142856,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.34880105811872725,
+                  "reference_mean": 306.0238095238094,
+                  "threshold_mae": 58.63,
+                  "threshold_per_unit": 0.2028
+                }
+              },
+              "n": 84
+            },
+            "enhancement_native_n": 81,
+            "enhancement_native_rate": 0.9642857142857143,
+            "fallback_n": 0,
+            "fallback_rate": 0.0,
+            "groups": 78,
+            "method_fallback_n": 0,
+            "method_fallback_rate": 0.0,
+            "n": 84,
+            "native_complete_n": 81,
+            "native_complete_rate": 0.9642857142857143,
+            "native_subset": {
+              "available_n": 81,
+              "complete_population": true,
+              "metrics": {
+                "carbs": {
+                  "mae": 13.60529133127572,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.5573267917144986,
+                  "reference_mean": 24.411694419753093,
+                  "threshold_mae": 7.774,
+                  "threshold_per_unit": 0.2756
+                },
+                "energy": {
+                  "mae": 140.99729596707823,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.41989807280451297,
+                  "reference_mean": 335.7893381728396,
+                  "threshold_mae": 88.66,
+                  "threshold_per_unit": 0.2561
+                },
+                "fat": {
+                  "mae": 9.77939272016461,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.5838290920198785,
+                  "reference_mean": 16.750437506172844,
+                  "threshold_mae": 5.213,
+                  "threshold_per_unit": 0.2938
+                },
+                "protein": {
+                  "mae": 12.683460971193423,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.5078673077853921,
+                  "reference_mean": 24.97396618518519,
+                  "threshold_mae": 5.044,
+                  "threshold_per_unit": 0.2444
+                },
+                "weight": {
+                  "mae": 107.53432098765427,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.35452317961659,
+                  "reference_mean": 303.32098765432085,
+                  "threshold_mae": 58.63,
+                  "threshold_per_unit": 0.2028
+                }
+              },
+              "n": 81
+            },
+            "primary": {
+              "available_n": 84,
+              "complete_population": true,
+              "metrics": {
+                "carbs": {
+                  "mae": 14.302940200396824,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.5785499871070274,
+                  "reference_mean": 24.72204739285715,
+                  "threshold_mae": 7.774,
+                  "threshold_per_unit": 0.2756
+                },
+                "energy": {
+                  "mae": 142.59013956349202,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.416636302430716,
+                  "reference_mean": 342.2412755000001,
+                  "threshold_mae": 88.66,
+                  "threshold_per_unit": 0.2561
+                },
+                "fat": {
+                  "mae": 9.807722742063492,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.5812177225563065,
+                  "reference_mean": 16.874438547619047,
+                  "threshold_mae": 5.213,
+                  "threshold_per_unit": 0.2938
+                },
+                "protein": {
+                  "mae": 13.38955798412699,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.5177688773561121,
+                  "reference_mean": 25.860105869047615,
+                  "threshold_mae": 5.044,
+                  "threshold_per_unit": 0.2444
+                },
+                "weight": {
+                  "mae": 106.74142857142856,
+                  "pass_mae": false,
+                  "pass_per_unit": false,
+                  "per_unit": 0.34880105811872725,
+                  "reference_mean": 306.0238095238094,
+                  "threshold_mae": 58.63,
+                  "threshold_per_unit": 0.2028
+                }
+              },
+              "n": 84
+            },
+            "repair_success_n": 3,
+            "repair_success_rate": 0.03571428571428571
+          }
+        },
+        "joint_pass": false,
+        "passed_checks": 10,
+        "recognition_pass": true,
+        "total_checks": 20,
+        "version": 2
+      },
+      "tolerance": {
+        "accepted": false,
+        "defined": {
+          "asa24": true,
+          "nutrition5k": true
+        },
+        "failed_checks": {
+          "asa24": 0,
+          "nutrition5k": 10
+        },
+        "original18_pass": false,
+        "original18_target_n": 18,
+        "rank": [
+          10,
+          2.6545515432448434,
+          10,
+          1.270915437470766
+        ],
+        "recognition_floor_n": 15,
+        "recognition_guard_pass": true,
+        "strict20_pass": false,
+        "target_pairs_pass": {
+          "asa24": {
+            "carbs": true,
+            "energy": true,
+            "fat": true,
+            "protein": true,
+            "weight": true
+          },
+          "nutrition5k": {
+            "carbs": false,
+            "energy": false,
+            "fat": false,
+            "protein": false,
+            "weight": false
+          }
+        }
+      }
+    },
+    "scope": "O_development_OOF_not_independent_validation",
+    "selection": {
+      "accepted": false,
+      "profile": "OOF_mass",
+      "reason": "preregistered_per_dataset_OOF_retention_rule_on_one_common_raw_method"
+    },
+    "source_records_sha256": "5037a09358f1f2644b7610d431e36751d285c62d607287ec2168f5bf9b2f4423",
+    "validation_opened": false
+  },
+  "created_utc": "2026-11-03T20:43:07.234148+00:00",
+  "evidence": {
+    "api_calls_during_recovery": 0,
+    "checkpoint_sha256": "696d32bae584a0be58aec8bb5cabd3adf88b4b867e3e6043c4f454340ccaa936",
+    "diagnostic_record_sha256": "bc3b7218927486475b155b5faf944bbaecc2dcc87bba0e4cf71588264b691fc7",
+    "expanded_data_audit_started": false,
+    "freeze_sha256": "0815819980716aa6be5a5e77a71de6c007f8985566bf5503f5b007d201164d92",
+    "label_or_catalog_file_opened_during_recovery": false,
+    "original_guard_passed": false,
+    "recomputed_diagnostic": false,
+    "recovery_receipt_sha256": "64f8539ce65917a346ae74bd0c3961d8d78744bb6ea07429d42577ae9e20d1a4",
+    "sealed_diagnostic_reverified": true,
+    "validation_opened": false
+  },
+  "limitations": [
+    "Conditional ASA scores cover 17 Exact records in 9 groups, not all 99 E2E records.",
+    "17/99 recognition passes the development 15 percent guard but misses the original 18 percent target.",
+    "Only 10 of 20 MAE checks pass; O is rejected, with N5 failing all ten checks.",
+    "Original guard did not pass. Recovery verifies an existing seal and does not recover original guard counters or metadata snapshots.",
+    "Mass-density algebra terms are not additive MAE contributions or causal ingredient errors.",
+    "These are repeatedly used development data, not independent validation. No oracle weights are included.",
+    "Provider money is unverified; token usage must not double count reasoning tokens."
+  ],
+  "scope": "completed_O_development_aggregates_not_independent_acceptance",
+  "supplementary_diagnostic": {
+    "ASA_raw_projection": {
+      "continuous_weight_mae_on_nonfallback_Exact": 28.844117647058823,
+      "fallback_n": 0,
+      "fixed_Exact_groups": 9,
+      "fixed_Exact_n": 17,
+      "legal_option_weight_mae_on_same_nonfallback_Exact": 27.197058823529414,
+      "limitation": "Continuous values are diagnostic only; final legal options remain the primary task.",
+      "mean_absolute_legal_projection_move": 7.294117647058823,
+      "native_or_repaired_continuous_n": 17,
+      "official_primary_includes_fallbacks": {
+        "available_n": 17,
+        "complete_population": true,
+        "metrics": {
+          "carbs": {
+            "mae": 8.260834705882353,
+            "pass_mae": true,
+            "pass_per_unit": true,
+            "per_unit": 0.2613019878546858,
+            "reference_mean": 31.61412882352941,
+            "threshold_mae": 9.035,
+            "threshold_per_unit": 0.2704
+          },
+          "energy": {
+            "mae": 40.3514705882353,
+            "pass_mae": true,
+            "pass_per_unit": true,
+            "per_unit": 0.19550158957704855,
+            "reference_mean": 206.39970588235295,
+            "threshold_mae": 62.01,
+            "threshold_per_unit": 0.2548
+          },
+          "fat": {
+            "mae": 0.7919367647058824,
+            "pass_mae": true,
+            "pass_per_unit": true,
+            "per_unit": 0.10310928339108355,
+            "reference_mean": 7.680557352941177,
+            "threshold_mae": 2.34,
+            "threshold_per_unit": 0.2262
+          },
+          "protein": {
+            "mae": 0.9121011764705882,
+            "pass_mae": true,
+            "pass_per_unit": true,
+            "per_unit": 0.14943468990537237,
+            "reference_mean": 6.103677647058824,
+            "threshold_mae": 1.794,
+            "threshold_per_unit": 0.3029
+          },
+          "weight": {
+            "mae": 27.19705882352941,
+            "pass_mae": true,
+            "pass_per_unit": true,
+            "per_unit": 0.25000675913158676,
+            "reference_mean": 108.78529411764706,
+            "threshold_mae": 64.22,
+            "threshold_per_unit": 0.4524
+          }
+        },
+        "n": 17
+      },
+      "projection_improved_n": 7,
+      "projection_worsened_n": 6
+    },
+    "api_calls": 0,
+    "arms": {
+      "OOF_mass": {
+        "asa24": {
+          "full_serving": {
+            "groups": 23,
+            "n": 99,
+            "targets": {
+              "carbs": {
+                "absolute_error_sum": 1446.5233621666669,
+                "equal_n": 5,
+                "mae": 14.611347092592597,
+                "mean_signed_error": -6.807386052188553,
+                "negative_error_magnitude_sum": 1060.2272906666665,
+                "over_n": 23,
+                "per_unit": 0.6299366139346659,
+                "positive_error_sum": 386.2960715,
+                "reference_mean": 23.19494814141414,
+                "sum_signed_error": -673.9312191666668,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 189.47584999999998,
+                    "fraction_of_all_absolute_error": 0.1309870652321817,
+                    "population_n": 23,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 774.649625,
+                    "fraction_of_all_absolute_error": 0.5355251392827113,
+                    "population_n": 23,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 99.99540000000002,
+                    "fraction_of_all_absolute_error": 0.06912809195851664,
+                    "population_n": 99,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 563.0953333333334,
+                    "fraction_of_all_absolute_error": 0.389274966489241,
+                    "population_n": 99,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 367.6206,
+                    "fraction_of_all_absolute_error": 0.25414079690310815,
+                    "population_n": 99,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 71
+              },
+              "energy": {
+                "absolute_error_sum": 11168.68633333334,
+                "equal_n": 2,
+                "mae": 112.81501346801345,
+                "mean_signed_error": -61.78414107744106,
+                "negative_error_magnitude_sum": 8642.658150000001,
+                "over_n": 36,
+                "per_unit": 0.5118438387331848,
+                "positive_error_sum": 2526.028183333333,
+                "reference_mean": 220.40904848484837,
+                "sum_signed_error": -6116.6299666666655,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 2751.876,
+                    "fraction_of_all_absolute_error": 0.2463920928450581,
+                    "population_n": 23,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 7384.1911666666665,
+                    "fraction_of_all_absolute_error": 0.6611512711775499,
+                    "population_n": 23,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 894.9360000000001,
+                    "fraction_of_all_absolute_error": 0.08012902979726738,
+                    "population_n": 99,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 5781.272,
+                    "fraction_of_all_absolute_error": 0.5176322288455347,
+                    "population_n": 99,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 3847.308666666667,
+                    "fraction_of_all_absolute_error": 0.3444728011730652,
+                    "population_n": 99,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 61
+              },
+              "fat": {
+                "absolute_error_sum": 723.3218964333333,
+                "equal_n": 2,
+                "mae": 7.306281782154888,
+                "mean_signed_error": -3.2345623929292926,
+                "negative_error_magnitude_sum": 521.7717866666668,
+                "over_n": 53,
+                "per_unit": 0.6782361170477224,
+                "positive_error_sum": 201.55010976666668,
+                "reference_mean": 10.772475246464646,
+                "sum_signed_error": -320.2216769,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 148.93401,
+                    "fraction_of_all_absolute_error": 0.20590280860345397,
+                    "population_n": 23,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 508.18935,
+                    "fraction_of_all_absolute_error": 0.702577030373141,
+                    "population_n": 23,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 93.26424,
+                    "fraction_of_all_absolute_error": 0.12893877602749432,
+                    "population_n": 99,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 400.53526666666664,
+                    "fraction_of_all_absolute_error": 0.5537441471655807,
+                    "population_n": 99,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 278.45346666666666,
+                    "fraction_of_all_absolute_error": 0.3849647965030614,
+                    "population_n": 99,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 44
+              },
+              "protein": {
+                "absolute_error_sum": 549.1774013000004,
+                "equal_n": 3,
+                "mae": 5.5472464777777795,
+                "mean_signed_error": -1.9807293033670017,
+                "negative_error_magnitude_sum": 372.63480116666676,
+                "over_n": 46,
+                "per_unit": 0.6204566436039496,
+                "positive_error_sum": 176.54260013333334,
+                "reference_mean": 8.940586800000005,
+                "sum_signed_error": -196.09220103333317,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 190.81156999999996,
+                    "fraction_of_all_absolute_error": 0.3474497849844424,
+                    "population_n": 23,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 374.66259013333325,
+                    "fraction_of_all_absolute_error": 0.6822250683411961,
+                    "population_n": 23,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 73.97838999999999,
+                    "fraction_of_all_absolute_error": 0.13470763695825796,
+                    "population_n": 99,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 299.11157999999995,
+                    "fraction_of_all_absolute_error": 0.5446538391637197,
+                    "population_n": 99,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 237.96938,
+                    "fraction_of_all_absolute_error": 0.43331968765773,
+                    "population_n": 99,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 50
+              },
+              "weight": {
+                "absolute_error_sum": 6667.204999999999,
+                "equal_n": 7,
+                "mae": 67.34550505050507,
+                "mean_signed_error": -35.52469696969697,
+                "negative_error_magnitude_sum": 5092.075,
+                "over_n": 32,
+                "per_unit": 0.562093533804667,
+                "positive_error_sum": 1575.13,
+                "reference_mean": 119.8119191919192,
+                "sum_signed_error": -3516.945,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 1386.2,
+                    "fraction_of_all_absolute_error": 0.2079132110082111,
+                    "population_n": 23,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 4705.87,
+                    "fraction_of_all_absolute_error": 0.7058235047519914,
+                    "population_n": 23,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 442.0,
+                    "fraction_of_all_absolute_error": 0.0662946467072784,
+                    "population_n": 99,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 2795.8,
+                    "fraction_of_all_absolute_error": 0.4193361386068076,
+                    "population_n": 99,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 1841.8000000000002,
+                    "fraction_of_all_absolute_error": 0.27624769299879043,
+                    "population_n": 99,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 60
+              }
+            }
+          },
+          "mass_density_identity": {
+            "complete_population_decomposition": true,
+            "decomposable_n": 99,
+            "formula": "error=(Wp-Wt)*(Dp+Dt)/2+(Dp-Dt)*(Wp+Wt)/2",
+            "nonpositive_weight_n": 0,
+            "population_n": 99,
+            "targets": {
+              "carbs": {
+                "density_mean_absolute_on_decomposable_rows": 12.695749338383838,
+                "density_signed_sum": -230.5354473333333,
+                "mass_mean_absolute_on_decomposable_rows": 15.37939121043771,
+                "mass_signed_sum": -443.39577183333296,
+                "max_identity_residual": 2.842170943040401e-14
+              },
+              "energy": {
+                "density_mean_absolute_on_decomposable_rows": 83.99351390572387,
+                "density_signed_sum": 1060.043089999999,
+                "mass_mean_absolute_on_decomposable_rows": 133.9137965656566,
+                "mass_signed_sum": -7176.673056666674,
+                "max_identity_residual": 1.1368683772161603e-13
+              },
+              "fat": {
+                "density_mean_absolute_on_decomposable_rows": 5.860109193265993,
+                "density_signed_sum": 128.52634696666658,
+                "mass_mean_absolute_on_decomposable_rows": 5.975936248821552,
+                "mass_signed_sum": -448.74802386666664,
+                "max_identity_residual": 1.4210854715202004e-14
+              },
+              "protein": {
+                "density_mean_absolute_on_decomposable_rows": 5.424851102020198,
+                "density_signed_sum": 188.807046,
+                "mass_mean_absolute_on_decomposable_rows": 5.291783447474748,
+                "mass_signed_sum": -384.89924703333327,
+                "max_identity_residual": 7.105427357601002e-15
+              }
+            }
+          },
+          "primary": {
+            "groups": 9,
+            "n": 17,
+            "targets": {
+              "carbs": {
+                "absolute_error_sum": 110.72149999999999,
+                "equal_n": 10,
+                "mae": 6.513029411764706,
+                "mean_signed_error": -6.513029411764705,
+                "negative_error_magnitude_sum": 110.72149999999999,
+                "over_n": 0,
+                "per_unit": 0.20601641272864246,
+                "positive_error_sum": 0,
+                "reference_mean": 31.61412882352941,
+                "sum_signed_error": -110.72149999999999,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 66.23999999999998,
+                    "fraction_of_all_absolute_error": 0.5982577909439448,
+                    "population_n": 9,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 110.72149999999999,
+                    "fraction_of_all_absolute_error": 1.0,
+                    "population_n": 9,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 33.12,
+                    "fraction_of_all_absolute_error": 0.29912889547197247,
+                    "population_n": 17,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 110.72149999999999,
+                    "fraction_of_all_absolute_error": 1.0,
+                    "population_n": 17,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 97.11224999999999,
+                    "fraction_of_all_absolute_error": 0.8770857511865355,
+                    "population_n": 17,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 7
+              },
+              "energy": {
+                "absolute_error_sum": 572.2249999999999,
+                "equal_n": 9,
+                "mae": 33.660294117647055,
+                "mean_signed_error": -33.660294117647055,
+                "negative_error_magnitude_sum": 572.2249999999999,
+                "over_n": 0,
+                "per_unit": 0.16308305272892828,
+                "positive_error_sum": 0,
+                "reference_mean": 206.39970588235295,
+                "sum_signed_error": -572.2249999999999,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 246.39999999999998,
+                    "fraction_of_all_absolute_error": 0.4305998514570318,
+                    "population_n": 9,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 538.4749999999999,
+                    "fraction_of_all_absolute_error": 0.9410197037878457,
+                    "population_n": 9,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 123.2,
+                    "fraction_of_all_absolute_error": 0.21529992572851592,
+                    "population_n": 17,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 572.225,
+                    "fraction_of_all_absolute_error": 1.0000000000000002,
+                    "population_n": 17,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 465.59999999999997,
+                    "fraction_of_all_absolute_error": 0.8136659530778978,
+                    "population_n": 17,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 8
+              },
+              "fat": {
+                "absolute_error_sum": 13.174125,
+                "equal_n": 9,
+                "mae": 0.7749485294117645,
+                "mean_signed_error": -0.7749485294117647,
+                "negative_error_magnitude_sum": 13.174125,
+                "over_n": 0,
+                "per_unit": 0.1008974341054829,
+                "positive_error_sum": 0,
+                "reference_mean": 7.680557352941177,
+                "sum_signed_error": -13.174125,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 4.695,
+                    "fraction_of_all_absolute_error": 0.35638040477071536,
+                    "population_n": 9,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 13.124125,
+                    "fraction_of_all_absolute_error": 0.9962046815253385,
+                    "population_n": 9,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 4.695,
+                    "fraction_of_all_absolute_error": 0.35638040477071536,
+                    "population_n": 17,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 13.174125000000002,
+                    "fraction_of_all_absolute_error": 1.0000000000000002,
+                    "population_n": 17,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 12.252125000000001,
+                    "fraction_of_all_absolute_error": 0.930014327327242,
+                    "population_n": 17,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 8
+              },
+              "protein": {
+                "absolute_error_sum": 15.130999999999997,
+                "equal_n": 9,
+                "mae": 0.8900588235294117,
+                "mean_signed_error": -0.8900588235294116,
+                "negative_error_magnitude_sum": 15.130999999999997,
+                "over_n": 0,
+                "per_unit": 0.14582336666457213,
+                "positive_error_sum": 0,
+                "reference_mean": 6.103677647058824,
+                "sum_signed_error": -15.130999999999997,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 9.195,
+                    "fraction_of_all_absolute_error": 0.607692816072963,
+                    "population_n": 9,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 14.995,
+                    "fraction_of_all_absolute_error": 0.9910118300178443,
+                    "population_n": 9,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 9.195,
+                    "fraction_of_all_absolute_error": 0.607692816072963,
+                    "population_n": 17,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 15.130999999999997,
+                    "fraction_of_all_absolute_error": 1.0,
+                    "population_n": 17,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 14.744999999999997,
+                    "fraction_of_all_absolute_error": 0.9744894587271166,
+                    "population_n": 17,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 8
+              },
+              "weight": {
+                "absolute_error_sum": 371.25,
+                "equal_n": 9,
+                "mae": 21.838235294117645,
+                "mean_signed_error": -21.83823529411765,
+                "negative_error_magnitude_sum": 371.25,
+                "over_n": 0,
+                "per_unit": 0.2007462081271798,
+                "positive_error_sum": 0,
+                "reference_mean": 108.78529411764706,
+                "sum_signed_error": -371.25,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 112.5,
+                    "fraction_of_all_absolute_error": 0.30303030303030304,
+                    "population_n": 9,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 356.25,
+                    "fraction_of_all_absolute_error": 0.9595959595959596,
+                    "population_n": 9,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 112.5,
+                    "fraction_of_all_absolute_error": 0.30303030303030304,
+                    "population_n": 17,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 371.25,
+                    "fraction_of_all_absolute_error": 1.0,
+                    "population_n": 17,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 298.75,
+                    "fraction_of_all_absolute_error": 0.8047138047138047,
+                    "population_n": 17,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 8
+              }
+            }
+          }
+        },
+        "nutrition5k": {
+          "full_serving": {
+            "groups": 78,
+            "n": 84,
+            "targets": {
+              "carbs": {
+                "absolute_error_sum": 1223.2334397575007,
+                "equal_n": 0,
+                "mae": 14.562302854255949,
+                "mean_signed_error": 1.989533128561508,
+                "negative_error_magnitude_sum": 528.0563284791666,
+                "over_n": 34,
+                "per_unit": 0.5890411349370434,
+                "positive_error_sum": 695.1771112783331,
+                "reference_mean": 24.72204739285715,
+                "sum_signed_error": 167.12078279916668,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 158.32348149999999,
+                    "fraction_of_all_absolute_error": 0.12943030852016826,
+                    "population_n": 78,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 354.31284659999994,
+                    "fraction_of_all_absolute_error": 0.28965268205081157,
+                    "population_n": 78,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 88.82502099999999,
+                    "fraction_of_all_absolute_error": 0.07261493850070765,
+                    "population_n": 84,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 470.97283115000005,
+                    "fraction_of_all_absolute_error": 0.3850228548717306,
+                    "population_n": 84,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 301.77414003750005,
+                    "fraction_of_all_absolute_error": 0.24670200325567057,
+                    "population_n": 84,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 50
+              },
+              "energy": {
+                "absolute_error_sum": 12025.506596916663,
+                "equal_n": 0,
+                "mae": 143.1607928204365,
+                "mean_signed_error": -47.01628220932541,
+                "negative_error_magnitude_sum": 7987.43715125,
+                "over_n": 33,
+                "per_unit": 0.41830370288120455,
+                "positive_error_sum": 4038.069445666665,
+                "reference_mean": 342.2412755000001,
+                "sum_signed_error": -3949.3677055833346,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 739.6148493333334,
+                    "fraction_of_all_absolute_error": 0.0615038413036978,
+                    "population_n": 78,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 2291.4529405,
+                    "fraction_of_all_absolute_error": 0.19054938950243708,
+                    "population_n": 78,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 739.6148493333334,
+                    "fraction_of_all_absolute_error": 0.0615038413036978,
+                    "population_n": 84,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 3877.7624737499996,
+                    "fraction_of_all_absolute_error": 0.3224614649285758,
+                    "population_n": 84,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 2291.4529405,
+                    "fraction_of_all_absolute_error": 0.19054938950243708,
+                    "population_n": 84,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 51
+              },
+              "fat": {
+                "absolute_error_sum": 829.7042850375001,
+                "equal_n": 0,
+                "mae": 9.877431964732144,
+                "mean_signed_error": -2.922208576914682,
+                "negative_error_magnitude_sum": 537.5849027491668,
+                "over_n": 34,
+                "per_unit": 0.5853487769005407,
+                "positive_error_sum": 292.1193822883333,
+                "reference_mean": 16.874438547619047,
+                "sum_signed_error": -245.4655204608333,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 52.72045,
+                    "fraction_of_all_absolute_error": 0.06354125313167112,
+                    "population_n": 78,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 168.5901293875,
+                    "fraction_of_all_absolute_error": 0.20319303205705422,
+                    "population_n": 78,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 52.72045,
+                    "fraction_of_all_absolute_error": 0.06354125313167112,
+                    "population_n": 84,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 285.83430880416665,
+                    "fraction_of_all_absolute_error": 0.3445014253376404,
+                    "population_n": 84,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 168.5901293875,
+                    "fraction_of_all_absolute_error": 0.20319303205705422,
+                    "population_n": 84,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 50
+              },
+              "protein": {
+                "absolute_error_sum": 1122.3627969025,
+                "equal_n": 0,
+                "mae": 13.361461867886906,
+                "mean_signed_error": -9.192331701041669,
+                "negative_error_magnitude_sum": 947.2593298950001,
+                "over_n": 28,
+                "per_unit": 0.5166824117251375,
+                "positive_error_sum": 175.10346700749997,
+                "reference_mean": 25.860105869047615,
+                "sum_signed_error": -772.1558628875001,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 127.05914374999999,
+                    "fraction_of_all_absolute_error": 0.11320683837762459,
+                    "population_n": 78,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 351.57777070833333,
+                    "fraction_of_all_absolute_error": 0.3132478835529997,
+                    "population_n": 78,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 66.882679,
+                    "fraction_of_all_absolute_error": 0.059590962195631404,
+                    "population_n": 84,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 463.7667678583333,
+                    "fraction_of_all_absolute_error": 0.41320575587344677,
+                    "population_n": 84,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 268.6341125833333,
+                    "fraction_of_all_absolute_error": 0.2393469503129563,
+                    "population_n": 84,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 56
+              },
+              "weight": {
+                "absolute_error_sum": 8838.619899999996,
+                "equal_n": 0,
+                "mae": 105.22166547619048,
+                "mean_signed_error": -53.75095059523811,
+                "negative_error_magnitude_sum": 6676.849875,
+                "over_n": 27,
+                "per_unit": 0.34383489846728404,
+                "positive_error_sum": 2161.7700250000003,
+                "reference_mean": 306.0238095238094,
+                "sum_signed_error": -4515.079850000001,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 577.5,
+                    "fraction_of_all_absolute_error": 0.06533825490108476,
+                    "population_n": 78,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 1955.65,
+                    "fraction_of_all_absolute_error": 0.22126191895637473,
+                    "population_n": 78,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 416.61249999999995,
+                    "fraction_of_all_absolute_error": 0.04713546964498384,
+                    "population_n": 84,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 2835.6297499999996,
+                    "fraction_of_all_absolute_error": 0.32082268296207656,
+                    "population_n": 84,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 1704.2624999999998,
+                    "fraction_of_all_absolute_error": 0.1928199786032207,
+                    "population_n": 84,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 57
+              }
+            }
+          },
+          "mass_density_identity": {
+            "complete_population_decomposition": true,
+            "decomposable_n": 84,
+            "formula": "error=(Wp-Wt)*(Dp+Dt)/2+(Dp-Dt)*(Wp+Wt)/2",
+            "nonpositive_weight_n": 0,
+            "population_n": 84,
+            "targets": {
+              "carbs": {
+                "density_mean_absolute_on_decomposable_rows": 12.445863744539045,
+                "density_signed_sum": 416.102084292803,
+                "mass_mean_absolute_on_decomposable_rows": 9.101324768472937,
+                "mass_signed_sum": -248.98130149363666,
+                "max_identity_residual": 1.0658141036401503e-14
+              },
+              "energy": {
+                "density_mean_absolute_on_decomposable_rows": 96.92798574922271,
+                "density_signed_sum": -157.84188770253468,
+                "mass_mean_absolute_on_decomposable_rows": 111.58494530469865,
+                "mass_signed_sum": -3791.5258178808,
+                "max_identity_residual": 8.526512829121202e-14
+              },
+              "fat": {
+                "density_mean_absolute_on_decomposable_rows": 8.490024685171614,
+                "density_signed_sum": -62.47951453528259,
+                "mass_mean_absolute_on_decomposable_rows": 5.386702178166409,
+                "mass_signed_sum": -182.98600592555073,
+                "max_identity_residual": 7.105427357601002e-15
+              },
+              "protein": {
+                "density_mean_absolute_on_decomposable_rows": 10.72479081122318,
+                "density_signed_sum": -453.93590021922034,
+                "mass_mean_absolute_on_decomposable_rows": 7.377907275559393,
+                "mass_signed_sum": -318.21996266827966,
+                "max_identity_residual": 7.105427357601002e-15
+              }
+            }
+          },
+          "primary": {
+            "groups": 78,
+            "n": 84,
+            "targets": {
+              "carbs": {
+                "absolute_error_sum": 1223.2334397575007,
+                "equal_n": 0,
+                "mae": 14.562302854255949,
+                "mean_signed_error": 1.989533128561508,
+                "negative_error_magnitude_sum": 528.0563284791666,
+                "over_n": 34,
+                "per_unit": 0.5890411349370434,
+                "positive_error_sum": 695.1771112783331,
+                "reference_mean": 24.72204739285715,
+                "sum_signed_error": 167.12078279916668,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 158.32348149999999,
+                    "fraction_of_all_absolute_error": 0.12943030852016826,
+                    "population_n": 78,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 354.31284659999994,
+                    "fraction_of_all_absolute_error": 0.28965268205081157,
+                    "population_n": 78,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 88.82502099999999,
+                    "fraction_of_all_absolute_error": 0.07261493850070765,
+                    "population_n": 84,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 470.97283115000005,
+                    "fraction_of_all_absolute_error": 0.3850228548717306,
+                    "population_n": 84,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 301.77414003750005,
+                    "fraction_of_all_absolute_error": 0.24670200325567057,
+                    "population_n": 84,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 50
+              },
+              "energy": {
+                "absolute_error_sum": 12025.506596916663,
+                "equal_n": 0,
+                "mae": 143.1607928204365,
+                "mean_signed_error": -47.01628220932541,
+                "negative_error_magnitude_sum": 7987.43715125,
+                "over_n": 33,
+                "per_unit": 0.41830370288120455,
+                "positive_error_sum": 4038.069445666665,
+                "reference_mean": 342.2412755000001,
+                "sum_signed_error": -3949.3677055833346,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 739.6148493333334,
+                    "fraction_of_all_absolute_error": 0.0615038413036978,
+                    "population_n": 78,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 2291.4529405,
+                    "fraction_of_all_absolute_error": 0.19054938950243708,
+                    "population_n": 78,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 739.6148493333334,
+                    "fraction_of_all_absolute_error": 0.0615038413036978,
+                    "population_n": 84,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 3877.7624737499996,
+                    "fraction_of_all_absolute_error": 0.3224614649285758,
+                    "population_n": 84,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 2291.4529405,
+                    "fraction_of_all_absolute_error": 0.19054938950243708,
+                    "population_n": 84,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 51
+              },
+              "fat": {
+                "absolute_error_sum": 829.7042850375001,
+                "equal_n": 0,
+                "mae": 9.877431964732144,
+                "mean_signed_error": -2.922208576914682,
+                "negative_error_magnitude_sum": 537.5849027491668,
+                "over_n": 34,
+                "per_unit": 0.5853487769005407,
+                "positive_error_sum": 292.1193822883333,
+                "reference_mean": 16.874438547619047,
+                "sum_signed_error": -245.4655204608333,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 52.72045,
+                    "fraction_of_all_absolute_error": 0.06354125313167112,
+                    "population_n": 78,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 168.5901293875,
+                    "fraction_of_all_absolute_error": 0.20319303205705422,
+                    "population_n": 78,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 52.72045,
+                    "fraction_of_all_absolute_error": 0.06354125313167112,
+                    "population_n": 84,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 285.83430880416665,
+                    "fraction_of_all_absolute_error": 0.3445014253376404,
+                    "population_n": 84,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 168.5901293875,
+                    "fraction_of_all_absolute_error": 0.20319303205705422,
+                    "population_n": 84,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 50
+              },
+              "protein": {
+                "absolute_error_sum": 1122.3627969025,
+                "equal_n": 0,
+                "mae": 13.361461867886906,
+                "mean_signed_error": -9.192331701041669,
+                "negative_error_magnitude_sum": 947.2593298950001,
+                "over_n": 28,
+                "per_unit": 0.5166824117251375,
+                "positive_error_sum": 175.10346700749997,
+                "reference_mean": 25.860105869047615,
+                "sum_signed_error": -772.1558628875001,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 127.05914374999999,
+                    "fraction_of_all_absolute_error": 0.11320683837762459,
+                    "population_n": 78,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 351.57777070833333,
+                    "fraction_of_all_absolute_error": 0.3132478835529997,
+                    "population_n": 78,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 66.882679,
+                    "fraction_of_all_absolute_error": 0.059590962195631404,
+                    "population_n": 84,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 463.7667678583333,
+                    "fraction_of_all_absolute_error": 0.41320575587344677,
+                    "population_n": 84,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 268.6341125833333,
+                    "fraction_of_all_absolute_error": 0.2393469503129563,
+                    "population_n": 84,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 56
+              },
+              "weight": {
+                "absolute_error_sum": 8838.619899999996,
+                "equal_n": 0,
+                "mae": 105.22166547619048,
+                "mean_signed_error": -53.75095059523811,
+                "negative_error_magnitude_sum": 6676.849875,
+                "over_n": 27,
+                "per_unit": 0.34383489846728404,
+                "positive_error_sum": 2161.7700250000003,
+                "reference_mean": 306.0238095238094,
+                "sum_signed_error": -4515.079850000001,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 577.5,
+                    "fraction_of_all_absolute_error": 0.06533825490108476,
+                    "population_n": 78,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 1955.65,
+                    "fraction_of_all_absolute_error": 0.22126191895637473,
+                    "population_n": 78,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 416.61249999999995,
+                    "fraction_of_all_absolute_error": 0.04713546964498384,
+                    "population_n": 84,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 2835.6297499999996,
+                    "fraction_of_all_absolute_error": 0.32082268296207656,
+                    "population_n": 84,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 1704.2624999999998,
+                    "fraction_of_all_absolute_error": 0.1928199786032207,
+                    "population_n": 84,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 57
+              }
+            }
+          }
+        }
+      },
+      "raw": {
+        "asa24": {
+          "full_serving": {
+            "groups": 23,
+            "n": 99,
+            "targets": {
+              "carbs": {
+                "absolute_error_sum": 1446.5233621666669,
+                "equal_n": 5,
+                "mae": 14.611347092592597,
+                "mean_signed_error": -6.807386052188553,
+                "negative_error_magnitude_sum": 1060.2272906666665,
+                "over_n": 23,
+                "per_unit": 0.6299366139346659,
+                "positive_error_sum": 386.2960715,
+                "reference_mean": 23.19494814141414,
+                "sum_signed_error": -673.9312191666668,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 189.47584999999998,
+                    "fraction_of_all_absolute_error": 0.1309870652321817,
+                    "population_n": 23,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 774.649625,
+                    "fraction_of_all_absolute_error": 0.5355251392827113,
+                    "population_n": 23,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 99.99540000000002,
+                    "fraction_of_all_absolute_error": 0.06912809195851664,
+                    "population_n": 99,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 563.0953333333334,
+                    "fraction_of_all_absolute_error": 0.389274966489241,
+                    "population_n": 99,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 367.6206,
+                    "fraction_of_all_absolute_error": 0.25414079690310815,
+                    "population_n": 99,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 71
+              },
+              "energy": {
+                "absolute_error_sum": 11168.68633333334,
+                "equal_n": 2,
+                "mae": 112.81501346801345,
+                "mean_signed_error": -61.78414107744106,
+                "negative_error_magnitude_sum": 8642.658150000001,
+                "over_n": 36,
+                "per_unit": 0.5118438387331848,
+                "positive_error_sum": 2526.028183333333,
+                "reference_mean": 220.40904848484837,
+                "sum_signed_error": -6116.6299666666655,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 2751.876,
+                    "fraction_of_all_absolute_error": 0.2463920928450581,
+                    "population_n": 23,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 7384.1911666666665,
+                    "fraction_of_all_absolute_error": 0.6611512711775499,
+                    "population_n": 23,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 894.9360000000001,
+                    "fraction_of_all_absolute_error": 0.08012902979726738,
+                    "population_n": 99,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 5781.272,
+                    "fraction_of_all_absolute_error": 0.5176322288455347,
+                    "population_n": 99,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 3847.308666666667,
+                    "fraction_of_all_absolute_error": 0.3444728011730652,
+                    "population_n": 99,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 61
+              },
+              "fat": {
+                "absolute_error_sum": 723.3218964333333,
+                "equal_n": 2,
+                "mae": 7.306281782154888,
+                "mean_signed_error": -3.2345623929292926,
+                "negative_error_magnitude_sum": 521.7717866666668,
+                "over_n": 53,
+                "per_unit": 0.6782361170477224,
+                "positive_error_sum": 201.55010976666668,
+                "reference_mean": 10.772475246464646,
+                "sum_signed_error": -320.2216769,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 148.93401,
+                    "fraction_of_all_absolute_error": 0.20590280860345397,
+                    "population_n": 23,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 508.18935,
+                    "fraction_of_all_absolute_error": 0.702577030373141,
+                    "population_n": 23,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 93.26424,
+                    "fraction_of_all_absolute_error": 0.12893877602749432,
+                    "population_n": 99,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 400.53526666666664,
+                    "fraction_of_all_absolute_error": 0.5537441471655807,
+                    "population_n": 99,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 278.45346666666666,
+                    "fraction_of_all_absolute_error": 0.3849647965030614,
+                    "population_n": 99,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 44
+              },
+              "protein": {
+                "absolute_error_sum": 549.1774013000004,
+                "equal_n": 3,
+                "mae": 5.5472464777777795,
+                "mean_signed_error": -1.9807293033670017,
+                "negative_error_magnitude_sum": 372.63480116666676,
+                "over_n": 46,
+                "per_unit": 0.6204566436039496,
+                "positive_error_sum": 176.54260013333334,
+                "reference_mean": 8.940586800000005,
+                "sum_signed_error": -196.09220103333317,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 190.81156999999996,
+                    "fraction_of_all_absolute_error": 0.3474497849844424,
+                    "population_n": 23,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 374.66259013333325,
+                    "fraction_of_all_absolute_error": 0.6822250683411961,
+                    "population_n": 23,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 73.97838999999999,
+                    "fraction_of_all_absolute_error": 0.13470763695825796,
+                    "population_n": 99,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 299.11157999999995,
+                    "fraction_of_all_absolute_error": 0.5446538391637197,
+                    "population_n": 99,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 237.96938,
+                    "fraction_of_all_absolute_error": 0.43331968765773,
+                    "population_n": 99,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 50
+              },
+              "weight": {
+                "absolute_error_sum": 6667.204999999999,
+                "equal_n": 7,
+                "mae": 67.34550505050507,
+                "mean_signed_error": -35.52469696969697,
+                "negative_error_magnitude_sum": 5092.075,
+                "over_n": 32,
+                "per_unit": 0.562093533804667,
+                "positive_error_sum": 1575.13,
+                "reference_mean": 119.8119191919192,
+                "sum_signed_error": -3516.945,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 1386.2,
+                    "fraction_of_all_absolute_error": 0.2079132110082111,
+                    "population_n": 23,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 4705.87,
+                    "fraction_of_all_absolute_error": 0.7058235047519914,
+                    "population_n": 23,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 442.0,
+                    "fraction_of_all_absolute_error": 0.0662946467072784,
+                    "population_n": 99,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 2795.8,
+                    "fraction_of_all_absolute_error": 0.4193361386068076,
+                    "population_n": 99,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 1841.8000000000002,
+                    "fraction_of_all_absolute_error": 0.27624769299879043,
+                    "population_n": 99,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 60
+              }
+            }
+          },
+          "mass_density_identity": {
+            "complete_population_decomposition": true,
+            "decomposable_n": 99,
+            "formula": "error=(Wp-Wt)*(Dp+Dt)/2+(Dp-Dt)*(Wp+Wt)/2",
+            "nonpositive_weight_n": 0,
+            "population_n": 99,
+            "targets": {
+              "carbs": {
+                "density_mean_absolute_on_decomposable_rows": 12.695749338383838,
+                "density_signed_sum": -230.5354473333333,
+                "mass_mean_absolute_on_decomposable_rows": 15.37939121043771,
+                "mass_signed_sum": -443.39577183333296,
+                "max_identity_residual": 2.842170943040401e-14
+              },
+              "energy": {
+                "density_mean_absolute_on_decomposable_rows": 83.99351390572387,
+                "density_signed_sum": 1060.043089999999,
+                "mass_mean_absolute_on_decomposable_rows": 133.9137965656566,
+                "mass_signed_sum": -7176.673056666674,
+                "max_identity_residual": 1.1368683772161603e-13
+              },
+              "fat": {
+                "density_mean_absolute_on_decomposable_rows": 5.860109193265993,
+                "density_signed_sum": 128.52634696666658,
+                "mass_mean_absolute_on_decomposable_rows": 5.975936248821552,
+                "mass_signed_sum": -448.74802386666664,
+                "max_identity_residual": 1.4210854715202004e-14
+              },
+              "protein": {
+                "density_mean_absolute_on_decomposable_rows": 5.424851102020198,
+                "density_signed_sum": 188.807046,
+                "mass_mean_absolute_on_decomposable_rows": 5.291783447474748,
+                "mass_signed_sum": -384.89924703333327,
+                "max_identity_residual": 7.105427357601002e-15
+              }
+            }
+          },
+          "primary": {
+            "groups": 9,
+            "n": 17,
+            "targets": {
+              "carbs": {
+                "absolute_error_sum": 140.43418999999997,
+                "equal_n": 8,
+                "mae": 8.260834705882353,
+                "mean_signed_error": -8.26083470588235,
+                "negative_error_magnitude_sum": 140.43418999999997,
+                "over_n": 0,
+                "per_unit": 0.2613019878546858,
+                "positive_error_sum": 0,
+                "reference_mean": 31.61412882352941,
+                "sum_signed_error": -140.43418999999997,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 82.79999999999998,
+                    "fraction_of_all_absolute_error": 0.5896000112223384,
+                    "population_n": 9,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 135.77525,
+                    "fraction_of_all_absolute_error": 0.966824745455505,
+                    "population_n": 9,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 49.67999999999999,
+                    "fraction_of_all_absolute_error": 0.353760006733403,
+                    "population_n": 17,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 140.43419,
+                    "fraction_of_all_absolute_error": 1.0000000000000002,
+                    "population_n": 17,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 122.16599999999998,
+                    "fraction_of_all_absolute_error": 0.8699163643839154,
+                    "population_n": 17,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 9
+              },
+              "energy": {
+                "absolute_error_sum": 685.975,
+                "equal_n": 7,
+                "mae": 40.3514705882353,
+                "mean_signed_error": -40.351470588235294,
+                "negative_error_magnitude_sum": 685.975,
+                "over_n": 0,
+                "per_unit": 0.19550158957704855,
+                "positive_error_sum": 0,
+                "reference_mean": 206.39970588235295,
+                "sum_signed_error": -685.975,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 308.0,
+                    "fraction_of_all_absolute_error": 0.4489959546630708,
+                    "population_n": 9,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 609.075,
+                    "fraction_of_all_absolute_error": 0.8878967892415904,
+                    "population_n": 9,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 184.8,
+                    "fraction_of_all_absolute_error": 0.2693975727978425,
+                    "population_n": 17,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 685.975,
+                    "fraction_of_all_absolute_error": 1.0,
+                    "population_n": 17,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 536.2,
+                    "fraction_of_all_absolute_error": 0.781661139254346,
+                    "population_n": 17,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 10
+              },
+              "fat": {
+                "absolute_error_sum": 13.462924999999998,
+                "equal_n": 8,
+                "mae": 0.7919367647058824,
+                "mean_signed_error": -0.7919367647058823,
+                "negative_error_magnitude_sum": 13.462924999999998,
+                "over_n": 0,
+                "per_unit": 0.10310928339108355,
+                "positive_error_sum": 0,
+                "reference_mean": 7.680557352941177,
+                "sum_signed_error": -13.462924999999998,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 4.695,
+                    "fraction_of_all_absolute_error": 0.34873550881402077,
+                    "population_n": 9,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 13.342125,
+                    "fraction_of_all_absolute_error": 0.9910272099116649,
+                    "population_n": 9,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 4.695,
+                    "fraction_of_all_absolute_error": 0.34873550881402077,
+                    "population_n": 17,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 13.462925,
+                    "fraction_of_all_absolute_error": 1.0000000000000002,
+                    "population_n": 17,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 12.349250000000001,
+                    "fraction_of_all_absolute_error": 0.917278377469978,
+                    "population_n": 17,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 9
+              },
+              "protein": {
+                "absolute_error_sum": 15.505719999999998,
+                "equal_n": 7,
+                "mae": 0.9121011764705882,
+                "mean_signed_error": -0.9121011764705882,
+                "negative_error_magnitude_sum": 15.505719999999998,
+                "over_n": 0,
+                "per_unit": 0.14943468990537237,
+                "positive_error_sum": 0,
+                "reference_mean": 6.103677647058824,
+                "sum_signed_error": -15.505719999999998,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 9.195,
+                    "fraction_of_all_absolute_error": 0.5930069677512557,
+                    "population_n": 9,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 15.245,
+                    "fraction_of_all_absolute_error": 0.9831855599095044,
+                    "population_n": 9,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 9.195,
+                    "fraction_of_all_absolute_error": 0.5930069677512557,
+                    "population_n": 17,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 15.505719999999998,
+                    "fraction_of_all_absolute_error": 1.0,
+                    "population_n": 17,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 14.744999999999997,
+                    "fraction_of_all_absolute_error": 0.9509393952683267,
+                    "population_n": 17,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 10
+              },
+              "weight": {
+                "absolute_error_sum": 462.35,
+                "equal_n": 7,
+                "mae": 27.19705882352941,
+                "mean_signed_error": -27.197058823529414,
+                "negative_error_magnitude_sum": 462.35,
+                "over_n": 0,
+                "per_unit": 0.25000675913158676,
+                "positive_error_sum": 0,
+                "reference_mean": 108.78529411764706,
+                "sum_signed_error": -462.35,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 125.0,
+                    "fraction_of_all_absolute_error": 0.27035795393100465,
+                    "population_n": 9,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 438.75,
+                    "fraction_of_all_absolute_error": 0.9489564182978263,
+                    "population_n": 9,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 125.0,
+                    "fraction_of_all_absolute_error": 0.27035795393100465,
+                    "population_n": 17,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 462.35,
+                    "fraction_of_all_absolute_error": 1.0,
+                    "population_n": 17,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 381.25,
+                    "fraction_of_all_absolute_error": 0.8245917594895641,
+                    "population_n": 17,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 10
+              }
+            }
+          }
+        },
+        "nutrition5k": {
+          "full_serving": {
+            "groups": 78,
+            "n": 84,
+            "targets": {
+              "carbs": {
+                "absolute_error_sum": 1201.446976833333,
+                "equal_n": 0,
+                "mae": 14.302940200396822,
+                "mean_signed_error": 1.2972353234126988,
+                "negative_error_magnitude_sum": 546.2396048333334,
+                "over_n": 31,
+                "per_unit": 0.5785499871070273,
+                "positive_error_sum": 655.2073720000002,
+                "reference_mean": 24.72204739285715,
+                "sum_signed_error": 108.9677671666667,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 152.400616,
+                    "fraction_of_all_absolute_error": 0.12684755876758205,
+                    "population_n": 78,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 341.110017,
+                    "fraction_of_all_absolute_error": 0.28391599760737457,
+                    "population_n": 78,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 85.43911800000001,
+                    "fraction_of_all_absolute_error": 0.07111351532565575,
+                    "population_n": 84,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 456.36565900000005,
+                    "fraction_of_all_absolute_error": 0.3798466913644812,
+                    "population_n": 84,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 290.45441200000005,
+                    "fraction_of_all_absolute_error": 0.24175383317002794,
+                    "population_n": 84,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 53
+              },
+              "energy": {
+                "absolute_error_sum": 11977.57172333333,
+                "equal_n": 0,
+                "mae": 142.59013956349202,
+                "mean_signed_error": -54.75150188888888,
+                "negative_error_magnitude_sum": 8288.348941,
+                "over_n": 32,
+                "per_unit": 0.416636302430716,
+                "positive_error_sum": 3689.2227823333333,
+                "reference_mean": 342.2412755000001,
+                "sum_signed_error": -4599.126158666666,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 740.3206826666667,
+                    "fraction_of_all_absolute_error": 0.0618089125047324,
+                    "population_n": 78,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 2290.196278,
+                    "fraction_of_all_absolute_error": 0.19120706023730188,
+                    "population_n": 78,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 740.3206826666667,
+                    "fraction_of_all_absolute_error": 0.0618089125047324,
+                    "population_n": 84,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 3865.317083,
+                    "fraction_of_all_absolute_error": 0.3227129147947436,
+                    "population_n": 84,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 2290.196278,
+                    "fraction_of_all_absolute_error": 0.19120706023730188,
+                    "population_n": 84,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 52
+              },
+              "fat": {
+                "absolute_error_sum": 823.8487103333332,
+                "equal_n": 0,
+                "mae": 9.807722742063492,
+                "mean_signed_error": -3.290880535714286,
+                "negative_error_magnitude_sum": 550.1413376666668,
+                "over_n": 33,
+                "per_unit": 0.5812177225563065,
+                "positive_error_sum": 273.70737266666663,
+                "reference_mean": 16.874438547619047,
+                "sum_signed_error": -276.433965,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 52.753,
+                    "fraction_of_all_absolute_error": 0.06403238766818714,
+                    "population_n": 78,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 164.698537,
+                    "fraction_of_all_absolute_error": 0.1999135702152913,
+                    "population_n": 78,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 52.753,
+                    "fraction_of_all_absolute_error": 0.06403238766818714,
+                    "population_n": 84,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 283.865689,
+                    "fraction_of_all_absolute_error": 0.34456045805442426,
+                    "population_n": 84,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 164.698537,
+                    "fraction_of_all_absolute_error": 0.1999135702152913,
+                    "population_n": 84,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 51
+              },
+              "protein": {
+                "absolute_error_sum": 1124.722870666667,
+                "equal_n": 0,
+                "mae": 13.389557984126988,
+                "mean_signed_error": -9.630014293650792,
+                "negative_error_magnitude_sum": 966.8220356666667,
+                "over_n": 26,
+                "per_unit": 0.517768877356112,
+                "positive_error_sum": 157.90083499999997,
+                "reference_mean": 25.860105869047615,
+                "sum_signed_error": -808.9212006666666,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 127.95855499999999,
+                    "fraction_of_all_absolute_error": 0.11376896330395947,
+                    "population_n": 78,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 353.57231466666667,
+                    "fraction_of_all_absolute_error": 0.31436394145438745,
+                    "population_n": 78,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 67.239004,
+                    "fraction_of_all_absolute_error": 0.059782730265051716,
+                    "population_n": 84,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 467.05701466666665,
+                    "fraction_of_all_absolute_error": 0.41526408580081936,
+                    "population_n": 84,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 270.2446296666667,
+                    "fraction_of_all_absolute_error": 0.24027663766318028,
+                    "population_n": 84,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 58
+              },
+              "weight": {
+                "absolute_error_sum": 8966.28,
+                "equal_n": 2,
+                "mae": 106.74142857142856,
+                "mean_signed_error": -60.345476190476184,
+                "negative_error_magnitude_sum": 7017.65,
+                "over_n": 23,
+                "per_unit": 0.34880105811872725,
+                "positive_error_sum": 1948.6299999999997,
+                "reference_mean": 306.0238095238094,
+                "sum_signed_error": -5069.0199999999995,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 601.0,
+                    "fraction_of_all_absolute_error": 0.06702891277095964,
+                    "population_n": 78,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 1997.0,
+                    "fraction_of_all_absolute_error": 0.22272335907422028,
+                    "population_n": 78,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 426.5,
+                    "fraction_of_all_absolute_error": 0.047567106983052054,
+                    "population_n": 84,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 2892.75,
+                    "fraction_of_all_absolute_error": 0.32262543663592924,
+                    "population_n": 84,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 1730.5,
+                    "fraction_of_all_absolute_error": 0.19300088777062505,
+                    "population_n": 84,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 59
+              }
+            }
+          },
+          "mass_density_identity": {
+            "complete_population_decomposition": true,
+            "decomposable_n": 84,
+            "formula": "error=(Wp-Wt)*(Dp+Dt)/2+(Dp-Dt)*(Wp+Wt)/2",
+            "nonpositive_weight_n": 0,
+            "population_n": 84,
+            "targets": {
+              "carbs": {
+                "density_mean_absolute_on_decomposable_rows": 12.301345536128869,
+                "density_signed_sum": 411.38203212026986,
+                "mass_mean_absolute_on_decomposable_rows": 9.179860723670359,
+                "mass_signed_sum": -302.41426495360326,
+                "max_identity_residual": 1.4210854715202004e-14
+              },
+              "energy": {
+                "density_mean_absolute_on_decomposable_rows": 95.78903513940533,
+                "density_signed_sum": -159.7152670125473,
+                "mass_mean_absolute_on_decomposable_rows": 112.866409141401,
+                "mass_signed_sum": -4439.410891654121,
+                "max_identity_residual": 7.105427357601002e-14
+              },
+              "fat": {
+                "density_mean_absolute_on_decomposable_rows": 8.389713881505381,
+                "density_signed_sum": -62.09471594404708,
+                "mass_mean_absolute_on_decomposable_rows": 5.4444766597827465,
+                "mass_signed_sum": -214.33924905595305,
+                "max_identity_residual": 5.329070518200751e-15
+              },
+              "protein": {
+                "density_mean_absolute_on_decomposable_rows": 10.59974498515908,
+                "density_signed_sum": -448.76514786527474,
+                "mass_mean_absolute_on_decomposable_rows": 7.5013083714061635,
+                "mass_signed_sum": -360.15605280139175,
+                "max_identity_residual": 1.4210854715202004e-14
+              }
+            }
+          },
+          "primary": {
+            "groups": 78,
+            "n": 84,
+            "targets": {
+              "carbs": {
+                "absolute_error_sum": 1201.446976833333,
+                "equal_n": 0,
+                "mae": 14.302940200396822,
+                "mean_signed_error": 1.2972353234126988,
+                "negative_error_magnitude_sum": 546.2396048333334,
+                "over_n": 31,
+                "per_unit": 0.5785499871070273,
+                "positive_error_sum": 655.2073720000002,
+                "reference_mean": 24.72204739285715,
+                "sum_signed_error": 108.9677671666667,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 152.400616,
+                    "fraction_of_all_absolute_error": 0.12684755876758205,
+                    "population_n": 78,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 341.110017,
+                    "fraction_of_all_absolute_error": 0.28391599760737457,
+                    "population_n": 78,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 85.43911800000001,
+                    "fraction_of_all_absolute_error": 0.07111351532565575,
+                    "population_n": 84,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 456.36565900000005,
+                    "fraction_of_all_absolute_error": 0.3798466913644812,
+                    "population_n": 84,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 290.45441200000005,
+                    "fraction_of_all_absolute_error": 0.24175383317002794,
+                    "population_n": 84,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 53
+              },
+              "energy": {
+                "absolute_error_sum": 11977.57172333333,
+                "equal_n": 0,
+                "mae": 142.59013956349202,
+                "mean_signed_error": -54.75150188888888,
+                "negative_error_magnitude_sum": 8288.348941,
+                "over_n": 32,
+                "per_unit": 0.416636302430716,
+                "positive_error_sum": 3689.2227823333333,
+                "reference_mean": 342.2412755000001,
+                "sum_signed_error": -4599.126158666666,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 740.3206826666667,
+                    "fraction_of_all_absolute_error": 0.0618089125047324,
+                    "population_n": 78,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 2290.196278,
+                    "fraction_of_all_absolute_error": 0.19120706023730188,
+                    "population_n": 78,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 740.3206826666667,
+                    "fraction_of_all_absolute_error": 0.0618089125047324,
+                    "population_n": 84,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 3865.317083,
+                    "fraction_of_all_absolute_error": 0.3227129147947436,
+                    "population_n": 84,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 2290.196278,
+                    "fraction_of_all_absolute_error": 0.19120706023730188,
+                    "population_n": 84,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 52
+              },
+              "fat": {
+                "absolute_error_sum": 823.8487103333332,
+                "equal_n": 0,
+                "mae": 9.807722742063492,
+                "mean_signed_error": -3.290880535714286,
+                "negative_error_magnitude_sum": 550.1413376666668,
+                "over_n": 33,
+                "per_unit": 0.5812177225563065,
+                "positive_error_sum": 273.70737266666663,
+                "reference_mean": 16.874438547619047,
+                "sum_signed_error": -276.433965,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 52.753,
+                    "fraction_of_all_absolute_error": 0.06403238766818714,
+                    "population_n": 78,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 164.698537,
+                    "fraction_of_all_absolute_error": 0.1999135702152913,
+                    "population_n": 78,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 52.753,
+                    "fraction_of_all_absolute_error": 0.06403238766818714,
+                    "population_n": 84,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 283.865689,
+                    "fraction_of_all_absolute_error": 0.34456045805442426,
+                    "population_n": 84,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 164.698537,
+                    "fraction_of_all_absolute_error": 0.1999135702152913,
+                    "population_n": 84,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 51
+              },
+              "protein": {
+                "absolute_error_sum": 1124.722870666667,
+                "equal_n": 0,
+                "mae": 13.389557984126988,
+                "mean_signed_error": -9.630014293650792,
+                "negative_error_magnitude_sum": 966.8220356666667,
+                "over_n": 26,
+                "per_unit": 0.517768877356112,
+                "positive_error_sum": 157.90083499999997,
+                "reference_mean": 25.860105869047615,
+                "sum_signed_error": -808.9212006666666,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 127.95855499999999,
+                    "fraction_of_all_absolute_error": 0.11376896330395947,
+                    "population_n": 78,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 353.57231466666667,
+                    "fraction_of_all_absolute_error": 0.31436394145438745,
+                    "population_n": 78,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 67.239004,
+                    "fraction_of_all_absolute_error": 0.059782730265051716,
+                    "population_n": 84,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 467.05701466666665,
+                    "fraction_of_all_absolute_error": 0.41526408580081936,
+                    "population_n": 84,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 270.2446296666667,
+                    "fraction_of_all_absolute_error": 0.24027663766318028,
+                    "population_n": 84,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 58
+              },
+              "weight": {
+                "absolute_error_sum": 8966.28,
+                "equal_n": 2,
+                "mae": 106.74142857142856,
+                "mean_signed_error": -60.345476190476184,
+                "negative_error_magnitude_sum": 7017.65,
+                "over_n": 23,
+                "per_unit": 0.34880105811872725,
+                "positive_error_sum": 1948.6299999999997,
+                "reference_mean": 306.0238095238094,
+                "sum_signed_error": -5069.0199999999995,
+                "top_groups": {
+                  "1": {
+                    "absolute_error_sum": 601.0,
+                    "fraction_of_all_absolute_error": 0.06702891277095964,
+                    "population_n": 78,
+                    "selected_n": 1
+                  },
+                  "5": {
+                    "absolute_error_sum": 1997.0,
+                    "fraction_of_all_absolute_error": 0.22272335907422028,
+                    "population_n": 78,
+                    "selected_n": 5
+                  }
+                },
+                "top_rows": {
+                  "1": {
+                    "absolute_error_sum": 426.5,
+                    "fraction_of_all_absolute_error": 0.047567106983052054,
+                    "population_n": 84,
+                    "selected_n": 1
+                  },
+                  "10": {
+                    "absolute_error_sum": 2892.75,
+                    "fraction_of_all_absolute_error": 0.32262543663592924,
+                    "population_n": 84,
+                    "selected_n": 10
+                  },
+                  "5": {
+                    "absolute_error_sum": 1730.5,
+                    "fraction_of_all_absolute_error": 0.19300088777062505,
+                    "population_n": 84,
+                    "selected_n": 5
+                  }
+                },
+                "under_n": 59
+              }
+            }
+          }
+        }
+      }
+    },
+    "existing_selection": {
+      "accepted": false,
+      "profile": "OOF_mass",
+      "reason": "preregistered_per_dataset_OOF_retention_rule_on_one_common_raw_method"
+    },
+    "limitations": [
+      "Algebraic mass/density terms are not additive MAE shares or causal ingredient errors.",
+      "Total mass discrepancy can include omitted or duplicated foods; it is not pure portion error.",
+      "Whole-dish density discrepancy cannot isolate code, recipe, water or FNDDS causes.",
+      "Repeated development diagnostics are not independent validation. No oracle weights are used."
+    ],
+    "new_bootstrap_replicates": 0,
+    "new_fit_or_selection": false,
+    "physical_accounting": {
+      "asa24": {
+        "complete_n": 99,
+        "excluded_canonical_unit_conflicts": 0,
+        "limitation": "Shared codes can represent separate visible items; no annotated omission/duplication rate is available.",
+        "mapping_or_join_inconsistencies": 0,
+        "mode_grams": {
+          "adjusted": 3306.435,
+          "grams": 560.0,
+          "standard": 4478.0
+        },
+        "mode_item_counts": {
+          "adjusted": 51,
+          "grams": 10,
+          "standard": 38
+        },
+        "mode_mass_fractions": {
+          "adjusted": 0.3962443233124831,
+          "grams": 0.06711059526498798,
+          "standard": 0.536645081422529
+        },
+        "multiple_items_sharing_primary_code_n": 0,
+        "physical_item_counts_on_successful_identities": {
+          "1": 99
+        },
+        "population_n": 99
+      },
+      "nutrition5k": {
+        "complete_n": 84,
+        "excluded_canonical_unit_conflicts": 0,
+        "limitation": "Shared codes can represent separate visible items; no annotated omission/duplication rate is available.",
+        "mapping_or_join_inconsistencies": 0,
+        "mode_grams": {
+          "adjusted": 10386.980000000001,
+          "grams": 435.0,
+          "standard": 9815.0
+        },
+        "mode_item_counts": {
+          "adjusted": 145,
+          "grams": 9,
+          "standard": 95
+        },
+        "mode_mass_fractions": {
+          "adjusted": 0.5033187995530354,
+          "grams": 0.02107866557994435,
+          "standard": 0.4756025348670202
+        },
+        "multiple_items_sharing_primary_code_n": 2,
+        "physical_item_counts_on_successful_identities": {
+          "1": 17,
+          "2": 20,
+          "3": 17,
+          "4": 16,
+          "5": 9,
+          "6": 4,
+          "8": 1
+        },
+        "population_n": 84
+      }
+    },
+    "provenance_sha256": {
+      "helper": "41ba7c857f8d00c673ae697ff926b49fcc7cdb5928d134b928cad4d0f9e58f16",
+      "inputs": "d3154fdc8a25e86e27ac7e895b746cc4f2f738d10d86d549b7c4db8f9f8ed1e6",
+      "source": "6eb2802b313bf0f04859db1f9cc95d42e6e1f253dd4510ff33af6b01dc83f2bc"
+    },
+    "scope": "posthoc_O_development_accounting_diagnostic_not_selection_or_acceptance",
+    "validation_opened": false
+  }
+}
