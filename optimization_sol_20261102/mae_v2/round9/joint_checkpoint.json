@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "scope": "R9_reference_informed_joint_feasibility_not_prediction_or_acceptance",
+  "fixed_N_density": {
+    "classification": "shared_witness",
+    "population_n": 84,
+    "fallback_n": 4,
+    "attempted_unique_patterns": 1,
+    "attempts": [
+      {
+        "solver_status": 0,
+        "solver_success": true,
+        "iterations": 527,
+        "objective": 0.7203107062823455,
+        "max_primal_violation": 1.2434497875801753e-14,
+        "max_nonnegative_violation": 0.0,
+        "common_witness_scores": {
+          "n": 84,
+          "metrics": {
+            "weight": {
+              "mae": 42.231816709333906,
+              "reference_mean": 306.0238095238094,
+              "per_unit": 0.13800173514292574,
+              "pass_mae": true,
+              "pass_per_unit": true
+            },
+            "energy": {
+              "mae": 60.579775118679215,
+              "reference_mean": 342.2412755000001,
+              "per_unit": 0.17700896839568728,
+              "pass_mae": true,
+              "pass_per_unit": true
+            },
+            "fat": {
+              "mae": 3.571091624266264,
+              "reference_mean": 16.874438547619047,
+              "per_unit": 0.21162728550575324,
+              "pass_mae": true,
+              "pass_per_unit": true
+            },
+            "carbs": {
+              "mae": 4.907762273281983,
+              "reference_mean": 24.72204739285715,
+              "per_unit": 0.1985176306514146,
+              "pass_mae": true,
+              "pass_per_unit": true
+            },
+            "protein": {
+              "mae": 3.6332472024881524,
+              "reference_mean": 25.860105869047615,
+              "per_unit": 0.1404962230582685,
+              "pass_mae": true,
+              "pass_per_unit": true
+            }
+          },
+          "failed_checks": 0
+        },
+        "dual": {
+          "exact_binary_coefficient_dual_feasible": true,
+          "lower_bound": 0.7203107062823452,
+          "exceeds_one_with_margin": false
+        },
+        "primal_dual_gap": 3.3306690738754696e-16,
+        "classification": "shared_witness",
+        "retained_checks": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "effective_caps": [
+          58.63,
+          87.64799065555002,
+          4.957710045290476,
+          6.81339626147143,
+          5.044
+        ]
+      }
+    ],
+    "reference_informed_oracle": true,
+    "predictive_result": false
+  },
+  "asa24": {
+    "recognition": {
+      "current_exact": {
+        "n": 10,
+        "groups": 6,
+        "fraction_of_all_99": 0.10101010101010101,
+        "guard15_pass": false
+      },
+      "candidate": {
+        "n": 19,
+        "groups": 11,
+        "fraction_of_all_99": 0.1919191919191919,
+        "guard15_pass": true
+      },
+      "top_three": {
+        "n": 19,
+        "groups": 11,
+        "fraction_of_all_99": 0.1919191919191919,
+        "guard15_pass": true
+      },
+      "primary": {
+        "n": 17,
+        "groups": 10,
+        "fraction_of_all_99": 0.1717171717171717,
+        "guard15_pass": true
+      }
+    },
+    "fixed_exact_quantity_oracle": {
+      "n": 10,
+      "available_n": 10,
+      "complete_population": true,
+      "metrics": {
+        "weight": {
+          "mae": 0.0,
+          "per_unit": 0.0,
+          "reference_mean": 140.185,
+          "threshold_mae": 64.22,
+          "threshold_per_unit": 0.4524,
+          "pass_mae": true,
+          "pass_per_unit": true
+        },
+        "energy": {
+          "mae": 0.0,
+          "per_unit": 0.0,
+          "reference_mean": 144.5735,
+          "threshold_mae": 62.01,
+          "threshold_per_unit": 0.2548,
+          "pass_mae": true,
+          "pass_per_unit": true
+        },
+        "fat": {
+          "mae": 0.0,
+          "per_unit": 0.0,
+          "reference_mean": 2.7476575000000003,
+          "threshold_mae": 2.34,
+          "threshold_per_unit": 0.2262,
+          "pass_mae": true,
+          "pass_per_unit": true
+        },
+        "carbs": {
+          "mae": 0.0,
+          "per_unit": 0.0,
+          "reference_mean": 27.259409,
+          "threshold_mae": 9.035,
+          "threshold_per_unit": 0.2704,
+          "pass_mae": true,
+          "pass_per_unit": true
+        },
+        "protein": {
+          "mae": 0.0,
+          "per_unit": 0.0,
+          "reference_mean": 4.352582,
+          "threshold_mae": 1.794,
+          "threshold_per_unit": 0.3029,
+          "pass_mae": true,
+          "pass_per_unit": true
+        }
+      }
+    },
+    "failed_checks": 0,
+    "reference_informed_nearest_legal_option_not_prediction": true,
+    "exact_population_chosen_from_frozen_N_codes": true
+  },
+  "api_calls": 0,
+  "validation_opened": false,
+  "images_opened": false,
+  "original_N_point_statistics_reproduced": [
+    "N-density",
+    "N-units"
+  ],
+  "new_bootstrap_replicates": 0,
+  "new_predictor_selected": false,
+  "oracle_witness_exported": false,
+  "runtime": {
+    "libraries": {
+      "numpy": {
+        "content_sha256": "2fb57c529cc8603a858333d6f6eb49e9ecc2080b22f4eae2458d1c0c5256c10b",
+        "members": 909,
+        "version": "1.26.4"
+      },
+      "scipy": {
+        "content_sha256": "22dcb7a4817e13d2af9e542dd779b8b493885b9143017fdbe6e21b1bb7cb1b5c",
+        "members": 1419,
+        "version": "1.15.3"
+      }
+    },
+    "python_sha256": "d54e2717f1fa2144ac8143dc689a68bddd8f17eaa277a2889d97f042f3a75334",
+    "python_version": [
+      3,
+      10,
+      13
+    ],
+    "wheel_name": "scipy-1.15.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "wheel_sha256": "9e2abc762b0811e09a0d3258abee2d98e0c703eee49464ce0069590846f31d40"
+  },
+  "solver_method": "highs-ds",
+  "solver_options": {
+    "primal_feasibility_tolerance": 1e-09,
+    "dual_feasibility_tolerance": 1e-09,
+    "time_limit": 60.0
+  },
+  "candidate_cone_fixed_failures": {
+    "status": "skipped",
+    "reason": "shared_witness"
+  },
+  "failure_relaxed_C_witness": {
+    "status": "not_recomputed",
+    "reason": "Earlier C uses a different representation; no unverified containment claim."
+  },
+  "fallback_error_budget": {
+    "weight": {
+      "fixed_absolute_error_sum": 325.0,
+      "fraction_of_absolute_cap_budget": 0.06599091964945623,
+      "fraction_of_per_unit_cap_budget": 0.06234202530786988
+    },
+    "energy": {
+      "fixed_absolute_error_sum": 908.7374279999999,
+      "fraction_of_absolute_cap_budget": 0.1220201073120428,
+      "fraction_of_per_unit_cap_budget": 0.12342898717211699
+    },
+    "fat": {
+      "fixed_absolute_error_sum": 54.613363500000006,
+      "fraction_of_absolute_cap_budget": 0.12471879710065496,
+      "fraction_of_per_unit_cap_budget": 0.1311410073090753
+    },
+    "carbs": {
+      "fixed_absolute_error_sum": 73.25408750000001,
+      "fraction_of_absolute_cap_budget": 0.11217808981709486,
+      "fraction_of_per_unit_cap_budget": 0.1279937988003888
+    },
+    "protein": {
+      "fixed_absolute_error_sum": 48.0740555,
+      "fraction_of_absolute_cap_budget": 0.11346355759790039,
+      "fraction_of_per_unit_cap_budget": 0.09055240188183976
+    }
+  },
+  "provenance_sha256": "ff0f38e010b06bc0e4c8c95a6aa9001295073fb266b593badc8c7a2960d247ab"
+}

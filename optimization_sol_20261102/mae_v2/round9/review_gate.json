@@ -1,0 +1,7 @@
+{
+  "status": "approved_or_fixed",
+  "unresolved_p1_p2": 0,
+  "review_sha256": "660cc44faae9d51ade3625d672bdcd4d5058b5d2558f78689ebdeb598220e329",
+  "offline_tests": 22,
+  "formal_reviews": 1
+}

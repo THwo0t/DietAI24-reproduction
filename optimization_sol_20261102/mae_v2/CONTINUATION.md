@@ -464,3 +464,54 @@ The original allowed conditional adapter may supply true code+complete legal
 options afterExact, never currenttrueweight/nutrients/option/bin; M/N were more
 restrictive. Any future realcommon candidate must freshly implement and score
 both task branches/datasets, notreuseoldASA numbers. No formal reports yet.
+
+## Completed N backup and registered Round9
+
+Completed N failure, diagnosis and full-project review are now publicly backed
+up at 6e87de6110b745f8b0d99fabc9fc449be925f1fd on the same approved branch.
+The remote-verified receipt is round8/evidence/github_completed_N_backup.json:
+293 explicit nested payloads,417 files/19 archive members actual credential scan
+zero,477 reachable blobs generic scan zero. Raw data/logs/witnesses stay private.
+
+R9-A is preregistered b5cf9d7; R9-B/C/D sources are6324697/8f1e542/e1b763e.
+One fresh explicit Sol reviewer is auditing round9 now; do not edit that scope
+or execute the real diagnostic until the single review and fixes finish.
+Fourteen synthetic tests pass in unshare -Urn, including joint-incompatibility
+and exact repaired-dual checks. The isolated SciPy1.15.3 target does not modify
+the old .venv. No R9 real label analysis, paid call, new embedding or validation
+has run. After review, freeze runtime/source/protocol, run guarded once, inspect
+existing aggregate without repeating an already sealed diagnostic, then use
+the bounded result to register the next learnability test. Reports remain deferred.
+
+## R9 completed; latest Dot steering is received
+
+The single formal review found0P1/5P2/1P3, all fixed in isolated cited commits.
+Final freeze165aa710a6dae1f205b980ce9ae25f5e4ad22690aaf7659563f74e3170630fc1
+binds6 sources and2328 runtime members. Two pre-label preflight refusals and
+old freezes are preserved; no optimizer/label read occurred in either. The
+final preflight stopped before labels and preserved14276 old files.22 offline
+tests pass. The once-only actual guarded diagnostic is sealed; do NOT run again.
+Inspect round9/joint_checkpoint.json and DECISION.md. It reproduced original
+N point statistics from both sealed profiles and found a fixed-N shared mass
+oracle passing10/10 N5 checks on all84 including4 exact fallbacks, t=.7203107063.
+This reference-informed unconstrained allocation is NOT prediction, training
+input or acceptance. Candidate-cone expansion was skipped,0API/0images/0val.
+ASA theoretical top3 upperbound19/99 is distinct from actual10/99 recognition.
+
+Dot's latest complete paragraph explicitly prioritizes the old
+asa-retrieval-portion plus grouped OOF calibration as the next common method's
+starting point. A fresh Sol source/aggregate audit confirms raw ASA already
+passed10/10; calibration improved it, not rescued it.99 development rows,
+16 Exact/9 groups,12 primary hits,24 retrieval hits; not full-population success.
+Continuous conditional grams were re-estimated for the fixed truecode food
+description and projected to legal options. M/N instead sum uncertain leaf
+grams, a different conditional target. Old fold-policy deviation is documented
+in AS_RUN_DEVIATIONS.md; freeze the next method's actual folds explicitly.
+
+Next: safe source/aggregate backup of completed R9, then implement one new
+common source-grounded candidate using restored flat food units/hybrid retrieval,
+separate identity-fixed conditional adapter and explicit standard-first quantity
+logic. Both datasets must be newly executed and scored, no old ASA splicing.
+Calibration/fallback fitting only from development training folds. Do not use
+R9 oracle weights or protected test/validation data as training. No formal report
+or validation run yet; continue autonomously under the existing authorizations.

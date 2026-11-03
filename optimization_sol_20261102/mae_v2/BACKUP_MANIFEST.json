@@ -9,7 +9,7 @@
       24
     ],
     "status": "PASS",
-    "working_files_scanned": 417
+    "working_files_scanned": 430
   },
   "credentials_included": false,
   "development_mae_pass": {
@@ -18,7 +18,7 @@
     "scope": "completed common M method; M0 passes6/20; neither passes coding guard or numerical tolerance",
     "total": 20
   },
-  "file_count": 293,
+  "file_count": 306,
   "files": {
     ".gitignore": {
       "bytes": 109,
@@ -33,8 +33,8 @@
       "sha256": "5deafa048129decb19bcad702e7e2f938ba9e9fa3d9033d6037dc8916014052e"
     },
     "CONTINUATION.md": {
-      "bytes": 31181,
-      "sha256": "de770f0d8d40440cf8ceaba3562d10000af53c5097d96c5cabdf09d66177fa8c"
+      "bytes": 34557,
+      "sha256": "21a268b0b86b6581f6e455c9727462ca087c9faceed0322f97595f0dcaefdc45"
     },
     "MAC_DEMO.md": {
       "bytes": 13272,
@@ -1024,6 +1024,58 @@
       "bytes": 3233,
       "sha256": "eb428068221133251c3b7fef03c73c59239ea7cee59ec2c67fa7d83426f0497f"
     },
+    "round9/.gitignore": {
+      "bytes": 74,
+      "sha256": "7942f72cec9576346da305957bdc8465ad66dbafcc1ce0ba6e6410aaf0cb48e1"
+    },
+    "round9/CHECKLIST.md": {
+      "bytes": 918,
+      "sha256": "fe51cc490e735f4a2dc98c4a65e5a7f41ef427f1f96afbd9287091fbe8dbfadf"
+    },
+    "round9/DECISION.md": {
+      "bytes": 3173,
+      "sha256": "3036bce6a33eccfdedbff46d9b0a1e399446c847ff3142af012d77ac542fea9d"
+    },
+    "round9/PROTOCOL.md": {
+      "bytes": 5553,
+      "sha256": "c6d5c1a5c2e44728db6c1e6fc7b12cf6aff4c5b295505d6ac7a545180d0fe3a6"
+    },
+    "round9/README.md": {
+      "bytes": 1619,
+      "sha256": "c118d00bff4000084d3a074a92fe5f75af49aba3b77a41f8aa880d675c9e49e2"
+    },
+    "round9/REVIEW.md": {
+      "bytes": 11168,
+      "sha256": "660cc44faae9d51ade3625d672bdcd4d5058b5d2558f78689ebdeb598220e329"
+    },
+    "round9/guarded_run.py": {
+      "bytes": 8931,
+      "sha256": "a6f0f1ddc22aaa7c0a09766c3d47b0634e8830d1aec50ce6d3bd444ac2452f1b"
+    },
+    "round9/joint_checkpoint.json": {
+      "bytes": 7242,
+      "sha256": "0f4cb8ba792e021248339cff943d23212215135055df2da963ffc2659cc8af02"
+    },
+    "round9/joint_lp.py": {
+      "bytes": 10420,
+      "sha256": "96b07045f77216243b8d69d470ed1d1c3bb9292fed0c7ab3c4067ae58b1c8329"
+    },
+    "round9/review_gate.json": {
+      "bytes": 194,
+      "sha256": "7cf3cd02bb6efc8710116319ddd2bae7de0c84cfc46151890b6025fdf0d50360"
+    },
+    "round9/run_diagnostic.py": {
+      "bytes": 15197,
+      "sha256": "5ff37286cb17bbb36a0679d650822cac838809aa8d9fcb39c007eb6bd951a879"
+    },
+    "round9/test_diagnostic_gate.py": {
+      "bytes": 6789,
+      "sha256": "56abd389fb047d7a491246fd49556c43fc9f5e0d8a0594357df4f09a6859a06a"
+    },
+    "round9/test_joint_lp.py": {
+      "bytes": 4741,
+      "sha256": "a95f365037c5139d837fc650f92b60d05aea575a96f444c056e4bb446eb09ee5"
+    },
     "setup.sh": {
       "bytes": 2619,
       "sha256": "660cba3b124519a4b1e8bf8355019d9897253c6939467863e83849b5e07f4058"
@@ -1212,7 +1264,7 @@
     "reachable_blobs_scanned": 429,
     "status": "PASS"
   },
-  "latest_local_checkpoint": "bdd4982faa37b14261c5c01c03c869a2d2ea2797",
+  "latest_local_checkpoint": "fb0fd47d3dc0e094da49152c5c42cb1cbac2cf44",
   "new_research_data_included": false,
   "old_local_git_history_included": false,
   "purpose": "Preserve completed failed development methods, full J and K scoring, and aggregate diagnostics; continue optimization with validation sealed and final reports deferred.",
@@ -1503,8 +1555,18 @@
     "stage": "completed_rejected_and_diagnosed",
     "validation": "sealed"
   },
+  "round9": {
+    "api_calls": 0,
+    "freeze_sha256": "165aa710a6dae1f205b980ce9ae25f5e4ad22690aaf7659563f74e3170630fc1",
+    "new_payloads": 13,
+    "offline_tests": 22,
+    "predictive_result": false,
+    "private_oracle_witnesses_included": false,
+    "stage": "reference_informed_diagnostic_complete",
+    "validation": "sealed"
+  },
   "secret_scan": "PASS_reachable_history_and_worktree_generic_scan_plus_coordinator_reported_actual_credentials_in_memory",
-  "source_state": "M and N complete/rejected on both cohorts; full N scoring, post-score mass/density diagnosis and project review preserved. No selected method or target attainment; validation sealed. Next is a preregistered zero-API feasibility diagnostic.",
+  "source_state": "M/N rejected. R9 zero-API common-mass oracle completed; not model predictions, selection or acceptance. Validation sealed. Next common predictive candidate starts from the historical ASA mechanism without splicing old ASA scores.",
   "subagent_model_policy": {
     "astra_allowed": false,
     "explicit_spawn_model_required": true,
