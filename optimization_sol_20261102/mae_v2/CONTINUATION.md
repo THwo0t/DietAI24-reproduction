@@ -137,6 +137,47 @@ The original preflight passed before the engineering fix and remains an as-of
 receipt only; a post-fix persistent network-isolated preflight has passed all 84 queries
 and 230 training images, with zero API calls. Its hashes and the 154-test
 public-copy pass are recorded in `round5/readiness.json`.
-K inference and scoring have not started. Keep all inference sources/tests
-unchanged during preflight and execution. Follow `round5/README.md`; final
-reports remain deferred, and the validation cohort remains sealed.
+K subsequently completed inference and full scoring. Keep all inference sources,
+tests and artifacts unchanged. Follow `round5/README.md`; final reports remain
+deferred, and the validation cohort remains sealed.
+
+
+K development was then launched persistently with two workers. Its PID is in
+the private launch receipt.
+The private receipt is `round5/launch/K_launch.json` and log is
+`round5/launch/K.log`; public source/readiness backup `cb2dc4d` is confirmed
+remote. Do not start a second K run, change frozen source, reset counters, or
+score partial results. The first 84 log progress events are parent-J cached
+verification, not K predictions; actual K progress follows them. A service stop
+requires preserving/reconciling state, not regenerating completed answers.
+
+K has now sealed all 84 records, including one fixed external-training median
+fallback. There were 181 successful HTTP requests, no HTTP errors, 12 identity
+format repairs and one unsuccessful mass format repair. No new embeddings were
+requested. Returned usage is 2,796,448 prompt and 106,552 completion tokens;
+31,384 reasoning tokens are already included in completion. Billing is unverified.
+See `round5/service_completion.json` for safe counts only.
+
+The independent network-disabled scorer completed all checks and preserved ASA.
+K MAEs are 83.11905 g weight, 120.71628 kcal energy, 8.97862 g fat, 10.44311 g
+carbs and 10.53377 g protein. K passes 0/10 N5 checks, 10/20 combined, and is
+rejected: its worst N5 threshold ratio is 2.08838 versus raw J's 1.77803.
+Four MAEs worsened; only carbs improved slightly. Raw J remains selected and
+still fails the target. The score seal is
+`54833d081661b21fc9c00c3e32bf4482ca8c83be1a72f39036c69f198b38a2f9`.
+`round5/development_checkpoint.json` contains the safe full aggregate.
+The independent posthoc diagnostic completed with networking disabled. Exact-ID
+mass overlap fell from J's 44.57% to K's 37.23%; reference mass with predicted
+present IDs fell from 51.63% to 43.64%. K has 83 decomposable rows plus its
+fallback versus J's 84, so shared-ID-only error changes do not establish an
+improvement. Even true-weight oracle scaling leaves energy/fat/carbs/protein
+MAEs at 93.91897 / 8.74002 / 8.98778 / 8.19471, all failing. The proposed
+mechanism is unsupported. See `round5/development_diagnostic.json`, completion
+`88ca175c290f5462da7f43e5eaf75915db7850a77242d78e770b19713fe6bb25`.
+Back up this failed iteration, then continue without a new formal report.
+
+`round6/PROTOCOL.md` registers a training-only 25-group paired pilot: return to
+J, keep the same four supports, and test automatic ingredient-region hints/crops.
+Five-fold assets exclude the query's entire fold. The fixed advance gate must
+pass before a new 84-image development candidate is even registered. Sources
+are in implementation; no L request or real training annotation has begun.

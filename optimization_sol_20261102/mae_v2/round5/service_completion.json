@@ -1,0 +1,38 @@
+{
+  "api_calls_by_this_export": 0,
+  "base_completion_sha256": "04abb5e7b80f835c7bc68c4a13bbe1121a969b51d1c5ec6f501b685f1c491968",
+  "chat_http_attempts_logged": 181,
+  "cost_notice": "Third-party price/billing unverified. Reported usage only; reasoning tokens are already included in completion tokens. Unlogged reservations are not claimed as known transmissions.",
+  "embedding_requests": 0,
+  "http_transport_errors": 0,
+  "method_fallbacks": 0,
+  "missing_predictions": 0,
+  "n": 84,
+  "native_complete": 71,
+  "new_hypothesis_repairs": 12,
+  "new_mass_repairs": 1,
+  "reported_token_totals": {
+    "completion_tokens": 106552,
+    "prompt_tokens": 2796448,
+    "reasoning_tokens_included_in_completion": 31384,
+    "total_tokens": 2903000
+  },
+  "requests_with_complete_reported_usage": 181,
+  "requests_without_complete_reported_usage": 0,
+  "schema_version": 1,
+  "scope": "completed_K_development_service_and_structure_only_not_accuracy",
+  "service_evidence_counts": {
+    "exhausted_pending_count": 0,
+    "logged_attempts": 181,
+    "pending_count": 0,
+    "request_count": 181,
+    "reserved_attempts": 181,
+    "success_count": 181,
+    "transmissions": 181,
+    "unlogged_attempts": 0
+  },
+  "successful_chat_responses": 181,
+  "third_party_cost_usd": null,
+  "validation_opened": false,
+  "whole_fallbacks": 1
+}

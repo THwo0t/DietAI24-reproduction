@@ -1,13 +1,15 @@
 {
   "actual_credential_scan": {
     "credential_values_printed": false,
-    "files_scanned": 336,
+    "evidence": "Coordinator-provided in-memory scan of full credential values and 12/24-character prefix/suffix fragments; coordinator will rescan final manifest.",
+    "files_scanned": 342,
     "findings": 0,
     "full_and_prefix_suffix_lengths": [
       12,
       24
     ],
-    "status": "PASS"
+    "status": "PASS",
+    "zip_members_scanned": 19
   },
   "credentials_included": false,
   "development_mae_pass": {
@@ -15,7 +17,7 @@
     "nutrition5k": 0,
     "total": 20
   },
-  "file_count": 212,
+  "file_count": 218,
   "files": {
     ".gitignore": {
       "bytes": 109,
@@ -30,8 +32,8 @@
       "sha256": "5deafa048129decb19bcad702e7e2f938ba9e9fa3d9033d6037dc8916014052e"
     },
     "CONTINUATION.md": {
-      "bytes": 9913,
-      "sha256": "f0ea5d2c96e1bc5e7d5f35031a1b853138873cd1d6571160245bfa72aa2c94be"
+      "bytes": 12567,
+      "sha256": "159c024c5b0224037e0ab481a639bcd6d4605eb5507093d7935c6b0da0aa07d2"
     },
     "MAC_DEMO.md": {
       "bytes": 13272,
@@ -610,16 +612,28 @@
       "sha256": "b265e11f2c2878e81036e8699046ed174fe41afb496644ea55b8679167fc558e"
     },
     "round5/README.md": {
-      "bytes": 2843,
-      "sha256": "c9421a00351bef1f7fbebe6d574d124ad9bb509f8e80434fa9fd979604124d3b"
+      "bytes": 3588,
+      "sha256": "74e405193ece22964d62766eaa40e556f2cf08f3cbd22a96fa424daf0638e4c3"
     },
     "round5/REVIEW.md": {
       "bytes": 12922,
       "sha256": "b414f8862f45cf710b9348bb79c9afef7eadb5b4bfaf5fc2dacbcc748cabc353"
     },
+    "round5/development_checkpoint.json": {
+      "bytes": 90816,
+      "sha256": "79e62dc65f6be9eda46df037ccb16045fe8ef7b17ea0ee57283afc540e46a6af"
+    },
+    "round5/development_diagnostic.json": {
+      "bytes": 16072,
+      "sha256": "b8ac43c2658565d709b76ee11f58939c713c79b24d06d480ef4ab3087d8c5858"
+    },
     "round5/readiness.json": {
       "bytes": 2912,
       "sha256": "549fab086ca1d9bbf792ce493c725054a358acd27b2b3b0a01ede2bcd4b0c722"
+    },
+    "round5/service_completion.json": {
+      "bytes": 1328,
+      "sha256": "027c6fde51a30f99a12b710bbccb3b65e346a381d72f1c92131d4db8a6672fe5"
     },
     "round5/src/component_estimator.py": {
       "bytes": 22309,
@@ -693,9 +707,21 @@
       "bytes": 15373,
       "sha256": "a16fad6105e41bff0d653d6426192934821fccb7c2d1bb9995494958b6fb0ee6"
     },
+    "round5/tools/diagnose_k.py": {
+      "bytes": 14864,
+      "sha256": "34e283513be117d03193d3e634400e28ed81b76a532d4c56da01ba8b5b85b00c"
+    },
+    "round5/tools/test_diagnose_k.py": {
+      "bytes": 18539,
+      "sha256": "b7efee630d2a528379771be53170d11f9fed885ef6096a8bd04244dc24963990"
+    },
     "round5/training_checkpoint.json": {
       "bytes": 3523,
       "sha256": "21c9390da4c0706a08b66573db42789312a12395cda2591c5ba6af210d29d4af"
+    },
+    "round6/PROTOCOL.md": {
+      "bytes": 8620,
+      "sha256": "e089aac8655f602af0c2c46c8ef16e28838eb2fea77d550d47d9c5bd39217284"
     },
     "setup.sh": {
       "bytes": 2619,
@@ -866,17 +892,18 @@
       "sha256": "5c7fd21b3ce541e61c7128248c34befc87e2ade9dbe7373bf34ad1f49ad64f43"
     }
   },
+  "formal_reports_deferred": true,
   "formal_validation": "not_run_sealed",
   "generic_publication_scan": {
     "issues": 0,
-    "publishable_files_scanned": 336,
-    "reachable_blobs_scanned": 352,
+    "publishable_files_scanned": 342,
+    "reachable_blobs_scanned": 374,
     "status": "PASS"
   },
-  "latest_local_checkpoint": "156e25a",
+  "latest_local_checkpoint": "23ae0a5",
   "new_research_data_included": false,
   "old_local_git_history_included": false,
-  "purpose": "Preserve completed failed development methods, full J scoring and posthoc diagnostics; continue optimization with validation sealed and final reports deferred.",
+  "purpose": "Preserve completed failed development methods, full J and K scoring, and aggregate diagnostics; continue optimization with validation sealed and final reports deferred.",
   "raw_logs_included": false,
   "round3": {
     "F": "completed 84; N5 0/10; rejected",
@@ -962,12 +989,33 @@
   },
   "round5": {
     "K": {
-      "accuracy_tested": false,
-      "development_queries_started": 0,
+      "accuracy_tested": true,
+      "asa24_passed_checks": 10,
+      "base_queries_complete": 84,
+      "decision": "rejected",
+      "development_queries_started": 84,
+      "diagnostic_completion_sha256": "88ca175c290f5462da7f43e5eaf75915db7850a77242d78e770b19713fe6bb25",
+      "diagnostic_public_copy_offline_tests": {
+        "actual_api_calls": 0,
+        "actual_research_images_read": false,
+        "command": "OPENBLAS_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 unshare -rn <existing-project-venv>/bin/python -B -m unittest round5.tools.test_diagnose_k",
+        "count": 15,
+        "fixtures": "synthetic only",
+        "network_disabled": true,
+        "network_isolation": "unshare -rn",
+        "passed": 15,
+        "platform": "Linux",
+        "seconds": 50.658,
+        "status": "PASS",
+        "wall_seconds": 50.89
+      },
+      "formal_reports_deferred": true,
       "implementation_commit": "5b73b0a",
       "independent_review": "once; K1/K2/K3/K5 approved; K4 R5-K4-1 fixed",
+      "joint_passed_checks": 10,
       "new_downloads": 0,
       "new_embeddings": 0,
+      "nutrition5k_passed_checks": 0,
       "offline_tests": {
         "actual_api_calls": 0,
         "count": 154,
@@ -975,16 +1023,27 @@
         "seconds": 33.855,
         "status": "PASS"
       },
+      "posthoc_diagnostic_status": "completed_all_84_after_final_score_seal_mechanism_unsupported",
       "protocol_sha256": "255a965f4340e5aa9c74b4864f9b5f853a8e1bb7a2a09ca04e4e286a8849f467",
       "public_copy_offline_tests": {
-        "api_calls": 0,
+        "actual_api_calls": 0,
+        "actual_research_images_read": false,
+        "command": "OPENBLAS_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 unshare -rn <existing-project-venv>/bin/python -B -m unittest discover -s round5/tests",
         "count": 154,
+        "fixtures": "synthetic only",
         "network_disabled": true,
-        "seconds": 33.116,
-        "status": "PASS"
+        "network_isolation": "unshare -rn",
+        "passed": 154,
+        "platform": "Linux",
+        "seconds": 47.776,
+        "status": "PASS",
+        "wall_seconds": 48.05
       },
       "readiness": "round5/readiness.json",
-      "status": "review_fixed_source_frozen_real_preflight_pass_not_inferred",
+      "scored_queries": 84,
+      "selected_candidate": "J",
+      "selected_profile": "raw",
+      "status": "development_complete_scored_gate_failed_rejected",
       "validation_opened": false
     },
     "absent_id_mass_fraction": 0.8609590075303394,
@@ -1004,6 +1063,14 @@
     "status": "fixed_external_training_oof_complete",
     "validation_opened": false
   },
-  "secret_scan": "PASS_reachable_history_and_worktree_generic_scan_plus_actual_credentials_in_memory",
-  "source_state": "K registered and implemented; one review complete, R5-K4-1 fixed, frozen sources and real offline preflight pass. All 154 tests pass locally and in the isolated public source copy. K accuracy not tested; J remains the selected failed development baseline. Validation sealed."
+  "round6": {
+    "new_downloads": 0,
+    "new_embeddings": 0,
+    "paid_requests_started": 0,
+    "pilot_queries": 25,
+    "status": "training_only_paired_pilot_protocol_registered_source_implementation_in_progress",
+    "validation_opened": false
+  },
+  "secret_scan": "PASS_reachable_history_and_worktree_generic_scan_plus_coordinator_reported_actual_credentials_in_memory",
+  "source_state": "K completed all 84 and full scoring; N5 0/10, combined 10/20, rejected. Its complete posthoc diagnostic does not support the proposed mechanism. Raw J remains the failed selected baseline. L is a registered 25-group external-training paired pilot only; sources not yet frozen or run. Validation remains sealed and final reports deferred."
 }

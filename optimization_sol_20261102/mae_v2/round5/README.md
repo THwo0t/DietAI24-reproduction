@@ -5,6 +5,17 @@ composition diagnostic are backed up at public commit `36be2b8` on
 `codex/mae-v2-backup-20261103`. The independent training download is complete;
 do not download its 230 images again. All validation data remain sealed.
 
+K has completed all 84 development predictions and full offline scoring. It
+passes 0/10 N5 checks and is rejected; raw J remains selected and still fails
+the target. K MAEs (weight, energy, fat, carbs, protein) are 83.11905 g,
+120.71628 kcal, 8.97862 g, 10.44311 g and 10.53377 g. The safe checkpoint and
+service aggregate are `development_checkpoint.json` and
+`service_completion.json`. Do not rerun completed answers. The separate
+posthoc diagnostic completed offline; `development_diagnostic.json` shows that
+exact-ID mass overlap and coverage worsened, while true-weight scaling still
+fails all four nutrient targets. The proposed mechanism is unsupported. Final
+reports remain deferred; the next training-only pilot is under `../round6/`.
+
 The fixed ridge experiment in `PRIOR_PROTOCOL.md` is separate from candidate K.
 Its dense predicted ingredient vector is not passed to K. `K_PROTOCOL.md`
 registers one component-identity comparison and conserved-mass method before

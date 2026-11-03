@@ -1,0 +1,431 @@
+{
+  "aggregate": {
+    "api_calls": 0,
+    "bootstrap_replicates": 0,
+    "calibration_refitted": false,
+    "candidate_source": "K",
+    "decomposition": {
+      "components_all_rows": {
+        "carbs": {
+          "extra_known_id": {
+            "mean_absolute": 11.060559523809523,
+            "mean_signed": 11.060559523809523
+          },
+          "omitted_reference": {
+            "mean_absolute": 11.897585718035714,
+            "mean_signed": -11.897585718035714
+          },
+          "prediction_reconciliation": {
+            "mean_absolute": 9.992007221626409e-16,
+            "mean_signed": 4.282288809268461e-16
+          },
+          "reference_reconciliation": {
+            "mean_absolute": 1.1705119049100685e-06,
+            "mean_signed": -3.4579761918975193e-07
+          },
+          "shared_id_density": {
+            "mean_absolute": 5.696501471588601e-16,
+            "mean_signed": 5.980665698129563e-17
+          },
+          "shared_id_mass": {
+            "mean_absolute": 5.180667117738095,
+            "mean_signed": 3.2671855757380954
+          },
+          "unknown": {
+            "mean_absolute": 1.0414285714285714,
+            "mean_signed": 1.0414285714285714
+          },
+          "whole_fallback_error": {
+            "mean_absolute": 0.7063790476190476,
+            "mean_signed": -0.7063790476190476
+          }
+        },
+        "energy": {
+          "extra_known_id": {
+            "mean_absolute": 140.19284523809523,
+            "mean_signed": 140.19284523809523
+          },
+          "omitted_reference": {
+            "mean_absolute": 201.01955188187856,
+            "mean_signed": -201.01955188187856
+          },
+          "prediction_reconciliation": {
+            "mean_absolute": 5.2656292025078855e-15,
+            "mean_signed": -1.5437386818597415e-15
+          },
+          "reference_reconciliation": {
+            "mean_absolute": 1.3591930957116258e-05,
+            "mean_signed": -1.88454761256602e-07
+          },
+          "shared_id_density": {
+            "mean_absolute": 5.346252541200903e-15,
+            "mean_signed": 3.0795471992578746e-16
+          },
+          "shared_id_mass": {
+            "mean_absolute": 52.454712529380956,
+            "mean_signed": 34.30686926080952
+          },
+          "unknown": {
+            "mean_absolute": 14.422023809523811,
+            "mean_signed": 14.422023809523811
+          },
+          "whole_fallback_error": {
+            "mean_absolute": 7.095837541666667,
+            "mean_signed": -7.095837541666667
+          }
+        },
+        "fat": {
+          "extra_known_id": {
+            "mean_absolute": 5.827869047619048,
+            "mean_signed": 5.827869047619048
+          },
+          "omitted_reference": {
+            "mean_absolute": 10.366702538285713,
+            "mean_signed": -10.366702538285713
+          },
+          "prediction_reconciliation": {
+            "mean_absolute": 4.629233504463822e-16,
+            "mean_signed": 1.6554218313607245e-16
+          },
+          "reference_reconciliation": {
+            "mean_absolute": 6.246309523115567e-07,
+            "mean_signed": 2.216785714100254e-07
+          },
+          "shared_id_density": {
+            "mean_absolute": 3.699297812520541e-16,
+            "mean_signed": 3.3104306333224067e-17
+          },
+          "shared_id_mass": {
+            "mean_absolute": 2.2984685690833335,
+            "mean_signed": 1.3750791856547617
+          },
+          "unknown": {
+            "mean_absolute": 0.8310714285714286,
+            "mean_signed": 0.8310714285714286
+          },
+          "whole_fallback_error": {
+            "mean_absolute": 0.24459410119047617,
+            "mean_signed": -0.24459410119047617
+          }
+        },
+        "protein": {
+          "extra_known_id": {
+            "mean_absolute": 11.912797619047618,
+            "mean_signed": 11.912797619047618
+          },
+          "omitted_reference": {
+            "mean_absolute": 17.016231799419046,
+            "mean_signed": -17.016231799419046
+          },
+          "prediction_reconciliation": {
+            "mean_absolute": 5.06208831465994e-16,
+            "mean_signed": 1.3613448992427516e-16
+          },
+          "reference_reconciliation": {
+            "mean_absolute": 1.0275380951279847e-06,
+            "mean_signed": -3.6434285667960717e-07
+          },
+          "shared_id_density": {
+            "mean_absolute": 4.87292084989866e-16,
+            "mean_signed": -1.410082368329719e-16
+          },
+          "shared_id_mass": {
+            "mean_absolute": 3.4305793963809528,
+            "mean_signed": 2.1292795090000003
+          },
+          "unknown": {
+            "mean_absolute": 0.6473809523809524,
+            "mean_signed": 0.6473809523809524
+          },
+          "whole_fallback_error": {
+            "mean_absolute": 0.6142063392857143,
+            "mean_signed": -0.6142063392857143
+          }
+        },
+        "weight": {
+          "extra_known_id": {
+            "mean_absolute": 122.58333333333333,
+            "mean_signed": 122.58333333333333
+          },
+          "omitted_reference": {
+            "mean_absolute": 168.6038928452381,
+            "mean_signed": -168.6038928452381
+          },
+          "prediction_reconciliation": {
+            "mean_absolute": 0.0,
+            "mean_signed": 0.0
+          },
+          "reference_reconciliation": {
+            "mean_absolute": 1.8809523773876707e-06,
+            "mean_signed": 2.3809524256941065e-08
+          },
+          "shared_id_density": {
+            "mean_absolute": 6.555602621596163e-16,
+            "mean_signed": -6.132660516977055e-16
+          },
+          "shared_id_mass": {
+            "mean_absolute": 45.48843379761905,
+            "mean_signed": 20.639607107142858
+          },
+          "unknown": {
+            "mean_absolute": 8.69047619047619,
+            "mean_signed": 8.69047619047619
+          },
+          "whole_fallback_error": {
+            "mean_absolute": 4.5,
+            "mean_signed": -4.5
+          }
+        }
+      },
+      "decomposable_n": 83,
+      "mass_micro_rates_on_decomposable_rows": {
+        "exact_id_overlap_predicted_fraction": 0.39432022221753976,
+        "exact_id_overlap_reference_fraction": 0.37232201473301324,
+        "present_id_reference_mass_fraction": 0.43644395376734363,
+        "unknown_fraction_of_predicted_mass": 0.030764043996797167
+      },
+      "mass_totals_on_decomposable_rows": {
+        "exact_id_overlap_g": 9356.824553,
+        "extra_known_id_g": 10297.0,
+        "omitted_reference_id_g": 14162.726999,
+        "predicted_g": 23729.0,
+        "reference_g": 25131.000002,
+        "reference_mass_with_present_id_g": 10968.273003,
+        "shared_id_over_g": 3345.175447,
+        "shared_id_under_g": 1611.44845,
+        "unknown_g": 730.0,
+        "unpaired_mass_l1_g": 30146.350896
+      },
+      "maximum_accounting_identity_residual": 1.1368683772161603e-13,
+      "mean_signed_error_all_rows": {
+        "carbs": 2.76520855952381,
+        "energy": -19.193651303571432,
+        "fat": -2.5772767559523806,
+        "protein": -2.9409804226190475,
+        "weight": -21.19047619047619
+      },
+      "omitted_reference_catalog_availability": {
+        "decomposable_n": 83,
+        "definition": "Exact-ID dish occurrences after merging duplicate ID entries. Whole fallbacks have no ingredient decomposition; full-population denominators do not impute their omitted mass.",
+        "excluded_whole_fallback_n": 1,
+        "mean_mass_on_decomposable_rows": {
+          "catalog_absent_reference_id_g": 17.7109743373494,
+          "catalog_present_unselected_reference_id_g": 152.92429071084337
+        },
+        "measured_mass_sums_divided_by_population_n": {
+          "catalog_absent_reference_id_g": 17.500129404761907,
+          "catalog_present_unselected_reference_id_g": 151.1037634404762
+        },
+        "population_n": 84,
+        "totals_on_decomposable_rows": {
+          "catalog_absent_reference_id_dish_occurrences": 31,
+          "catalog_absent_reference_id_g": 1470.01087,
+          "catalog_present_unselected_reference_id_dish_occurrences": 639,
+          "catalog_present_unselected_reference_id_g": 12692.716129
+        }
+      },
+      "population_n": 84,
+      "whole_fallback_n": 1
+    },
+    "definitions": {
+      "available_coverage": "Present exact-ID reference mass divided by reference mass with IDs available in the frozen training catalog, on decomposable rows only.",
+      "identity": "Signed terms sum to prediction minus truth; absolute term means need not sum to MAE. Shared-density and mass terms are descriptive, not causal.",
+      "omission": "Exact-ID absence is split into catalog-unavailable and available-but-unselected. Neither proves a visual omission; unknown items are never mapped to truth.",
+      "oracle": "All 84 query truths independently set true_weight/raw_predicted_weight; all five totals scale. Nondeployable, not calibration or an attainable bound; invalid weight rejects all rows.",
+      "overlap": "Sum of min(predicted grams, reference grams) by shared exact ID divided by reference mass on decomposable rows.",
+      "raw": "Unchanged K totals, including every whole fallback; no K calibration is applied.",
+      "shared_mass": "Sum of per-ID absolute gram errors on shared IDs, divided by all 84. Net-per-dish absolute shared-mass error is also shown; neither imputes fallback ingredients."
+    },
+    "groups": 78,
+    "limitations": [
+      "Development data were repeatedly reused and are not independent validation.",
+      "Exact-ID agreement does not prove semantic, region or compound-food equivalence.",
+      "Mass decomposition excludes whole fallbacks; oracle and raw metrics retain all 84.",
+      "Comparisons on different decomposable subsets are descriptive and do not establish a mechanism.",
+      "No candidate is selected, calibrated, accepted or promoted by this diagnostic."
+    ],
+    "mechanism_comparison": {
+      "comparison_is_descriptive_only": true,
+      "raw_J": {
+        "available_id_reference_mass_fraction": 0.5496534563482482,
+        "decomposable_n": 84,
+        "exact_id_overlap_reference_fraction": 0.44568977482967204,
+        "population_n": 84,
+        "present_id_all_reference_mass_fraction": 0.5162968327401586,
+        "shared_id_absolute_mass_error_g_per_population_row": 70.00147234523808,
+        "shared_id_net_mass_error_mean_absolute_g": 52.367687845238095,
+        "true_weight_oracle_fat_mae": 8.500319317840194,
+        "true_weight_oracle_protein_mae": 7.385165758422552,
+        "whole_fallback_n": 0
+      },
+      "raw_K": {
+        "available_id_reference_mass_fraction": 0.4635593610144599,
+        "decomposable_n": 83,
+        "exact_id_overlap_reference_fraction": 0.37232201473301324,
+        "population_n": 84,
+        "present_id_all_reference_mass_fraction": 0.43644395376734363,
+        "shared_id_absolute_mass_error_g_per_population_row": 59.0074273452381,
+        "shared_id_net_mass_error_mean_absolute_g": 45.48843379761905,
+        "true_weight_oracle_fat_mae": 8.740021422685025,
+        "true_weight_oracle_protein_mae": 8.194710107804214,
+        "whole_fallback_n": 1
+      },
+      "selection_performed": false
+    },
+    "n": 84,
+    "new_profile_selected": false,
+    "provider_constructed": false,
+    "raw_J_point_metrics": {
+      "carbs": {
+        "mae": 10.52197489285714,
+        "pass_mae": false,
+        "pass_per_unit": false,
+        "per_unit": 0.42561098300851957,
+        "reference_mean": 24.72204739285715,
+        "threshold_mae": 7.774,
+        "threshold_per_unit": 0.2756
+      },
+      "energy": {
+        "mae": 102.18844652380953,
+        "pass_mae": false,
+        "pass_per_unit": false,
+        "per_unit": 0.29858597965577505,
+        "reference_mean": 342.2412755000001,
+        "threshold_mae": 88.66,
+        "threshold_per_unit": 0.2561
+      },
+      "fat": {
+        "mae": 8.36883245238095,
+        "pass_mae": false,
+        "pass_per_unit": false,
+        "per_unit": 0.4959473127810689,
+        "reference_mean": 16.874438547619047,
+        "threshold_mae": 5.213,
+        "threshold_per_unit": 0.2938
+      },
+      "protein": {
+        "mae": 8.96836770238095,
+        "pass_mae": false,
+        "pass_per_unit": false,
+        "per_unit": 0.34680320907407175,
+        "reference_mean": 25.860105869047615,
+        "threshold_mae": 5.044,
+        "threshold_per_unit": 0.2444
+      },
+      "weight": {
+        "mae": 67.20238095238098,
+        "pass_mae": false,
+        "pass_per_unit": false,
+        "per_unit": 0.21959853730646559,
+        "reference_mean": 306.0238095238094,
+        "threshold_mae": 58.63,
+        "threshold_per_unit": 0.2028
+      }
+    },
+    "raw_point_metrics": {
+      "carbs": {
+        "mae": 10.443111583333332,
+        "pass_mae": false,
+        "pass_per_unit": false,
+        "per_unit": 0.4224209838846366,
+        "reference_mean": 24.72204739285715,
+        "threshold_mae": 7.774,
+        "threshold_per_unit": 0.2756
+      },
+      "energy": {
+        "mae": 120.71628154166663,
+        "pass_mae": false,
+        "pass_per_unit": false,
+        "per_unit": 0.35272274323225694,
+        "reference_mean": 342.2412755000001,
+        "threshold_mae": 88.66,
+        "threshold_per_unit": 0.2561
+      },
+      "fat": {
+        "mae": 8.978616875,
+        "pass_mae": false,
+        "pass_per_unit": false,
+        "per_unit": 0.5320838882824263,
+        "reference_mean": 16.874438547619047,
+        "threshold_mae": 5.213,
+        "threshold_per_unit": 0.2938
+      },
+      "protein": {
+        "mae": 10.533772898809524,
+        "pass_mae": false,
+        "pass_per_unit": false,
+        "per_unit": 0.4073368048897885,
+        "reference_mean": 25.860105869047615,
+        "threshold_mae": 5.044,
+        "threshold_per_unit": 0.2444
+      },
+      "weight": {
+        "mae": 83.11904761904762,
+        "pass_mae": false,
+        "pass_per_unit": false,
+        "per_unit": 0.27160974091651763,
+        "reference_mean": 306.0238095238094,
+        "threshold_mae": 58.63,
+        "threshold_per_unit": 0.2028
+      }
+    },
+    "row_predictions_or_reference_rows_exported": false,
+    "schema_version": 1,
+    "scope": "posthoc_development_diagnostic_not_candidate_selection_or_acceptance",
+    "training_catalog_sha256": "c0e3060fa7b40b25a9943966a12466dba3b50d94917a13b9c180cc8f87c802ca",
+    "training_catalog_size": 164,
+    "true_weight_oracle_point_metrics": {
+      "carbs": {
+        "mae": 8.987776606589698,
+        "pass_mae": false,
+        "pass_per_unit": false,
+        "per_unit": 0.3635530853802385,
+        "reference_mean": 24.72204739285715,
+        "threshold_mae": 7.774,
+        "threshold_per_unit": 0.2756
+      },
+      "energy": {
+        "mae": 93.91896988413069,
+        "pass_mae": false,
+        "pass_per_unit": false,
+        "per_unit": 0.274423269802624,
+        "reference_mean": 342.2412755000001,
+        "threshold_mae": 88.66,
+        "threshold_per_unit": 0.2561
+      },
+      "fat": {
+        "mae": 8.740021422685025,
+        "pass_mae": false,
+        "pass_per_unit": false,
+        "per_unit": 0.5179444280780664,
+        "reference_mean": 16.874438547619047,
+        "threshold_mae": 5.213,
+        "threshold_per_unit": 0.2938
+      },
+      "protein": {
+        "mae": 8.194710107804214,
+        "pass_mae": false,
+        "pass_per_unit": false,
+        "per_unit": 0.3168861778563945,
+        "reference_mean": 25.860105869047615,
+        "threshold_mae": 5.044,
+        "threshold_per_unit": 0.2444
+      },
+      "weight": {
+        "mae": 0.0,
+        "pass_mae": true,
+        "pass_per_unit": true,
+        "per_unit": 0.0,
+        "reference_mean": 306.0238095238094,
+        "threshold_mae": 58.63,
+        "threshold_per_unit": 0.2028
+      }
+    },
+    "validation_opened": false
+  },
+  "api_calls": 0,
+  "completion_sha256": "88ca175c290f5462da7f43e5eaf75915db7850a77242d78e770b19713fe6bb25",
+  "new_profile_selected": false,
+  "status": "completed_all_84_after_final_score_seal",
+  "validation_opened": false
+}
