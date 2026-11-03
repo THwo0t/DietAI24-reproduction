@@ -1,0 +1,25 @@
+{
+  "status": "frozen_post_review",
+  "formal_reviews": 1,
+  "fixed_findings": [
+    "R8-G-1",
+    "R8-G-2",
+    "R8-G-3"
+  ],
+  "freeze_sha256": "e581d24372a4ad1f4d8baf5f0f26e1490242c949368a48cb5107c3165945011d",
+  "freeze_binding_sha256": "8fb28995b05b61c7083edbc0ce8b6b6b8e06df1a1113ec4eb2188e6e6467dc2d",
+  "offline_tests": 45,
+  "coordinator_confirmation": "pass",
+  "post_freeze_guarded_preflight": {
+    "rows": 183,
+    "imported_pairs": 183,
+    "forbidden_reads": 0,
+    "image_opens": 915,
+    "old_M_files_preserved": 8487,
+    "api_calls": 0,
+    "pre_review": false
+  },
+  "accuracy_result": null,
+  "validation_opened": false,
+  "new_embedding_requests": 0
+}

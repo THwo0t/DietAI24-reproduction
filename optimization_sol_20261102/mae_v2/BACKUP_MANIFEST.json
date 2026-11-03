@@ -1,25 +1,15 @@
 {
   "actual_credential_scan": {
-    "approved_demo_fixture_hashes": {
-      "demo/examples.json": "a9d2fc2546535f7c5717134685f04042187814afabb3138c705c00fb51b21819",
-      "optimization_sol_20261102/mae_v2/tools/demo_inputs.json": "105d9d36dafa2737761c5036df6a3d0ac4a2ed221c485589bfad08bc549287f2"
-    },
     "archive_members_scanned": 19,
-    "credential_values_printed": false,
-    "files_scanned": 385,
-    "findings": 0,
-    "full_and_prefix_suffix_lengths": [
+    "credentials_checked": 2,
+    "matched_values_printed": false,
+    "matches": 0,
+    "prefix_suffix_lengths": [
       12,
       24
     ],
-    "new_payload_generic_scans": "PASS",
-    "row_level_aggregate_check": "PASS_except_two_unchanged_approved_demo_fixtures",
     "status": "PASS",
-    "unchanged_approved_legacy_package_assignment_exception": {
-      "covered_by_generic_history_and_actual_credential_scans": true,
-      "path": "code/rag_food_code.py",
-      "sha256": "e5ec9f8bf508d3ad843a22493d5be1c812b2483e27ed7985fa5941e9a2ff1736"
-    }
+    "working_files_scanned": 411
   },
   "credentials_included": false,
   "development_mae_pass": {
@@ -28,7 +18,7 @@
     "scope": "completed common M method; M0 passes6/20; neither passes coding guard or numerical tolerance",
     "total": 20
   },
-  "file_count": 261,
+  "file_count": 287,
   "files": {
     ".gitignore": {
       "bytes": 109,
@@ -43,8 +33,8 @@
       "sha256": "5deafa048129decb19bcad702e7e2f938ba9e9fa3d9033d6037dc8916014052e"
     },
     "CONTINUATION.md": {
-      "bytes": 22112,
-      "sha256": "1a70f404b148466210545c51229afb9dd4151339a56a55423d589ff0ed78be06"
+      "bytes": 28679,
+      "sha256": "12e1d6cac5fab74a1d4c3aaf1a58ffa82d70937692828bfa37b1a59fcd6d437f"
     },
     "MAC_DEMO.md": {
       "bytes": 13272,
@@ -906,6 +896,110 @@
       "bytes": 3215,
       "sha256": "9e6328fa2f44aee7ce441552e208826cf6292f827f3a715d61922af6f5effd81"
     },
+    "round8/.gitignore": {
+      "bytes": 76,
+      "sha256": "b094c436f81bfaae7bf5a7c1d2e7ce67e36898f3249890a16a4abde21df6f93e"
+    },
+    "round8/CHECKLIST.md": {
+      "bytes": 1279,
+      "sha256": "1c0aa3739a78e5051c3e99aca4da9828573d4334c9fac05505cdcb6bb74b9dd1"
+    },
+    "round8/PROTOCOL.md": {
+      "bytes": 11528,
+      "sha256": "c17fdca51b663bb3cf2a4febfee24576f58a2776bf2eab32e4192ce5cd9be78f"
+    },
+    "round8/PROTOCOL_DRAFT.md": {
+      "bytes": 11518,
+      "sha256": "d14a7717674290315d92f052d1b139889ddaf131708f1b4f7f7b05f66b4c0ea2"
+    },
+    "round8/README.md": {
+      "bytes": 2386,
+      "sha256": "0edaf29fecaf3786e315630b285e2e75063f9b5bf00c202a9484acf31b983497"
+    },
+    "round8/REVIEW.md": {
+      "bytes": 12309,
+      "sha256": "ec2e27bf9b540d45fc057696004acbd99d73df3d2c5d01e2ec899ae293adace8"
+    },
+    "round8/readiness.json": {
+      "bytes": 674,
+      "sha256": "5c27dcd30188cadd597c32738c5dc5cc22df5b504b44ccc32a6b54959b60a947"
+    },
+    "round8/readiness_pre_review.json": {
+      "bytes": 1357,
+      "sha256": "6d1507a57d50b3ddcf37e24ea8cacf47bdc8bdf39c9674d648390df80f9b7a75"
+    },
+    "round8/review_gate.json": {
+      "bytes": 504,
+      "sha256": "289538ac721f336d85bac795f636618fb484cc65c4591b2f532818392f00bd2f"
+    },
+    "round8/src/context_n.py": {
+      "bytes": 4341,
+      "sha256": "3baa25569d30b301dafe5a6178d2adbceb8d021758f411fb495329142917673c"
+    },
+    "round8/src/gate_n.py": {
+      "bytes": 6530,
+      "sha256": "588be356980f562d19ef2aa76a7f60c00ff00f68b741e4aff4bfc7bc74b80f99"
+    },
+    "round8/src/records_n.py": {
+      "bytes": 3852,
+      "sha256": "2e1ddaa047871a5c4dff549993fd3ef452086422f3a77a4e2c234be14c2aadc0"
+    },
+    "round8/src/run_n.py": {
+      "bytes": 12761,
+      "sha256": "962d399938ac102615bc7c12bde00047ae61748eaedb081b00e821fc32bbea75"
+    },
+    "round8/src/runtime_n.py": {
+      "bytes": 7507,
+      "sha256": "77dca150cffd62be3ed2f977bcba4ab71f74d42a5e339b032a7784094bab5bc9"
+    },
+    "round8/src/scoring_n.py": {
+      "bytes": 3291,
+      "sha256": "e73bc4b153189558e66ea974e195ffde681d829420302b5ef294bf32e16376a4"
+    },
+    "round8/src/service_n.py": {
+      "bytes": 15089,
+      "sha256": "22379b68705cbbdfde51d47a78adb83c9f31be5512082affd978616b6afe18ad"
+    },
+    "round8/src/uncertain_portions.py": {
+      "bytes": 18062,
+      "sha256": "357cfa94ed2899940d23c041f7a3d4f8abc5ecf86cb4c3a640150bc262074ffe"
+    },
+    "round8/src/upstream_n.py": {
+      "bytes": 8642,
+      "sha256": "78ff7222623c8d8f6c3328d6b01133ef2a03b4d856f6a8be0c26e48ca0770d56"
+    },
+    "round8/tests/test_records_scoring_n.py": {
+      "bytes": 4610,
+      "sha256": "f15dc404808c66c67a16a3b915efc3a105da7f7bc181a6f3cae501450b5c8668"
+    },
+    "round8/tests/test_run_n.py": {
+      "bytes": 9750,
+      "sha256": "0f3d1ca92146059d4d58ef8a857cfd47c0d80e5cf1476c06136d7461569863c1"
+    },
+    "round8/tests/test_service_n.py": {
+      "bytes": 9894,
+      "sha256": "d99242730b63a9a3d83af94403e56ec2168cffa3c53183f34c4592f3130b8534"
+    },
+    "round8/tests/test_uncertain_portions.py": {
+      "bytes": 11827,
+      "sha256": "673e5d99f05c3b2035996cfa58cb6803502c567a8b33c4b300556db1502effc8"
+    },
+    "round8/tests/test_upstream_n.py": {
+      "bytes": 4151,
+      "sha256": "97e82f435759b84a3a8dfe0168306f90a8322f05bc47a0d7059c385d2f645843"
+    },
+    "round8/tools/guarded_preflight.py": {
+      "bytes": 3145,
+      "sha256": "7426de947ec0f855a5ea374f4d1f42f8fbe4782a790e926d0f66e49374ffa5e5"
+    },
+    "round8/tools/launch_n.py": {
+      "bytes": 2685,
+      "sha256": "f556f7c74da25c2bad6b075e2f9a7ddecd32aca5feb083170cb9332b57e6bdc2"
+    },
+    "round8/tools/watch_and_score.py": {
+      "bytes": 3233,
+      "sha256": "eb428068221133251c3b7fef03c73c59239ea7cee59ec2c67fa7d83426f0497f"
+    },
     "setup.sh": {
       "bytes": 2619,
       "sha256": "660cba3b124519a4b1e8bf8355019d9897253c6939467863e83849b5e07f4058"
@@ -1078,13 +1172,18 @@
   "formal_reports_deferred": true,
   "formal_validation": "not_run_sealed",
   "generic_publication_scan": {
+    "N_precommit_worktree": {
+      "files": 411,
+      "issues": 0,
+      "reachable_blobs_before_new_commit": 440
+    },
     "issues": 0,
     "phase": "precommit_history_and_complete_worktree",
     "publishable_files_scanned": 385,
     "reachable_blobs_scanned": 429,
     "status": "PASS"
   },
-  "latest_local_checkpoint": "28bed4d065ac85452838414b93d13b0110ed9e54",
+  "latest_local_checkpoint": "5979eb33d1b0bcf6be0f5e48c19716eeee396cb9",
   "new_research_data_included": false,
   "old_local_git_history_included": false,
   "purpose": "Preserve completed failed development methods, full J and K scoring, and aggregate diagnostics; continue optimization with validation sealed and final reports deferred.",
@@ -1345,8 +1444,30 @@
     "validation_opened": false,
     "zero_provider_completed_replay": "PASS"
   },
+  "round8": {
+    "accuracy_result": null,
+    "datasets": {
+      "asa24": 99,
+      "nutrition5k": 84
+    },
+    "freeze_sha256": "e581d24372a4ad1f4d8baf5f0f26e1490242c949368a48cb5107c3165945011d",
+    "new_payloads": 26,
+    "offline_tests": 45,
+    "profiles": [
+      "N-density",
+      "N-units"
+    ],
+    "public_copy_tests": {
+      "M": 49,
+      "N": 45,
+      "network_disabled": true,
+      "result": "pass"
+    },
+    "stage": "frozen_development_launched",
+    "validation": "sealed"
+  },
   "secret_scan": "PASS_reachable_history_and_worktree_generic_scan_plus_coordinator_reported_actual_credentials_in_memory",
-  "source_state": "M completed both datasets, passed offline replay and was rejected. Complete metrics and post-score diagnostics are preserved. No method selected; independent validation stays sealed. Continue optimization without a per-iteration formal report.",
+  "source_state": "M complete/rejected and preserved; N common-method profiles independently reviewed/fixed/frozen, persistently launched on both complete development cohorts. No N accuracy claim; validation sealed.",
   "subagent_model_policy": {
     "astra_allowed": false,
     "explicit_spawn_model_required": true,

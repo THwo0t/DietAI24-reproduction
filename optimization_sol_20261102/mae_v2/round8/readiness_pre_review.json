@@ -1,0 +1,37 @@
+{
+  "stage": "pre_review",
+  "status": "ready_for_independent_review",
+  "tests": {
+    "unique_tests": 39,
+    "network_namespace_disabled": true,
+    "result": "pass"
+  },
+  "guarded_preparation": {
+    "rows": 183,
+    "imported_pairs": 183,
+    "old_M_files_preserved": 8487,
+    "forbidden_reads": 0,
+    "image_opens": 3438,
+    "api_calls": 0
+  },
+  "guarded_final_preflight": {
+    "rows": 183,
+    "old_M_files_preserved": 8487,
+    "forbidden_reads": 0,
+    "image_opens": 732,
+    "api_calls": 0
+  },
+  "source_files": {
+    "src/context_n.py": "3baa25569d30b301dafe5a6178d2adbceb8d021758f411fb495329142917673c",
+    "src/records_n.py": "2e1ddaa047871a5c4dff549993fd3ef452086422f3a77a4e2c234be14c2aadc0",
+    "src/run_n.py": "962d399938ac102615bc7c12bde00047ae61748eaedb081b00e821fc32bbea75",
+    "src/runtime_n.py": "b616c58e635493f83e9f9d73d6543e15f120b9168781658a2818c608235a9172",
+    "src/scoring_n.py": "e73bc4b153189558e66ea974e195ffde681d829420302b5ef294bf32e16376a4",
+    "src/service_n.py": "0b8cb65f188ae49dfcf4f767bf0e8486031c8bf9fbac0ca1853b546621d6d11f",
+    "src/uncertain_portions.py": "a259ab4d3aa747bcde3af58de85fa74d6f2444e690122a2c1a0b51e305b995b5",
+    "src/upstream_n.py": "78ff7222623c8d8f6c3328d6b01133ef2a03b4d856f6a8be0c26e48ca0770d56"
+  },
+  "N_paid_calls": 0,
+  "accuracy_result": null,
+  "validation_opened": false
+}

@@ -328,3 +328,102 @@ source/aggregate inventory, then register and implement one next shared method
 using the complete development evidence and paper/source differences. Do not
 choose from original-test or sealed-validation labels, splice old ASA scores,
 write a formal report, or claim target attainment. Continue autonomously.
+
+The failed M iteration is now remote-verified at
+`a227a740f473ac964cc0b536228b819f23da0e45` on the existing public backup branch.
+The explicit inventory contains261 nested payloads. All49 public-copy tests
+pass with networking disabled; actual full/12/24-prefix/suffix scanning covers
+385 files and19 archive members with zero matches, and the final generic scan
+passes440 reachable blobs. Two unchanged approved demo fixtures and one old
+source-template assignment are checked against their original manifest hashes;
+there are no exceptions for new research aggregates or actual credentials.
+Private receipt:round7/evidence/github_completed_M_backup.json. No force push,
+new research images/labels/raw logs/local config or local Git history is public.
+
+## Round8 N is registered and core implemented; continue without stopping
+
+R8-A draft is committed283fcb2 and R8-B core/tests bb51248. Read
+round8/PROTOCOL_DRAFT.md and CHECKLIST.md. N has no Provider, paid call, complete
+runner, review or freeze yet. Do not imply accuracy from its13 passing
+network-disabled synthetic tests. The root remains the only implementation
+writer; one fresh independent Sol implementation review is still required.
+
+N-density and N-units share one new physical-leaf identity stage:1–3 ranked
+plausible FNDDS codes, arithmetic mean density, each physical mass counted once.
+It reuses M0's exactly verified layout/hybrid32 banks on both datasets, never M
+collapse. N-density keeps M0 per-leaf grams (fresh-image method explicitly runs
+old single-code M0 quantity first). N-units estimates canonical ONE-unit amounts,
+converting original fractional/mixed catalog options with exact rational
+provenance, primary-code old E physical-unit whitelist, max12, conflicting
+normalized labels excluded. Unit-free leaves estimate direct grams. One invalid
+leaf invalidates the image/profile, with fixed codes retained on quantity
+failure. Tests cover averaging/conservation, units, missing/illegal values,
+source tamper, prompt metadata isolation and service-stop propagation.
+
+Pending R8-C/D/E/F: exact immutable M0 upstream/fallback importer, own durable
+N service/replay, alternative-aware ASA option adapter, record/scoring and
+resumable runner. Preparation should first complete the existing M0/M sealed
+zero-Provider replay; import ASA M0 identity/quantity envelopes from sealed
+stages and N5 raw-C values from its already verified prepared source. Bind
+full M freeze/completion/service evidence and all current dev image hashes.
+No new embeddings or download in this fixed batch. Fallback vectors remain
+the frozen other-fold M preparation, not newly fit query statistics.
+
+R8 service design must add a freeze-bound single durable admission ledger,
+allowed732(sample,identity/units,initial/repair) slots, immutable slot→payload
+bindings, at most3 reservations per exact payload and2196 total. Unique
+reservation IDs survive unknown outcomes and restarts. Same-payload slots may
+share verified success without a new transmission. Fixed lock order payload
+execution lock then short admission lock, no lock across HTTP except payload.
+Bind sanitized raw reply/outcome, successful log, cache and returned value
+digests; recover a complete already persisted reply offline, never resend to
+confirm it. Repair admission must be tied to the initial cached raw response's
+format failure under the frozen parser, not service/accuracy errors. No old M
+state or source modification, implicit parent-chat import, budget reset or
+unregistered slot. Add offline negative/concurrency/replay evidence, then
+one independent review, fix, freeze and run both profiles on both full cohorts.
+
+The complete M failure was backed up before this N decision; its public remote
+is a227a74. No final report or independent validation has been started. Continue
+until a verifiable goal or clear external blocker; do not finish just because
+one development version or one conversation segment ends.
+
+## Round8 N implementation ready for its single independent review
+
+R8-C importer aa3cf41, R8-D service dfc0ddf, R8-E scoring c5d2bb8 and R8-F
+runner/preflight35a7d43 are implemented. Final protocol is round8/PROTOCOL.md.
+39 unique synthetic tests pass with networking disabled, including actual
+ArtifactStore+Ledger scientific stage/format repair/full-seal/replay integration.
+The real guarded prepare imported all183 exact M0 pairs after the old complete
+M replay; the final guarded context preflight passed with zero API/forbidden
+reference opens and8487 old M file sizes/mtimes preserved. The prepared upstream
+bundle is private. No N paid call, service ledger, accuracy result or validation
+access exists yet. Public readiness_pre_review.json records the as-of evidence.
+
+A fresh explicit gpt-6.1-sol independent reviewer is now auditing R8-A..F and
+may write only round8/REVIEW.md. Root is waiting without changing that scope.
+Do not start another review or paid coordinator. After its one review, fix all
+P1/P2 findings with cited English commits, run offline evidence, finalize the
+review gate and freeze, guarded post-freeze preflight, then launch the existing
+N both-profile/both-dataset batch persistently. Never reset admissions or reuse
+an old-M chat namespace. Validation remains sealed; reports remain deferred.
+
+## N is frozen and persistently launched
+
+The one formal R8-G review found0P1/3P2. Fixes c349fc2/7d8c4d8/8637d41 add
+frozen-context direct task admission, actual-parser proof before repair, and
+full-vector numeric validation inside the quantity contract. Independent Sol
+coordinator evidence confirms45 network-disabled tests and guarded183-input
+preflight; see round8/REVIEW.md and review_gate.json. No second formal review.
+
+Freeze file SHA256 is e581d24372a4ad1f4d8baf5f0f26e1490242c949368a48cb5107c3165945011d.
+Post-freeze guarded preflight passed183 inputs/0forbidden reads/0API and preserved
+8487 oldM files. Frozen science source commit is e53343d; do not edit round8/src,
+PROTOCOL.md, REVIEW.md, review_gate.json or prepared artifacts during execution.
+The persistent N coordinator PID426130 and offline follower PID426132 were
+launched once. Read round8/launch/N_launch.json and automatic_followup_launch.json
+before any resume. Never launch a duplicate or reset the ledger. No new embedding
+or data download; validation remains sealed. All183 paired records must seal
+before the follower runs network-disabled verify then score. Inspect complete
+scores before the full-project retrospective/backup/next candidate. No formal
+report and no claim of N target achievement exists yet.

@@ -1,0 +1,21 @@
+{
+  "status": "approved_or_fixed",
+  "unresolved_p1_p2": 0,
+  "review_sha256": "ec2e27bf9b540d45fc057696004acbd99d73df3d2c5d01e2ec899ae293adace8",
+  "formal_reviews": 1,
+  "review_model": "gpt-6.1-sol",
+  "fix_commits": {
+    "R8-G-1": "c349fc2",
+    "R8-G-2": "7d8c4d8",
+    "R8-G-3": "8637d41"
+  },
+  "offline_confirmation": {
+    "tests": 45,
+    "network_disabled": true,
+    "rows": 183,
+    "forbidden_reads": 0,
+    "api_calls": 0,
+    "old_M_files_preserved": 8487,
+    "preparation": null
+  }
+}
