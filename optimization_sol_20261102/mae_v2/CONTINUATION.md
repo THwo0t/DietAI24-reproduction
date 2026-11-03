@@ -515,3 +515,65 @@ logic. Both datasets must be newly executed and scored, no old ASA splicing.
 Calibration/fallback fitting only from development training folds. Do not use
 R9 oracle weights or protected test/validation data as training. No formal report
 or validation run yet; continue autonomously under the existing authorizations.
+
+R9 source/aggregate backup is now remote-verified at
+a2e3940b335512854f7c580c9cbc69bd15a8905f on the same public branch:
+306 explicit nested payloads,22 public-copy R9 tests,430 files/19 archive
+members actual credential scan0,492 reachable blobs generic scan0. Private
+receipt round9/evidence/github_completed_R9_backup.json. No oracle weights or
+new research data were published; do not rebuild or rerun the completed bound.
+
+O-A is committed48055f2 under round10/PROTOCOL_DRAFT.md and CHECKLIST.md.
+O-B's source_portions.py implements checked flat food identities, exact
+standard-option branch without multiplier, explicit no-standard-fit canonical
+unit adjustment, direct grams only when no physical catalogue exists, mean
+density per physical item counted once, and restored isolated continuous
+conditional interface.11 network-disabled synthetic tests pass. This is only
+the pure core: no O Provider, paid request, input preparation, complete runner,
+review, freeze or accuracy score exists yet. Continue O-C/D/E/F, one independent
+review and fixed freeze, then both183 full dev records once. Do not wake old
+unknown-model agents; all new subagents are explicit Sol and root remains the
+single implementation writer.
+
+O-C components are now858d07a: label-blind input/fallback reuse, pure post-seal
+ASA code/catalogue adapter and atomic records. A guarded183-image preparation
+ran with0 query-label/key/validation/Provider/network access and0API; private
+round10/prepared/common.json exists. The actual coding store/adapter subprocess
+must still be wired by O-E. The initial O-D Ledger now supports fixed chat versus
+official embedding routes,8616 theoreticalslots/25848 reservations, max3 per
+exact payload shared across slots, raw→anchor→cache recovery, no reserve after
+success/fatal and explicit role validation.25 synthetic tests pass without
+network. No O HTTP Provider/task gate/real replay/complete runner/review/freeze
+or paid call exists. Next implement explicit old embedding imports (registered
+N7 manifest plus verified M embedding caches), stage reconstruction and role
+transport, then full O-E scoring/runner; keep one implementation writer and
+perform only one complete formal review after the full scope is ready.
+
+O-D now additionally has imports_o.py/runtime_o.py and ledger import-use
+evidence. The real guarded import preparation found3360 entries:3159 legacy
+plus201 M official successes,0 blocked,0query-label/key/val/API access. It did
+not construct a real Provider.31 synthetic tests pass, including MockTransport
+dual-route credentials, model mismatch/auth/redaction, nonfinite envelope,
+transient budgets and no duplicate successful transmissions. The factory itself
+is implemented but has NOT been used for actual O inference. Frozen TaskGate,
+complete Replay, adapter subprocess, OOF scorer and persistent full runner are
+still unfinished. Read round10/ENGINE_DESIGN.md for the agreed minimal stage
+capture/reconstruction design before continuing, without changing old M/N/R9.
+
+## O implementation reviewed and fixed
+
+O-D3/E/F completed through9315b0d. One fresh explicit Sol reviewer found0P1,
+one mandatory P2 R-O-1 and optional P3 R-O-2. R-O-1 fixed67e245f: conditional
+repair no longer contaminates main/E2E repair success. Three new synthetic
+record/evaluator assertions catch two failures against old9315b0d; all fixed.
+R-O-2 documented/tested910cd36: preserve follower logs and continue only
+network-isolated verify→score after a sealed base; no duplicate paid launch.
+All43 unique network-disabled tests pass. No second formal review required.
+
+Next finalize gate, freeze all source/task/input/environment bindings, run the
+guarded183-task post-freeze preflight, publish the scoped source backup, then
+launch O once with its detached offline follower. No O paid request or accuracy
+score existed at this checkpoint. Check round10/launch receipts and live process
+state before any continuation. The same new core must freshly score both99ASA
+and84N5; R9 oracle and historical16Exact ASA scores cannot be reused as results.
+Validation stays sealed; no formal report until a qualified method exists.

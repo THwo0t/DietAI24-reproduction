@@ -9,7 +9,7 @@
       24
     ],
     "status": "PASS",
-    "working_files_scanned": 430
+    "working_files_scanned": 461
   },
   "credentials_included": false,
   "development_mae_pass": {
@@ -18,7 +18,7 @@
     "scope": "completed common M method; M0 passes6/20; neither passes coding guard or numerical tolerance",
     "total": 20
   },
-  "file_count": 306,
+  "file_count": 337,
   "files": {
     ".gitignore": {
       "bytes": 109,
@@ -33,8 +33,8 @@
       "sha256": "5deafa048129decb19bcad702e7e2f938ba9e9fa3d9033d6037dc8916014052e"
     },
     "CONTINUATION.md": {
-      "bytes": 34557,
-      "sha256": "21a268b0b86b6581f6e455c9727462ca087c9faceed0322f97595f0dcaefdc45"
+      "bytes": 38703,
+      "sha256": "8cfb32d7101f376145f4db3d25f4d114107e308f311e38d534ea2e0b3df1affc"
     },
     "MAC_DEMO.md": {
       "bytes": 13272,
@@ -147,6 +147,130 @@
     "requirements-demo.txt": {
       "bytes": 423,
       "sha256": "2b78834ad9edefc2f101c863b296bdbee7da273effcddccca8fa90d59d8ce83a"
+    },
+    "round10/.gitignore": {
+      "bytes": 68,
+      "sha256": "10ba220a90a4d8bcdf10ab74e9c36b689eeef4c025a2219d602e8e06218b855e"
+    },
+    "round10/CHECKLIST.md": {
+      "bytes": 1312,
+      "sha256": "6ac6df1bbfe57b45ac0cd399a998d352b9fc2b122191ea371954a9e7a0cb3a4d"
+    },
+    "round10/ENGINE_DESIGN.md": {
+      "bytes": 5188,
+      "sha256": "8c1ab122e76bcdb0aa5e809daf82626c22d13f57aea4dfe53d8c36b64b0d6548"
+    },
+    "round10/PROTOCOL.md": {
+      "bytes": 6971,
+      "sha256": "56192fa229eabf7073c3c5423cad130d002944ee30bcb96785d24a75f94f3325"
+    },
+    "round10/PROTOCOL_DRAFT.md": {
+      "bytes": 6325,
+      "sha256": "092ee0bbcfb1a98226b6db0b9153479e8a426020e5b3fb24f620ab1398a03dee"
+    },
+    "round10/README.md": {
+      "bytes": 3607,
+      "sha256": "0394c07d474f3ea5872edec4d75dcbd4cf65e228fdb37cd18fb327621a18504c"
+    },
+    "round10/REVIEW.md": {
+      "bytes": 11166,
+      "sha256": "9af6180354e6a67650b42dc4045db90d7df5723e203f108ff5769d1504cc25e3"
+    },
+    "round10/adapter_o.py": {
+      "bytes": 2786,
+      "sha256": "7e549c802eab80efec77b14d48ef7c474981fa13f024646d0ce40e300bda3270"
+    },
+    "round10/conditional_o.py": {
+      "bytes": 1639,
+      "sha256": "1c8858fef254b88e2ff53d5fc8e29132bcdb92f0ac58878b2b70c0923010cd10"
+    },
+    "round10/context_o.py": {
+      "bytes": 6074,
+      "sha256": "690fd3f38848bfb7be2c8a688666ddc954117606d2dc9209253c712616fc312b"
+    },
+    "round10/engine_o.py": {
+      "bytes": 3535,
+      "sha256": "60d24d96367bda048d9c88af019135cbeac31c4a358c55aa8d6d1337f6148ac2"
+    },
+    "round10/gate_o.py": {
+      "bytes": 7519,
+      "sha256": "c619425b7a650942299b7e044602e3e68a8776ecfa7eef639cc4db4f07ee65d6"
+    },
+    "round10/imports_o.py": {
+      "bytes": 5865,
+      "sha256": "6bd7b132691c941b1595584b2c541c79036b3af73f35d5050209e3575c890a0e"
+    },
+    "round10/launch_o.py": {
+      "bytes": 2693,
+      "sha256": "bb4aaf76dfa82a6e88e3426e0565e344365fbf86cbfd4db08d7906f5e49ea424"
+    },
+    "round10/records_o.py": {
+      "bytes": 4097,
+      "sha256": "b672de6de4a17890f2c345b6cf76f833b87eb5d5d4bec75cfa417af06e486d34"
+    },
+    "round10/review_gate.json": {
+      "bytes": 284,
+      "sha256": "eefc238642c5aa649ce976a3d5231c1099825facdeb7cb42081e3dc2000cb1cc"
+    },
+    "round10/run_o.py": {
+      "bytes": 14042,
+      "sha256": "3bed66f2a44a8cb380bc5c36165044a09d603b74b956d6568dc405223b27702d"
+    },
+    "round10/runtime_o.py": {
+      "bytes": 9115,
+      "sha256": "ba92b267da7369de844bebcf412aa2fffa99100cce369a1261974cd26040a944"
+    },
+    "round10/scoring_o.py": {
+      "bytes": 4410,
+      "sha256": "06c34ddf4f2ed9b72eaa05934c23a1c9d6441082ad0b49f4a0e20755b73be7b9"
+    },
+    "round10/service_o.py": {
+      "bytes": 19307,
+      "sha256": "d7e7db974d48744a966860e85b2477cdf5ff9ffe87be45663d7bc50eb093be3b"
+    },
+    "round10/source_portions.py": {
+      "bytes": 9672,
+      "sha256": "c156a5e3e354422c28d7bb3beced3f59b6c18394595e7bc87e691364ab7df922"
+    },
+    "round10/stores_o.py": {
+      "bytes": 4132,
+      "sha256": "6ae9b81a4b66f77a23e22455aa342a05791e11a0ed53c28e5ec22dce19f49a0d"
+    },
+    "round10/test_conditional_o.py": {
+      "bytes": 2430,
+      "sha256": "62ad02494b2acc21d6c909b6e62e79a6e5481c85a34d485b01daf1a5e9a66124"
+    },
+    "round10/test_gate_o.py": {
+      "bytes": 7427,
+      "sha256": "2429f022a426f19bf38f9c2dda149db38760a8cf0826f532e129c2adccdfbf85"
+    },
+    "round10/test_run_o.py": {
+      "bytes": 4002,
+      "sha256": "d42c54bc2ed0fe3fbbddf9d87504fc91b5186a7e28ee86be700cd91422e60e75"
+    },
+    "round10/test_runtime_o.py": {
+      "bytes": 4994,
+      "sha256": "2a0a96c93cd44091afd96e00356642622f65b547ca454a1c789de9c5264df743"
+    },
+    "round10/test_scoring_o.py": {
+      "bytes": 2783,
+      "sha256": "9397106c2f0ea90a59aa041bc3e92fcca9257832f79e57ca3ca0785fcdc33f5d"
+    },
+    "round10/test_service_o.py": {
+      "bytes": 6511,
+      "sha256": "b74cc27430f4592ecb5f75ca12137fab89be5296a87ff5f8af5570329f568607"
+    },
+    "round10/test_source_portions.py": {
+      "bytes": 9756,
+      "sha256": "f5e2b24f029e16164dcd88e84220c5bd04325d88aacdd9e43f6b0939309196a7"
+    },
+    "round10/test_watch_o.py": {
+      "bytes": 2234,
+      "sha256": "92f9fa5851de46bf2bbcd107c8792118ce89c97d4675fa39365bf6c47735db79"
+    },
+    "round10/watch_o.py": {
+      "bytes": 2957,
+      "sha256": "9fe5ec5ebf83a3abf25f1203a2b63fd65fc2d5922dcb172724f25ca688517a9a"
     },
     "round3/ENSEMBLE_PROTOCOL.md": {
       "bytes": 2034,
@@ -1264,11 +1388,23 @@
     "reachable_blobs_scanned": 429,
     "status": "PASS"
   },
-  "latest_local_checkpoint": "fb0fd47d3dc0e094da49152c5c42cb1cbac2cf44",
+  "latest_local_checkpoint": "02212283d39d8237e4ac2fead66a25116d7e852d",
   "new_research_data_included": false,
   "old_local_git_history_included": false,
   "purpose": "Preserve completed failed development methods, full J and K scoring, and aggregate diagnostics; continue optimization with validation sealed and final reports deferred.",
   "raw_logs_included": false,
+  "round10": {
+    "api_calls_at_this_checkpoint": 0,
+    "formal_reviews": 1,
+    "freeze_sha256": "0815819980716aa6be5a5e77a71de6c007f8985566bf5503f5b007d201164d92",
+    "new_payloads": 31,
+    "offline_tests": 43,
+    "predictive_result": false,
+    "private_inputs_or_outputs_included": false,
+    "stage": "reviewed_fixed_frozen_before_paid_development",
+    "unresolved_p1_p2": 0,
+    "validation": "sealed"
+  },
   "round3": {
     "F": "completed 84; N5 0/10; rejected",
     "G": "completed 84; N5 0/10; rejected",
@@ -1566,7 +1702,7 @@
     "validation": "sealed"
   },
   "secret_scan": "PASS_reachable_history_and_worktree_generic_scan_plus_coordinator_reported_actual_credentials_in_memory",
-  "source_state": "M/N rejected. R9 zero-API common-mass oracle completed; not model predictions, selection or acceptance. Validation sealed. Next common predictive candidate starts from the historical ASA mechanism without splicing old ASA scores.",
+  "source_state": "M/N rejected; R9 reference-informed bound is not prediction. O common source-grounded method reviewed, fixed and frozen; no O accuracy result yet. Both development cohorts must run anew. Validation sealed.",
   "subagent_model_policy": {
     "astra_allowed": false,
     "explicit_spawn_model_required": true,

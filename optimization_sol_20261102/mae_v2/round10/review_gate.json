@@ -1,0 +1,11 @@
+{
+  "status": "approved_or_fixed",
+  "unresolved_p1_p2": 0,
+  "review_sha256": "9af6180354e6a67650b42dc4045db90d7df5723e203f108ff5769d1504cc25e3",
+  "offline_tests": 43,
+  "formal_reviews": 1,
+  "findings": {
+    "R-O-1": "fixed",
+    "R-O-2": "documented_and_fail_stop_tested"
+  }
+}
