@@ -1,6 +1,6 @@
 # Round8 working checklist
 
-No N paid inference yet. Independent review/fixes completed; freeze follows. Root is the sole implementation
+N completed and rejected. Frozen science is preserved. Root is the sole implementation
 writer. Independent reviewer modifies only REVIEW.md; all subagents are Sol.
 
 | Item | Scope | State |
@@ -11,6 +11,6 @@ writer. Independent reviewer modifies only REVIEW.md; all subagents are Sol.
 | R8-D | Own durable N service and scientific replay | fixed;45 unique tests and guarded183-input confirmation pass |
 | R8-E | Complete-population record/adapters/scorer | fixed;45 unique tests and guarded183-input confirmation pass |
 | R8-F | Runner, negative tests, guarded real preparation/preflight | fixed;45 unique tests and guarded183-input confirmation pass |
-| R8-G | One independent review, fixes and immutable freeze | review/fixes complete;freeze and post-freeze preflight next |
-| R8-H | Both profiles/both datasets, verify and complete scoring | pending |
-| R8-I | Full-project retrospective and safe backup or validation gate | pending |
+| R8-G | One independent review, fixes and immutable freeze | fixed;freeze/post-freeze guarded preflight passed |
+| R8-H | Both profiles/both datasets, verify and complete scoring | completed183pairs,zero-Provider verify,full score;both rejected |
+| R8-I | Full-project retrospective and safe backup or validation gate | retrospective/guarded diagnosis complete;safe completed-failure backup next;validation stays sealed |

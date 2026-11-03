@@ -427,3 +427,40 @@ or data download; validation remains sealed. All183 paired records must seal
 before the follower runs network-disabled verify then score. Inspect complete
 scores before the full-project retrospective/backup/next candidate. No formal
 report and no claim of N target achievement exists yet.
+
+## N completed, rejected and diagnosed; next is a bounded zero-API diagnostic
+
+All183 N pairs sealed. The existing offline follower completed zero-Provider
+verify then full scoring and ended development_scored. Do not restart either
+PID426130/426132 or any N paid request. Both N-density and N-units fail9/10 ASA
+and10/10 N5, Exact10/99/6groups below15 floor. Four N5 identity failures use
+fixed fallback in both profiles. N-density weight82.25 vsM0 82.988 changes only
+through those4 fallbacks; all80 successful masses are identical. N-units
+weight96.385655 and energy159.074402 worsen. See round8/development_checkpoint.json,
+development_diagnostic.json and the full-project round8/PROJECT_REVIEW.md.
+
+The separate guarded post-score helper completed, preserved14254 old inference
+files, counted10 devlabel opens after scoring,0forbidden opens/Provider/network,
+0API,0newbootstrap/selection. Its6 tests and prior45 give51 total. Frozen N36
+source/input pins remain unchanged. Service333 transmissions/331 successful
+payloads/2recovered502/0unknown, noembeddings; tokens1591364prompt/103913completion,
+including47386reasoning. Original test and validation remain untouched.
+
+Before registering the next phase, back up this completed failure's explicit
+source/aggregate/review inventory to the same approved GitHub branch, with
+actual full/truncated credential and reachable-history scans, and verify remote.
+The existing frozen N backup is568c4116fd31537b47dfc5517bc671c53a7da58d (287nested
+payloads,94public tests,411files/19archive members actualscan0,468blobs generic0).
+The new diagnosis/review/result files are not yet public.
+
+Next decision after backup: one preregistered0-API joint-feasibility diagnostic,
+not another immediate paid prompt/unit attempt. Fixed N identity and optimistic
+candidate-density relaxations must use ONE mass vector per image for all5
+nutrients; preserve full population/fallbacks and separately show relaxed-failure
+bounds. Never splice5 different target optima or interpret oracle feasibility
+as a predictive result. Check prior C oracle evidence first to avoid duplication.
+ASA recognition upperbound separate; fixed10 Exact notoracle-selectedeasyrows.
+The original allowed conditional adapter may supply true code+complete legal
+options afterExact, never currenttrueweight/nutrients/option/bin; M/N were more
+restrictive. Any future realcommon candidate must freshly implement and score
+both task branches/datasets, notreuseoldASA numbers. No formal reports yet.
