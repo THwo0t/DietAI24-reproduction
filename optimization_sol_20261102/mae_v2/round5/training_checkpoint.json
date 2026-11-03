@@ -1,0 +1,104 @@
+{
+  "aggregate": {
+    "advance_gate": {
+      "advance": true,
+      "improved_targets": 4,
+      "mean_ratio": 0.9131544756315865,
+      "ratios": {
+        "carbs": 0.8457867472612511,
+        "energy": 0.9604210190761735,
+        "fat": 1.0052514895959428,
+        "protein": 0.9689850661671917,
+        "weight": 0.7853280560573733
+      },
+      "reason": [],
+      "valid": true
+    },
+    "api_calls": 0,
+    "candidate_mae": {
+      "carbs": 12.800392295998805,
+      "energy": 153.657624437339,
+      "fat": 11.476811771483213,
+      "protein": 11.066000417308,
+      "weight": 81.4897364602838
+    },
+    "composition": {
+      "absent_id_mass_fraction_pooled": 0.8609590075303394,
+      "absent_id_mass_grams_mean": 203.04311313214674,
+      "at_least_one_gram_id_count_mean": 43.243478260869566,
+      "evaluated_nonfallback_n": 230,
+      "excluded_whole_fallback_n": 0,
+      "ingredient_l1_grams_mean": 383.3379709761338,
+      "negative_gram_count_clipped_mean": 40.8304347826087,
+      "negative_gram_magnitude_clipped_mean": 24.107830124519467,
+      "omitted_true_id_mass_grams_mean": 13.90053562173913,
+      "positive_id_count_mean": 113.5695652173913
+    },
+    "fit_loss": "unaveraged_squared_error",
+    "fold_count": 5,
+    "fold_median_baseline_mae": {
+      "carbs": 15.13430227826087,
+      "energy": 159.98986005652174,
+      "fat": 11.416856269565217,
+      "protein": 11.420197073913045,
+      "weight": 103.76521739130435
+    },
+    "groups": 230,
+    "kernel": "linear",
+    "lambda": 1.0,
+    "n": 230,
+    "official_minus_ingredient_totals": {
+      "carbs": {
+        "max": 7.000000010748408e-06,
+        "min": -5.000000001587068e-06,
+        "nonzero_at_0_001_n": 0,
+        "signed_sum": 2.1305000042382005e-05
+      },
+      "energy": {
+        "max": 0.00010799999995469989,
+        "min": -8.08500000175627e-05,
+        "nonzero_at_0_001_n": 0,
+        "signed_sum": 0.0002752101998808598
+      },
+      "fat": {
+        "max": 3.999999989900971e-06,
+        "min": -2.979999997876348e-06,
+        "nonzero_at_0_001_n": 0,
+        "signed_sum": -1.3011999989209766e-05
+      },
+      "protein": {
+        "max": 7.187999997881889e-06,
+        "min": -5.887999996900817e-06,
+        "nonzero_at_0_001_n": 0,
+        "signed_sum": 3.0068799998783646e-05
+      },
+      "weight": {
+        "max": 6.999999982326699e-06,
+        "min": -2.0,
+        "nonzero_at_0_001_n": 1,
+        "signed_sum": -2.000023000000013
+      }
+    },
+    "scope": "external_training_group_oof_prior_utility_not_paper_acceptance",
+    "version": "external-gram-prior-r5.1",
+    "whole_fallback_n": 0
+  },
+  "api_calls": 0,
+  "completion_sha256": "7fb254a424b0507505708fe4927bcfc924c142d7018539755060dec79f87b146",
+  "deployment_decision": "Not a final predictor. Advance gate permits further investigation only; dense composition has high absent-ID mass and needs visual rejection. No Sol-prior experiment launched.",
+  "development_opened": false,
+  "images_opened": false,
+  "offline_tests": {
+    "count": 33,
+    "network_disabled": true,
+    "seconds": 2.084,
+    "status": "PASS"
+  },
+  "source_sha256": {
+    "round5/PRIOR_PROTOCOL.md": "b265e11f2c2878e81036e8699046ed174fe41afb496644ea55b8679167fc558e",
+    "round5/src/gram_prior.py": "c02aa3fd50466af88f916d0e1bcbe35d4d709896af7d13bd5a639378f9dad8b0",
+    "round5/src/run_train_prior.py": "425ac1b9017640e3ac20f99a671a187da63b946151dbcc849c31ddcbc6908897"
+  },
+  "status": "fixed_external_training_oof_complete",
+  "validation_opened": false
+}

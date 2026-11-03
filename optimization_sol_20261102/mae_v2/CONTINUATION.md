@@ -82,11 +82,42 @@ creating a provider or new run. The private registration binds 35 old source
 files, 7 new source files, 792 old artifacts, 213 original counters and 212
 successful response caches. Only the remaining 32 queries require completion.
 Use the separate continuation entry points in `round4/README.md`; do not change
-the original J or open validation. Full-population scoring is still pending.
+the original J or open validation. The continuation has now sealed all 84 base
+records (completion `11fc4c720a3bd9c5b59cd5f3cca8fb291b0865e9ebc8e32e8643498d3ae22b1f`).
+It used 126 successful requests and two timeouts. Its last estimate returned on
+its third cumulative attempt; no further exception or service fallback was used.
+Offline full-population scoring/calibration is complete. Request/token aggregates
+are recorded separately in `round4/service_completion.json`; timeout-side billing
+is unknown. `round4/development_checkpoint.json` records the completed decision:
+raw MAEs are 67.20238 g weight, 102.18845 kcal, 8.36883 g fat, 10.52197 g carbs,
+and 8.96837 g protein. Raw and calibrated each pass 0/10 N5 checks. Calibration
+reduces mean threshold ratio but worsens the maximum from 1.77803 to 1.79571;
+the fixed rule therefore retains raw. ASA remains 10/10, joint 10/20. There are
+two format repairs, no whole/method fallback, and no missing prediction. Formal
+validation remains sealed. The posthoc mass/density/catalog-coverage diagnostic
+has 18 passing synthetic tests and completed only after the final score seal.
+Its independently verified aggregate is `round4/diagnostics/development_diagnostic.json`
+(completion `7212c0eaf8771aeedae85faa411268275aba98d5dce0c355a3877dc485452658`).
+Even oracle true-weight scaling leaves fat/carbs/protein MAEs at 8.50032,
+8.41922 and 7.38517 g; this is a nondeployable diagnostic, not a new candidate.
+Exact present IDs cover 51.63% of reference mass, with 44.57% exact mass overlap.
+Omitted exact-ID mass averages 148.02 g, of which 129.45 g is already available
+in the training catalog and 18.57 g is outside it. Exact-ID disagreement is not
+proof of visual omission. Shared-ID density differences are numerical roundoff;
+identity/composition and mass allocation need investigation before another run.
+
+A zero-API external-training prior experiment was separately preregistered in
+`round5/PRIOR_PROTOCOL.md` before fitting. Its fixed 230/230 five-fold OOF and
+33 synthetic tests completed. Relative to fold median baselines, four of five
+MAEs improved and the mean ratio was 0.9131544756; however 86.10% of predicted
+ingredient mass was allocated to absent exact IDs. The gate permits further
+investigation only. This dense regression is not a final predictor or a food
+recognition result, and no Sol-prior experiment has been launched. All evidence
+is in `round5/training_checkpoint.json`; private OOF/fold records stay local.
 
 The public backup branch is `codex/mae-v2-backup-20261103` in
-`THwo0t/DietAI24-reproduction`. Source commit `cd07790` is confirmed pushed and
-contains completed round 3 comparisons plus tested round 4 source, with 169
+`THwo0t/DietAI24-reproduction`. Source commit `a740851` is confirmed pushed and
+contains completed round 3 comparisons plus reviewed continuation source, with 181
 explicitly allowlisted members. Reachable-history/worktree scans and exact plus
 truncated checks against both actual credentials passed. New research data,
 per-query outputs and API logs remain private. Final reports remain deferred.

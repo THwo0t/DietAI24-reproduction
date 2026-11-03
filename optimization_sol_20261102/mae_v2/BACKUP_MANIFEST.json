@@ -1,7 +1,7 @@
 {
   "actual_credential_scan": {
     "credential_values_printed": false,
-    "files_scanned": 305,
+    "files_scanned": 317,
     "findings": 0,
     "full_and_prefix_suffix_lengths": [
       12,
@@ -15,7 +15,7 @@
     "nutrition5k": 0,
     "total": 20
   },
-  "file_count": 181,
+  "file_count": 193,
   "files": {
     ".gitignore": {
       "bytes": 109,
@@ -26,12 +26,12 @@
       "sha256": "9657cfd44261114a116fead62313a165b947397c2b41dea7c467de1643bbbeaa"
     },
     "CHECKLIST.md": {
-      "bytes": 4182,
-      "sha256": "6875f5c18b5b8d6363bf6d24d298c963b3a9c07d7a1cd542ec38fd57d3f11683"
+      "bytes": 4789,
+      "sha256": "b77887a24b4c8cedd8ec60f4324dd09f730e61fea0c4dc4da157cb6a50c93f00"
     },
     "CONTINUATION.md": {
-      "bytes": 6194,
-      "sha256": "2f20ba23f62bd77679193cf10c7818a70268343bc705602c374ee9cf5c2c57fd"
+      "bytes": 8607,
+      "sha256": "1c52e90f148b1e912f27ff7b8adef0193be9128108cbff6ab43a9dd9e7a6385e"
     },
     "MAC_DEMO.md": {
       "bytes": 13272,
@@ -417,6 +417,26 @@
       "bytes": 14184,
       "sha256": "bb1758f289039aa61adbb5715b1689d3a7e706475d91122ddff3247e37f68b1d"
     },
+    "round4/development_checkpoint.json": {
+      "bytes": 87213,
+      "sha256": "eb9373df2d158c38823affcdba8ba9804a883b6edbf4f37198defd99bbf7332f"
+    },
+    "round4/diagnostics/.gitignore": {
+      "bytes": 28,
+      "sha256": "90eafac535a388eb84b99414b257212570dfa7aee61ee2519d7928fe364e4c23"
+    },
+    "round4/diagnostics/analyze_j.py": {
+      "bytes": 20840,
+      "sha256": "bc6b09556dca481a0540ac12b2d61409a3ece1e5ffaef7fe93255b831fa16543"
+    },
+    "round4/diagnostics/development_diagnostic.json": {
+      "bytes": 14063,
+      "sha256": "3bde6e1a2742aa9ed687bc93624907280a51fb96364312bb122455471421a20c"
+    },
+    "round4/diagnostics/tests/test_analyze_j.py": {
+      "bytes": 16550,
+      "sha256": "06f8580ed5d040b081a9ad967a831fa42d7e80572e678877740ce9311c2191ee"
+    },
     "round4/execution_readiness.json": {
       "bytes": 4564,
       "sha256": "38f983675d7d0521c4b2916b7a5ebd044672130166e4f5cbe8f514f7f28aa370"
@@ -456,6 +476,10 @@
     "round4/readiness.json": {
       "bytes": 4665,
       "sha256": "1587f31a3ecfa5ac50056a892062f3147e359c533933ad81c8be8ec19398a482"
+    },
+    "round4/service_completion.json": {
+      "bytes": 2561,
+      "sha256": "e47dd435d8dc2ed2d773f46007d1fd41527d0d3c552e2f4361e4d5b111b14916"
     },
     "round4/service_interruption.json": {
       "bytes": 2472,
@@ -572,6 +596,30 @@
     "round4/tools/download_train.py": {
       "bytes": 25771,
       "sha256": "e4547e9c20d6b09d7510332ad40570cd6d95a9b1745f830a364c48c98ee19dfb"
+    },
+    "round5/PRIOR_PROTOCOL.md": {
+      "bytes": 7917,
+      "sha256": "b265e11f2c2878e81036e8699046ed174fe41afb496644ea55b8679167fc558e"
+    },
+    "round5/src/gram_prior.py": {
+      "bytes": 13918,
+      "sha256": "c02aa3fd50466af88f916d0e1bcbe35d4d709896af7d13bd5a639378f9dad8b0"
+    },
+    "round5/src/run_train_prior.py": {
+      "bytes": 14803,
+      "sha256": "425ac1b9017640e3ac20f99a671a187da63b946151dbcc849c31ddcbc6908897"
+    },
+    "round5/tests/test_gram_prior.py": {
+      "bytes": 14313,
+      "sha256": "a6869efd3bd5e62d513406d9d8f06da331253c47f58e4f847029e09091f62e54"
+    },
+    "round5/tests/test_train_loader.py": {
+      "bytes": 14870,
+      "sha256": "5ed156bf1fba91afc147c781d00e37052e49bfcb839a6c3b477c329560c996de"
+    },
+    "round5/training_checkpoint.json": {
+      "bytes": 3523,
+      "sha256": "21c9390da4c0706a08b66573db42789312a12395cda2591c5ba6af210d29d4af"
     },
     "setup.sh": {
       "bytes": 2619,
@@ -743,10 +791,16 @@
     }
   },
   "formal_validation": "not_run_sealed",
-  "latest_local_checkpoint": "99c9772",
+  "generic_publication_scan": {
+    "issues": 0,
+    "publishable_files_scanned": 317,
+    "reachable_blobs_scanned": 337,
+    "status": "PASS"
+  },
+  "latest_local_checkpoint": "b0da57b",
   "new_research_data_included": false,
   "old_local_git_history_included": false,
-  "purpose": "Preserve completed failed development methods and the active independent-training J implementation; final reports remain deferred.",
+  "purpose": "Preserve completed failed development methods, full J scoring and posthoc diagnostics; continue optimization with validation sealed and final reports deferred.",
   "raw_logs_included": false,
   "round3": {
     "F": "completed 84; N5 0/10; rejected",
@@ -757,8 +811,10 @@
     "validation": "sealed; no formal run"
   },
   "round4": {
-    "accuracy_tested": false,
-    "calibration_status": "registered_and_implemented_not_executed",
+    "accuracy_tested": true,
+    "base_queries_complete": 84,
+    "calibrated_nutrition5k_passed_checks": 0,
+    "calibration_status": "completed_oof_not_selected_worst_ratio_worsened",
     "capability_probe_images": 13,
     "capability_probe_status": "passed",
     "capability_request_count": 1,
@@ -779,10 +835,19 @@
       "status": "PASS"
     },
     "continuation_review": "R-SC-1/2/3 fixed; one independent review; no validation access",
+    "diagnostic_public_copy_offline_tests": {
+      "actual_api_calls": 0,
+      "count": 18,
+      "network_disabled": true,
+      "seconds": 0.895,
+      "status": "PASS"
+    },
     "formal_reports_deferred": true,
     "implementation_commit": "27a31bd",
-    "latest_local_checkpoint": "99c9772",
+    "joint_passed_checks": 10,
+    "latest_local_checkpoint": "b0da57b",
     "new_images_downloaded": 230,
+    "posthoc_diagnostic_status": "completed_all_84_after_final_score_seal",
     "public_copy_offline_tests": {
       "actual_api_calls": 0,
       "actual_research_images_read": false,
@@ -796,6 +861,7 @@
       "seconds": 39.31,
       "status": "PASS"
     },
+    "raw_nutrition5k_passed_checks": 0,
     "real_import_preflight": {
       "complete_queries": 52,
       "development_labels_read": false,
@@ -807,16 +873,35 @@
       "validation_opened": false
     },
     "registered_source_mass_exceptions": 1,
-    "research_api_request_note": "Baseline usage in round4/service_interruption.json; continuation usage remains active and unfinalized.",
+    "research_api_request_note": "Completed returned usage and timeout counts are in round4/service_completion.json; monetary billing for timeouts remains unknown.",
     "research_api_requests": null,
+    "selected_profile": "raw",
     "service_interruption": "one exact payload exhausted three read timeouts; explicit singleton fourth attempt registered",
-    "status": "service_continuation_running_unscored",
+    "status": "development_complete_gate_failed",
     "synthetic_tests_passed": 213,
     "training_catalog_size": 164,
     "training_groups": 230,
     "training_images": 230,
     "validation_opened": false
   },
+  "round5": {
+    "absent_id_mass_fraction": 0.8609590075303394,
+    "advance_gate": true,
+    "api_calls": 0,
+    "deployed": false,
+    "development_opened": false,
+    "groups": 230,
+    "mean_mae_ratio_vs_fold_medians": 0.9131544756315865,
+    "n": 230,
+    "public_copy_offline_tests": {
+      "count": 33,
+      "network_disabled": true,
+      "seconds": 2.329,
+      "status": "PASS"
+    },
+    "status": "fixed_external_training_oof_complete",
+    "validation_opened": false
+  },
   "secret_scan": "PASS_reachable_history_and_worktree_generic_scan_plus_actual_credentials_in_memory",
-  "source_state": "Original J stopped on service timeouts; reviewed continuation is running and unscored. Completed predictions are reused."
+  "source_state": "J service continuation and all 84 grouped OOF calibration completed; raw selected, N5 0/10 and joint 10/20. Fixed external-training prior completed offline but is not deployed."
 }

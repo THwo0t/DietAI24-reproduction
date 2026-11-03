@@ -40,10 +40,13 @@ published physical plate identifier.
 | R3-5 | Fixed HI mean and raw-CHI median | complete offline, all 84 each; N5 0/10 |
 | R3-6 | Calibration bounds and semantic-neighbor diagnostics | complete offline; no passing method |
 | R4-1 | Independent external training-gallery proposal | authorized and downloaded all 230; training release retains 230 groups/164 ingredient classes, with one explicitly registered official 2 g mass discrepancy |
-| R4-2 | Appearance retrieval and visual reranking pipeline | gallery 230 complete; base stopped on one exhausted timeout payload, 52 estimate stages sealed; no MAE scoring |
+| R4-2 | Appearance retrieval and visual reranking pipeline | gallery 230 and continuation all 84 complete; raw and calibrated N5 each 0/10; selected raw by registered worst-ratio rule |
 | R4-3 | Training-only service probe and isolated complete-population scorer | fixed 13-image probe passed with one request; repeated verification constructs no provider |
-| R4-4 | One grouped aggregate calibration candidate | protocol committed before J; implementation and 18 synthetic tests complete; no actual J fit yet |
-| R4-8 | Explicit service continuation | implementation reviewed once; R-SC-1/2/3 fixed; 36 offline tests and all 263 real sealed-stage imports verified; registered before continuation execution |
+| R4-4 | One grouped aggregate calibration candidate | completed all 84 OOF; worst ratio increased from 1.77803 to 1.79571, so not selected; raw and all OOF evidence preserved |
+| R4-8 | Explicit service continuation | all 84 base records sealed; 126 successful continuation requests and 2 read timeouts; original artifacts preserved, singleton fourth attempt used exactly once |
+| R4-9 | Posthoc mass and density diagnostics | complete offline on all 84; true-weight oracle still fails fat/carbs/protein; 87.45% of omitted exact-ID mass is already in catalog; 18 synthetic tests |
+| R5-1 | External-training ingredient-mass prior | protocol committed before data fitting; one fixed linear kernel ridge, no API or parameter search |
+| R5-2/3 | Fixed 230-image training OOF and isolated loader | complete; 33 offline tests; 4/5 improvements versus fold medians and mean ratio 0.91315, but 86.10% absent-ID mass; not promoted to a Sol experiment |
 
 `round3/development_checkpoint.json` records the whole-method comparison. The
 fixed CHI median improves all five MAEs relative to the original selected v2 C,

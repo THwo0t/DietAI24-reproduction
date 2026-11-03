@@ -1,0 +1,93 @@
+{
+  "base_completion_sha256": "11fc4c720a3bd9c5b59cd5f3cca8fb291b0865e9ebc8e32e8643498d3ae22b1f",
+  "billing_note": "Returned usage only; server-side work for timeouts is unknown. Third-party monetary cost is not claimed. Reasoning tokens are already included in completion tokens.",
+  "development_n": 84,
+  "original_base_preserved_stopped": true,
+  "phase_usage": {
+    "original_base": {
+      "chat": {
+        "http_attempts": 167,
+        "returned_token_usage": {
+          "completion_tokens": 75660,
+          "prompt_tokens": 1683251,
+          "total_tokens": 1758911
+        },
+        "success_responses": 159,
+        "transport_errors": {
+          "ReadTimeout": 8
+        }
+      },
+      "embedding": {
+        "http_attempts": 53,
+        "returned_token_usage": {
+          "completion_tokens": 0,
+          "prompt_tokens": 7682,
+          "total_tokens": 7682
+        },
+        "success_responses": 53,
+        "transport_errors": {}
+      }
+    },
+    "service_continuation": {
+      "chat": {
+        "http_attempts": 97,
+        "returned_token_usage": {
+          "completion_tokens": 44518,
+          "prompt_tokens": 1021134,
+          "total_tokens": 1065652
+        },
+        "success_responses": 95,
+        "transport_errors": {
+          "ReadTimeout": 2
+        }
+      },
+      "embedding": {
+        "http_attempts": 31,
+        "returned_token_usage": {
+          "completion_tokens": 0,
+          "prompt_tokens": 4579,
+          "total_tokens": 4579
+        },
+        "success_responses": 31,
+        "transport_errors": {}
+      }
+    },
+    "training_gallery": {
+      "chat": {
+        "http_attempts": 230,
+        "returned_token_usage": {
+          "completion_tokens": 80073,
+          "prompt_tokens": 268180,
+          "total_tokens": 348253
+        },
+        "success_responses": 230,
+        "transport_errors": {}
+      },
+      "embedding": {
+        "http_attempts": 230,
+        "returned_token_usage": {
+          "completion_tokens": 0,
+          "prompt_tokens": 31594,
+          "total_tokens": 31594
+        },
+        "success_responses": 230,
+        "transport_errors": {}
+      }
+    },
+    "training_probe": {
+      "chat": {
+        "http_attempts": 1,
+        "returned_token_usage": {
+          "completion_tokens": 565,
+          "prompt_tokens": 8430,
+          "total_tokens": 8995
+        },
+        "success_responses": 1,
+        "transport_errors": {}
+      }
+    }
+  },
+  "pricing_verified": false,
+  "status": "continuation_base_complete_unscored",
+  "validation_opened": false
+}
