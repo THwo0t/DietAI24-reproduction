@@ -1,0 +1,20 @@
+{
+  "ASA_chosen_broader_components": 20,
+  "ASA_eligible_broader_components": 161,
+  "ASA_new_triplet_rows": 0,
+  "ASA_retained_validation_groups": 22,
+  "ASA_retained_validation_rows": 75,
+  "acceptance_designated": false,
+  "api_calls": 0,
+  "labels_or_values_exported": false,
+  "new_selection_or_reroll": false,
+  "nutrition5k_official_unblocked_identities": 137,
+  "nutrition5k_unmatched_in_raw_tables": 0,
+  "nutrition5k_validity_counts": {
+    "all_four_nutrition_totals_zero": 137,
+    "finite_nonnegative_positive_mass": 137,
+    "matched_unblocked_rows": 137
+  },
+  "protected_target_conversions": 0,
+  "status": "registered_proposal_shortfall_diagnosis"
+}

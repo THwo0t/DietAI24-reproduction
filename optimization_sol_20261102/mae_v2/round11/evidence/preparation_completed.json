@@ -1,0 +1,53 @@
+{
+  "acceptance_designated": false,
+  "api_calls": 0,
+  "cohort_status": "prepared_development_pending_integrated_review",
+  "dataset_counts": {
+    "asa24": 529,
+    "nutrition5k": 314
+  },
+  "development_rows": 843,
+  "fallback_membership_disjoint": true,
+  "fold_row_counts": {
+    "asa24": {
+      "0": 98,
+      "1": 70,
+      "2": 82,
+      "3": 72,
+      "4": 207
+    },
+    "nutrition5k": {
+      "0": 62,
+      "1": 61,
+      "2": 62,
+      "3": 66,
+      "4": 63
+    }
+  },
+  "groups": {
+    "asa24": 43,
+    "nutrition5k": 293
+  },
+  "no_group_crosses_folds": true,
+  "science_freeze_exists": false,
+  "sha256": {
+    "calibration.json": "d2381e818eaf39536b50b4a86d73f01ed445ec5c350c372543444f2660848d1b",
+    "catalog.json": "e3e0be4a73bf4650d1ca04ae98e290e9f657c64ad80c70817b52770855f90499",
+    "cohort/dev.json": "23460f3958e2e53f23cb697e3d3bab08dbe03cc63104a270e35bf9fabf013c7f",
+    "cohort/freeze.json": "402523eec6ff9ef412cd9e2b78fad1fedb47b1d4a2043b169887cec94c409847",
+    "cohort/lineage.json": "34f3490179bc4428392d301ab24d4a3c189ee28328c599e977f515467931b0c5",
+    "cohort/source_closure.json": "3532f6689a8ee89cf6fcc7eab66e52e5568333dc189cea2fae7923bbeb5d383c",
+    "common.json": "93e3960780a4286db18e7ab7a906cb98fb99284c5a38636bda26e980ab587167",
+    "fallbacks.json": "8f2d795acaa13f288e3c8cba2820dcdc73650dffafaadd3b6bbdeb344caabd0f"
+  },
+  "source_closure_bytes": 8165375,
+  "status": "actual_development_preparation_complete_pending_integrated_review",
+  "stratum_counts": {
+    "asa_broader_frame": 230,
+    "asa_core": 99,
+    "asa_core_all_legal_extra": 200,
+    "core84": 84,
+    "historical_support230_reused_not_fresh": 230
+  },
+  "validation_targets_opened": false
+}

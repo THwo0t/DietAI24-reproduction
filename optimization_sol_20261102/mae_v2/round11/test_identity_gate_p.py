@@ -16,7 +16,7 @@ from engine_p import RowLive,identify
 from gate_p import Gate
 from stores_p import name,proof_for_refs
 from round4.src.artifacts import ArtifactStore
-from identity_gate_p import build_loader
+from identity_gate_p import build_loader,_load_snapshot
 
 
 class LocalAnswers:
@@ -92,6 +92,14 @@ class SnapshotTests(unittest.TestCase):
         snapshot=self.snapshot()
         self.f.row['image_sha256']='0'*64
         with self.assertRaises(ValueError):snapshot.load()
+
+    def test_restart_loader_reads_exact_sealed_envelopes_without_provider(self):
+        with patch('runtime_p.PProvider',side_effect=AssertionError('provider forbidden')):
+            snapshot=_load_snapshot(self.f.ctx,self.f.ledger,self.store,data_root=self.f.root)
+            self.assertEqual(snapshot.load()[0],self.f.sealed)
+        self.f.ledger.binding='0'*64
+        with self.assertRaisesRegex(ValueError,'science_binding'):
+            _load_snapshot(self.f.ctx,self.f.ledger,self.store,data_root=self.f.root)
 
     def test_false_repair_proof_and_source_change_refuse(self):
         initial=slot_id('a','identify',0);state=self.f.ledger.read()

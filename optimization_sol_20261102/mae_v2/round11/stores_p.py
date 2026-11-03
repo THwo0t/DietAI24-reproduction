@@ -87,10 +87,8 @@ def verify_proof(ledger,proof):
 
 
 def sealed_identities(ctx,ledger):
-    records=identity_store(ctx).verify_completed()
-    verify_proof(ledger,records['service-proof'])
-    identities={r['sample_id']:records[name('identity',r)] for r in ctx.rows}
-    return identities,{'complete':True,'identity_records_sha256':fingerprint(identities)}
+    from identity_gate_p import coding_snapshot
+    return coding_snapshot(ctx,ledger).load()
 
 
 def adapter_store(ctx):
@@ -100,9 +98,39 @@ def adapter_store(ctx):
                          verify_sources=ctx.verify_sources,root=ROUND)
 
 
-def sealed_contexts(ctx):
-    values=adapter_store(ctx).verify_completed()
-    require(values['provenance']['coding_completion_sha256']==sha(ROUND/'runs/identities/completion.json')
-            and values['provenance']['labels_sha256']==ctx.binding['labels_sha256'],
-            'P_conditional_adapter_provenance_changed')
-    return values['contexts']
+def verified_contexts(ctx,ledger,snapshot,store):
+    """Full coding-snapshot evidence plus exact sealed adapter provenance."""
+    from verified_identity import VerifiedIdentitySnapshot
+    require(type(snapshot) is VerifiedIdentitySnapshot,'P_verified_coding_snapshot_required')
+    identities,proof=snapshot.load();values=store.verify_completed()
+    require(type(values) is dict and set(values)=={'contexts','provenance'},'P_adapter_record_schema_changed')
+    provenance=values['provenance'];seal=proof['coding_completion_sha256']
+    fields={'coding_completion_sha256','labels_sha256','identity_records_sha256','adapter_source_sha256',
+            'input_rows','Exact_contexts','permitted_fields','current_portion_truth_exported','api_calls','validation_opened'}
+    require(type(provenance) is dict and set(provenance)==fields and proof['complete'] is True and
+        proof['science_binding_sha256']==fingerprint(ctx.binding) and proof['rows_sha256']==fingerprint(ctx.rows) and
+        proof['catalog_sha256']==fingerprint(ctx.catalog) and provenance['coding_completion_sha256']==seal and
+        provenance['labels_sha256']==ctx.binding['labels_sha256'] and
+        provenance['identity_records_sha256']==fingerprint(identities) and
+        provenance['adapter_source_sha256']==sha(Path(__file__).with_name('adapter_p.py')) and
+        type(provenance['input_rows']) is int and provenance['input_rows']==len(ctx.rows) and
+        provenance['permitted_fields']==['code','options'] and provenance['current_portion_truth_exported'] is False and
+        type(provenance['api_calls']) is int and provenance['api_calls']==0 and provenance['validation_opened'] is False,
+        'P_adapter_provenance_changed')
+    contexts=values['contexts'];rows={r['sample_id']:r for r in ctx.rows}
+    require(type(contexts) is dict and type(provenance['Exact_contexts']) is int and
+            provenance['Exact_contexts']==len(contexts),'P_adapter_exact_count_changed')
+    require(store.binding=={'science':ctx.binding,'coding_completion_sha256':seal,
+            'labels_sha256':ctx.binding['labels_sha256'],'role':'post_coding_ASA_code_and_full_catalogue_only'},
+            'P_adapter_store_binding_changed')
+    for sid,context in contexts.items():
+        require(sid in rows and rows[sid]['dataset']=='asa24' and identities[sid].get('status')=='ok' and
+                type(context) is dict and set(context)=={'code','options'} and
+                context['code'] in identities[sid]['final_codes'] and
+                context['options']==ctx.catalog['asa_options'][context['code']], 'P_adapter_context_changed')
+    return deepcopy(contexts)
+
+
+def sealed_contexts(ctx,ledger):
+    from identity_gate_p import coding_snapshot
+    return verified_contexts(ctx,ledger,coding_snapshot(ctx,ledger),adapter_store(ctx))

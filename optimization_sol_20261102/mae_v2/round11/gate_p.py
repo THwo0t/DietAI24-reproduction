@@ -96,6 +96,7 @@ class Gate:
         self.catalog_sha256=fingerprint(ctx.catalog)
         self.imports_sha256=fingerprint(ctx.imports)
         self.identity_loader,self.context_loader=identity_loader,context_loader
+        self._snapshot=None
 
     def verify_context(self):
         self.ctx.verify_sources()
@@ -111,13 +112,18 @@ class Gate:
 
     def identities(self):
         if self.identity_loader is not None:return self.identity_loader()
-        from stores_p import sealed_identities
-        return sealed_identities(self.ctx,self.ledger)
+        return self.coding_snapshot().load()
 
     def contexts(self):
         if self.context_loader is not None:return self.context_loader()
-        from stores_p import sealed_contexts
-        return sealed_contexts(self.ctx)
+        from stores_p import verified_contexts,adapter_store
+        return verified_contexts(self.ctx,self.ledger,self.coding_snapshot(),adapter_store(self.ctx))
+
+    def coding_snapshot(self):
+        if self._snapshot is None:
+            from identity_gate_p import coding_snapshot
+            self._snapshot=coding_snapshot(self.ctx,self.ledger)
+        return self._snapshot
 
     def previous(self,sid,value):
         meta=self.ledger.slots.get(sid)
@@ -190,6 +196,9 @@ class Gate:
 
 
 def frozen_gate(ledger):
-    # No P context/freeze contract has been reviewed yet. Never fall back to
-    # context_o, O inputs, its targets, or historical fallback statistics.
-    raise ValueError('P_frozen_context_interface_not_implemented')
+    from context_p import runtime_context
+    ctx=runtime_context()
+    if ledger.binding!=fingerprint(ctx.binding) or ledger.directory!=ROOT/'round11/provider/P':
+        raise ValueError('P_frozen_ledger_science_or_root_changed')
+    ctx.verify_sources()
+    return Gate(ctx,ledger,root=ROOT)

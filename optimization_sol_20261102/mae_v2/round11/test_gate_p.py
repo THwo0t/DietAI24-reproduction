@@ -6,6 +6,7 @@ import sys
 import tempfile
 from types import SimpleNamespace
 import unittest
+from unittest.mock import patch
 
 BASE=Path(__file__).resolve().parent.parent
 sys.path[:0]=[str(BASE)]+[str(BASE/name) for name in ('src','round7/src','round8/src','round10','round11')]
@@ -172,7 +173,15 @@ class GateTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'previous_exact_request'):
             engine_p.density(self.ctx,self.row,identity,Client(self,[]),root=self.root)
 
-    def test_production_entry_fails_closed(self):
-        with self.assertRaisesRegex(ValueError,'context_interface_not_implemented'):frozen_gate(self.ledger)
+    def test_production_entry_requires_review_and_exact_ledger_science_root(self):
+        with patch('context_p.runtime_context',side_effect=ValueError('synthetic_missing_review')):
+            with self.assertRaisesRegex(ValueError,'missing_review'):frozen_gate(self.ledger)
+        self.ctx.binding={'synthetic':True};self.ledger.binding=fingerprint(self.ctx.binding)
+        self.ledger.directory=self.root/'round11/provider/P'
+        with patch('context_p.runtime_context',return_value=self.ctx),patch('gate_p.ROOT',self.root):
+            gate=frozen_gate(self.ledger);self.assertIsInstance(gate,Gate)
+            self.ledger.binding='0'*64
+            with self.assertRaisesRegex(ValueError,'science_or_root'):frozen_gate(self.ledger)
+
 
 if __name__=='__main__':unittest.main()

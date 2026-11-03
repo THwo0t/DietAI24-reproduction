@@ -1,16 +1,25 @@
 """Resumable paired P runner prototype; public execution awaits integrated review.
 
-Main inference never opens labels. Synthetic tests inject their own offline
+Main inference never parses labels. The separate offline adapter currently
+requires Linux user/network namespaces; no Mac isolation fallback or real Mac
+hardware acceptance is implemented. Synthetic tests inject their own offline
 ledger, trace, stores and isolated adapter seam. No scoring or fitting here.
 """
 from copy import deepcopy
 from pathlib import Path
+import argparse
+import os
+import subprocess
+import sys
+
+BASE=Path(__file__).resolve().parent.parent
+sys.path[:0]=[str(BASE),str(BASE/'src'),str(BASE/'round7/src'),str(BASE/'round8/src'),str(BASE/'round10'),str(BASE/'round11')]
 
 from opt_provider import ROOT,sha,fingerprint
 from service_p import Ledger,allowed_slots
 from runtime_p import Trace
 from engine_p import RowLive,RowReplay,identify,portions,quantity,density
-from stores_p import name,identity_store,final_store,adapter_store,proof_for_refs
+from stores_p import name,identity_store,final_store,adapter_store,proof_for_refs,verified_contexts
 from identity_gate_p import build_loader
 from round4.src.artifacts import key_path
 
@@ -25,41 +34,24 @@ def cached(store,complete,stem,inputs,call,validate):
 
 
 def _contexts(ctx,store,snapshot,identity_seal):
-    identities,proof=snapshot.load();values=store.verify_completed()
-    require(type(values) is dict and set(values)=={'contexts','provenance'},'P_adapter_record_schema_changed')
-    provenance=values['provenance']
-    fields={'coding_completion_sha256','labels_sha256','identity_records_sha256','adapter_source_sha256',
-            'input_rows','Exact_contexts','permitted_fields','current_portion_truth_exported','api_calls','validation_opened'}
-    require(type(provenance) is dict and set(provenance)==fields and
-        provenance['coding_completion_sha256']==identity_seal==proof['coding_completion_sha256'] and
-        provenance['labels_sha256']==ctx.binding['labels_sha256'] and
-        provenance['identity_records_sha256']==fingerprint(identities) and
-        provenance['adapter_source_sha256']==sha(Path(__file__).with_name('adapter_p.py')) and
-        type(provenance['input_rows']) is int and provenance['input_rows']==len(ctx.rows) and
-        provenance['permitted_fields']==['code','options'] and provenance['current_portion_truth_exported'] is False and
-        type(provenance['api_calls']) is int and provenance['api_calls']==0 and provenance['validation_opened'] is False,
-        'P_adapter_provenance_changed')
-    contexts=values['contexts'];rows={r['sample_id']:r for r in ctx.rows}
-    require(type(contexts) is dict and type(provenance['Exact_contexts']) is int and
-            provenance['Exact_contexts']==len(contexts),'P_adapter_exact_count_changed')
-    require(store.binding=={'science':ctx.binding,'coding_completion_sha256':identity_seal,
-            'labels_sha256':ctx.binding['labels_sha256'],'role':'post_coding_ASA_code_and_full_catalogue_only'},
-            'P_adapter_store_binding_changed')
-    for sid,context in contexts.items():
-        require(sid in rows and rows[sid]['dataset']=='asa24' and identities[sid].get('status')=='ok'
-                and type(context) is dict and set(context)=={'code','options'} and
-                context['code'] in identities[sid]['final_codes'] and
-                context['options']==ctx.catalog['asa_options'][context['code']],
-                'P_adapter_context_changed')
-    return deepcopy(contexts)
+    require(snapshot.load()[1]['coding_completion_sha256']==identity_seal,'P_adapter_identity_seal_changed')
+    return verified_contexts(ctx,None,snapshot,store)
 
 
-def _isolated_adapter_unavailable(*args):
-    raise ValueError('P_reviewed_isolated_adapter_entry_not_implemented')
+def _isolated_adapter(ctx,ledger,snapshot):
+    """Linux-only separate offline projection; no credential-bearing environment."""
+    from adapter_p import CLEAN_ENV
+    require(sys.platform.startswith('linux'),'P_adapter_portable_isolation_unimplemented')
+    ctx.verify_sources();snapshot.revalidate_full()
+    require(ledger.binding==fingerprint(ctx.binding),'P_adapter_launch_science_changed')
+    child=subprocess.run(['/usr/bin/unshare','-Urn',sys.executable,'-B',str(Path(__file__).with_name('adapter_p.py'))],
+        cwd=ROOT,env=dict(CLEAN_ENV),stdin=subprocess.DEVNULL,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,check=False)
+    require(child.returncode==0,'P_isolated_adapter_child_failed_preserve_state')
+    ctx.verify_sources();snapshot.revalidate_full()
 
 
 def _run(ctx,allow_paid=False,*,ledger=None,trace=None,adapter_runner=None,data_root=ROOT,stores=None,emit=lambda **kw:None):
-    """Private integration seam; production entry below intentionally closed."""
+    """Private synthetic seam; public entry supplies only fixed reviewed sources."""
     from records_p import compose_record,attach_conditional
     root=Path(data_root);ctx.verify_sources()
     require(root.is_absolute() and root.resolve()==root,'P_runner_absolute_root_required')
@@ -73,6 +65,10 @@ def _run(ctx,allow_paid=False,*,ledger=None,trace=None,adapter_runner=None,data_
             'P_runner_artifact_population_changed')
     id_complete=(ids.directory/'completion.json').is_file();complete=(out.directory/'completion.json').is_file()
     require(not complete or id_complete,'P_final_without_complete_coding')
+    if complete:
+        adapter=(adapter_store(ctx) if stores is None else stores[2])
+        require((adapter.directory/'completion.json').is_file(),'P_complete_replay_requires_existing_adapter_seal')
+        ids.verify_completed();out.verify_completed();adapter.verify_completed()
     require(complete or allow_paid or trace is not None,'P_paid_flag_required_for_incomplete_batch')
     if not complete:
         ledger.initialize();ledger.recover_pending()
@@ -110,7 +106,7 @@ def _run(ctx,allow_paid=False,*,ledger=None,trace=None,adapter_runner=None,data_
         identity_seal=sha(ids.directory/'completion.json')
         adapter=adapter_store(ctx) if stores is None else stores[2]
         if not (adapter.directory/'completion.json').is_file():
-            (adapter_runner or _isolated_adapter_unavailable)(ctx,ledger,snapshot)
+            (adapter_runner or _isolated_adapter)(ctx,ledger,snapshot)
         contexts=_contexts(ctx,adapter,snapshot,identity_seal)
         ledger.task_gate().context_loader=lambda:deepcopy(contexts)
 
@@ -159,9 +155,75 @@ def _run(ctx,allow_paid=False,*,ledger=None,trace=None,adapter_runner=None,data_
     finally:trace.close()
 
 
-def run():
-    raise ValueError('P_runner_first_integrated_review_required')
+def run(*,allow_paid=False):
+    require(type(allow_paid) is bool,'P_explicit_paid_flag_required')
+    from context_p import runtime_context
+    return _run(runtime_context(),allow_paid=allow_paid)
+
+
+def _verified_completed(ctx,ledger,*,data_root=ROOT,stores=None):
+    """Private fixture seam. Always complete-only, no adapter/Provider creation."""
+    root=Path(data_root)
+    ids,out,adapter=(identity_store(ctx),final_store(ctx),adapter_store(ctx)) if stores is None else stores
+    require(all((s.directory/'completion.json').is_file() for s in (ids,out,adapter)),
+            'P_verify_completed_requires_all_three_seals')
+    result=_run(ctx,ledger=ledger,data_root=root,stores=(ids,out,adapter))
+    require(result['completed_replay'] is True and result['provider_constructed'] is False,
+            'P_completed_verifier_requires_zero_provider')
+    values=out.verify_completed()
+    from context_p import _load,_read
+    closure_path='round11/prepared/cohort/source_closure.json'
+    require(_read(root,closure_path,digest_only=True)==ctx.binding['source_files'][closure_path],
+            'P_completed_source_snapshot_changed')
+    closure=_load(root,closure_path)
+    strata=closure['strata_private'];records=[values[name('record',row)] for row in ctx.rows]
+    require(type(strata) is dict and set(strata)=={r['sample_id'] for r in ctx.rows},'P_completed_strata_changed')
+    sources=ctx.binding['source_files']
+    bindings={'science_sha256':fingerprint(ctx.binding),
+        'manifest_sha256':sources['round11/prepared/cohort/dev.json'],'labels_sha256':ctx.binding['labels_sha256'],
+        'record_seal_sha256':sha(out.directory/'completion.json'),'coding_seal_sha256':sha(ids.directory/'completion.json'),
+        'adapter_seal_sha256':sha(adapter.directory/'completion.json'),'model_environment_sha256':fingerprint(ctx.binding['environment']),
+        'matrix_sha256':sources['data/vectors/embeddings.npy'],'request_cache_proof_sha256':fingerprint(values['service-proof']),
+        'source_snapshot_sha256':sources['round11/prepared/cohort/source_closure.json']}
+    ctx.verify_sources()
+    require(_read(root,closure_path,digest_only=True)==sources[closure_path],'P_completed_source_snapshot_changed')
+    snapshot=fingerprint({'bindings':bindings,'records':records,'strata':strata})
+    def revalidate():
+        current=_verified_completed(ctx,ledger,data_root=root,stores=(ids,out,adapter))
+        require(fingerprint({k:current[k] for k in ('bindings','records','strata')})==snapshot,'P_completed_evidence_changed')
+        return True
+    return {'rows':deepcopy(ctx.rows),'records':deepcopy(records),'catalog':deepcopy(ctx.catalog),
+        'strata':deepcopy(strata),'bindings':bindings,
+        'audit':{'completed':True,'provider_constructed':False,'labels_parsed':False,'validation_opened':False,
+                 'exact_records_reconstructed':True,'all_cache_model_matrix_refs_authenticated':True},
+        'revalidate':revalidate}
+
+
+def verify_completed():
+    """Fixed, cache-only full scientific replay for independently gated scoring."""
+    from context_p import runtime_context
+    ctx=runtime_context()
+    require((ROOT/'round11/runs/development/completion.json').is_file() and
+            (ROOT/'round11/runs/identities/completion.json').is_file() and
+            (ROOT/'round11/runs/conditional-adapter/completion.json').is_file(),
+            'P_verify_completed_requires_all_three_seals')
+    ledger=Ledger(ROOT/'round11/provider/P',ctx.binding,allowed_slots(ctx.rows))
+    return _verified_completed(ctx,ledger)
+
+
+verified_completed=verify_completed
+
+
+def main():
+    parser=argparse.ArgumentParser(description='Frozen P paired development runner')
+    parser.add_argument('--allow-paid',action='store_true',help='Explicitly allow incomplete frozen inference')
+    args=parser.parse_args()
+    return run(allow_paid=args.allow_paid)
 
 
 if __name__=='__main__':
-    raise SystemExit('P_runner_first_integrated_review_required')
+    import json
+    try:print(json.dumps(main(),sort_keys=True))
+    except BaseException:
+        # ProviderStop inherits BaseException; never print service error bodies.
+        print(json.dumps({'status':'P_runner_refused_preserve_state'}));raise SystemExit(1)

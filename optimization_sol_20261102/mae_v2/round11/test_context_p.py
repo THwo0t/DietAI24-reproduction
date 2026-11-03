@@ -20,7 +20,17 @@ class ContextTests(unittest.TestCase):
             for ds in ('asa24','nutrition5k') for f in range(5)]
         for row in self.rows:self.write(row['image_path'],b'synthetic')
         for p in c.REQUIRED:self.write(p,b'synthetic source')
-        self.write('round11/prepared/cohort/source_closure.json',{'complete':True})
+        prefix='optimization_sol_20261102/mae_v2/'
+        prep_path='round11/preparation/preparation_review_gate.json';prep_review='round11/preparation/PREPARATION_REVIEW.md'
+        prep=dict(status='approved_or_fixed',scope='P_capacity_v4_preparation',unresolved_p1_p2=0,
+            review_sha256=self.sha(prep_review),source_files={prefix+'round11/prepare_p.py':self.sha('round11/prepare_p.py')},
+            receipt_sha256={'synthetic-receipt.json':'f'*64})
+        self.write(prep_path,prep)
+        self.write('round11/prepared/cohort/source_closure.json',dict(complete=True,
+            preparation_review_gate_sha256=self.sha(prep_path),preparation_review_sha256=self.sha(prep_review),
+            authenticated_preparation_source_sha256={**prep['source_files'],**prep['receipt_sha256'],
+                prefix+prep_path:self.sha(prep_path),prefix+prep_review:self.sha(prep_review)},
+            inference_authorized=False,inference_science_frozen=False,validation_targets_opened=False))
         self.write('round11/REVIEW.md',b'synthetic independent review')
         self.write('round11/review_gate.json',dict(status='approved_or_fixed',scope='P_first_integrated_context_runner',
             unresolved_p1_p2=0,review_sha256=self.sha('round11/REVIEW.md')))
@@ -28,7 +38,7 @@ class ContextTests(unittest.TestCase):
         self.write(c.ROLES['labels'],b'POISON: must never be JSON-decoded')
         self.write(c.ROLES['lineage'],dict(schema_version=1,complete=True,
             rows=[{k:r[k] for k in ('sample_id','dataset','group_id','fold')} for r in self.rows]))
-        self.write(c.ROLES['cohort_freeze'],dict(schema_version=1,status='reviewed_complete_new_cohort',
+        self.write(c.ROLES['cohort_freeze'],dict(schema_version=1,status='prepared_development_pending_integrated_review',
             manifest_sha256=self.sha(c.ROLES['manifest']),labels_sha256=self.sha(c.ROLES['labels']),
             lineage_sha256=self.sha(c.ROLES['lineage']),validation_opened=False,
             source_closure_sha256=self.sha('round11/prepared/cohort/source_closure.json')))
@@ -46,8 +56,12 @@ class ContextTests(unittest.TestCase):
                         value={k:1. for k in c.TARGETS} if role=='fallbacks' else dict(enabled=False,status='preregistered_disabled_identity',multipliers={k:1. for k in c.TARGETS}))
             self.write(c.ROLES[role],bundle)
         self.write(c.ROLES['embeddings'],dict(schema_version=1,namespace=c.NAMESPACE,entries={},blocked_hashes=[],policy='fresh_P_queries_only'))
-        for p in ('data/catalog.json','data/vectors/manifest.json','data/vectors/codes.json','data/vectors/embeddings.npy'):
+        for p in ('data/catalog.json','round11/prepared/catalog.json','data/vectors/manifest.json','data/vectors/codes.json','data/vectors/embeddings.npy'):
             self.write(p,b'synthetic generic asset');self.common['asset_files'][p]=self.sha(p)
+        self.write('data/vectors/manifest.json',dict(vectors=5624,dimensions=3072,api_calls=0,
+            embedding_model='text-embedding-3-large',files={name:self.sha('data/vectors/'+name)
+                for name in ('codes.json','embeddings.npy')}))
+        self.common['asset_files']['data/vectors/manifest.json']=self.sha('data/vectors/manifest.json')
         self.refresh()
 
     def write(self,p,value):
@@ -68,6 +82,15 @@ class ContextTests(unittest.TestCase):
     def test_complete_synthetic_contract_label_poison_not_parsed(self):
         ctx=self.load();self.assertEqual(ctx.rows,self.rows);self.assertEqual(ctx.imports['entries'],{})
         self.assertTrue(ctx.verify_sources())
+    def test_R_P_1_verified_identity_pin_is_mandatory_and_live_drift_refused(self):
+        path='round11/verified_identity.py'
+        self.assertIn(path,c.REQUIRED)
+        ctx=self.load();self.write(path,b'changed synthetic snapshot authenticator')
+        with self.assertRaisesRegex(ValueError,'source_changed'):ctx.verify_sources()
+        frozen=json.loads((self.root/'round11/prepared/freeze.json').read_text())
+        frozen['source_files'].pop(path);self.write('round11/prepared/freeze.json',frozen)
+        with self.assertRaisesRegex(ValueError,'source_pins_missing'):self.load()
+
     def test_source_environment_and_label_drift(self):
         ctx=self.load();self.write(c.ROLES['labels'],b'changed opaque label bytes')
         with self.assertRaises(ValueError):ctx.verify_sources()
@@ -132,6 +155,57 @@ class ContextTests(unittest.TestCase):
                     c._read(self.root,path,digest_only=digest)
             self.write(c.VECTOR_PATH,b'x'*33)
             with self.assertRaises(ValueError):c._read(self.root,c.VECTOR_PATH,digest_only=True)
+
+    def test_pending_cohort_accepted_only_with_both_genuine_review_gate_contracts(self):
+        self.assertEqual(self.load().rows,self.rows)
+        path='round11/review_gate.json';gate=json.loads((self.root/path).read_text())
+        gate['status']='pending';self.write(path,gate);self.refresh()
+        with self.assertRaisesRegex(ValueError,'review_gate_incomplete'):self.load()
+
+    def test_fake_reviewed_producer_status_and_missing_preparation_proof_rejected(self):
+        path=c.ROLES['cohort_freeze'];cohort=json.loads((self.root/path).read_text())
+        cohort['status']='reviewed_complete_new_cohort';self.write(path,cohort);self.refresh()
+        with self.assertRaisesRegex(ValueError,'new_cohort_freeze_incomplete'):self.load()
+        cohort['status']='prepared_development_pending_integrated_review';self.write(path,cohort);self.refresh()
+        prep='round11/preparation/preparation_review_gate.json'
+        gate=json.loads((self.root/prep).read_text());gate['scope']='fake';self.write(prep,gate);self.refresh()
+        with self.assertRaisesRegex(ValueError,'preparation_source_proof_missing'):self.load()
+
+    def test_preparation_gate_contract_is_checked_even_with_coherently_rebound_proof(self):
+        prep_path='round11/preparation/preparation_review_gate.json'
+        gate=json.loads((self.root/prep_path).read_text());gate['scope']='fake_scope';self.write(prep_path,gate)
+        closure_path='round11/prepared/cohort/source_closure.json'
+        closure=json.loads((self.root/closure_path).read_text())
+        closure['preparation_review_gate_sha256']=self.sha(prep_path)
+        closure['authenticated_preparation_source_sha256']['optimization_sol_20261102/mae_v2/'+prep_path]=self.sha(prep_path)
+        self.write(closure_path,closure)
+        cohort=json.loads((self.root/c.ROLES['cohort_freeze']).read_text())
+        cohort['source_closure_sha256']=self.sha(closure_path);self.write(c.ROLES['cohort_freeze'],cohort)
+        for role in ('fallbacks','calibration'):
+            bundle=json.loads((self.root/c.ROLES[role]).read_text())
+            bundle['cohort_freeze_sha256']=self.sha(c.ROLES['cohort_freeze']);self.write(c.ROLES[role],bundle)
+        self.refresh()
+        with self.assertRaisesRegex(ValueError,'preparation_review_gate_incomplete'):self.load()
+
+    def test_default_loader_routes_to_P_assets_and_extra_unregistered_asset_rejected(self):
+        with patch('assets_p.assets',return_value=({'new_P_catalog':True},object())) as loader:
+            ctx=c._context(self.root,image_hashes={r['sample_id']:'b'*64 for r in self.rows})
+            loader.assert_called_once_with(self.root)
+            self.assertTrue(ctx.catalog['new_P_catalog'])
+        self.write('data/vectors/unregistered.json',{'extra':True})
+        self.common['asset_files']['data/vectors/unregistered.json']=self.sha('data/vectors/unregistered.json')
+        self.refresh()
+        with self.assertRaisesRegex(ValueError,'assets_changed'):self.load()
+
+    def test_new_catalog_required_and_runtime_raw_receipts_forbidden(self):
+        self.assertIn('round11/prepared/catalog.json',self.common['asset_files'])
+        self.common['asset_files'].pop('round11/prepared/catalog.json');self.refresh()
+        with self.assertRaisesRegex(ValueError,'assets_changed'):self.load()
+        self.common['asset_files']['round11/prepared/catalog.json']=self.sha('round11/prepared/catalog.json');self.refresh()
+        frozen=json.loads((self.root/'round11/prepared/freeze.json').read_text())
+        frozen['source_files']['round11/preparation/source_inventory/source_inventory.json']='a'*64
+        self.write('round11/prepared/freeze.json',frozen)
+        with self.assertRaisesRegex(ValueError,'runtime_raw_corpus'):self.load()
 
     def test_public_entry_has_no_pre_review_bypass(self):
         with self.assertRaises(TypeError):c.runtime_context(pre_review=True)

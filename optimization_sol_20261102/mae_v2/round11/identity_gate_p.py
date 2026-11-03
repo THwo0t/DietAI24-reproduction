@@ -11,7 +11,7 @@ import sys
 
 BASE=Path(__file__).resolve().parent.parent
 sys.path[:0]=[str(BASE),str(BASE/'src'),str(BASE/'round7/src'),str(BASE/'round8/src'),str(BASE/'round10')]
-from opt_provider import fingerprint
+from opt_provider import fingerprint,ROOT
 from stores_p import name,verify_proof,proof_for_refs
 from service_p import slot_id
 from engine_p import RowReplay,identify,STAGES
@@ -114,3 +114,23 @@ def build_loader(ctx,ledger,store,*,data_root,envelopes):
                            'coding_completion_sha256':checked_file(store.directory/'completion.json')},evidence()
 
     return VerifiedIdentitySnapshot.verify(full_verify,evidence)
+
+
+def _load_snapshot(ctx,ledger,store,*,data_root):
+    """Read exactly the already sealed coding stage envelopes, then fully replay."""
+    if ledger.binding!=fingerprint(ctx.binding):raise ValueError('P_snapshot_science_binding_changed')
+    records=store.verify_completed()
+    if set(records)!={name('identity',row) for row in ctx.rows}|{'service-proof'}:
+        raise ValueError('P_snapshot_sealed_population_changed')
+    envelopes={}
+    for row in ctx.rows:
+        stem=name('identity',row)
+        inputs={'row_sha256':fingerprint(row),'image_sha256':row['image_sha256']}
+        envelopes[row['sample_id']]=store._cached('stages/'+key_path(stem),store._stage_intent(stem,inputs),lambda value:value)
+    return build_loader(ctx,ledger,store,data_root=data_root,envelopes=envelopes)
+
+
+def coding_snapshot(ctx,ledger):
+    """Fixed production coding store and root; no alternate path parameters."""
+    from stores_p import identity_store
+    return _load_snapshot(ctx,ledger,identity_store(ctx),data_root=ROOT)

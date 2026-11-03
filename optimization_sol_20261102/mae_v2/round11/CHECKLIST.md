@@ -340,3 +340,50 @@ confirmation is still required. See CAPACITY_AMENDMENT.md and ID-free capacity
 evidence. Root confirmed19 scoped source-scope/ASA/capacity helper tests.
 The complete reviewed preparation entry and integrated P runner remain pending;
 no candidate target interpretation, new image download or model call occurred.
+
+2026-11-04 continuation: P-C6 completed its first complete preparation review
+with R-PC6-1 as the only required finding. Commit4d5f24c pins all active
+preparation dependencies; thirteen coordinator-run synthetic tests passed,
+including52 drift/removal subcases. The fixed preparation gate binds48 current
+source/assets and five held receipts. Authorized actual development preparation
+is now running; its eligibility and target reads are limited to registered
+development/support sources and unprotected candidate validity checks. Copied
+development images are being published privately. Common publication, final
+cohort counts and independent replacement proposals are not yet confirmed.
+No acceptance designation/download, P inference or new MAE has occurred.
+
+P-D4/P-E1/P-D5 implementations are ready for the first integrated review:
+fixed-root resumable paired runner, separate Linux offline code-only adapter,
+cache-only completed verification, four-arm OOF scoring and bounded L1 fitting,
+and review-gated write-once science freezing. Root confirmed512 distinct offline
+unittest IDs, including historical regressions. Mac native isolation remains
+unimplemented; no Mac hardware acceptance is claimed. The independent integrated
+review is in progress and actual paid inference remains stopped pending fixes.
+
+Public backup correction P-B5: Dot found that ac15938 declared489 payloads but
+published477; twelve safe evidence JSON receipts were copied locally yet ignored
+by Git. Commit764e826 explicitly includes the reviewed ID-free whitelist. All489
+payloads now match committed Git blobs, the remote ref is independently verified,
+and729 reachable blobs plus19 archive members pass the credential scan. The
+four-test public manifest checker rejects a working-directory-only file.
+`evidence/github_manifest_coverage_fix_764e826.json` records the discrepancy and
+repair; old backup receipts remain historical evidence. No private images,
+targets, row predictions or raw logs were added to the public repository.
+
+P-C6 actual preparation completed:843 private development observations,
+ASA529 (99core/200legalextras/230broader) in43 groups and N5314
+(84core/230historicalsupport) in293 fold units. Common and complete copied
+source proof are bound by `evidence/preparation_completed.json`; every group
+stays in one fold. Registered independent proposals have shortfalls: N5102/0new,
+ASA75/0new. All137 unblocked new RGB identities have zero four-nutrient totals
+in current pinned raw metadata. The smaller102/75 acceptance boundary proposal
+is awaiting user confirmation, with no designation or validation target/image
+opening. This does not block authorized development.
+
+The first complete integrated review found R-P-1 (snapshot source pin) and
+R-P-2 (separate D primary reporting); both are fixed in isolated commits and
+confirmed by517 distinct offline tests. A real Linux clean-environment network
+namespace child reached a synthetic sentinel before any real context load; this
+checks actual isolation/launch plumbing without claiming a complete real adapter
+run. Runtime/postscore receipts and development science freeze are the next
+authorized engineering step. No new MAE or paid P request is yet claimed.

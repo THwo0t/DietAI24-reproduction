@@ -1,0 +1,10 @@
+{
+  "actual_namespace_and_clean_environment_check_executed": true,
+  "api_calls": 0,
+  "complete_real_adapter_run_claimed": false,
+  "context_replaced_by_synthetic_sentinel_before_any_real_source_load": true,
+  "mac_validation_claimed": false,
+  "research_images_or_labels_opened": false,
+  "status": "PASS",
+  "test": "actual_Linux_unshare_clean_environment_adapter_entry"
+}

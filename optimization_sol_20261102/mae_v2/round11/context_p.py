@@ -23,6 +23,19 @@ MAX_BYTES = 32*1024*1024
 VECTOR_DIGEST_MAX_BYTES = 96*1024*1024
 VECTOR_PATH = 'data/vectors/embeddings.npy'
 REQUIRED = set(PARSER_SOURCES) | {
+    'round11/verified_identity.py','round11/assets_p.py','round11/records_p.py','round11/run_p.py','round11/identity_gate_p.py',
+    'round11/adapter_p.py','round11/prepare_p.py','round11/source_scope_v3.py','round11/capacity_cohort_v4.py',
+    'round11/asa_expansion_v3.py','round11/training_identity.py','round11/caller_registration.py',
+    'round11/lineage_pool_v3.py','round11/cohort_lineage_v3.py','round11/n5_identity.py',
+    'round11/asa_phase_graph.py','round11/asa_content_identity.py','round11/asa_identity.py',
+    'round11/development_identity.py','round11/source_capture.py','round11/source_census.py','round11/n5_sources.py',
+    'round11/PREPARATION_PROTOCOL.md','round11/preparation/preparation_review_gate.json',
+    'round11/preparation/PREPARATION_REVIEW.md','round11/source_role_audit.py',
+    'round11/source_inventory_capture.py','round11/asa_workbook.py','round11/asa_tables.py',
+    'round11/asa_eligibility.py','round11/asa_archive.py','round11/asa_role_sources.py',
+    'round11/n5_preparation.py','round11/n5_pool.py','round11/qualification.py',
+    'round11/CAPACITY_AMENDMENT.md','round11/preparation/SOURCE_DISPOSITION_DESIGN.md',
+    'round11/preparation/CALLER_COVERAGE_DESIGN.md','round11/COHORT_REPAIR_DESIGN.md',
     'round11/context_p.py','round11/runtime_p.py','round11/stores_p.py','round11/engine_p.py',
     'round11/paired_failure.py','round11/paired_stage_pipeline.py','round11/paired_accounting.py',
     'round11/DESIGN.md','round11/PAIRED_CONTEXT_DESIGN.md','round11/PAIRED_FAILURE_DESIGN.md',
@@ -141,9 +154,14 @@ def _context(root,*,asset_loader=None,image_hashes=None):
     require(type(sources) is dict and required<=set(sources) and all(_hash(v) for v in sources.values()),'P_source_pins_missing')
     for role,path in ROLES.items():require(sources[path]==common['hashes'][role],'P_role_pin_changed')
     assets=common['asset_files']
-    require(type(assets) is dict and {'data/catalog.json','data/vectors/manifest.json','data/vectors/codes.json',
-            'data/vectors/embeddings.npy'}<=set(assets) and all(p.startswith('data/vectors/') or p=='data/catalog.json'
-            for p in assets) and all(_hash(v) and sources.get(p)==v for p,v in assets.items()),'P_assets_changed')
+    from assets_p import asset_paths,VECTOR_MANIFEST
+    required_assets=asset_paths(_load(root,VECTOR_MANIFEST))
+    require(type(assets) is dict and set(assets)==required_assets and
+            all(_hash(v) and sources.get(p)==v for p,v in assets.items()),'P_assets_changed')
+    require(all(not p.lower().endswith(('.zip','.tar','.tar.gz','.tgz')) and
+                not p.startswith('round11/preparation/source_inventory/') and
+                not p.startswith('round11/preparation/source_role_audit/') for p in sources),
+            'P_runtime_raw_corpus_or_mechanical_receipt_forbidden')
     live={}
     def verify_sources():
         require(_read(root,'round11/prepared/freeze.json',digest_only=True)==freeze_sha256,'P_freeze_changed')
@@ -180,10 +198,36 @@ def _context(root,*,asset_loader=None,image_hashes=None):
     cohort=_load(root,ROLES['cohort_freeze'])
     require(type(cohort) is dict and set(cohort)=={'schema_version','status','manifest_sha256','labels_sha256',
             'lineage_sha256','source_closure_sha256','validation_opened'} and cohort['schema_version']==1 and
-            cohort['status']=='reviewed_complete_new_cohort' and cohort['validation_opened'] is False and
+            cohort['status']=='prepared_development_pending_integrated_review' and cohort['validation_opened'] is False and
             cohort['source_closure_sha256']==sources['round11/prepared/cohort/source_closure.json'] and
             all(cohort[k+'_sha256']==common['hashes'][k] for k in ('manifest','labels','lineage')),
             'P_new_cohort_freeze_incomplete')
+    # The immutable producer output remains pending. The separate runtime gate
+    # above, and the genuine earlier preparation gate copied into this proof,
+    # are both required; no post-review rewrite of the cohort freeze occurs.
+    closure=_load(root,'round11/prepared/cohort/source_closure.json')
+    prep_path='round11/preparation/preparation_review_gate.json'
+    prep_review='round11/preparation/PREPARATION_REVIEW.md'
+    require(type(closure) is dict and closure.get('preparation_review_gate_sha256')==sources[prep_path] and
+            closure.get('preparation_review_sha256')==sources[prep_review] and
+            closure.get('inference_authorized') is False and closure.get('inference_science_frozen') is False and
+            closure.get('validation_targets_opened') is False,'P_preparation_source_proof_missing')
+    prep=_load(root,prep_path)
+    require(type(prep) is dict and set(prep)=={'status','scope','unresolved_p1_p2','review_sha256','source_files','receipt_sha256'} and
+            prep['status']=='approved_or_fixed' and prep['scope']=='P_capacity_v4_preparation' and
+            type(prep['unresolved_p1_p2']) is int and prep['unresolved_p1_p2']==0 and
+            prep['review_sha256']==sources[prep_review],'P_preparation_review_gate_incomplete')
+    held=closure.get('authenticated_preparation_source_sha256')
+    require(type(held) is dict and all(type(path) is str and _hash(h) for path,h in held.items()) and
+            type(prep['source_files']) is dict and type(prep['receipt_sha256']) is dict and
+            prep['source_files'] and prep['receipt_sha256'] and
+            all(type(path) is str and _hash(h) and held.get(path)==h
+                for group in (prep['source_files'],prep['receipt_sha256']) for path,h in group.items()),
+            'P_preparation_review_source_bindings_changed')
+    prefix='optimization_sol_20261102/mae_v2/'
+    require(held.get(prefix+prep_path)==sources[prep_path] and held.get(prefix+prep_review)==sources[prep_review] and
+            all(sources.get(path.removeprefix(prefix),h)==h for path,h in prep['source_files'].items()
+                if path.startswith(prefix)),'P_preparation_to_runtime_source_drift')
     imports=_load(root,ROLES['embeddings'])
     require(type(imports) is dict and set(imports)=={'schema_version','namespace','entries','blocked_hashes','policy'} and
             imports['schema_version']==1 and imports['namespace']==NAMESPACE and imports['entries']=={} and
@@ -194,7 +238,7 @@ def _context(root,*,asset_loader=None,image_hashes=None):
     _validate_training(fallbacks,rows,common,'componentwise_training_medians')
     _validate_training(calibration,rows,common,'training_fold_calibration')
     if asset_loader is None:
-        from context_m import assets as asset_loader
+        from assets_p import assets as asset_loader
     catalog,retriever=asset_loader(root)
     verify_sources()
     ctx=SimpleNamespace(rows=rows,catalog=catalog,retriever=retriever,fallbacks=fallbacks,

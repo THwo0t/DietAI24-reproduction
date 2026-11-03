@@ -1,0 +1,18 @@
+{
+  "all_MAE_thresholds_unchanged": true,
+  "asa24": {
+    "groups": 22,
+    "identity_proposal_sha256": "d4c18204c6b54ecdd478883c99a9f722d662276bcb5504f15f8d0b6b555ed2cc",
+    "records": 75
+  },
+  "new_acceptance_designated": false,
+  "new_downloads_required": 0,
+  "nutrition5k": {
+    "groups": 92,
+    "identity_proposal_sha256": "945967722b4eff24b4c554ffd433afe1de26c95a799cad053486f3a684db7cad",
+    "records": 102
+  },
+  "old_full_validation_unchanged": true,
+  "status": "proposal_only_pending_user_boundary_confirmation",
+  "validation_images_or_labels_opened": false
+}

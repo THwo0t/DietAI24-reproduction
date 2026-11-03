@@ -9,7 +9,7 @@
       24
     ],
     "status": "PASS",
-    "working_files_scanned": 613
+    "working_files_scanned": 637
   },
   "completed_O": {
     "ASA_Exact": 17,
@@ -33,7 +33,7 @@
     "scope": "completed common M method; M0 passes6/20; neither passes coding guard or numerical tolerance",
     "total": 20
   },
-  "file_count": 489,
+  "file_count": 513,
   "files": {
     ".gitignore": {
       "bytes": 109,
@@ -323,13 +323,17 @@
       "bytes": 188,
       "sha256": "f419b33bdb4d3aa2b1579ffcc3faa64dfb1f4e3b3be0cbab3766879652fc8ef1"
     },
+    "round11/ACCEPTANCE_SCOPE_PROPOSAL.md": {
+      "bytes": 2385,
+      "sha256": "e969ce86b912529b56042b29a7fa82c9fa3bd6db808cda92be042730ab4fe385"
+    },
     "round11/CAPACITY_AMENDMENT.md": {
       "bytes": 5504,
       "sha256": "bb70cacd7892b64baa3ce69f4b17988f642806d81fc395f17708f48a8e34bc45"
     },
     "round11/CHECKLIST.md": {
-      "bytes": 23332,
-      "sha256": "535ab899d59c236bf7ea09c41412e002093342586c2b3bcdbc25cbcbb342a72f"
+      "bytes": 26551,
+      "sha256": "89771a2953bf78dfa0740fb29e7b744b7b49245a7c528b2828a0d6631c1d2fb5"
     },
     "round11/COHORT_REPAIR_DESIGN.md": {
       "bytes": 5948,
@@ -343,21 +347,37 @@
       "bytes": 21654,
       "sha256": "46056fc22ba4a73bf4c3d3ae6bc6f0852c62a87ec3d3243c7c9fbc93b378e491"
     },
+    "round11/FREEZE_PROTOCOL.md": {
+      "bytes": 2519,
+      "sha256": "cc3e715e3e6ffdccd595390b555f4a680f073a9fb401195dc57e39990790dd72"
+    },
     "round11/PAIRED_ASA_ADAPTER_DESIGN.md": {
       "bytes": 2485,
       "sha256": "cf68a18c3e9cb6f8f8faf891d991002feddc7ff82e7c29ac3bd7c8010cf3a9be"
     },
     "round11/PAIRED_CONTEXT_DESIGN.md": {
-      "bytes": 3756,
-      "sha256": "aa6439fdfd7e6dbee1437484c095fbea054b3cff05b71731db064a9015e8c8a6"
+      "bytes": 6817,
+      "sha256": "eebe94becab34a6bcb06322c382371fc0bbe4dc51412a95d9f0ae541c9999231"
     },
     "round11/PAIRED_FAILURE_DESIGN.md": {
       "bytes": 2040,
       "sha256": "992d58ebea965008b72c2497230903a9a29f57f1e5448b44f1d16c8983f9c570"
     },
+    "round11/POSTSCORE_PROTOCOL.md": {
+      "bytes": 6968,
+      "sha256": "0d91f51850bce0fef09efa186e6ec326d7767f79718a3763b5c0bf18c4d5395a"
+    },
+    "round11/PREPARATION_PROTOCOL.md": {
+      "bytes": 7824,
+      "sha256": "f935178f1f7556f3495e54c16a593b4a471e5d2e1b32ca1627cb0a936abfb1ac"
+    },
+    "round11/REVIEW.md": {
+      "bytes": 13644,
+      "sha256": "679a2a86e3138fff9b24e749fadafbf88c24bba62551c034a33e171c18c92063"
+    },
     "round11/adapter_p.py": {
-      "bytes": 4753,
-      "sha256": "1f95f09f750298f1bc872dccef58ff73f6a3468ffd97483b97ad5d37f221a9aa"
+      "bytes": 6783,
+      "sha256": "fae185bb15a23ebf590e1213d3d191bba31c14f07c1636fdfc3750aaed21fbda"
     },
     "round11/asa_archive.py": {
       "bytes": 5530,
@@ -399,6 +419,10 @@
       "bytes": 5762,
       "sha256": "d198b8e49ffafe61e3544d475a477bed794ffc4c4eef19005bb25665e988093b"
     },
+    "round11/assets_p.py": {
+      "bytes": 7319,
+      "sha256": "39b6e447e39ed5131505b7df94357e65f5936df844b5ab90e20be13bf97dba9b"
+    },
     "round11/caller_registration.py": {
       "bytes": 11913,
       "sha256": "be9750058e0c72354ab094f200d53bb065df05a7847ea871578b415f06150b11"
@@ -412,8 +436,8 @@
       "sha256": "a52386f42eae7df0f22a18a8a5b177996b3fa2234eb3c95eb2229e5537872ab1"
     },
     "round11/context_p.py": {
-      "bytes": 12931,
-      "sha256": "cd054a0b13aa5824788eb4cdd990f4ec27096c726b7cd75d1c63b3d140ff2570"
+      "bytes": 16631,
+      "sha256": "fd32d7f6fead363c0e2f1ee78719913bc0e890db078602f7c052cea5c5b2ab7f"
     },
     "round11/development_identity.py": {
       "bytes": 4585,
@@ -427,21 +451,45 @@
       "bytes": 8914,
       "sha256": "ed230637c401af49ad3e7bc0f40af914f8f5ae9a0bff72f4caa44be477b28158"
     },
+    "round11/evidence/acceptance_boundary_proposal.json": {
+      "bytes": 579,
+      "sha256": "45cc6e55db031b5f1457c618e9c1c706cc99b922f329478da802d7cc5fb663ab"
+    },
     "round11/evidence/caller_registration.json": {
       "bytes": 835,
       "sha256": "6dccb76bd76539d5ec83dcfb6c68876815fb3bafd55190ef5a65cefa11e824d0"
+    },
+    "round11/evidence/github_manifest_coverage_fix_764e826.json": {
+      "bytes": 1679,
+      "sha256": "f2f367571975509b4c1c01927cd3dec7443ef594fc7aa970e5d4a4a7993adb1f"
+    },
+    "round11/evidence/github_source_0895445_backup_ac15938.json": {
+      "bytes": 1215,
+      "sha256": "c3a69479ecfbc13240007df572b9fdf9bf51ea25a05ae994cc1fcc561e077225"
     },
     "round11/evidence/identity_capacity.json": {
       "bytes": 1458,
       "sha256": "ab0a6de55f277e03c5efab5c5071000dd358c5f25f090f1fbd52cdebb321d840"
     },
+    "round11/evidence/isolated_adapter_entry_smoke.json": {
+      "bytes": 376,
+      "sha256": "57c8f11d9326126b8e0edd52c9de15f4517ec743ce2fc0cc8574c7c562573cf5"
+    },
     "round11/evidence/local_header_inventory.json": {
       "bytes": 914,
       "sha256": "e5abd37f4a9acd97b0a0b9b4365ac0a8e31bd980bf0d625a60b610540141052a"
     },
+    "round11/evidence/preparation_completed.json": {
+      "bytes": 1705,
+      "sha256": "f3a19332aa173e82cb6fd6f15179b781d26976e78172757738321012bb979673"
+    },
     "round11/evidence/proposal_overlap.json": {
       "bytes": 2412,
       "sha256": "45f1f30b0b1286f891f93b28b1c99d7d0ffd522255b5c2f731c6efdf62ad6203"
+    },
+    "round11/evidence/proposal_shortfall.json": {
+      "bytes": 667,
+      "sha256": "273900c7e05d1a464fa895a9a0c5c6e9289d6ef98b26b16c2e9ba92edf76c195"
     },
     "round11/evidence/source_capture_refusal.json": {
       "bytes": 705,
@@ -475,17 +523,21 @@
       "bytes": 754,
       "sha256": "e85161f29d6b0ab7aeca4280a621bee4c3e6c463ee7e6beef9fa9ba10509c845"
     },
+    "round11/freeze_p.py": {
+      "bytes": 6316,
+      "sha256": "c3bea7e8d5ccaebab25b74ee1bd09c4ec216441b6de6118913debef3992392ef"
+    },
     "round11/gate_p.py": {
-      "bytes": 10212,
-      "sha256": "dc95b45d4a3e1e4dc27bac96f0ab33b72b7bb6cd1f85b5a19bcd90edbf6fd714"
+      "bytes": 10554,
+      "sha256": "e86a6db3ca5e563afe71fabd94549d81747bca4929e49ac8369ae36a52074816"
     },
     "round11/identity_gate.py": {
       "bytes": 5002,
       "sha256": "a635b87d7920bcc41bebc56471b530cd3f7820dd688ccf37a526e7cf2dd0eb7f"
     },
     "round11/identity_gate_p.py": {
-      "bytes": 7256,
-      "sha256": "278417ba5785f9f018ed9c7f37eef3c3d16c8ccb89bd7a322a9a2140740b1889"
+      "bytes": 8282,
+      "sha256": "a2e37f403543feddbe7f99f3d56dc78281012aec531765aee7049fed8ccb2bc6"
     },
     "round11/legacy_input_identity.py": {
       "bytes": 6460,
@@ -539,6 +591,10 @@
       "bytes": 3202,
       "sha256": "b50d1099c12cc82849574bead873e14de2f5a66757611d56aa2639569e610dce"
     },
+    "round11/postscore_p.py": {
+      "bytes": 10890,
+      "sha256": "9ef015821d0669e7bdf8a73e6f08e3501e8a25dfa9fa8b7e8720dfbb3f92f711"
+    },
     "round11/preparation/ASA_ROLE_AUDIT_DESIGN.md": {
       "bytes": 3177,
       "sha256": "6e9a208d10ca18fa8dcd580625021d04ae38f8ade5bbace38cbab3361c24dde4"
@@ -566,6 +622,10 @@
     "round11/preparation/PNG_INPUT_IDENTITY_V2.md": {
       "bytes": 3230,
       "sha256": "5f720c1e6c01c299a5fdd3fa26a740f857ce17cad8eb5a769d446fbc2e399338"
+    },
+    "round11/preparation/PREPARATION_REVIEW.md": {
+      "bytes": 16055,
+      "sha256": "4787304c7fd44d8296a9c70e86b3504653e589f3c3dacccb6622f460091056c3"
     },
     "round11/preparation/PROPOSAL_OVERLAP.md": {
       "bytes": 3455,
@@ -631,9 +691,17 @@
       "bytes": 3799,
       "sha256": "d0d2d27584a9037f33d72129514f662299a15144205c054918e4ce6a8b5b08c9"
     },
+    "round11/prepare_p.py": {
+      "bytes": 40183,
+      "sha256": "83174b90e8f88ff3afe716a27728dfeee9707f6af3710593ce5a79c181388e27"
+    },
     "round11/proposal_overlap.py": {
       "bytes": 12175,
       "sha256": "298ddc1cbfbb41000ad99b9e4cde45105f9e2b1ec44cf82980c2e34bc9674d21"
+    },
+    "round11/public_manifest.py": {
+      "bytes": 2714,
+      "sha256": "901770f6829d2f5c4dfc8fa935e1cbaed2ee23d973bd86d18c2e27612504ac11"
     },
     "round11/qualification.py": {
       "bytes": 4333,
@@ -652,8 +720,8 @@
       "sha256": "b82782a6858caeae195acb89037f4bf72604d8d30bcbcbd67a2d994f3907e20e"
     },
     "round11/run_p.py": {
-      "bytes": 10622,
-      "sha256": "a4d0dd3547104407b0a62802d861b9b134d0ecf26729e901c386423a713e19bc"
+      "bytes": 13932,
+      "sha256": "ca10c1fe510cb335890cec03b47a30649201d505066358ef5b74d6950675a2d6"
     },
     "round11/runtime_p.py": {
       "bytes": 10165,
@@ -662,6 +730,10 @@
     "round11/runtime_review/REVIEW.md": {
       "bytes": 3961,
       "sha256": "6070adf04d342bacc1d36dbadcd33b331d9333a367cc6ae90cb1cc979433f5f5"
+    },
+    "round11/scoring_p.py": {
+      "bytes": 20432,
+      "sha256": "08e4bdcfd456aa1cfe3ce52e24b73ce0ee7fff846a6dbc5964a9aa491d9682de"
     },
     "round11/service_p.py": {
       "bytes": 23304,
@@ -688,12 +760,12 @@
       "sha256": "a1b78f07836e36cc0334b0a251baedcc3e669821cd5e97e9fb76b0466bb47d74"
     },
     "round11/stores_p.py": {
-      "bytes": 5207,
-      "sha256": "6e0d3bfc3034e6a6d5b369c7fe0884fbdb715e31933fb144620da16fea74b659"
+      "bytes": 7491,
+      "sha256": "e225485d06e714f50007bafe0da6d593e9e141ab938df2e28ce1d55ad39e8fc6"
     },
     "round11/test_adapter_p.py": {
-      "bytes": 4792,
-      "sha256": "bdbb2acd084f01beaeba191998b0fb0eac331b0d775dc3f29cf58e60fd9db31a"
+      "bytes": 6274,
+      "sha256": "9861b47d89d509a369080f9d0e4547fe7f0d57f8208e9cb3b71ec6057c4fb5de"
     },
     "round11/test_asa_archive.py": {
       "bytes": 9870,
@@ -735,6 +807,10 @@
       "bytes": 7736,
       "sha256": "7ed37cf7c3013f619b5b297b08fde2247372aa62ca5c55ada60aadf2e3f72799"
     },
+    "round11/test_assets_p.py": {
+      "bytes": 7621,
+      "sha256": "ac03a84bc3d5e16ff0f2c5225dbb5fa2cee21d39cd6b3cad59a2b2acaa27ddb1"
+    },
     "round11/test_caller_registration.py": {
       "bytes": 6959,
       "sha256": "60d92a578eb115fa45013dc678881a22282d8a2cf2059af8e99de74f549fb841"
@@ -748,8 +824,8 @@
       "sha256": "897c31805c527bd18d3f2fa558f5f5b4c16a73e857c5d88f29b13e14c15432d1"
     },
     "round11/test_context_p.py": {
-      "bytes": 9649,
-      "sha256": "15f7fa7cf29b48dbed568136af8984dca8eec2e795274f35d2274eea2e344087"
+      "bytes": 15315,
+      "sha256": "f62e913a9eee814aa91dc859c07441da02f270ead4601a43ba912ab1b6320eaf"
     },
     "round11/test_development_identity.py": {
       "bytes": 5903,
@@ -759,17 +835,21 @@
       "bytes": 11532,
       "sha256": "862d426dd55d11c0c2c679e9c8a485587713a0adef0a8b814de0470dfd373d04"
     },
+    "round11/test_freeze_p.py": {
+      "bytes": 10362,
+      "sha256": "c9b4d8d050ec50545b3f3a8396f00075d6f1033f2337d91afe9bb0627ba89ba1"
+    },
     "round11/test_gate_p.py": {
-      "bytes": 10133,
-      "sha256": "b8af0341023d88d6b44973f276f23a0e55539b5739083e45ba22e2bb429b168b"
+      "bytes": 10750,
+      "sha256": "d33426f0b9d36943455464159b3fcb7a26a103c40e844ee912d885fe4cec9b10"
     },
     "round11/test_identity_gate.py": {
       "bytes": 8327,
       "sha256": "0bab4116bd2485549b55dd787e5afcf68940e08c38b559c1b627e3d72d7ddbd9"
     },
     "round11/test_identity_gate_p.py": {
-      "bytes": 6272,
-      "sha256": "2b9bae529bf0a95ef7a3dad1466be8db641cf75ae655dbb3774b731804ac077e"
+      "bytes": 6809,
+      "sha256": "cfa9f16433a84872ad13027875cd697269ad3ac3e49b95e04d6bd982cd57fd9a"
     },
     "round11/test_legacy_input_identity.py": {
       "bytes": 6526,
@@ -827,9 +907,21 @@
       "bytes": 9742,
       "sha256": "3f42b0716cd77aa30f81a5553d361620cd0fdbc24ae23f21a15425ac5bc92df3"
     },
+    "round11/test_postscore_p.py": {
+      "bytes": 11275,
+      "sha256": "647f3411b6bd7dbbf2e6dda480c8dace2e07edeb7574e6ad56314cca53d649d3"
+    },
+    "round11/test_prepare_p.py": {
+      "bytes": 18356,
+      "sha256": "02d9381d0e04b5589bfb4c193d014d12fad71dc5371bfdef3d12644b7aa720ce"
+    },
     "round11/test_proposal_overlap.py": {
       "bytes": 13071,
       "sha256": "25e7f381b8b33cad6d7f44568c1f59070b57aadcebbb1d9b89453932b10feca0"
+    },
+    "round11/test_public_manifest.py": {
+      "bytes": 1466,
+      "sha256": "cff77dda71f41a94815a3e099321429eee9bd6ed2566d879d13ce583e5334e61"
     },
     "round11/test_qualification.py": {
       "bytes": 3319,
@@ -840,8 +932,8 @@
       "sha256": "80af533f1fe987cc7f8e9d2ff80227c8566a49211e2de96a1bc1a3c6cba9f237"
     },
     "round11/test_run_p.py": {
-      "bytes": 10180,
-      "sha256": "e68fb0a60e94152edbbc28ac979ead47d6bf910d912c1375287737fe4030c3cb"
+      "bytes": 13529,
+      "sha256": "85a57c30f57e0924498c696ec5e8bd3c5f86e3e349705870aef6ab6aa3f39048"
     },
     "round11/test_runner_equivalence.py": {
       "bytes": 7780,
@@ -850,6 +942,10 @@
     "round11/test_runtime_p.py": {
       "bytes": 7644,
       "sha256": "9eb21a9e6f23adeabcdd7ab42f1cafdd273bda46cac563c17dfb05449fcc332f"
+    },
+    "round11/test_scoring_p.py": {
+      "bytes": 13870,
+      "sha256": "b4e9c0f41ff6b8876bd77e7d0d898ab238d713a060f319d3eff8a779441f2226"
     },
     "round11/test_service_p.py": {
       "bytes": 14381,
@@ -876,8 +972,8 @@
       "sha256": "889faf2ad456fa4ac087a252acc26b03c87da60ce2f1fb2efb6d472aa32555b4"
     },
     "round11/test_stores_p.py": {
-      "bytes": 2639,
-      "sha256": "2a25f7a0811647a8d6a94726992e72b385f49899e1b5fea0549bd5b08a7cde44"
+      "bytes": 4341,
+      "sha256": "8af0e33f5022b6de57fe96bda3c5f1086764528545c31e387e0c50eeb478f19e"
     },
     "round11/test_training_identity.py": {
       "bytes": 8536,
@@ -2011,19 +2107,30 @@
     "reachable_blobs_scanned": 429,
     "status": "PASS"
   },
-  "latest_local_checkpoint": "08954450a64561b7f65a51d8b4f080ad83adf846",
+  "latest_local_checkpoint": "20c748572d50cc2149f509e95c1a5691c6c10c24",
+  "manifest_coverage_history": [
+    {
+      "cause": "Ignored round11/evidence JSON files were copied and listed but excluded from ordinary git add. Exact safe whitelist files are now explicitly staged with -f.",
+      "declared_payloads": 489,
+      "fixes_checkpoint": "ac1593888a26a7ec708218bf76094f68c396212b",
+      "indexed_payloads_verified": 489,
+      "missing_payloads": 0,
+      "previous_declared_payloads": 489,
+      "previous_missing_ID_free_receipts": 12,
+      "previous_published_payloads": 477,
+      "private_data_newly_published": false,
+      "status": "PASS",
+      "verification": "git index contents, not working directory presence"
+    }
+  ],
   "manifest_publication_audit": {
-    "cause": "Ignored round11/evidence JSON files were copied and listed but excluded from ordinary git add. Exact safe whitelist files are now explicitly staged with -f.",
-    "declared_payloads": 489,
-    "fixes_checkpoint": "ac1593888a26a7ec708218bf76094f68c396212b",
-    "indexed_payloads_verified": 489,
+    "committed_payloads_verified": 513,
+    "declared_payloads": 513,
+    "ignored_safe_whitelist_receipts_explicitly_staged": true,
     "missing_payloads": 0,
-    "previous_declared_payloads": 489,
-    "previous_missing_ID_free_receipts": 12,
-    "previous_published_payloads": 477,
-    "private_data_newly_published": false,
+    "snapshot": "20c748572d50cc2149f509e95c1a5691c6c10c24",
     "status": "PASS",
-    "verification": "git index contents, not working directory presence"
+    "verification": "git index payload contents; committed tree is verified again after commit"
   },
   "new_research_data_included": false,
   "old_local_git_history_included": false,
@@ -2051,7 +2158,12 @@
     "unresolved_p1_p2": 0
   },
   "round11": {
-    "actual_data_audit": "completed mechanical inventory and ASA topology; finite caller identity registration; scoped preparation remains pending",
+    "acceptance_designated": false,
+    "acceptance_proposal_counts": {
+      "asa24": 75,
+      "nutrition5k": 102
+    },
+    "actual_data_audit": "843 development rows privately prepared with no group crossing folds; global exposure completeness remains false",
     "cache_component_formal_reviews": 1,
     "cache_component_unresolved_p1_p2": 0,
     "completed_O_evidence_component_formal_reviews": 1,
@@ -2068,31 +2180,39 @@
       "P_service_ledger",
       "P_role_entry"
     ],
+    "dataset_development_counts": {
+      "asa24": 529,
+      "nutrition5k": 314
+    },
+    "development_rows": 843,
+    "first_integrated_runtime_scoring_formal_reviews": 1,
     "full_pc_formal_reviews": 0,
-    "full_preparer_formal_reviews": 0,
+    "full_preparer_formal_reviews": 1,
     "new_api_calls": 0,
     "new_downloads": 0,
-    "offline_unique_tests": 449,
+    "offline_unique_tests": 517,
     "pc_components_formal_reviews": 6,
     "pc_source_preparer_components_formal_reviews": 6,
     "postscore_offline_tests": 15,
     "preparation_component_formal_reviews": 1,
     "preparation_component_unresolved_p1_p2": 0,
     "private_inputs_or_outputs_included": false,
-    "public_checkout_offline_test_ids": 449,
+    "public_checkout_offline_test_ids": 517,
     "recovery_formal_reviews": 1,
     "review_fix": "R-PB-1",
     "round11_test_execution": {
-      "distinct_unittest_ids": 449,
+      "distinct_unittest_ids": 517,
       "network": "isolated unshare -Urn",
-      "runtime_seconds": 46.03,
-      "scope": "committed source snapshot 0895445; public checkout; no research data or provider calls",
+      "runtime_seconds": 55.196,
+      "scope": "committed source snapshot 20c7485; public checkout; no research data or provider calls",
       "status": "PASS"
     },
     "selected_new_samples": 0,
-    "stage": "mechanical_source_preparation_and_paired_predictor_implementation",
-    "total_offline_unique_tests": 449,
-    "validation": "labels sealed; no validation inference or MAE selection",
+    "stage": "reviewed_843_row_development_prepared_before_P_inference",
+    "total_offline_unique_tests": 517,
+    "unresolved_integrated_p1_p2": 0,
+    "unresolved_preparation_p1_p2": 0,
+    "validation": "labels and images sealed; population amendment pending user boundary confirmation",
     "whole_project_O_retrospective_reviews": 1
   },
   "round3": {
@@ -2392,7 +2512,7 @@
     "validation": "sealed"
   },
   "secret_scan": "PASS_reachable_history_and_worktree_generic_scan_plus_coordinator_reported_actual_credentials_in_memory",
-  "source_state": "O remains rejected at 10/20 strict checks. The original and expanded blind linkage diagnostics are preserved. Mechanical inventory and ASA topology audit completed; old validation remains sealed. Identity-only capacity disproved the fresh216+200 allocation; a314-row historical-support development amendment and separate pending validation replacement proposals are registered. Paired predictor/runner/source adapters are implemented as closed prototypes; complete preparation/integrated reviews and actual new inference remain pending. No new MAE improvement is claimed. Concurrent uncommitted work is excluded. This backup includes source, tests, reviews and explicitly ID-free aggregates only.",
+  "source_state": "O remains rejected at10/20. Capacity-amended actual development preparation completed843rows (ASA529/N5314), with historical support reuse explicit. The first complete preparation and integrated runtime/scoring reviews completed, and R-PC6-1/R-P-1/R-P-2 are fixed with root offline confirmation. Four-arm O/Q/D/Q+D runner, source-bound science freezing, exact completed replay and OOF scoring are implemented. Independent acceptance proposals have genuine shortfalls (N5102/0new,ASA75/0new) and await user boundary confirmation. This backup claims no new model run or MAE improvement. Committed source/tests/reviews/designs and explicit ID-free aggregates only; private preparation, labels, images, request logs and private Git history excluded.",
   "subagent_model_policy": {
     "astra_allowed": false,
     "explicit_spawn_model_required": true,

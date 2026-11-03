@@ -1,13 +1,21 @@
 """Isolated offline P ASA projection after complete verified blind coding.
 
-No provider, scoring, calibration or fallback fitting. A future reviewed runner
-must invoke this in a separate process; public preparation stays closed.
+No provider, scoring, calibration or fallback fitting. The fixed reviewed runner
+invokes this in a Linux user/network namespace with a clean environment.
+Portable Mac isolation and real Mac hardware acceptance remain unimplemented.
 """
 from copy import deepcopy
 from pathlib import Path
+import json
+import hashlib
+import os
+import sys
+
+BASE=Path(__file__).resolve().parent.parent
+sys.path[:0]=[str(BASE),str(BASE/'src'),str(BASE/'round7/src'),str(BASE/'round8/src'),str(BASE/'round10'),str(BASE/'round11')]
 
 from opt_pipeline import _code,validate_options
-from opt_provider import fingerprint
+from opt_provider import fingerprint,ROOT
 from round4.src.artifacts import decode
 from verified_identity import VerifiedIdentitySnapshot,checked_file
 
@@ -61,7 +69,11 @@ def _prepare(ctx,snapshot,labels_path,store,*,coding_completion_path,data_root):
     if store.binding!=expected_binding:raise ValueError('P_adapter_store_binding_changed')
     if checked_file(path)!=ctx.binding['labels_sha256']:
         raise ValueError('P_adapter_label_binding_changed')
-    labels=decode(path.read_bytes())
+    from context_p import _read
+    raw=_read(root,relative)
+    if hashlib.sha256(raw).hexdigest()!=ctx.binding['labels_sha256']:
+        raise ValueError('P_adapter_label_bytes_changed')
+    labels=decode(raw);del raw
     contexts=contexts_after_seal(ctx.rows,identities,ctx.catalog,code_only(labels,ctx.rows),proof)
     del labels
     if checked_file(path)!=ctx.binding['labels_sha256']:
@@ -81,5 +93,42 @@ def _prepare(ctx,snapshot,labels_path,store,*,coding_completion_path,data_root):
             'current_portion_truth_exported':False,'validation_opened':False}
 
 
+CLEAN_ENV={'PATH':os.defpath,'LANG':'C.UTF-8','LC_ALL':'C.UTF-8',
+           'PYTHONNOUSERSITE':'1','PYTHONDONTWRITEBYTECODE':'1'}
+
+
+def _isolation_check():
+    from source_census import isolated_network
+    if not sys.platform.startswith('linux'):
+        raise ValueError('P_adapter_Linux_network_namespace_required_portable_fallback_unimplemented')
+    if dict(os.environ)!=CLEAN_ENV:
+        raise ValueError('P_adapter_clean_environment_required')
+    if not isolated_network(Path('/proc/net/dev').read_bytes()):
+        raise ValueError('P_adapter_isolated_network_required')
+
+
 def prepare():
-    raise ValueError('P_adapter_reviewed_separate_process_entry_not_implemented')
+    """Fixed offline child entry. No public paths, labels or context overrides."""
+    _isolation_check()
+    from context_p import runtime_context
+    from service_p import Ledger,allowed_slots
+    from identity_gate_p import coding_snapshot
+    from stores_p import adapter_store
+    ctx=runtime_context()
+    ledger=Ledger(ROOT/'round11/provider/P',ctx.binding,allowed_slots(ctx.rows))
+    ledger.read();snapshot=coding_snapshot(ctx,ledger)
+    return _prepare(ctx,snapshot,ROOT/'round11/prepared/cohort/dev_labels.json',adapter_store(ctx),
+        coding_completion_path=ROOT/'round11/runs/identities/completion.json',data_root=ROOT)
+
+
+def main():
+    if len(sys.argv)!=1:raise ValueError('P_adapter_no_arguments_allowed')
+    return prepare()
+
+
+if __name__=='__main__':
+    try:print(json.dumps(main(),sort_keys=True))
+    except (Exception,SystemExit):
+        # Never print labels, paths, exception details or inherited credentials.
+        print(json.dumps({'status':'P_adapter_refused_preserve_state'}))
+        raise SystemExit(1)

@@ -17,7 +17,8 @@ from gate_p import Gate
 from round4.src.artifacts import ArtifactStore
 from stores_p import name
 from adapter_p import _prepare
-from run_p import _run,run
+from run_p import _run,run,_verified_completed,_isolated_adapter,main
+from types import SimpleNamespace
 
 
 class OfflineProvider:
@@ -52,8 +53,11 @@ class RunnerTests(unittest.TestCase):
         labels=self.root/'round11/prepared/cohort/dev_labels.json';labels.parent.mkdir(parents=True,exist_ok=True)
         labels.write_text(json.dumps({'a':{'food_code':'12345678','weight':'POISON','size':'POISON'},'n':{'weight':'POISON'}}))
         self.labels=labels;sources['round11/prepared/cohort/dev_labels.json']=sha(labels)
+        for path,raw in [('round11/prepared/cohort/dev.json',b'synthetic manifest'),('data/vectors/embeddings.npy',b'synthetic vectors'),
+                         ('round11/prepared/cohort/source_closure.json',json.dumps({'strata_private':{'a':'core','n':'core'}}).encode())]:
+            dest=self.root/path;dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(raw);sources[path]=sha(dest)
         slots=allowed_slots(self.ctx.rows,image_hashes={r['sample_id']:fingerprint(encode_image(self.root/r['image_path'],'square256')) for r in self.ctx.rows})
-        self.ctx.binding={'schema_version':1,'source_files':sources,'labels_sha256':sha(labels),
+        self.ctx.binding={'schema_version':1,'environment':{'synthetic':True},'source_files':sources,'labels_sha256':sha(labels),
                           'allowed_slots_sha256':fingerprint(slots),'transport_cap':len(slots)*3}
         self.ctx.fallbacks={'folds':{ds:{'0':{'value':dict(weight=100.,energy=110.,fat=3.,carbs=20.,protein=5.),
                                             'train_ids':['synthetic-train'],'heldout_ids':['a' if ds=='asa24' else 'n']}}
@@ -157,7 +161,44 @@ class RunnerTests(unittest.TestCase):
         self.child=isolated
         with patch.object(Path,'read_bytes',guarded):self.execute()
 
-    def test_public_entry_closed(self):
-        with self.assertRaisesRegex(ValueError,'first_integrated_review_required'):run()
+    def test_public_entry_requires_frozen_review_and_explicit_paid_boolean(self):
+        with patch('context_p.runtime_context',side_effect=ValueError('synthetic_review_missing')):
+            with self.assertRaisesRegex(ValueError,'review_missing'):run()
+        with self.assertRaisesRegex(ValueError,'explicit_paid_flag'):run(allow_paid=1)
+        with patch('run_p.run',return_value={'synthetic':True}) as call,patch('run_p.sys.argv',['run_p.py','--allow-paid']):
+            self.assertEqual(main(),{'synthetic':True});call.assert_called_once_with(allow_paid=True)
+
+    def test_incomplete_no_paid_flag_and_missing_adapter_seal_refuse(self):
+        with self.assertRaisesRegex(ValueError,'paid_flag'):
+            _run(self.ctx,ledger=self.ledger,data_root=self.root,stores=self.stores)
+        self.execute();calls=self.adapter_calls
+        (self.stores[2].directory/'completion.json').unlink()
+        with patch('runtime_p.PProvider',side_effect=AssertionError('provider forbidden')):
+            with self.assertRaisesRegex(ValueError,'existing_adapter_seal'):self.execute(complete=True)
+        self.assertEqual(self.adapter_calls,calls)
+
+    def test_completed_verifier_exports_postscore_binding_contract_without_provider(self):
+        self.execute()
+        with patch('runtime_p.PProvider',side_effect=AssertionError('provider forbidden')):
+            result=_verified_completed(self.ctx,self.ledger,data_root=self.root,stores=self.stores)
+            self.assertTrue(result['revalidate']())
+        self.assertEqual(set(result),{'rows','records','catalog','strata','bindings','audit','revalidate'})
+        self.assertEqual(len(result['records']),2);self.assertFalse(result['audit']['labels_parsed'])
+        self.assertEqual(set(result['bindings']),{'science_sha256','manifest_sha256','labels_sha256',
+            'record_seal_sha256','coding_seal_sha256','adapter_seal_sha256','model_environment_sha256',
+            'matrix_sha256','request_cache_proof_sha256','source_snapshot_sha256'})
+
+    def test_adapter_subprocess_has_fixed_offline_command_and_no_inherited_environment(self):
+        self.execute()
+        from identity_gate_p import _load_snapshot
+        snapshot=_load_snapshot(self.ctx,self.ledger,self.stores[0],data_root=self.root)
+        with patch('run_p.subprocess.run',return_value=SimpleNamespace(returncode=0)) as child:
+            _isolated_adapter(self.ctx,self.ledger,snapshot)
+            args=child.call_args;self.assertEqual(args.args[0][:2],['/usr/bin/unshare','-Urn'])
+            self.assertIn('-B',args.args[0]);self.assertEqual(set(args.kwargs['env']),{'PATH','LANG','LC_ALL','PYTHONNOUSERSITE','PYTHONDONTWRITEBYTECODE'})
+            self.assertEqual(args.kwargs['stdout'],__import__('subprocess').DEVNULL)
+        with patch('run_p.subprocess.run',return_value=SimpleNamespace(returncode=1)):
+            with self.assertRaisesRegex(ValueError,'child_failed'):_isolated_adapter(self.ctx,self.ledger,snapshot)
+
 
 if __name__=='__main__':unittest.main()
