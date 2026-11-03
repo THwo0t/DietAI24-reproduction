@@ -1,0 +1,29 @@
+{
+  "api_calls": 0,
+  "entry_counts": {
+    "credential_name_excluded": 8,
+    "directory": 13498,
+    "excluded": 509,
+    "file": 136550,
+    "symlink_unresolved": 5451
+  },
+  "exposure_complete": false,
+  "grants_sampling_download_or_inference": false,
+  "legacy_presence_counts": {
+    "regular_unopened": 4
+  },
+  "new_downloads": 0,
+  "new_samples_selected": 0,
+  "offline_census_tests": 15,
+  "private_census_sha256": "46a40f27b9da663b93611523677ed3ddf038f8bc91111c80c250489284b5db04",
+  "private_output_mode": "0o600",
+  "private_parent_mode": "0o700",
+  "research_file_bodies_opened": 0,
+  "review": "one bounded review, both P2 fixes confirmed; P3 adopted",
+  "schema_version": 1,
+  "source_association_complete": false,
+  "source_checkpoint": "db59d62",
+  "source_sha256": "eec61cecfb31c484c126fb4e4bdad3d255e3f1e408fc16e80ce6c36dd70dbef7",
+  "status": "path_census_complete_not_exposure_closure",
+  "validation_content_opened": false
+}

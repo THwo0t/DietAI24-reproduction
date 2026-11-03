@@ -1,0 +1,38 @@
+{
+  "amended_acceptance_proposal": {
+    "new_requested": 98,
+    "old_retained_requested": 102,
+    "status": "not_selected_pending_preparation_review_and_boundary_confirmation",
+    "total_requested": 200
+  },
+  "amended_development": {
+    "core": 84,
+    "fresh_independent_claim": false,
+    "historical_support": 230,
+    "total": 314
+  },
+  "api_calls": 0,
+  "blocked_screening_components": 485,
+  "candidate_targets_interpreted": 0,
+  "contains_images_or_targets": false,
+  "contains_sample_identifiers": false,
+  "full_screening_components": 823,
+  "grants_sampling_download_or_inference": false,
+  "infeasible_previous_new_component_request": 416,
+  "new_downloads": 0,
+  "new_samples_selected": 0,
+  "official_RGB_dish_objects": 3490,
+  "original_available_frame_identities": 2035,
+  "private_capacity_sha256": "506aaa9df00f7d3e6bf1d1b9f50e99fe32f6b382e27ef042843c313b0d56e493",
+  "private_inventory_sha256": "203bbb7c9f26f2bf6a4bf3846151fe068c3399f61efbb3f1a0b41c830dc9892d",
+  "protected_targets_interpreted": 0,
+  "schema_version": 1,
+  "status": "identity_only_capacity_upper_bound_before_targets",
+  "unblocked_full_raw_official_RGB_components": 57,
+  "unblocked_full_raw_official_RGB_identities": 137,
+  "unblocked_full_universe_components": 338,
+  "unblocked_original_available_components": 57,
+  "unblocked_original_available_identities": 98,
+  "unlinked_existing_reserved_components": 92,
+  "unlinked_existing_reserved_identities": 102
+}

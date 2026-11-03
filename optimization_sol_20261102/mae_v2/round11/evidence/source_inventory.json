@@ -1,0 +1,203 @@
+{
+  "contains_images_or_targets": false,
+  "contains_sample_identifiers": false,
+  "control_sha256": {
+    "round10/development_checkpoint.json": "696d32bae584a0be58aec8bb5cabd3adf88b4b867e3e6043c4f454340ccaa936",
+    "round10/diagnostics/completed_o/completion.json": "fa6bb8cb1a3c8608fe228275c534bac19d16dcf08d9db41a4085d8eb2e4fe3d5",
+    "round10/evidence/postscore_guard_recovery.json": "64f8539ce65917a346ae74bd0c3961d8d78744bb6ea07429d42577ae9e20d1a4",
+    "round10/postscore/guarded_diagnose_o.py": "27c06dca5863e704605761a26389ee6246a8c97340b92f4230ae39abefbfd2a5",
+    "round10/postscore/reverify_sealed_o.py": "e701bad797ada42d13de04f6ea339789268abad035ade92ee56af3ba447b950a",
+    "round10/prepared/freeze.json": "0815819980716aa6be5a5e77a71de6c007f8985566bf5503f5b007d201164d92",
+    "round10/runs/development/completion.json": "86957227302e05ae0feaeb3298a891d2a907a8e021f2c064374bae7fc8afb7c2",
+    "round10/runs/identities/completion.json": "c65ab26520131a8c4a64b7eb949fc17725f022877a0ed6fc068187cec57edfd8",
+    "round10/runs/scoring/completion.json": "927b0db5837cfb1994b71d23088b8285f790650bd96063459cfcc35f4e654d75",
+    "round10/runs/verification.json": "a754ca6402745f03d118f12a0d11f859b425ef3ec19575800596b8c5d552be90",
+    "round11/DESIGN.md": "63d0690e20f463fff2f74e697e4d72901947a1af6c31bcce4c571b72dd78370a",
+    "round11/evidence/github_completed_O_backup.json": "42c17727ae34417dfbe3a745eeefb81ebf0cffef4526297378ab7fbd6dbbeabc",
+    "round11/o_completion.py": "ee5e6bfdc6fa98d4fe4e612a0e739cf70ae86c5362bb2773b847bc743be4a5c4",
+    "round11/retrospective/REVIEW.md": "b82782a6858caeae195acb89037f4bf72604d8d30bcbcbd67a2d994f3907e20e"
+  },
+  "implementation_sha256": {
+    "round11/asa_archive.py": "1ed587d5ea87353745dd3bc99c8824fc9551854893275d76a5ef34c35e8c787e",
+    "round11/asa_content_identity.py": "17a984e8e19232055e7b8e8b60981d7148c180cf03ed78e8d9abac6339490e37",
+    "round11/asa_identity.py": "c35806b698020506c9424594a02d13707d0bd1ea65edb4733af2f749341caa63",
+    "round11/asa_source_capture.py": "1e80081de959e10011796a8f66c25494fb5dbc31f4c4571b65dcdcf082700781",
+    "round11/asa_workbook.py": "d198b8e49ffafe61e3544d475a477bed794ffc4c4eef19005bb25665e988093b",
+    "round11/cohort_lineage_v3.py": "a52386f42eae7df0f22a18a8a5b177996b3fa2234eb3c95eb2229e5537872ab1",
+    "round11/development_identity.py": "bf07429ba82c7ca10bdc8acc86a86a19603d2b51df6f767638e3972d369281b3",
+    "round11/legacy_input_identity.py": "d6fef5b0a73847f112a9b1128d24ab01ad600db62647fcd8a057b2491043ecae",
+    "round11/local_content_inventory.py": "16fc270f7053134a46864d30dca7f4b9f984b7ed21766819a1fa97f70c21722d",
+    "round11/local_input_inventory.py": "657f88967b4c31f7f06979cb326c51d5e18bffa470df2c72f6fe8d01fb8bd3d8",
+    "round11/n5_identity.py": "c7686101e45975a45291f58bd00797e1e129b03c6b3709cc86fc9349493f47d8",
+    "round11/n5_pool.py": "221e163bda4d1be2b340442e2fc3036611ffaa6835480c22830d1b53fb9706ee",
+    "round11/n5_potential_identity.py": "f23c49283ef4b0fdebb7882d3b7c14cd1d50f8a62ec18411c24beba7ef7e581c",
+    "round11/n5_preparation.py": "aba98d25f44a86410e1ca23e628067fe5b3460731d2bcbae6ff71aa5f3e6bceb",
+    "round11/n5_sources.py": "fd0f2d94652e801b5a8307b9d5369ed442023ae4aba97df4816d5377cdf03e27",
+    "round11/qualification.py": "b6ceea7613a29c847c4879b71a6ed54edce2cc8e6f2e39897fde484c6f16e510",
+    "round11/source_capture.py": "f73a242948918b62efaff39ea73f36a64a26bc7b119792f8d148891ef7ea6e22",
+    "round11/source_census.py": "eec61cecfb31c484c126fb4e4bdad3d255e3f1e408fc16e80ce6c36dd70dbef7",
+    "round11/source_inventory_capture.py": "05f7d54e9210b6cf4734df1728423ab0b80ea3de68d5f2bd3f0e55dba81ca485",
+    "src/cohorts_v2.py": "866bbcd1854bc362dc26bc7d4a3bca111488ee8fd9441d0c897869120a9b803f"
+  },
+  "private_artifact_bytes": 47848040,
+  "private_artifact_mode": "0o600",
+  "private_inventory_sha256": "203bbb7c9f26f2bf6a4bf3846151fe068c3399f61efbb3f1a0b41c830dc9892d",
+  "private_parent_mode": "0o700",
+  "schema_version": 1,
+  "source_checkpoint": "50e65fe",
+  "summary": {
+    "actual_api_exposure_complete": false,
+    "api_calls": 0,
+    "asa": {
+      "api_calls": 0,
+      "asa_archive": {
+        "algorithm": "image-model-input-rgb-u32be-v3",
+        "api_calls": 0,
+        "archive_bytes": 670269206,
+        "archive_members": 17137,
+        "duplicate_basename_members": 0,
+        "external_exposure_completeness_proven": false,
+        "metadata_coverage_proven": false,
+        "new_samples_selected": 0,
+        "other_members": 2,
+        "png_members": 17135,
+        "unique_png_image_names": 17135
+      },
+      "asa_workbook": {
+        "api_calls": 0,
+        "associated_code_image_rows": 253059,
+        "associated_source_rows": 253071,
+        "associated_uncoded_image_rows": 12,
+        "eligibility_evaluated": false,
+        "full_metadata_image_names": 17244,
+        "inventory_source_rows": 17146,
+        "source_or_exposure_completeness_proven": false
+      },
+      "candidate_eligibility_evaluated": false,
+      "candidate_targets_interpreted": 0,
+      "decoder_runtime": {
+        "Pillow": "10.2.0",
+        "asa_exact_rgb_rule": "image-model-input-rgb-u32be-v3",
+        "implementation": "cpython",
+        "openpyxl": "3.1.2",
+        "python": "3.10.13"
+      },
+      "fresh_O_store_replay": false,
+      "grants_sampling_download_or_inference": false,
+      "implementation_files_bound": 9,
+      "latest_exposure_completeness_proven": false,
+      "new_downloads": 0,
+      "new_samples_selected": 0,
+      "original_linkage_guard_remains_stopped": true,
+      "previous_completed_O_recovery_consumed": true,
+      "protected_dish_targets_interpreted": 0,
+      "registered_asa_sources": 5,
+      "sealed_validation_label_or_image_files_opened": 0,
+      "source_association_complete": false,
+      "status": "asa_mechanical_identity_supplement_not_eligibility"
+    },
+    "candidate_eligibility_evaluated": false,
+    "candidate_targets_interpreted": 0,
+    "core_fold_proposal": {
+      "ambiguous_core_components": 1,
+      "fold_row_counts": {
+        "0": 15,
+        "1": 18,
+        "2": 19,
+        "3": 15,
+        "4": 17
+      },
+      "fold_unit_count": 63,
+      "screening_component_count": 63,
+      "uncertainty_containment_units": 1
+    },
+    "food_visual_analysis_performed": false,
+    "fresh_O_store_replay": false,
+    "grants_sampling_download_or_inference": false,
+    "legacy": {
+      "dataset_identity_counts": {
+        "asa24": 60,
+        "nutrition5k": 53
+      },
+      "empty_unresolved_count": 0,
+      "fixed_manifest_count": 4,
+      "missing_unresolved_count": 0,
+      "unknown_identity_count": 0
+    },
+    "link_status_counts": {
+      "internal_already_covered": 5441,
+      "unresolved": 10
+    },
+    "local_content": {
+      "asa_compatible": 2993,
+      "images": 3168,
+      "nontrivial_render_semantics": 1809
+    },
+    "local_images_may_include_sealed_copies": true,
+    "local_images_mechanically_fingerprinted": 3168,
+    "local_metadata": {
+      "credential_name_excluded": 8,
+      "entries": 156016,
+      "excluded": 509,
+      "images": 3168,
+      "links": 5451,
+      "named_entries": 156008
+    },
+    "n5_local_overlay": {
+      "blocked_screening_components": 485,
+      "classification_counts": {
+        "dependency": 213,
+        "rendered_evidence": 26,
+        "research_potential": 2929
+      },
+      "download_authorized": false,
+      "eligibility_established": false,
+      "freeze_authorized": false,
+      "frozen": false,
+      "inference_authorized": false,
+      "latest_exposure_completeness_proven": false,
+      "local_image_rows": 3168,
+      "new_potential_identity_count": 0,
+      "postdownload_blind_collision_check_required": true,
+      "potential_extra_identity_count": 748,
+      "raw_components": 2606,
+      "resolved_local_rows": 1282,
+      "screening_components": 823,
+      "source_completeness_proven": false,
+      "status": "provisional_potential_input_overlay",
+      "unassigned_local_rows": 1886
+    },
+    "n5_supplied": {
+      "download_authorized": false,
+      "freeze_authorized": false,
+      "frozen": false,
+      "inference_authorized": false,
+      "latest_exposure_completeness_proven": false,
+      "legacy_reserved_intersections": {
+        "core": 23,
+        "history": 37,
+        "retired": 18,
+        "training": 0
+      },
+      "role_counts": {
+        "core": 84,
+        "history": 185,
+        "legacy_reserved": 200,
+        "retired": 74,
+        "training": 230
+      },
+      "screening_components": 823,
+      "source_completeness_proven": false,
+      "status": "provisional"
+    },
+    "new_downloads": 0,
+    "new_samples_selected": 0,
+    "old_core_fold_bridge_components": 9,
+    "original_linkage_guard_remains_stopped": true,
+    "potential_input_coverage_complete": false,
+    "protected_dish_targets_interpreted": 0,
+    "sealed_label_files_opened": 0,
+    "source_association_complete": false,
+    "status": "mechanical_source_inventory_captured_role_closure_pending"
+  }
+}

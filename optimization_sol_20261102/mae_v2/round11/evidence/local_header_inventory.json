@@ -1,0 +1,28 @@
+{
+  "api_calls": 0,
+  "contains_images_or_targets": false,
+  "contains_sample_identifiers": false,
+  "corrected_fixed_relative_parent_counts": {
+    "python3.10/idlelib/Icons": 45,
+    "tk8.6/demos/images": 15
+  },
+  "fixed_census_sha256": "46a40f27b9da663b93611523677ed3ddf038f8bc91111c80c250489284b5db04",
+  "food_visual_analysis_performed": false,
+  "grants_sampling_download_or_inference": false,
+  "labels_opened": 0,
+  "local_header_counts": {
+    "GIF": 175,
+    "JPEG": 1,
+    "PNG": 2992,
+    "images": 3168,
+    "initial_GIF_policy_admitted": 115,
+    "initial_GIF_policy_refused": 60
+  },
+  "new_downloads": 0,
+  "new_samples_selected": 0,
+  "private_header_receipt_sha256": "db040fa3fc4673cb8520e2c80d11d4d5ece44ebfcea8c1d02f73bf7c7e043246",
+  "schema_version": 1,
+  "scoped_offline_test_executions": 56,
+  "source_association_complete": false,
+  "status": "D-PC3-GIF-1_directory_constant_corrected"
+}

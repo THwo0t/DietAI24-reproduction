@@ -1,0 +1,17 @@
+{
+  "api_calls": 0,
+  "asa_source_archive_opened": false,
+  "completed_capture_artifact": false,
+  "eligibility_or_inference_granted": false,
+  "interpretation": "Blind linkage stopped; accepted versus rejected training-proposal provenance has not yet been resolved.",
+  "new_downloads": 0,
+  "new_samples_selected": 0,
+  "registered_training_proposals": 230,
+  "review_disposition_checkpoint": "2643868",
+  "reviewed_source_checkpoint": "55f5fec",
+  "schema_version": 1,
+  "sealed_validation_label_or_image_files_opened": 0,
+  "status": "mechanical_identity_capture_stopped_for_blind_linkage_resolution",
+  "stop_code": "validation_linkage_requires_separate_resolution",
+  "validation_unchanged": true
+}

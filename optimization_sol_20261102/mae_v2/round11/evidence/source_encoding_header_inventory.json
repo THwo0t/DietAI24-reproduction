@@ -1,0 +1,32 @@
+{
+  "api_calls": 0,
+  "completed_source_inventory_artifact": false,
+  "dish_targets_interpreted": 0,
+  "food_visual_analysis_performed": false,
+  "format_mode_counts": {
+    "JPEG:RGB": 1,
+    "PNG:RGB": 3,
+    "PNG:RGBA": 17131
+  },
+  "header_decode_failures": 0,
+  "maximum": {
+    "bytes": 189589,
+    "height": 240,
+    "pixels": 78430,
+    "width": 341
+  },
+  "multiple_frames": 0,
+  "new_downloads": 0,
+  "new_samples_selected": 0,
+  "outside_v2_decoder": {
+    "non_PNG_encoding": 1
+  },
+  "png_named_members": 17135,
+  "render_metadata_counts": {
+    "ICC": 97
+  },
+  "resolution": "A separately versioned generic PNG/JPEG model-input identity contract is proposed; bounds and inference preprocessing remain as registered. New encoding delta requires its first review.",
+  "source_bytes": 670269206,
+  "source_sha256": "2c0c68caaba894f43a87277a8d2484eded03c630d65fb7a308a590b2457e1c38",
+  "status": "full_registered_archive_header_inventory_complete"
+}

@@ -1,0 +1,28 @@
+{
+  "api_calls": 0,
+  "completed_inventory_artifact": false,
+  "dish_targets_interpreted": 0,
+  "new_downloads": 0,
+  "new_samples_selected": 0,
+  "original_linkage_guard_remains_stopped": true,
+  "resolution": "Increase bounded declared range from 2000000 to 4000000 cells; preserve full identity rows and all existing row/column/workbook-byte bounds. No portion or metric change.",
+  "resolution_id": "D-PC3-WB-1",
+  "source_checkpoint": "1299df0",
+  "source_geometry": [
+    {
+      "columns": 10,
+      "rows": 253072,
+      "sheet": "AssociatedCodes",
+      "xml_bytes": 107016960
+    },
+    {
+      "columns": 15,
+      "rows": 17147,
+      "sheet": "ImageFileInventory",
+      "xml_bytes": 9853383
+    }
+  ],
+  "status": "mechanical_inventory_stopped_at_official_workbook_geometry",
+  "stop_code": "bounded_metadata_sheet_required",
+  "workbook_sha256": "d2382c6808427db7add17d2d29c85a3860674c693cd839fcaa91e28b0938b170"
+}

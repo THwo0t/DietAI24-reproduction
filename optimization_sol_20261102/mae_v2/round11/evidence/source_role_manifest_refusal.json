@@ -1,0 +1,22 @@
+{
+  "api_calls": 0,
+  "contains_sample_identifiers": false,
+  "first_entry_stable_code": "manifest_image_binding_required",
+  "fixed_v1_manifest_shape": {
+    "asa_dev_repeated_image_path_rows": 22,
+    "asa_validation_repeated_image_path_rows": 9,
+    "dev_rows": 199,
+    "digest_pattern_failures": 0,
+    "path_pattern_failures": 0,
+    "validation_rows": 278
+  },
+  "grants_sampling_download_or_inference": false,
+  "image_or_label_files_opened": 0,
+  "new_downloads": 0,
+  "new_samples_selected": 0,
+  "private_inventory_sha256": "203bbb7c9f26f2bf6a4bf3846151fe068c3399f61efbb3f1a0b41c830dc9892d",
+  "schema_version": 1,
+  "source_association_complete": false,
+  "status": "D-PC5-MANIFEST-1_fixed_shared_photo_adapter",
+  "targets_interpreted": 0
+}

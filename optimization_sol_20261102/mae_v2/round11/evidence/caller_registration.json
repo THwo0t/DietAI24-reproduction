@@ -1,0 +1,23 @@
+{
+  "actual_api_exposure_complete": false,
+  "api_calls": 0,
+  "candidate_eligibility_evaluated": false,
+  "contains_images_or_targets": false,
+  "contains_sample_identifiers": false,
+  "counts": {
+    "ASA_core_supervision": 99,
+    "potential_development_queries": 183,
+    "protected_training_proposals": 230,
+    "registered_callers": 16
+  },
+  "grants_sampling_download_or_inference": false,
+  "new_downloads": 0,
+  "new_samples_selected": 0,
+  "potential_input_coverage_complete": false,
+  "private_caller_sha256": "c3320f0499b9c4c446524a7e77919713f54fa8ee4432f8e3ebda71ead24c43bd",
+  "registered_source_files": 61,
+  "schema_version": 1,
+  "source_association_complete": false,
+  "source_pin_semantics": "prospective_current_source_not_historical_frozen_invocation",
+  "status": "finite_caller_source_registration_unresolved"
+}

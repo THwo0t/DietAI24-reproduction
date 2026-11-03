@@ -9,7 +9,7 @@
       24
     ],
     "status": "PASS",
-    "working_files_scanned": 601
+    "working_files_scanned": 613
   },
   "completed_O": {
     "ASA_Exact": 17,
@@ -2012,6 +2012,19 @@
     "status": "PASS"
   },
   "latest_local_checkpoint": "08954450a64561b7f65a51d8b4f080ad83adf846",
+  "manifest_publication_audit": {
+    "cause": "Ignored round11/evidence JSON files were copied and listed but excluded from ordinary git add. Exact safe whitelist files are now explicitly staged with -f.",
+    "declared_payloads": 489,
+    "fixes_checkpoint": "ac1593888a26a7ec708218bf76094f68c396212b",
+    "indexed_payloads_verified": 489,
+    "missing_payloads": 0,
+    "previous_declared_payloads": 489,
+    "previous_missing_ID_free_receipts": 12,
+    "previous_published_payloads": 477,
+    "private_data_newly_published": false,
+    "status": "PASS",
+    "verification": "git index contents, not working directory presence"
+  },
   "new_research_data_included": false,
   "old_local_git_history_included": false,
   "purpose": "Preserve completed failed development methods, full J and K scoring, and aggregate diagnostics; continue optimization with validation sealed and final reports deferred.",

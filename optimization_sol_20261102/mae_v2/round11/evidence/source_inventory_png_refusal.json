@@ -1,0 +1,35 @@
+{
+  "api_calls": 0,
+  "completed_inventory_artifact": false,
+  "dish_targets_interpreted": 0,
+  "first_unsupported_png_header": {
+    "alpha_extrema": [
+      0,
+      182
+    ],
+    "dimensions": [
+      160,
+      160
+    ],
+    "exif_orientation_default": true,
+    "frames": 1,
+    "icc_profile_present": false,
+    "mode": "RGBA"
+  },
+  "food_visual_analysis_performed": false,
+  "new_decoder_delta_requires_first_review": true,
+  "new_downloads": 0,
+  "new_samples_selected": 0,
+  "original_linkage_guard_remains_stopped": true,
+  "source_checkpoint": "8c488b5",
+  "stage_isolated_after_refusal": "ASA_archive_identity_only",
+  "status": "mechanical_inventory_stopped_at_unsupported_source_png",
+  "stop_code": "unsupported_png_rendering_semantics",
+  "workbook_identity_probe": {
+    "associated_code_image_rows": 253059,
+    "associated_source_rows": 253071,
+    "inventory_source_rows": 17146,
+    "metadata_image_names": 17244,
+    "uncoded_image_rows": 12
+  }
+}
