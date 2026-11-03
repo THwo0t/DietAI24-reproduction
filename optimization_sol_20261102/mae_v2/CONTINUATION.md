@@ -181,3 +181,73 @@ J, keep the same four supports, and test automatic ingredient-region hints/crops
 Five-fold assets exclude the query's entire fold. The fixed advance gate must
 pass before a new 84-image development candidate is even registered. Sources
 are in implementation; no L request or real training annotation has begun.
+
+## Latest steering and working state (supersedes the L plan above)
+
+Every complete improvement now requires the same common method on both ASA24
+and N5. The old ASA score cannot be combined with J/K/L to imply a common-method
+dual-dataset experiment. The user allows one or two failing MAE items in each
+dataset; `round7/PROTOCOL_DRAFT.md` conservatively preregisters at most two of
+ten numerical checks per dataset, retaining all original caps and strict20/20
+reporting. This draft is not an execution freeze.
+
+L source is retained and its paid CLI is explicitly shelved. It has 96 passing
+network-disabled synthetic tests in the public copy, no real preflight, no
+annotation and no paid request. The next common M design returns to zero-shot
+FNDDS and tests an exclusive children-versus-whole accounting route. No supervised
+recipe dictionary, examples, crops or calibration are part of M. Original 4o/Sol
+test comparisons are descriptive diagnostics only, never method-selection data.
+
+Round7 R7-B implements the common accounting core and has 18 passing synthetic
+tests. R7-C onward (historical importer, dual-role runtime, isolated adapters,
+scorer and runner) remain unfinished. No M service client or paid request has
+been created. See `round7/CHECKLIST.md`; complete the one independent review,
+fixes and immutable freeze before paid execution. Validation remains sealed.
+
+The latest confirmed public backup is `ed179b0b5d87ba825d9e19bd3c26597adac31638`
+on `codex/mae-v2-backup-20261103` in THwo0t/DietAI24-reproduction: K failure,
+full-project review, L source/shelving and the project-only subagent policy.
+It contains 235 explicitly allowlisted payloads. The newer M draft/core and
+latest policy wording are not yet public. Never publish local Codex config.
+
+All newly created subagents in DietAI24 explicitly use gpt-6.1-sol, with no
+Astra fallback. The global subagent-model override was removed after the user's
+scope correction; unrelated projects inherit the main conversation model.
+Only project `.codex/config.toml` sets the Sol default. Do not wake legacy
+subagents whose prior model cannot be changed.
+
+Dot's separate first-formal 4o/Sol diagnostic is now implemented and executed in
+`round7/tools/diagnose_original_comparison.py`. It reproduces all300 prediction
+rows, using prediction-column whitelists and original generic FNDDS densities,
+without importing inference/config modules, loading query labels, opening any
+validation file or calling an API. Safe aggregates are
+`round7/original_comparison_diagnostic.json`; private per-dish chains are ignored
+under `round7/diagnostics/original_comparison/`. Coverage86/118/common79 is
+reproduced. The paired79 show74 changed final-code sets and41 changed item
+counts. These are descriptive historical observations, not causal findings or
+selection data. No M source/configuration was changed based on this audit.
+
+## M is now implemented, reviewed and frozen
+
+R7-C/D/E/F are implemented in `round7/src/`. One independent gpt-6.1-sol review
+found only R7-G-1(P2): new cache answers lacked a success-log value digest. It
+is fixed in `2c36c3e` with both chat and valid-vector tamper negatives; all38
+network-disabled synthetic tests pass. The reviewer independently replayed all84
+raw-C inputs and all3159 imported embedding sources. See round7/REVIEW.md.
+
+The final protocol is round7/PROTOCOL.md; review_gate.json and private prepared
+freeze.json bind the approved/fixed state. Freeze file SHA256 is
+`b2d832529ed8453d2c5d9bebf645e8716f3d39185e0e3070e78cd4b3b486261b`.
+The guarded real preflight passed183 dev images,84 imported raw-C computations,
+3159 old embeddings and20 source/input pins, without Provider/credential/query
+label/validation access or file/mtime changes. No M accuracy result exists yet.
+Use round7/README.md for resumable commands. Do not change frozen method files,
+reset counters, rerun completed answers for accuracy, or open validation early.
+
+M is now launched persistently from frozen source commit `9d74f25`, with two
+workers. Inspect `round7/launch/M_launch.json` and its private M.log before any
+resume; do not start a second coordinator. The initial real responses returned
+HTTP200 and the expected reported model names for both Sol chat and official
+embedding. No complete M score is available. All-science completion precedes
+offline verification and paired full-population scoring; source files remain
+unchanged while this run is active.

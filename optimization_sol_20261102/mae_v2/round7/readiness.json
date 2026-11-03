@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "freeze_sha256": "b2d832529ed8453d2c5d9bebf645e8716f3d39185e0e3070e78cd4b3b486261b",
+  "development_rows": 183,
+  "raw_c_imports": 84,
+  "imported_embeddings": 3159,
+  "source_files": 20,
+  "api_calls": 0,
+  "provider_constructed": false,
+  "labels_loaded": false,
+  "validation_accessed": false,
+  "files_or_mtimes_changed": false,
+  "checked_file_opens": 1269,
+  "offline_synthetic_tests_passed": 38,
+  "review": "once; R7-G-1 fixed",
+  "money": "unverified; report actual requests/tokens",
+  "scope": "Guarded offline preflight before the first M paid launch; this is not a live-run request count."
+}

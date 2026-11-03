@@ -2,23 +2,24 @@
   "actual_credential_scan": {
     "archive_members_scanned": 19,
     "credential_values_printed": false,
-    "files_scanned": 359,
+    "files_scanned": 380,
     "findings": 0,
     "full_and_prefix_suffix_lengths": [
       12,
       24
     ],
     "new_payload_generic_scans": "PASS",
-    "row_level_aggregate_check": "PASS",
+    "row_level_aggregate_check": "PASS_except_existing_approved_two_demo_inputs",
     "status": "PASS"
   },
   "credentials_included": false,
   "development_mae_pass": {
     "asa24": 10,
     "nutrition5k": 0,
+    "scope": "historical old ASA plus K N5 bookkeeping, not common M results",
     "total": 20
   },
-  "file_count": 235,
+  "file_count": 256,
   "files": {
     ".gitignore": {
       "bytes": 109,
@@ -33,8 +34,8 @@
       "sha256": "5deafa048129decb19bcad702e7e2f938ba9e9fa3d9033d6037dc8916014052e"
     },
     "CONTINUATION.md": {
-      "bytes": 12567,
-      "sha256": "159c024c5b0224037e0ab481a639bcd6d4605eb5507093d7935c6b0da0aa07d2"
+      "bytes": 17007,
+      "sha256": "9555c920417f3b8e4b778151b98d36aaf5ef8397f730341ce3d94f628b38c02d"
     },
     "MAC_DEMO.md": {
       "bytes": 13272,
@@ -788,9 +789,93 @@
       "bytes": 5279,
       "sha256": "e3095cd3ce4df95610afac3c8f3d1d4e86044dcc3d687a673b1fe24e1b15cd50"
     },
+    "round7/.gitignore": {
+      "bytes": 86,
+      "sha256": "fb92750512084475decddaf247b6fd5d577915a4961b7735ed0b8f533f4dd84e"
+    },
+    "round7/CHECKLIST.md": {
+      "bytes": 3705,
+      "sha256": "edba4e96411c7506d8d46187eca815658c24ac9b7ebee6dbc20c04295918764a"
+    },
     "round7/PROJECT_REVIEW.md": {
-      "bytes": 7716,
-      "sha256": "893fba704c29f3f88740b1f2a05d2d3ec90df19fc92b38f4cd6ab6c2b131a663"
+      "bytes": 11917,
+      "sha256": "d8b6f8745d6a6f2a54e95ea3a4f890f152dfce934df01d3b7deca0439b1ec3be"
+    },
+    "round7/PROTOCOL.md": {
+      "bytes": 13561,
+      "sha256": "e9a41a5b8769267c02fd8b79364186ce4c86434298dd49e0397ed35e1e603f2c"
+    },
+    "round7/PROTOCOL_DRAFT.md": {
+      "bytes": 12813,
+      "sha256": "1a1d95ce72084a0045d0210c0a9235de3859985a2bfba5977c80bd3b3287c4e4"
+    },
+    "round7/README.md": {
+      "bytes": 2720,
+      "sha256": "8ae414d443139fbbb3ecf70b18084202d66718f8d019cb702556bdda377ffbe7"
+    },
+    "round7/REVIEW.md": {
+      "bytes": 8879,
+      "sha256": "2a750a26a6bafd26e0e164f7c49c0a2977da3bcd633eb7cb85f37065317051a6"
+    },
+    "round7/original_comparison_diagnostic.json": {
+      "bytes": 6280,
+      "sha256": "aaba628eeaa45c810dfd8a2eafe874f55901a1bec82ce0a208b7ce8786e98c0b"
+    },
+    "round7/readiness.json": {
+      "bytes": 628,
+      "sha256": "8c9bd3f10ec76a2a5760078df22dcd2b3cd3534a2e041975d79f0eb000784de7"
+    },
+    "round7/review_gate.json": {
+      "bytes": 423,
+      "sha256": "277d4fea876da9b1aca644b96f6e7b53243990403b3099e14c810c224253ff65"
+    },
+    "round7/src/context_m.py": {
+      "bytes": 7564,
+      "sha256": "825a56935c0ebf632bcce50e7645e50d48f825db673b8bde20c3d6b8948d133f"
+    },
+    "round7/src/historical_m.py": {
+      "bytes": 16022,
+      "sha256": "0c958b00160c0b7074bf20ffadac372d20176a252dcf9ec06299a340c3ee828a"
+    },
+    "round7/src/records_m.py": {
+      "bytes": 2417,
+      "sha256": "735e3c0dcff07ae3a6efad939bd56f35d6dfef51b774b89f1b5d63a477ac9ff0"
+    },
+    "round7/src/run_m.py": {
+      "bytes": 11693,
+      "sha256": "812a9db0b7f9f0865ea225ac61d188c894dafc00bbf9b7f4fd2f839a0bc92613"
+    },
+    "round7/src/runtime_m.py": {
+      "bytes": 10325,
+      "sha256": "a58dbc00f964431dabb5910b68a0cc08ae71fe9b5aa959a976897dd999ada3df"
+    },
+    "round7/src/scoring_m.py": {
+      "bytes": 3995,
+      "sha256": "d33f37a8f29f6ab465a0d992c833e3cf911cadc85c94d4115b085162bb1c41bc"
+    },
+    "round7/src/service_m.py": {
+      "bytes": 8433,
+      "sha256": "495980b1a90e51f1e5f1c0bc51d90c2f3ec5b646e59ce027d51dd71584bf3450"
+    },
+    "round7/src/shared_accounting.py": {
+      "bytes": 15841,
+      "sha256": "bc88b350e187b2feb55e9539e301ed466cea92ca384b487ab8908188c8fa77d5"
+    },
+    "round7/tests/test_runner_m.py": {
+      "bytes": 6923,
+      "sha256": "867067a5ad421756c2229c6b901b7cd4d4d7c683ab1303b7dbcf8219af02eb6c"
+    },
+    "round7/tests/test_runtime_scoring_m.py": {
+      "bytes": 11662,
+      "sha256": "b531ef8db514c9fb86dd78136dad622cd4e3c604cf70b4a9c27755ccffd8839f"
+    },
+    "round7/tests/test_shared_accounting.py": {
+      "bytes": 15169,
+      "sha256": "174a720ebee67b8078b2a42d4c0b548650e749e2f50a4326ba5b4efe82b6a203"
+    },
+    "round7/tools/diagnose_original_comparison.py": {
+      "bytes": 13403,
+      "sha256": "349b16608b45e4a1e1d753a16c3cbc8317819526f51ea7b78ea606ff2ec37a42"
     },
     "setup.sh": {
       "bytes": 2619,
@@ -966,11 +1051,11 @@
   "generic_publication_scan": {
     "issues": 0,
     "phase": "precommit_history_and_complete_worktree",
-    "publishable_files_scanned": 359,
-    "reachable_blobs_scanned": 383,
+    "publishable_files_scanned": 380,
+    "reachable_blobs_scanned": 403,
     "status": "PASS"
   },
-  "latest_local_checkpoint": "26a9d88",
+  "latest_local_checkpoint": "4e86c69be83ef51a945767ecf478b6daba871e9b",
   "new_research_data_included": false,
   "old_local_git_history_included": false,
   "purpose": "Preserve completed failed development methods, full J and K scoring, and aggregate diagnostics; continue optimization with validation sealed and final reports deferred.",
@@ -1166,22 +1251,47 @@
     "validation_opened": false
   },
   "round7": {
+    "complete_accuracy_result_available": false,
+    "development_populations": {
+      "asa24": 99,
+      "nutrition5k": 84
+    },
+    "explicit_historical_embedding_imports": 3159,
+    "freeze_sha256": "b2d832529ed8453d2c5d9bebf645e8716f3d39185e0e3070e78cd4b3b486261b",
     "fresh_same_method_ASA_and_N5_required": true,
+    "guarded_real_preflight": "PASS_no_Provider_credentials_query_labels_validation_or_writes",
     "historical_joint_scores": "old_ASA_plus_new_N5_are_not_common_method_evidence",
+    "imported_raw_c": 84,
+    "independent_review_count": 1,
     "new_user_target": "at_most_two_failed_absolute_or_per_unit_checks_out_of_ten_per_dataset",
-    "paid_requests_started": 0,
+    "offline_synthetic_tests_passed": 38,
+    "paid_requests_started": true,
     "project_review": "round7/PROJECT_REVIEW.md",
-    "status": "whole_project_review_and_shared_method_design_only",
+    "public_copy_offline_tests": {
+      "actual_api_calls": 0,
+      "count": 38,
+      "network_disabled": true,
+      "research_images_read": false,
+      "seconds": 0.851,
+      "status": "PASS"
+    },
+    "required_fixes_resolved": [
+      "R7-G-1"
+    ],
+    "review_model": "gpt-6.1-sol",
+    "status": "implemented_reviewed_fixed_frozen_development_running",
     "strict_20_of_20_target_retained_for_reporting": true,
     "validation_opened": false
   },
   "secret_scan": "PASS_reachable_history_and_worktree_generic_scan_plus_coordinator_reported_actual_credentials_in_memory",
-  "source_state": "K rejected and safely backed up. L engineering source passed synthetic tests but was never run on real data; N5-only paid CLI now refuses execution. User requires a common method tested separately on ASA24 and N5, full project retrospectives after failures, and an explicit per-dataset failure tolerance. Whole-project review recorded; new shared FNDDS method not yet frozen or paid. Validation sealed; formal reports deferred.",
+  "source_state": "M common-method source passed one independent Sol review, required fix and frozen real offline preflight. Both-dataset paired development is now running; no complete M score exists. Historical J/K combined scores use old ASA and are not same-method dual-dataset evidence. L remains unexecuted and shelved. Validation stays sealed; final reports remain deferred.",
   "subagent_model_policy": {
     "astra_allowed": false,
     "explicit_spawn_model_required": true,
     "global_local_config_not_published": true,
+    "global_override": false,
     "repository_instructions": "AGENTS.md",
-    "required_model": "gpt-6.1-sol"
+    "required_model": "gpt-6.1-sol",
+    "scope": "DietAI24 only; other projects inherit main conversation model"
   }
 }

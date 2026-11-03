@@ -114,3 +114,66 @@ There is no ongoing paid run to interrupt or restart.
 The next protocol is not yet frozen. Its candidate must be selected from these
 mechanisms and source compatibility checks, not from validation. No formal
 report or Mac delivery update is produced for this failed iteration.
+
+## Original GPT-4o/Sol comparison remains a separate diagnostic
+
+The first formal comparison has 79 jointly complete Nutrition5k dishes. GPT-4o
+to Sol weight MAE changes from 96.01 to 62.24 g; energy 126.9 to 131.8 kcal,
+fat 7.969 to 9.435 g, carbs 12.27 to 13.66 g and protein 10.00 to 10.06 g.
+The four nutrient paired intervals all cross zero: these point estimates do not
+establish statistically significant nutrient differences. Coverage is separately
+86/150 versus 118/150, with 7 and 39 model-exclusive complete dishes and 25
+jointly incomplete. Completeness only covers recognized items, not proof that
+every visible food was recognized. Evidence: root `REPORT.md:105–132` and
+`runs/comparison-gpt-4o-vs-sol/comparison.md:23–27`.
+
+This was a joint model/required-parameter replacement: temperature 0 to 1,
+description `max_tokens=200` to `max_completion_tokens=4096`, and a changed token
+budget definition including reasoning. It does not isolate model causality.
+The paper uses pretrained GPT zero-shot without task-specific weight tuning;
+J/K's labeled training galleries are a separately documented method deviation.
+
+For descriptive diagnosis only, join the two original runs (`runs/test` and
+`runs/test-gpt-6.1-sol`) by dish ID through `nutrition5k_food_codes.csv`,
+`nutrition5k_portion.csv` and `nutrition5k_nutrition.csv`. Inspect generated
+descriptions, item splitting, candidates/final codes, exact-name gram matching,
+and average-candidate FNDDS density. Source: `code/rag_food_code.py:256–277`,
+`code/rag_portion_size.py:280–296`, `code/nutrient_estimate_mix.py:48–83`.
+Keep prediction-only chain inspection separate from reference-aware error
+decomposition; retain all 150 coverage statuses and the paired-79 denominator.
+Original test labels may explain these archived results, never tune prompts,
+rules, candidates or method selection. Any proposed mechanism must be checked
+on the independent active development cohorts. K's later diagnostics cannot
+serve as evidence for this first comparison.
+
+The requested prediction-side audit is now executed, not merely planned.
+`tools/diagnose_original_comparison.py` reads explicit prediction-column lists,
+AST-extracts only pure parser functions (no inference/config import), and
+recomputes both models' 150 archived rows against the original FNDDS table.
+All 300 ingredient/error counts, predicted weights and four nutrient outputs
+match their archived values. The historical food/gram-name parser hash equals
+both run configurations. Postprocessing sources are separately hashed: those
+files were not included in the original inference config's five-file hash map.
+No query reference label, image, credential or API client is loaded, and every
+input file is rehashed before the separate outputs are written. Validation
+remains unopened. See `original_comparison_diagnostic.json` for safe aggregates;
+per-dish chains stay in ignored private `diagnostics/original_comparison/`.
+
+The all-150 coverage transitions reproduce exactly: common complete79, 4o-only7,
+Sol-only39, neither25. On the common79, final selected-code sets differ in74
+dishes and item counts differ in41. Mean parsed items are1.861 versus1.494;
+mean visible description lengths are132.67 versus83.89 characters, despite the
+larger supported Sol token ceiling. Mean predicted total weights are162.15
+versus212.05g. No selected code is outside its saved retrieval candidate set in
+either run. Two 4o rows contain parser warning lines; these are retained, not
+discarded or reanswered.
+
+An optional symmetric algebraic decomposition of the **predicted nutrient
+differences** into total-mass and effective-density terms is also saved. It is
+not a decomposition of MAE, proof of omission, an accuracy ranking for those
+stages or a causal explanation. Effective density combines code identity,
+averaging multiple selected codes, and food-mass allocation. No reference
+labels were used in this audit. The M draft/core commits (`e3d6731`, `16c1abb`)
+precede this audit; no M prompt, parameter, selection rule or method was changed
+using these original test records. Any subsequent predictive hypothesis must
+be evaluated on the independent active development data.

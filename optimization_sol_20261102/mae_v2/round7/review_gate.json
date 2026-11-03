@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "status": "approved_or_fixed",
+  "unresolved_p1_p2": 0,
+  "review_sha256": "2a750a26a6bafd26e0e164f7c49c0a2977da3bcd633eb7cb85f37065317051a6",
+  "independent_review_model": "gpt-6.1-sol",
+  "resolved": [
+    "R7-G-1"
+  ],
+  "offline_tests": {
+    "passed": 38,
+    "network_disabled": true,
+    "new_requests": 0
+  },
+  "historical_raw_c_independently_replayed": 84,
+  "formal_review_count": 1
+}

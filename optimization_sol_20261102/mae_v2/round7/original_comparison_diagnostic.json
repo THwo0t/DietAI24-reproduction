@@ -1,0 +1,152 @@
+{
+  "purpose": "Historical prediction-chain description only; never select or tune a method with these test records.",
+  "api_calls": 0,
+  "query_labels_loaded": false,
+  "validation_accessed": false,
+  "source_sha256": {
+    "code/rag_portion_size.py": "f00eb45afb1db81f7daf6e725be892df293a78c761882b8564678a7e9daabb8e",
+    "code/nutrient_estimate.py": "5adaf26a86b1334abc917c144cb700df0bb366281a2aa6e1c9c811d91c65d742",
+    "code/nutrient_estimate_mix.py": "e84756e0d60284cc02d211fc6878f77c55bd4d77645d2055342ecadbc3bd8c6a",
+    "optimization_sol_20261102/mae_v2/round7/tools/diagnose_original_comparison.py": "349b16608b45e4a1e1d753a16c3cbc8317819526f51ea7b78ea606ff2ec37a42",
+    "FNDDS/2019-2020 FNDDS At A Glance - FNDDS Nutrient Values.xlsx": "5007ce9723eb77dc6c3423b3b95a5ef171c71d40ebe4725dc3cc1fe6f9d7161a",
+    "runs/test/nutrition5k_food_codes.csv": "5779def7882af4e7058292e874896f57f43025cf05ad0be7615545c5a554c41a",
+    "runs/test/nutrition5k_portion.csv": "4d67a2fc752153b0391dfba778e2a0e9fb75a4b3b1c19f7d423d303d33ade8ad",
+    "runs/test/nutrition5k_nutrition.csv": "067ae38260da76818aa08e92a7cb2c34d19eb36b1bc921ceee7a84577d1a5e41",
+    "runs/test/config.json": "85ddfaab26686df77dc73b318115824853a4b20fe1b9ef0f009f6782ea3755d7",
+    "runs/test-gpt-6.1-sol/nutrition5k_food_codes.csv": "a6f6c69de777abe60aa552e397ca0e0b610f97ea491bfabb69582b662aaed6cb",
+    "runs/test-gpt-6.1-sol/nutrition5k_portion.csv": "0a957d323cd322d4dbc0b72728dca99b54a353754ea03ac4f812b75bb309611f",
+    "runs/test-gpt-6.1-sol/nutrition5k_nutrition.csv": "fa81635e80011abf2de0555951f076b9eef8a7127af48ab19d0918bcfbce2389",
+    "runs/test-gpt-6.1-sol/config.json": "0d2cd4638524c2076842827ba5e9940318db688c3c861a80115e79813de1d017"
+  },
+  "recomputed_rows": 300,
+  "coverage_groups": {
+    "common_complete": 79,
+    "4o_only_complete": 7,
+    "sol_only_complete": 39,
+    "neither_complete": 25
+  },
+  "replay_matches_archived_predictions": true,
+  "prediction_columns_loaded": [
+    "dish_id",
+    "GPTFoodDescription",
+    "GPTFoodCode",
+    "GPTCandidateCodes",
+    "GPTFoodNames",
+    "GPTAmount",
+    "GPTAmountReason",
+    "FoodCodeError",
+    "WeightError",
+    "IngredientNum",
+    "GPTWeight",
+    "Energy (kcal)",
+    "Total Fat (g)",
+    "Carbohydrate (g)",
+    "Protein (g)"
+  ],
+  "run_configurations": [
+    {
+      "models": {
+        "llm": "gpt-4o-2024-08-06",
+        "llm_vision": "gpt-4o-2024-08-06",
+        "embedding": "text-embedding-3-large"
+      },
+      "temperature": 0,
+      "image_size": [
+        256,
+        256
+      ],
+      "split": "test",
+      "inputs_sha256": {
+        "../df_results.csv": "ec7714cff6f358975dafaf1865ecadf3c57c90e848cf85def575f18f2b7866af",
+        "../dish_metadata.csv": "32fe942a4d3ce1d61f2674c27d17db9b0b4bcee9211760d21cf45d1099f78e96",
+        "../df_image_link.csv": "7a02cbe660a5284ef0d6f0759f4b299475b104c8fb6a89ec6317d419c2c66067",
+        "../FoodWeights.csv": "1c75899faa33a123e149391d4258eaa1f1051c10c1bab4bec89e0e58aff112b0",
+        "../FNDDS/2019-2020 FNDDS At A Glance - FNDDS Nutrient Values.xlsx": "5007ce9723eb77dc6c3423b3b95a5ef171c71d40ebe4725dc3cc1fe6f9d7161a",
+        "../FNDDS/2019-2020 FNDDS - Foods and Beverages.csv": "3ef27c4d9fef1f7da27e2ab541285f5a43644c0b5afa1a524c8469dec50c746c"
+      }
+    },
+    {
+      "models": {
+        "llm": "gpt-6.1-sol",
+        "llm_vision": "gpt-6.1-sol",
+        "embedding": "text-embedding-3-large"
+      },
+      "temperature": 1,
+      "image_size": [
+        256,
+        256
+      ],
+      "split": "test",
+      "inputs_sha256": {
+        "../df_results.csv": "ec7714cff6f358975dafaf1865ecadf3c57c90e848cf85def575f18f2b7866af",
+        "../dish_metadata.csv": "32fe942a4d3ce1d61f2674c27d17db9b0b4bcee9211760d21cf45d1099f78e96",
+        "../df_image_link.csv": "7a02cbe660a5284ef0d6f0759f4b299475b104c8fb6a89ec6317d419c2c66067",
+        "../FoodWeights.csv": "1c75899faa33a123e149391d4258eaa1f1051c10c1bab4bec89e0e58aff112b0",
+        "../FNDDS/2019-2020 FNDDS At A Glance - FNDDS Nutrient Values.xlsx": "5007ce9723eb77dc6c3423b3b95a5ef171c71d40ebe4725dc3cc1fe6f9d7161a",
+        "../FNDDS/2019-2020 FNDDS - Foods and Beverages.csv": "3ef27c4d9fef1f7da27e2ab541285f5a43644c0b5afa1a524c8469dec50c746c"
+      }
+    }
+  ],
+  "own_complete_n": [
+    86,
+    118
+  ],
+  "common_complete_n": 79,
+  "paired_prediction_features": {
+    "gpt4o": {
+      "description_chars": 132.67088607594937,
+      "item_count": 1.860759493670886,
+      "items_with_multiple_selected_codes": 0.6075949367088608,
+      "candidate_count": 14.670886075949367,
+      "mean_predicted_weight_g": 162.15189873417722
+    },
+    "sol": {
+      "description_chars": 83.88607594936708,
+      "item_count": 1.4936708860759493,
+      "items_with_multiple_selected_codes": 0.0759493670886076,
+      "candidate_count": 10.177215189873417,
+      "mean_predicted_weight_g": 212.0506329113924
+    }
+  },
+  "predicted_nutrient_difference_decomposition": {
+    "Energy (kcal)": {
+      "n": 79,
+      "mean_sol_minus_4o": 75.61538175607794,
+      "mean_mass_term": 62.33624968319043,
+      "mean_effective_density_term": 13.27913207288755
+    },
+    "Total Fat (g)": {
+      "n": 79,
+      "mean_sol_minus_4o": 5.191655877034357,
+      "mean_mass_term": 3.852496062580338,
+      "mean_effective_density_term": 1.3391598144540187
+    },
+    "Carbohydrate (g)": {
+      "n": 79,
+      "mean_sol_minus_4o": 4.148283494072736,
+      "mean_mass_term": 4.316824005693595,
+      "mean_effective_density_term": -0.16854051162086275
+    },
+    "Protein (g)": {
+      "n": 79,
+      "mean_sol_minus_4o": 3.3354236085995566,
+      "mean_mass_term": 2.988467666655505,
+      "mean_effective_density_term": 0.346955941944052
+    }
+  },
+  "paired_changed_selected_code_set_n": 74,
+  "paired_changed_item_count_n": 41,
+  "all150_prediction_audit": {
+    "gpt4o": {
+      "outside_candidate_rows": 0,
+      "parser_warning_rows": 2,
+      "missing_gram_items": 38
+    },
+    "sol": {
+      "outside_candidate_rows": 0,
+      "parser_warning_rows": 0,
+      "missing_gram_items": 32
+    }
+  },
+  "decomposition_scope": "Symmetric algebraic decomposition of PREDICTIONS, not MAE or causal effects. Effective density mixes code identity, selected-code averaging and item mass allocation. No query ground truth used."
+}
