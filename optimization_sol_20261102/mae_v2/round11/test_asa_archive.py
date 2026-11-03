@@ -1,4 +1,6 @@
 import hashlib
+import io
+import os
 from pathlib import Path
 import stat
 import sys
@@ -7,6 +9,7 @@ import unittest
 from unittest.mock import patch
 import warnings
 import zipfile
+from PIL import Image
 
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 import asa_archive as a
@@ -87,6 +90,23 @@ class ArchiveTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'linked_archive'):
                 a.capture_archive(root,digest)
 
+    def test_parent_swap_refuses_without_opening_foreign_archive(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);path,digest=self.write(root,[('a.png',png())])
+            foreign=root/'foreign';foreign.mkdir();(foreign/path.name).write_bytes(b'SYNTHETIC protected body')
+            original=os.open;swapped=[];foreign_opened=[]
+            def racing_open(candidate,flags,*args,**kwargs):
+                if Path(candidate) in (path,Path(path.name)) and not flags&os.O_DIRECTORY and not swapped:
+                    path.parent.rename(root/'held_ASA24')
+                    path.parent.symlink_to(foreign,target_is_directory=True);swapped.append(True)
+                fd=original(candidate,flags,*args,**kwargs)
+                if Path('/proc/self/fd/'+str(fd)).resolve()==foreign/path.name:foreign_opened.append(True)
+                return fd
+            with patch.object(a.os,'open',side_effect=racing_open):
+                with self.assertRaises((ValueError,OSError)):
+                    a.capture_archive(root,digest)
+            self.assertTrue(swapped);self.assertEqual(foreign_opened,[])
+
     def test_same_size_mtime_restoration_during_capture_does_not_hide_drift(self):
         with tempfile.TemporaryDirectory() as temp:
             root=Path(temp);path,digest=self.write(root,[('a.png',png())]);before=path.stat()
@@ -115,10 +135,19 @@ class ArchiveTests(unittest.TestCase):
                     with self.assertRaisesRegex(ValueError,code):a.capture_archive(root,digest)
 
     def test_corrupt_or_unsupported_png_member_fails_whole_capture(self):
-        for raw in (b'not PNG',png()[:-12],png((1,2,3,255),mode='RGBA')):
+        stream=io.BytesIO();Image.new('RGB',(2,2)).save(stream,format='JPEG')
+        for raw in (b'not PNG',png()[:-12],stream.getvalue()):
             with self.subTest(length=len(raw)),tempfile.TemporaryDirectory() as temp:
                 root=Path(temp);_,digest=self.write(root,[('a.png',raw)])
                 with self.assertRaises(ValueError):a.capture_archive(root,digest)
+
+    def test_single_frame_transparent_png_uses_the_registered_model_input_decoder(self):
+        raw=png((1,2,3,5),mode='RGBA')
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);_,digest=self.write(root,[('a.png',raw)])
+            private,summary=a.capture_archive(root,digest)
+            self.assertEqual(summary['algorithm'],c.ALGORITHM)
+            self.assertEqual(private['image_fingerprints'][0]['bytes_sha256'],hashlib.sha256(raw).hexdigest())
 
     def test_only_fixed_local_archive_and_no_png_or_bad_archive_refuse(self):
         with tempfile.TemporaryDirectory() as temp:

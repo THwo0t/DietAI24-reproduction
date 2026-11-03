@@ -28,6 +28,31 @@ def capture(raw):return w.capture_workbook(raw,hashlib.sha256(raw).hexdigest())
 
 
 class WorkbookTests(unittest.TestCase):
+    @staticmethod
+    def sparse_large_workbook(last_row):
+        book=openpyxl.load_workbook(io.BytesIO(workbook(rows=[],inventory=[['tail.png','small']])))
+        sheet=book['AssociatedCodes'];sheet.cell(1,10,'ignored_field')
+        for column,value in enumerate([11111111,'tail.png','SIZE',9,'POISON','POISON'],1):
+            sheet.cell(last_row,column,value)
+        stream=io.BytesIO();book.save(stream);book.close();return stream.getvalue()
+
+    def test_registered_official_geometry_retains_the_last_identity_row(self):
+        raw=self.sparse_large_workbook(253072)
+        try:
+            _,identity,aggregate=capture(raw)
+        except ValueError as exc:
+            if str(exc)=='bounded_metadata_sheet_required':
+                self.fail('registered official geometry was refused before its final identity row')
+            raise
+        self.assertEqual(identity['pairs'],[('11111111','tail.png')])
+        self.assertEqual(aggregate['associated_source_rows'],1)
+        self.assertNotIn('POISON',str(identity))
+
+    def test_larger_than_registered_bound_still_refuses_before_iteration(self):
+        raw=self.sparse_large_workbook(400001)
+        with self.assertRaisesRegex(ValueError,'bounded_metadata_sheet_required'):
+            capture(raw)
+
     def test_all_types_modified_codes_and_uncoded_orphan_inventory_names_remain(self):
         rows=[[11111111,'a.png','PORTION',0,98,10],
               [22222222,'size.png','SIZE',9,'POISON','POISON'],

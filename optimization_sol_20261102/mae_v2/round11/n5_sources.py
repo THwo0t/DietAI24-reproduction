@@ -13,6 +13,8 @@ from pathlib import Path
 import re
 import stat
 
+from source_census import directory_fd,same_directory
+
 PREFIX='optimization_sol_20261102/mae_v2/'
 PATHS={
     'index':PREFIX+'round4/proposal/private_audit_index.json',
@@ -69,15 +71,21 @@ class IdentitySourceReader:
         require(slot in PATHS,'unregistered_source_slot')
         path=self.repo/PATHS[slot]
         require(path.resolve()==path,'linked_source_path_refused')
-        fd=os.open(path,os.O_RDONLY|os.O_NOFOLLOW)
+        parent=directory_fd(path.parent)
         try:
-            info=os.fstat(fd)
-            require(stat.S_ISREG(info.st_mode) and info.st_size<=MAX_SOURCE_BYTES,
-                    'regular_bounded_source_required')
-            with os.fdopen(fd,'rb',closefd=False) as stream:raw=stream.read(MAX_SOURCE_BYTES+1)
-            require(len(raw)<=MAX_SOURCE_BYTES,'source_size_bound_exceeded')
-            return raw
-        finally:os.close(fd)
+            fd=os.open(path.name,os.O_RDONLY|os.O_NOFOLLOW|os.O_NONBLOCK,dir_fd=parent)
+            try:
+                info=os.fstat(fd)
+                require(stat.S_ISREG(info.st_mode) and info.st_size<=MAX_SOURCE_BYTES,
+                        'regular_bounded_source_required')
+                with os.fdopen(fd,'rb',closefd=False) as stream:raw=stream.read(MAX_SOURCE_BYTES+1)
+                require(len(raw)<=MAX_SOURCE_BYTES,'source_size_bound_exceeded')
+                current=os.stat(path.name,dir_fd=parent,follow_symlinks=False)
+                require((current.st_dev,current.st_ino)==(info.st_dev,info.st_ino)
+                        and same_directory(path.parent,parent),'source_path_changed')
+                return raw
+            finally:os.close(fd)
+        finally:os.close(parent)
 
     def bind(self,slot,expected):
         require(isinstance(expected,str) and HEX.fullmatch(expected),'registered_source_hash_required')

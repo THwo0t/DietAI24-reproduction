@@ -9,7 +9,7 @@
       24
     ],
     "status": "PASS",
-    "working_files_scanned": 507
+    "working_files_scanned": 551
   },
   "completed_O": {
     "ASA_Exact": 17,
@@ -33,7 +33,7 @@
     "scope": "completed common M method; M0 passes6/20; neither passes coding guard or numerical tolerance",
     "total": 20
   },
-  "file_count": 383,
+  "file_count": 432,
   "files": {
     ".gitignore": {
       "bytes": 109,
@@ -324,8 +324,12 @@
       "sha256": "f419b33bdb4d3aa2b1579ffcc3faa64dfb1f4e3b3be0cbab3766879652fc8ef1"
     },
     "round11/CHECKLIST.md": {
-      "bytes": 6360,
-      "sha256": "9e969af17f87400dc0c5362724849d44814d130b0c184a49335c6773153c7b91"
+      "bytes": 17033,
+      "sha256": "15ed042f8371b28685038c174e0ffd52af16a8cafe7e00b180f63db675070166"
+    },
+    "round11/COHORT_REPAIR_DESIGN.md": {
+      "bytes": 5948,
+      "sha256": "729586bb9e09cd8e902dfb667b27fbbb244fa4e80e448961e69cf81fc740c14f"
     },
     "round11/DESIGN.md": {
       "bytes": 8431,
@@ -335,13 +339,21 @@
       "bytes": 21654,
       "sha256": "46056fc22ba4a73bf4c3d3ae6bc6f0852c62a87ec3d3243c7c9fbc93b378e491"
     },
+    "round11/PAIRED_ASA_ADAPTER_DESIGN.md": {
+      "bytes": 2485,
+      "sha256": "cf68a18c3e9cb6f8f8faf891d991002feddc7ff82e7c29ac3bd7c8010cf3a9be"
+    },
+    "round11/PAIRED_FAILURE_DESIGN.md": {
+      "bytes": 2040,
+      "sha256": "992d58ebea965008b72c2497230903a9a29f57f1e5448b44f1d16c8983f9c570"
+    },
     "round11/asa_archive.py": {
-      "bytes": 5226,
-      "sha256": "28f8dce66d5fde631e8d027462c96a5724026b5c589a1bbe956b03f7384ad4f7"
+      "bytes": 5487,
+      "sha256": "2146f335a999bc67c6cee6aca7d924af78a60710d7526705e59b8b27e726258b"
     },
     "round11/asa_content_identity.py": {
-      "bytes": 8959,
-      "sha256": "99bb8d43ec74e643e8c43806e3d80d73a3e2e345dad48c9c49b31db693fcb389"
+      "bytes": 8831,
+      "sha256": "e3b880215cf335e98665c1a131f1e6b9034caa72ea1f4cbdceea97d1794e6b97"
     },
     "round11/asa_eligibility.py": {
       "bytes": 5839,
@@ -351,21 +363,69 @@
       "bytes": 4781,
       "sha256": "c35806b698020506c9424594a02d13707d0bd1ea65edb4733af2f749341caa63"
     },
+    "round11/asa_role_sources.py": {
+      "bytes": 9845,
+      "sha256": "fd3c1c83a0c5994b531eacfaa2b539e4f051a021714b3c4d1d6e4b337a76d632"
+    },
+    "round11/asa_source_capture.py": {
+      "bytes": 7898,
+      "sha256": "1e80081de959e10011796a8f66c25494fb5dbc31f4c4571b65dcdcf082700781"
+    },
     "round11/asa_tables.py": {
       "bytes": 2735,
       "sha256": "000a56376bfdd6ed6573fc299d239ebc947acd303645cc8d75427eccaf75976d"
     },
     "round11/asa_workbook.py": {
-      "bytes": 5620,
-      "sha256": "f704b14489ae049bde5c43ed22468107edade5e46f86e1e887736c7507a9ba3d"
+      "bytes": 5762,
+      "sha256": "d198b8e49ffafe61e3544d475a477bed794ffc4c4eef19005bb25665e988093b"
+    },
+    "round11/cohort_lineage_v3.py": {
+      "bytes": 9648,
+      "sha256": "a52386f42eae7df0f22a18a8a5b177996b3fa2234eb3c95eb2229e5537872ab1"
+    },
+    "round11/development_identity.py": {
+      "bytes": 4585,
+      "sha256": "bf07429ba82c7ca10bdc8acc86a86a19603d2b51df6f767638e3972d369281b3"
     },
     "round11/engineering/REVIEW.md": {
       "bytes": 8914,
       "sha256": "ed230637c401af49ad3e7bc0f40af914f8f5ae9a0bff72f4caa44be477b28158"
     },
+    "round11/evidence/proposal_overlap.json": {
+      "bytes": 2412,
+      "sha256": "45f1f30b0b1286f891f93b28b1c99d7d0ffd522255b5c2f731c6efdf62ad6203"
+    },
+    "round11/evidence/source_capture_refusal.json": {
+      "bytes": 705,
+      "sha256": "ce223cf5e756a9b7c6840d044f6cca017c3cd31348d78a0f3dde2a3185be5f9a"
+    },
+    "round11/evidence/source_census.json": {
+      "bytes": 948,
+      "sha256": "e1a3464acad74da325c0e3336c89950421ccc29f2b1bf77d9cf5d5307be7aed0"
+    },
+    "round11/evidence/source_inventory_png_refusal.json": {
+      "bytes": 973,
+      "sha256": "9ae6fe567feca17853fd81cd675b9f986347edd500cc45f635a9bb01a3d3ba59"
+    },
+    "round11/evidence/source_inventory_refusal.json": {
+      "bytes": 930,
+      "sha256": "a1658ecd02397747fe653b22b51efe81a44b2e237f01eff4d2fb57ab99ef98e8"
+    },
     "round11/identity_gate.py": {
       "bytes": 5002,
       "sha256": "a635b87d7920bcc41bebc56471b530cd3f7820dd688ccf37a526e7cf2dd0eb7f"
+    },
+    "round11/legacy_input_identity.py": {
+      "bytes": 6460,
+      "sha256": "d6fef5b0a73847f112a9b1128d24ab01ad600db62647fcd8a057b2491043ecae"
+    },
+    "round11/local_content_inventory.py": {
+      "bytes": 6085,
+      "sha256": "17c97d080d6dd962925ad01ed8f76b69ccf6bdc59fbb9b3b1d50078cbb649779"
+    },
+    "round11/local_input_inventory.py": {
+      "bytes": 9004,
+      "sha256": "258c489b0a56ba704c1da3f8ce3736015093c4ba29a649993345c647e3c4f27c"
     },
     "round11/n5_identity.py": {
       "bytes": 8052,
@@ -375,21 +435,85 @@
       "bytes": 4368,
       "sha256": "221e163bda4d1be2b340442e2fc3036611ffaa6835480c22830d1b53fb9706ee"
     },
+    "round11/n5_potential_identity.py": {
+      "bytes": 8682,
+      "sha256": "9de8c93fdf25b45a0e0015853045cc55a515e5383deabe72c9d57a9ac37ee22e"
+    },
     "round11/n5_preparation.py": {
       "bytes": 5905,
       "sha256": "aba98d25f44a86410e1ca23e628067fe5b3460731d2bcbae6ff71aa5f3e6bceb"
     },
     "round11/n5_sources.py": {
-      "bytes": 7953,
-      "sha256": "db97437eccc95b549f321a226b71c7451681deef293f2f52ff3f930da854b1bf"
+      "bytes": 8412,
+      "sha256": "fd0f2d94652e801b5a8307b9d5369ed442023ae4aba97df4816d5377cdf03e27"
     },
     "round11/o_completion.py": {
       "bytes": 9559,
       "sha256": "ee5e6bfdc6fa98d4fe4e612a0e739cf70ae86c5362bb2773b847bc743be4a5c4"
     },
+    "round11/paired_accounting.py": {
+      "bytes": 10771,
+      "sha256": "a903303ca426f2f988fd02e1d96790ed0a3b5958c0cb36c21fd1da6c509a5245"
+    },
+    "round11/paired_failure.py": {
+      "bytes": 7997,
+      "sha256": "b0effb6e3b12a361d26c5e64724391d65072f6e8ba661c392eec874461a86a07"
+    },
+    "round11/paired_stage_pipeline.py": {
+      "bytes": 3202,
+      "sha256": "b50d1099c12cc82849574bead873e14de2f5a66757611d56aa2639569e610dce"
+    },
+    "round11/preparation/CENSUS.md": {
+      "bytes": 2638,
+      "sha256": "781dc7f9548ac0664ab5ba8f03d903b828c662af2360fa96d94a77a1c82e3249"
+    },
+    "round11/preparation/PNG_INPUT_IDENTITY_V2.md": {
+      "bytes": 3230,
+      "sha256": "5f720c1e6c01c299a5fdd3fa26a740f857ce17cad8eb5a769d446fbc2e399338"
+    },
+    "round11/preparation/PROPOSAL_OVERLAP.md": {
+      "bytes": 3455,
+      "sha256": "bf435813ef08d902fc49e95a170c2f175d2395dbb1fe0d80d9bd32be205b1c69"
+    },
     "round11/preparation/REVIEW.md": {
       "bytes": 8758,
       "sha256": "3c6b8d7e24f2e130db986da0939cd25e5e6536ca29ca6858e15da2230b8eabbc"
+    },
+    "round11/preparation/SOURCE_CAPTURE.md": {
+      "bytes": 4117,
+      "sha256": "19f285e8fb0e2e09ed04118e23c6e8c2666e50146c7b67aa399af953025d5b3a"
+    },
+    "round11/preparation/SOURCE_INVENTORY_DESIGN.md": {
+      "bytes": 3456,
+      "sha256": "6f7ee8f6e055d5c5d7aaf6baf0653393157990bb861ff0badf1d78a11e1441fd"
+    },
+    "round11/preparation/capture_review/REVIEW.md": {
+      "bytes": 5314,
+      "sha256": "0d8337a1fcfd0eb965234758bc9d3ddc639e1065f66ad37e71cb74fa70605db2"
+    },
+    "round11/preparation/census_review/REVIEW.md": {
+      "bytes": 9108,
+      "sha256": "ff26247894a874462e6e3a555328c2bb149196943fe2dc2e54425d58a4254af5"
+    },
+    "round11/preparation/lineage_review/REVIEW.md": {
+      "bytes": 4663,
+      "sha256": "13eaeca02f7019c7ca7fa869bb3fb0c5b873332fd81854e7d31517b4d2c59eea"
+    },
+    "round11/preparation/overlap_review/REVIEW.md": {
+      "bytes": 5132,
+      "sha256": "572611aae288dca33bf5118b1d3af5812845ab75eeb97ce78b3c8836873d29c7"
+    },
+    "round11/preparation/png_identity_review/REVIEW.md": {
+      "bytes": 3546,
+      "sha256": "1ed6c63804b10f1a3636d8c7575c8912f3551845721fd33775959f0763b1bd99"
+    },
+    "round11/preparation/source_inventory_review/REVIEW.md": {
+      "bytes": 7626,
+      "sha256": "39884740ec45e70085c1f5c794b36e28903775d6b28e775361ae48e17a365906"
+    },
+    "round11/proposal_overlap.py": {
+      "bytes": 12175,
+      "sha256": "298ddc1cbfbb41000ad99b9e4cde45105f9e2b1ec44cf82980c2e34bc9674d21"
     },
     "round11/qualification.py": {
       "bytes": 4333,
@@ -403,13 +527,25 @@
       "bytes": 14353,
       "sha256": "b82782a6858caeae195acb89037f4bf72604d8d30bcbcbd67a2d994f3907e20e"
     },
+    "round11/source_capture.py": {
+      "bytes": 8336,
+      "sha256": "f73a242948918b62efaff39ea73f36a64a26bc7b119792f8d148891ef7ea6e22"
+    },
+    "round11/source_census.py": {
+      "bytes": 14943,
+      "sha256": "eec61cecfb31c484c126fb4e4bdad3d255e3f1e408fc16e80ce6c36dd70dbef7"
+    },
+    "round11/source_inventory_capture.py": {
+      "bytes": 8888,
+      "sha256": "3810f6cc1d1daf71cfe6b6c186efd4c18b9cc1dab1bcaf09233b5b573f89505a"
+    },
     "round11/test_asa_archive.py": {
-      "bytes": 7477,
-      "sha256": "8e153e7aa5168a497115eb519eb27326c1057f19d374b67319a19fbb03319596"
+      "bytes": 9211,
+      "sha256": "b1f2d678965bd910bbf56fb2ecdbd9544543e1b7e6c0cb48b1a0cb50203a1e4e"
     },
     "round11/test_asa_content_identity.py": {
-      "bytes": 9775,
-      "sha256": "bf0b6e0e7a867a06fc4d99b906b7606d9a713c03c72f5dac428d895502554b94"
+      "bytes": 11928,
+      "sha256": "a700e379fdfd6eeb177e4831d8e6688b4f97e4a6bf7a8c413aaf90d49a2cc831"
     },
     "round11/test_asa_eligibility.py": {
       "bytes": 6719,
@@ -419,17 +555,45 @@
       "bytes": 3767,
       "sha256": "7f6e55d04555ad9a8de657eba0fa770f39b21b052751eb76abaca78adea9c00e"
     },
+    "round11/test_asa_role_sources.py": {
+      "bytes": 7818,
+      "sha256": "7c6c9f72b0139f7682fc3bff35d56030766b80417a15cd48894158501a9b0d7e"
+    },
+    "round11/test_asa_source_capture.py": {
+      "bytes": 8293,
+      "sha256": "4e240d4bcdc0cd0336e42097aed9a2c4c5d6844289039941f99c56fce1e1d36e"
+    },
     "round11/test_asa_tables.py": {
       "bytes": 3130,
       "sha256": "e10cd9bbd25d9407c670513b444443112642ba046290548824da58ef4dcbbfa1"
     },
     "round11/test_asa_workbook.py": {
-      "bytes": 6467,
-      "sha256": "387a48827fb6979105c37dcdfdd09f2d48693ef8a681053db683a914fe00415f"
+      "bytes": 7736,
+      "sha256": "7ed37cf7c3013f619b5b297b08fde2247372aa62ca5c55ada60aadf2e3f72799"
+    },
+    "round11/test_cohort_lineage_v3.py": {
+      "bytes": 7247,
+      "sha256": "897c31805c527bd18d3f2fa558f5f5b4c16a73e857c5d88f29b13e14c15432d1"
+    },
+    "round11/test_development_identity.py": {
+      "bytes": 5903,
+      "sha256": "2be7b76db1ea8f87d9c55f5b7da9df44c7ffeeae20dae221acf88fb9454b21ea"
     },
     "round11/test_identity_gate.py": {
       "bytes": 8327,
       "sha256": "0bab4116bd2485549b55dd787e5afcf68940e08c38b559c1b627e3d72d7ddbd9"
+    },
+    "round11/test_legacy_input_identity.py": {
+      "bytes": 6526,
+      "sha256": "5e286a20411c76cdf639cfc3cc1a21c38b64e39777ee701d3e28982e61297c25"
+    },
+    "round11/test_local_content_inventory.py": {
+      "bytes": 7367,
+      "sha256": "6ab8c8e1bf3e9b3d190085b786387c7155896abd88f73b1f7ec86a47aa8a42d2"
+    },
+    "round11/test_local_input_inventory.py": {
+      "bytes": 4985,
+      "sha256": "567f12706c4fe9e033b3c30add58a58b7bd3d00b2e029107e00116b58bb2ffc2"
     },
     "round11/test_n5_identity.py": {
       "bytes": 5748,
@@ -439,21 +603,41 @@
       "bytes": 4749,
       "sha256": "422ddb3296ec1362ebcbe6c96b73aa96b41e6773238636b71eac66625842b04b"
     },
+    "round11/test_n5_potential_identity.py": {
+      "bytes": 6321,
+      "sha256": "46bba46020445e1bf59a03a4244baac5339195d3bc8384bd5411cb2113b96fc0"
+    },
     "round11/test_n5_preparation.py": {
       "bytes": 6962,
       "sha256": "87149d6174faa5543bc71660900e3c49a745f098bd5f7f1cd8fe1e2167a56be0"
     },
     "round11/test_n5_sources.py": {
-      "bytes": 8862,
-      "sha256": "d97c065f531abe77457506839ebe2148888f245893b68776e742274c79300f8e"
+      "bytes": 10197,
+      "sha256": "b7aaf69c38545e7e1aaa857568506903160eaed33bba2d1d6bece9b5cf7669fa"
     },
     "round11/test_o_completion.py": {
       "bytes": 11057,
       "sha256": "324246ddea71bc3c9e332f5905f5ab6ce93f2dd0d359a251417ca2c84289f351"
     },
+    "round11/test_paired_accounting.py": {
+      "bytes": 7731,
+      "sha256": "7f4a006319b85595a5fa9a460418d0e0ca6729a801c432629544a79064f76caa"
+    },
+    "round11/test_paired_failure.py": {
+      "bytes": 8850,
+      "sha256": "892ef7288f9dc514ce3081e2aa86a75413ec1217b80f02512e173de19f7ed581"
+    },
+    "round11/test_paired_stage_pipeline.py": {
+      "bytes": 8621,
+      "sha256": "8590ce6638f31f8cc43f3840e2fb42a1dc932e5d37752e6b2e9caeeb04061473"
+    },
     "round11/test_parallel_snapshot.py": {
       "bytes": 9742,
       "sha256": "3f42b0716cd77aa30f81a5553d361620cd0fdbc24ae23f21a15425ac5bc92df3"
+    },
+    "round11/test_proposal_overlap.py": {
+      "bytes": 13071,
+      "sha256": "25e7f381b8b33cad6d7f44568c1f59070b57aadcebbb1d9b89453932b10feca0"
     },
     "round11/test_qualification.py": {
       "bytes": 3319,
@@ -462,6 +646,18 @@
     "round11/test_runner_equivalence.py": {
       "bytes": 7780,
       "sha256": "070df1bc8d01c58999ca0f774f63a6b5a12559383914aa5160a07a0305e2d5e0"
+    },
+    "round11/test_source_capture.py": {
+      "bytes": 10964,
+      "sha256": "3c59fa79ca98cb87bd380d5a0f4041f0dffa3532ac5883cadfbd75c442e207cf"
+    },
+    "round11/test_source_census.py": {
+      "bytes": 16900,
+      "sha256": "9ae8abfb8682eaa5a2e79da804bb90ffdbd128e78fef8ede70d364832675bedc"
+    },
+    "round11/test_source_inventory_capture.py": {
+      "bytes": 10332,
+      "sha256": "1effbd6e87ceee4c6352e4aafb4adf64c30c8fa18ad6fa2882d43dc229e3b97d"
     },
     "round11/test_verified_identity.py": {
       "bytes": 4096,
@@ -1587,7 +1783,7 @@
     "reachable_blobs_scanned": 429,
     "status": "PASS"
   },
-  "latest_local_checkpoint": "b132782d7328208f13e1fd7c5de54fda7d8cb181",
+  "latest_local_checkpoint": "a3ba045576af4ea9c59513abbe78dcce0d03b8f4",
   "new_research_data_included": false,
   "old_local_git_history_included": false,
   "purpose": "Preserve completed failed development methods, full J and K scoring, and aggregate diagnostics; continue optimization with validation sealed and final reports deferred.",
@@ -1614,27 +1810,36 @@
     "unresolved_p1_p2": 0
   },
   "round11": {
-    "actual_data_audit": false,
+    "actual_data_audit": "bounded mechanical steps only; source-role closure pending",
     "cache_component_formal_reviews": 1,
     "cache_component_unresolved_p1_p2": 0,
     "completed_O_evidence_component_formal_reviews": 1,
+    "component_reviews": [
+      "P-C0",
+      "P-C1",
+      "P-C1D",
+      "P-C2",
+      "P-C3"
+    ],
     "full_pc_formal_reviews": 0,
     "full_preparer_formal_reviews": 0,
     "new_api_calls": 0,
     "new_downloads": 0,
-    "offline_unique_tests": 104,
-    "pc_components_formal_reviews": 0,
-    "pc_source_preparer_components_formal_reviews": 0,
+    "offline_unique_tests": 271,
+    "pc_components_formal_reviews": 6,
+    "pc_source_preparer_components_formal_reviews": 6,
     "postscore_offline_tests": 15,
     "preparation_component_formal_reviews": 1,
     "preparation_component_unresolved_p1_p2": 0,
     "private_inputs_or_outputs_included": false,
+    "public_checkout_offline_test_ids": 271,
     "recovery_formal_reviews": 1,
     "review_fix": "R-PB-1",
+    "round11_test_execution": "PASS: isolated public-checkout 271 distinct unittest IDs; inherited historical cases included",
     "selected_new_samples": 0,
-    "stage": "prospective_design_registered_actual_preparer_and_run_pending",
-    "total_offline_unique_tests": 119,
-    "validation": "sealed",
+    "stage": "mechanical_source_preparation_and_paired_predictor_implementation",
+    "total_offline_unique_tests": 286,
+    "validation": "labels sealed; no validation inference or MAE selection",
     "whole_project_O_retrospective_reviews": 1
   },
   "round3": {
@@ -1934,7 +2139,7 @@
     "validation": "sealed"
   },
   "secret_scan": "PASS_reachable_history_and_worktree_generic_scan_plus_coordinator_reported_actual_credentials_in_memory",
-  "source_state": "O inference, original zero-Provider replay and scoring are complete: only 10 of 20 MAE checks pass, so O is rejected. Existing diagnostic seal was reverified without recomputation; the missing original guard receipt is explicit. Whole-project retrospective findings have design-level dispositions, and finite O/Q/D/Q+D comparisons and sampling rules are registered prospectively. Actual expanded-source/exposure audit, cohort preparation, predictor implementation and new run remain pending. Validation sealed.",
+  "source_state": "O remains rejected at 10/20 strict checks. The original and expanded blind linkage diagnostics are preserved. Source census, provisional lineage, fixed identity readers and mechanical inventory are implemented/reviewed within their recorded scopes. New source-role closure, cohort freeze and the complete Q/D paid runner remain pending; no new MAE improvement is claimed. This backup includes source, tests, reviews and explicitly ID-free aggregates only.",
   "subagent_model_policy": {
     "astra_allowed": false,
     "explicit_spawn_model_required": true,

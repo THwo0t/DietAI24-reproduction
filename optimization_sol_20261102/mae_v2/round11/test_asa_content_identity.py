@@ -1,5 +1,9 @@
 from copy import deepcopy
 import io
+import hashlib
+import struct
+import tempfile
+from unittest.mock import patch
 from pathlib import Path
 import sys
 import unittest
@@ -100,7 +104,7 @@ class ContentIdentityTests(unittest.TestCase):
         bad['rgb_sha256']=first['rgb_sha256'];bad['width']+=1
         with self.assertRaisesRegex(ValueError,'pixel_dimensions'):
             self.graph(rows=[first,bad])
-        for field,value in [('algorithm','unknown-v0'),('width',True),('height',float('nan'))]:
+        for field,value in [('algorithm','png-rgb-u32be-v1'),('algorithm','unknown-v0'),('width',True),('height',float('nan'))]:
             bad=deepcopy(first);bad[field]=value
             with self.subTest(field=field),self.assertRaisesRegex(ValueError,'pixel_semantics'):
                 self.graph(rows=[bad])
@@ -136,7 +140,7 @@ class ContentIdentityTests(unittest.TestCase):
                          {('11111111','a.png'),('11111111','d.png')})
 
     def test_unsupported_rendering_and_corrupt_images_refuse_instead_of_becoming_unknown(self):
-        for raw in [png((1,2,3,255),mode='RGBA'),b'not an image',png()[:-12]]:
+        for raw in [b'not an image',png()[:-12]]:
             with self.subTest(length=len(raw)),self.assertRaises(ValueError):
                 c.png_fingerprint(raw)
         image=Image.new('RGB',(2,2));stream=io.BytesIO();image.save(stream,format='JPEG')
@@ -145,19 +149,54 @@ class ContentIdentityTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'bounded_png_bytes'):
             c.png_fingerprint(b'x'*(c.MAX_BYTES+1))
 
-    def test_palette_transparency_animation_orientation_and_icc_are_explicitly_refused(self):
-        image=Image.new('P',(2,2));stream=io.BytesIO();image.save(stream,format='PNG',transparency=0)
-        cases=[stream.getvalue()]
+    def test_model_encoder_equivalence_for_alpha_profile_orientation_and_palette(self):
+        sys.path.insert(0,str(Path(__file__).resolve().parents[1] / 'src'))
+        from opt_pipeline import encode_image
+        def save(image, **options):
+            stream=io.BytesIO();image.save(stream,format='PNG',**options)
+            return stream.getvalue()
+        rgb=Image.new('RGB',(3,2),(1,2,3))
+        rgba=rgb.convert('RGBA');rgba.putalpha(0)
+        rgba_other=rgba.copy();rgba_other.putalpha(182)
+        la=Image.new('LA',(3,2),(7,0));la_other=Image.new('LA',(3,2),(7,182))
+        palette=Image.new('P',(3,2));palette.putpalette([1,2,3]+[0]*765)
+        exif=Image.Exif();exif[274]=6
+        pairs=[(save(rgba),save(rgba_other)),
+               (save(la),save(la_other)),
+               (save(rgb),save(rgb,icc_profile=b'synthetic ignored profile')),
+               (save(rgb),save(rgb,exif=exif)),
+               (save(palette,transparency=0),save(rgb))]
+        with tempfile.TemporaryDirectory() as directory:
+            for index,(a,b) in enumerate(pairs):
+                with self.subTest(index=index):
+                    fa,fb=c.png_fingerprint(a),c.png_fingerprint(b)
+                    self.assertNotEqual(fa['bytes_sha256'],fb['bytes_sha256'])
+                    self.assertEqual(fa['rgb_sha256'],fb['rgb_sha256'])
+                    paths=[Path(directory)/f'{index}-{j}.png' for j in range(2)]
+                    for path,body in zip(paths,(a,b)):path.write_bytes(body)
+                    for mode in ('native','square256'):
+                        self.assertEqual(encode_image(paths[0],mode),encode_image(paths[1],mode))
+                    with Image.open(io.BytesIO(a)) as image:
+                        expected=hashlib.sha256(c.ALGORITHM.encode()+b'\0'
+                            +struct.pack('>II',3,2)+image.convert('RGB').tobytes()).hexdigest()
+                    self.assertEqual(fa['rgb_sha256'],expected)
+
+    def test_animation_crc_bounds_and_pixel_permutation_refuse_or_differ(self):
         image=Image.new('RGB',(2,2));stream=io.BytesIO()
-        image.save(stream,format='PNG',save_all=True,append_images=[Image.new('RGB',(2,2),(1,2,3))])
-        cases.append(stream.getvalue())
-        stream=io.BytesIO();exif=Image.Exif();exif[274]=6;image.save(stream,format='PNG',exif=exif)
-        cases.append(stream.getvalue())
-        stream=io.BytesIO();image.save(stream,format='PNG',icc_profile=b'unsupported profile')
-        cases.append(stream.getvalue())
-        for raw in cases:
-            with self.subTest(length=len(raw)),self.assertRaisesRegex(ValueError,'rendering_semantics'):
-                c.png_fingerprint(raw)
+        image.save(stream,format='PNG',save_all=True,
+                   append_images=[Image.new('RGB',(2,2),(1,2,3))])
+        with self.assertRaisesRegex(ValueError,'animated_png'):
+            c.png_fingerprint(stream.getvalue())
+        corrupt=bytearray(png());corrupt[29]^=1  # IHDR CRC, not image pixels
+        with self.assertRaises(ValueError):c.png_fingerprint(bytes(corrupt))
+        with patch.object(c,'MAX_PIXELS',1),self.assertRaisesRegex(ValueError,'bounded_png'):
+            c.png_fingerprint(png())
+        a=Image.new('RGB',(2,1));a.putdata([(1,2,3),(4,5,6)])
+        b=Image.new('RGB',(2,1));b.putdata([(4,5,6),(1,2,3)])
+        raws=[]
+        for image in (a,b):
+            out=io.BytesIO();image.save(out,format='PNG');raws.append(out.getvalue())
+        self.assertNotEqual(*(c.png_fingerprint(raw)['rgb_sha256'] for raw in raws))
 
     def test_returns_are_detached_from_inputs_and_aggregate_contains_no_identifiers(self):
         row=fp('a.png');protected=roles();protected['core']['images']={'a.png'}

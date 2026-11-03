@@ -19,7 +19,9 @@ from qualification import code8
 MAX_WORKBOOK_BYTES=32*1024*1024
 MAX_ROWS=1000000
 MAX_COLUMNS=128
-MAX_CELLS=2000000
+# The authenticated official AssociatedCodes sheet declares 253072 x 10.
+# Bound its complete range without truncating the association graph.
+MAX_CELLS=4000000
 ASSOCIATED=('FoodCode','Image','ImageType','ModCode','PortionCode','Multiplier')
 INVENTORY=('FileName','Portion')
 

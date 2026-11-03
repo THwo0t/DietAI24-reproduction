@@ -1,6 +1,7 @@
 from copy import deepcopy
 import hashlib
 import json
+import os
 from pathlib import Path
 import tempfile
 import unittest
@@ -66,7 +67,10 @@ class RestrictedIdentitySourceTests(unittest.TestCase):
         original=sources.os.open;opened=[]
         allowed={self.path(slot) for slot in sources.PATHS}
         def observe(path,*args,**kwargs):
-            self.assertIn(Path(path),allowed);opened.append(Path(path))
+            if not args[0]&os.O_DIRECTORY:
+                parent=Path('/proc/self/fd/'+str(kwargs['dir_fd'])).resolve() if 'dir_fd' in kwargs else None
+                full=parent/Path(path) if parent is not None else Path(path)
+                self.assertIn(full,allowed);opened.append(full)
             return original(path,*args,**kwargs)
         with patch.object(sources.os,'open',side_effect=observe):projection,reader=self.load()
         self.assertEqual(set(opened),allowed)
@@ -86,6 +90,24 @@ class RestrictedIdentitySourceTests(unittest.TestCase):
         target=self.root/'unregistered.csv';target.write_bytes(self.path('available').read_bytes())
         self.path('available').unlink();self.path('available').symlink_to(target)
         with self.assertRaisesRegex(ValueError,'linked_source'):self.load()
+
+    def test_parent_swap_never_opens_foreign_body(self):
+        path=self.path('available');parent=path.parent
+        foreign=self.root/'foreign';foreign.mkdir()
+        (foreign/path.name).write_bytes(b'SYNTHETIC protected body')
+        original=os.open;swapped=[];foreign_opened=[]
+        def racing_open(candidate,flags,*args,**kwargs):
+            if Path(candidate) in (path,Path(path.name)) and not flags&os.O_DIRECTORY and not swapped:
+                parent.rename(parent.with_name('held_metadata'))
+                parent.symlink_to(foreign,target_is_directory=True);swapped.append(True)
+            fd=original(candidate,flags,*args,**kwargs)
+            if Path('/proc/self/fd/'+str(fd)).resolve()==foreign/path.name:foreign_opened.append(True)
+            return fd
+        expected=self.hash('available')
+        with patch.object(sources.os,'open',side_effect=racing_open):
+            with self.assertRaises((ValueError,OSError)):
+                sources.IdentitySourceReader(self.root).bind('available',expected)
+        self.assertTrue(swapped);self.assertEqual(foreign_opened,[])
 
     def test_an_index_cannot_redirect_a_fixed_source_or_use_conflicting_alias_pins(self):
         index=deepcopy(self.values['index'])

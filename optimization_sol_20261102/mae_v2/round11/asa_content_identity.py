@@ -19,7 +19,7 @@ from PIL import Image
 from asa_identity import ROLES,image_name as original_image_name,require,sha_value
 from qualification import code8
 
-ALGORITHM='png-rgb-u32be-v1'
+ALGORITHM='png-model-input-rgb-u32be-v2'
 MAX_BYTES=8*1024*1024
 MAX_PIXELS=16*1024*1024
 ANCHOR_TYPES={'codes','images','hashes','rgb_hashes'}
@@ -35,11 +35,12 @@ def image_name(value):
 def png_fingerprint(raw):
     """Fingerprint supplied PNG bytes only; unsupported decoding is fatal.
 
-    RGB/L/opaque palette images are decoded without resizing, EXIF rotation or
-    color management. Reject alpha/transparency, animation, nontrivial EXIF and
-    ICC profiles instead of pretending this is universal visible-content proof.
-    Dimensions and a versioned prefix are part of the RGB digest. Text chunks
-    and compression level intentionally do not change this exact RGB identity.
+    Match opt_pipeline.encode_image's pre-resize PIL.convert('RGB') exactly:
+    no alpha compositing, color management, or EXIF rotation. Single-frame PNG
+    modes supported by Pillow conversion are accepted. Alpha/profile/orientation
+    differences may intentionally join; this is not universal rendered appearance
+    or physical-plate identity. Dimensions and the version prefix bind the digest.
+    Text chunks and compression level do not change this model-input identity.
     """
     require(isinstance(raw,bytes) and 0<len(raw)<=MAX_BYTES,'bounded_png_bytes_required')
     with warnings.catch_warnings():
@@ -51,10 +52,7 @@ def png_fingerprint(raw):
                         and width*height<=MAX_PIXELS,'supported_bounded_png_required')
                 image.verify()
             with Image.open(io.BytesIO(raw)) as image:
-                require(image.mode in ('RGB','L','P') and 'transparency' not in image.info
-                        and not image.info.get('icc_profile')
-                        and getattr(image,'n_frames',1)==1
-                        and image.getexif().get(274,1)==1,'unsupported_png_rendering_semantics')
+                require(getattr(image,'n_frames',1)==1,'animated_png_out_of_scope')
                 rgb=image.convert('RGB');rgb.load()
                 payload=ALGORITHM.encode()+b'\0'+struct.pack('>II',width,height)+rgb.tobytes()
         except ValueError:

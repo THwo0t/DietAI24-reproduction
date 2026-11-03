@@ -13,6 +13,7 @@ import zipfile
 
 from asa_content_identity import ALGORITHM,MAX_BYTES,png_fingerprint,image_name
 from asa_identity import require,sha_value
+from source_census import directory_fd,same_directory
 
 RELATIVE='ASA24/Asa24PortionImages.zip'
 MAX_ARCHIVE_BYTES=16*1024**3
@@ -24,14 +25,18 @@ def _open(repo):
     require(root.is_absolute() and root.resolve()==root,'canonical_archive_root_required')
     path=root/RELATIVE
     require(path.resolve()==path,'linked_archive_path_refused')
-    fd=os.open(path,os.O_RDONLY|os.O_NOFOLLOW|os.O_NONBLOCK)
+    parent=directory_fd(path.parent)
     try:
-        info=os.fstat(fd)
-        require(stat.S_ISREG(info.st_mode) and 0<info.st_size<=MAX_ARCHIVE_BYTES,
-                'regular_bounded_archive_required')
-        return os.fdopen(fd,'rb')
-    except BaseException:
-        os.close(fd);raise
+        fd=os.open(path.name,os.O_RDONLY|os.O_NOFOLLOW|os.O_NONBLOCK,dir_fd=parent)
+        try:
+            info=os.fstat(fd)
+            require(stat.S_ISREG(info.st_mode) and 0<info.st_size<=MAX_ARCHIVE_BYTES,
+                    'regular_bounded_archive_required')
+            require(same_directory(path.parent,parent),'archive_parent_changed')
+            return os.fdopen(fd,'rb')
+        except BaseException:
+            os.close(fd);raise
+    finally:os.close(parent)
 
 
 def _digest(stream):
