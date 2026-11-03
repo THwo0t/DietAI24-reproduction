@@ -64,3 +64,25 @@ fields never reach eligibility. CSV weights remain strings and retain exact-key
 zero/positive conflicts for the existing legal-stage check. These functions
 consume supplied synthetic bytes only: real fixed-path source capture, trusted
 pins, phase permission, exposure closure and core/fold comparisons are pending.
+
+`o_completion.py` adds the completed-O artifact consistency barrier prototype
+with9 synthetic real-ArtifactStore tests. It pins the production O freeze,
+checks all complete store inventories, both populations, zero-Provider replay,
+score/checkpoint/followup binding and source drift, then returns immutable
+evidence that explicitly grants no next-phase action. Unknown store filenames
+are rejected before opening their bodies. There is no public root/pin override
+or phase CLI. No real O evidence was passed through this new barrier. The
+separate diagnostic, content-bound full-project retrospective, source rules,
+cohort/fold registration and first full P-C review remain pending.
+All103 current unique preparation tests pass in a network namespace; these are
+synthetic evidence checks, not an invocation of the barrier on the live O run.
+
+Additional source-only concurrency evidence in `test_parallel_snapshot.py`
+uses three synthetic rows across both datasets, two workers, two conditional
+tasks and native/whole-fallback/conditional-fallback branches. It compares all
+scientific records, semantic request refs and service counts with uncached
+execution; each run independently passes exact physical-ref replay. Cache full
+proof counts stay at one through repeated loads and reach two at the terminal
+check, including a separate zero-Provider restart process. All104 unique
+preparation tests pass offline. This extends tests only; P-C actual integration
+and its first full-scope review remain pending, and O has not been modified.

@@ -299,3 +299,19 @@ these boundaries; all94 current tests pass offline. No actual workbook, CSV,
 archive, image, validation or API has been read. The complete fixed-path reader,
 source/exposure authentication, phase/cohort/fold registration and first full
 P-C review remain pending.
+
+The completed-O barrier prototype now verifies full existing ArtifactStore
+inventories for identities/development/scoring, exact99/84 populations, the
+original zero-Provider replay binding and the same frozen score checkpoint.
+Its production interface fixes the O freeze SHA and accepts no caller root/pin
+overrides. Private fixture hooks are not to become configuration or CLI flags.
+Unexpected store members (including env/image/extra JSON files) refuse before
+their bodies open. Same-size/restored-mtime mutations, missing stages, stale
+replay hashes, duplicate populations, source drift and fake success statuses
+all refuse in synthetic tests. The returned immutable evidence explicitly
+grants no audit/select/download/infer action: a later reviewed entry still
+needs the guarded diagnostic, content-bound full-project retrospective and
+action-specific registrations. No real O evidence is checked by this prototype
+during the ongoing original offline replay. Nine new tests bring the current
+preparation suite to103. This remains unreviewed P-C implementation, not a
+ready real-data phase runner or a substitute for the original O verifier.

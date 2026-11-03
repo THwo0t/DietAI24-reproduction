@@ -89,6 +89,7 @@ class WorkbookTests(unittest.TestCase):
         for change,code in [({'rows':[['=11111111','a.png','PORTION',0,98,10]]},'formula_identity'),
                             ({'rows':[[11111111,None,'PORTION',0,98,10]]},'image_basename'),
                             ({'rows':[[11111111,'x/a.png','PORTION',0,98,10]]},'image_basename'),
+                            ({'rows':[[11111111,'a\n.png','PORTION',0,98,10]]},'control_character'),
                             ({'associated_header':['FoodCode','Image','Image','ModCode','PortionCode','Multiplier']},'headers')]:
             with self.subTest(change=change),self.assertRaisesRegex(ValueError,code):capture(workbook(**change))
 

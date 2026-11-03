@@ -12,7 +12,8 @@ import io
 
 import openpyxl
 
-from asa_identity import image_name,require,sha_value
+from asa_identity import require,sha_value
+from asa_content_identity import image_name
 from qualification import code8
 
 MAX_WORKBOOK_BYTES=32*1024*1024

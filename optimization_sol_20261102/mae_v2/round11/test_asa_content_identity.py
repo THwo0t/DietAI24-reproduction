@@ -81,6 +81,9 @@ class ContentIdentityTests(unittest.TestCase):
                              ({'pixel_unknown':['ghost.png']},'unknown_pixel')]:
             with self.subTest(change=change),self.assertRaisesRegex(ValueError,error):
                 self.graph(**change)
+        for name in ('bad\n.png','bad\0.png','bad\x7f.png'):
+            with self.subTest(name=repr(name)),self.assertRaisesRegex(ValueError,'control_character'):
+                self.graph(metadata=['a.png',name],byte_unknown=[name],pixel_unknown=[name])
 
     def test_basename_byte_and_pixel_conflicts_cannot_disappear_by_overwrite(self):
         first=fp('a.png');different=fp('a.png',png((9,8,7)))

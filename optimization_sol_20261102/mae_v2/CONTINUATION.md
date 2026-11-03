@@ -910,3 +910,83 @@ also confirms the N5 fixed15-slot/8-anchor reader is historical identity evidenc
 not a current complete exposure registry. J(round4), prior/K(round5), shelved
 L(round6), M/N/O(round7/8/10) source contracts use the same external training230
 and/or currentcore84; actual O-cutoff input/discovery evidence is still required.
+
+The source-only P-C prototype backup is now publicly verified at
+b1d3da31275ce46ff935447a0f44e8c2fdd6fcc7, normalFF from20ea39e on the same
+codex/mae-v2-backup-20261103 branch; local source16135c9.374nested payloads,
+94 public-copy offline tests,498workingfiles/19archive members and571reachable
+blobs/19archive members scanned against generic/fullactual/12and24prefix-suffix
+credentials,0matches. No actual data, logs, keys or local history published.
+Private receipt round11/evidence/github_pc_source_backup.json. P-C full review
+count remains0 and real phase/source/exposure/fold integration remains pending.
+O42pins unchanged;18:46:52UTC still64/183, same463390/463392,738outcomes,
+736success and2previous recovered errors. No fullscore or validation opening.
+
+Subsequent P-C source hardening rejects control-character image/member names
+and uses canonical JSON node arrays for new content-component digests. This
+avoids delimiter ambiguity; no old graph/source/O binding is changed. Expanded
+negative subcases retain94 unique offline tests, all passed. These later source
+edits are not in publicb1d3da3 yet; P-C full integration/review still pending.
+
+O inference has now sealed all183 records unchanged. At19:38:49UTC the base
+463390 was no longer visible after its completed log/seal; existing follower463392 runs the original offline
+verify child544111, actively consuming CPU. No duplicate verifier was started.
+Service counts:846successful unique payloads,848durable transmissions,2recovered
+transporterrors,0unknownoutcomes;503chat/345embedding reservations,3format repair
+proofs. Counted conditional service payloads are NOT a substitute for the final
+Exact record/group denominator; await full scoring. No complete MAE yet.
+The /tmp readonly monitor now also reports follower child CPU and safe aggregate
+automatic_verify.log progress. Earlier monitor session63987 ended at its time
+limit only; neither that exit nor terminated JS observer loops stopped O.
+Finish this same original offline replay/scorer before real P-C audit or method
+choice. Then check diagnostic/guard receipts and run the reviewed diagnostic
+once, followed by full-project retrospective/review and safe backup.
+
+P-C source-only o_completion.py now supplies completed-O evidence consistency
+(not action permission). Its production function fixes the original O freeze
+and exposes no root/pin override; synthetic private hooks exercise complete
+real ArtifactStores. It verifies all three stores,99/84 identities, zeroProvider
+replay/source/completion/checkpoint/followup binding, full inventories and source
+drift. A restrictive store reader rejects unexpected filenames before body
+open. Nine new tests cover missing/stale/fake/duplicate/same-mtime/symlink/
+forbidden-member cases. No real O data was passed through this new barrier;
+only the existing original verifier544111 continues. Full P-C integration,
+diagnostic/retrospective/action registration and first review remain pending.
+Latest19:55:16UTC original offline replay quantities22/183, childCPU1111.6s,
+API counters remain848transmissions/846success/2old errors/0unknown.
+
+Dot's two source instructions were re-read together: start from the previously
+successful ASA retrieval/continuous-weight/legal-option/OOF mechanism, and
+expand BOTH development populations only AFTER the same O batch is completely
+scored. Additional API allowance and testing-image downloads are authorized;
+these do not waive source/exposure/group isolation or sealed validation. The
+old ASA10/10 result was conditional on16Exact records from99, not a full-population
+success. No new candidate or actual audit has started while O replays.
+
+Source-only consultation confirms that a next-phase independent runner must
+own one identity snapshot, install it on the exact Ledger Gate, use it for
+post-adapter identity loading, and fully revalidate before successful final
+seal. Source-pin the independent runner and cache dependencies and use its own
+output roots; existing patch-based tests do not prove a production entry point
+is isolated from O. Never hot-swap this into O. A new synthetic three-row,
+two-worker test spans BOTH datasets and two ASA conditional tasks, native,
+whole-fallback and conditional-fallback paths plus a distinct-process restart.
+All scientific records, slot/payload/value/origin references and service counts
+match uncached execution. Independent concurrent runs legitimately differ in
+reservation allocation/cache-hit ordering; each original exact full replay
+checks those physical refs within its own run. Full cache proof is counted
+once at construction, remains unchanged through repeated loads, and runs again
+at terminal/restart. This is synthetic integration evidence, not a full-population
+real-data benchmark or approval of a future paid runner.
+
+Official parameter advice is source-only and unselected. The exact Sol model
+page lists low/medium(default)/high/xhigh/max reasoning; the Chat Completions
+parameter is reasoning_effort, while Responses uses reasoning.effort. Official
+max_completion_tokens includes visible and reasoning tokens. The generic image
+guide does not establish exact Sol detail/resolution rules. None of these
+OpenAI-native declarations proves that zicc accepts, forwards or executes them,
+nor that a higher effort improves MAE. No capability probe or parameter change
+has occurred. References: https://developers.openai.com/api/docs/models/gpt-6.1-sol
+and https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6.1-sol
+and https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create
+and https://developers.openai.com/api/docs/guides/images-vision .

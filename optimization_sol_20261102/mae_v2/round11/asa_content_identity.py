@@ -10,18 +10,26 @@ decoder rules; resized/cropped/perceptually similar images are outside scope.
 from collections import defaultdict
 import hashlib
 import io
+import json
 import struct
 import warnings
 
 from PIL import Image
 
-from asa_identity import ROLES,image_name,require,sha_value
+from asa_identity import ROLES,image_name as original_image_name,require,sha_value
 from qualification import code8
 
 ALGORITHM='png-rgb-u32be-v1'
 MAX_BYTES=8*1024*1024
 MAX_PIXELS=16*1024*1024
 ANCHOR_TYPES={'codes','images','hashes','rgb_hashes'}
+
+
+def image_name(value):
+    original_image_name(value)
+    require(all(ord(character)>=32 and ord(character)!=127 for character in value),
+            'control_character_in_image_identity')
+    return value
 
 
 def png_fingerprint(raw):
@@ -127,7 +135,8 @@ def build_asa_content_inventory(pairs,image_fingerprints,protected,*,metadata_im
         for node in nodes:find(node)
     members=defaultdict(list)
     for node in sorted(parent):members[find(node)].append(node)
-    names={root:'asa-content-'+hashlib.sha256('\n'.join(nodes).encode()).hexdigest()
+    names={root:'asa-content-'+hashlib.sha256(json.dumps(nodes,ensure_ascii=False,
+           separators=(',',':')).encode()).hexdigest()
            for root,nodes in members.items()}
     mapping={node:names[find(node)] for node in parent}
     groups={role:{mapping[node] for node in nodes} for role,nodes in anchors.items()}

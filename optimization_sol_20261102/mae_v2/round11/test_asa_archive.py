@@ -63,7 +63,7 @@ class ArchiveTests(unittest.TestCase):
                     a.capture_archive(root,'f'*64)
 
     def test_member_paths_and_symlink_members_refuse_without_extraction(self):
-        for name in ('../a.png','/a.png','x/../a.png','x\\a.png','x//a.png'):
+        for name in ('../a.png','/a.png','x/../a.png','x\\a.png','x//a.png','bad\n/a.png'):
             with self.subTest(name=name),tempfile.TemporaryDirectory() as temp:
                 root=Path(temp);_,digest=self.write(root,[(name,png())])
                 with self.assertRaisesRegex(ValueError,'unsafe_archive_member'):

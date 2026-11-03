@@ -11,8 +11,8 @@ from pathlib import Path,PurePosixPath
 import stat
 import zipfile
 
-from asa_content_identity import ALGORITHM,MAX_BYTES,png_fingerprint
-from asa_identity import image_name,require,sha_value
+from asa_content_identity import ALGORITHM,MAX_BYTES,png_fingerprint,image_name
+from asa_identity import require,sha_value
 
 RELATIVE='ASA24/Asa24PortionImages.zip'
 MAX_ARCHIVE_BYTES=16*1024**3
@@ -48,7 +48,7 @@ def _digest(stream):
 def _member(info):
     name=info.filename
     require(isinstance(name,str) and name and '\\' not in name and '\0' not in name
-            and info.orig_filename==name,
+            and info.orig_filename==name and all(ord(v)>=32 and ord(v)!=127 for v in name),
             'unsafe_archive_member')
     path=PurePosixPath(name)
     require(not path.is_absolute() and all(v not in ('','.','..') for v in name.rstrip('/').split('/')),
