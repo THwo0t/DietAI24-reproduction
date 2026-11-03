@@ -1,6 +1,7 @@
 # Round 7 implementation checklist
 
-Working state; no execution freeze or M accuracy claim. All new subagents for
+The implementation and development results are frozen; M failed the target.
+All new subagents for
 this project are explicitly gpt-6.1-sol; unrelated projects inherit their parent.
 
 | Item | Scope | State | Evidence |
@@ -12,8 +13,8 @@ this project are explicitly gpt-6.1-sol; unrelated projects inherit their parent
 | R7-E | Dataset adapters, label-isolated preparation and 10-check tolerance scorer | approved | post-seal ASA adapter; fixed other-fold fallbacks; per-dataset tolerance and common-Exact |
 | R7-F | Resumable paired M0/M runner and full offline preflight | fixed and frozen preflight passed |38 offline tests; real guarded preflight forbids labels/credentials/Provider and confirms no writes |
 | R7-G | One independent implementation review, fixes, immutable freeze | complete | REVIEW.md,review_gate.json,readiness.json;20 source/input pins |
-| R7-H | Both-dataset development inference and complete scoring | running; no partial scoring | persistent2-worker batch, ASA99 and N584 unchanged; validation sealed |
-| R7-I | Full retrospective and explicit public backup | pending results | no per-iteration formal report |
+| R7-H | Both-dataset development inference and complete scoring | completed; targets not met |183 pairs; zero-Provider verification; M0 fails4/10 ASA,10/10 N5; M fails9/10 ASA,10/10 N5; both9/99 Exact |
+| R7-I | Full retrospective and explicit public backup | retrospective complete; backup pending | PROJECT_REVIEW.md; sealed post-score diagnostics; no per-iteration formal report |
 | R7-J | Dot's original 4o/Sol prediction-chain diagnostic, isolated from method selection | completed offline | original_comparison_diagnostic.json; all300 archived rows replayed, no query labels or API |
 
 The R7-B tests verify synthetic mass conservation, candidate membership, mutual
@@ -36,7 +37,7 @@ locations were found without new inference, and the initial manifest is preserve
 in ignored preflight_archives. The corrected3159-entry manifest has zero rejected
 old successes and explicitly records whether an old persistent counter exists.
 
-The36 synthetic tests are network-disabled. They cover authorization/route keys,
+The38 synthetic tests are network-disabled. They cover authorization/route keys,
 payload identity, model mismatch, invalid vectors, redaction, orphan caches,
 unlogged reservations, three-attempt exhaustion, ASA option fallbacks, per-dataset
 tolerance, two-arm execution and immutable completed replay. They do not establish

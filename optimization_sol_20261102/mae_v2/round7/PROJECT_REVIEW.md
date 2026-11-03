@@ -177,3 +177,70 @@ labels were used in this audit. The M draft/core commits (`e3d6731`, `16c1abb`)
 precede this audit; no M prompt, parameter, selection rule or method was changed
 using these original test records. Any subsequent predictive hypothesis must
 be evaluated on the independent active development data.
+
+## Completed M: rejected on both datasets
+
+All183 paired predictions sealed and passed the automatic zero-Provider replay
+before scoring. Both arms retain every record and have zero whole-row fallbacks.
+M0/M repair counts are0/0 on ASA99 and1/6 on N584. This is a completed negative
+result, not a failure caused by missing rows or median fallback predictions.
+
+| Population / arm | Five MAEs: weight / energy / fat / carbs / protein | Failed checks |
+|---|---|---|
+| ASA M0 conditional,9 Exact/7 groups |30.416667 /36.308333 /0.374681 /8.249944 /0.707861 |4/10: energy,fat,carbs,protein per-unit |
+| ASA M conditional,9 Exact/7 groups |70.472222 /93.374444 /4.041986 /7.582594 /6.832406 |9/10: only carbs absolute passes |
+| N5 M0 all84/78 groups |82.988095 /126.693157 /8.628053 /14.582201 /11.228450 |10/10 |
+| N5 M all84/78 groups |87.273810 /129.982346 /8.989465 /15.807168 /11.334722 |10/10 |
+
+Full-precision absolute/per-unit values and all20 decisions for each arm are in
+`development_checkpoint.json`. M0 passes6/20 and M1/20; neither satisfies the
+per-dataset tolerance. Both ASA arms have9/99 Exact (9.09%), below the fixed15
+floor and original18 target; candidate retrieval includes the true code on19/99.
+Both average only1.0404 final codes. No profile is selected or advanced to
+validation. Old ASA16-Exact results cannot replace these new method results.
+
+ASA full99 E2E five MAEs are64.971919 /109.318763 /8.202332 /14.477438 /5.671648
+for M0 and68.557778 /114.672051 /8.521274 /14.692523 /6.235079 for M. All ten
+E2E checks fail in each arm. The common Exact subset is only8 rows/6 groups;
+all five absolute errors are equal on each of those rows, and the existing
+paired intervals are zero. The different own-Exact conditional scores include
+one different matched row per arm; they do not demonstrate paired improvement.
+
+The representation intervention is narrow: ASA has99 parents and103 leaves in
+both arms, with no whole collapse. N5 has252 parents in both arms and384→366
+leaves, with collapse on8 images/10 parents. Nevertheless code sets change on
+45/99 ASA and62/84 N5 images, and quantity is newly executed for M. ASA54 pairs
+share exactly verified quantity request/response references; N5's historical
+baseline has separate provenance and no claim of cross-namespace request reuse.
+N5 also has22 unchanged-code images with changed nutrient vectors. This is a
+whole-method negative result, not an isolated estimate of collapse causality.
+
+M's largest10 N5 errors contribute only33.73/30.74/32.47/35.55/40.68% of each
+target's absolute error. The remaining74 dominate every target. Signed biases
+are+11.32g,+26.54kcal,-1.92g fat,+10.27g carbs,-1.50g protein, with both signs
+in every target. Aggregate scaling or excluding a few outliers is not justified
+as a sufficient solution. The symmetric mass/density identity covers all rows,
+but its absolute terms do not add to MAE or identify causal errors. Both mass
+and composition/density remain unresolved. Raw J is descriptively better on the
+same N584 but uses supervised galleries and lacks new ASA evidence; it is not
+a qualified dual-dataset replacement.
+
+The paper describes standard FNDDS portions plus unit/count adjustment. The
+released nutrition code averages multiple chosen code densities per physical
+food (`code/nutrient_estimate_mix.py:66–80`); M uses one code per leaf and free
+total-ratio quantity. These are concrete source differences, not proof that
+restoring either will improve accuracy. Old E's unit experiment used old C/A
+identities, and old D held structure/grams fixed; neither tested the current
+M or a combined original-style alternative. The next registered mechanism must
+address food identity/density and physical quantity while retaining one shared
+method and both-dataset testing. Validation stays sealed; final reports remain
+deferred. Preserve and back up this failed iteration before the next method.
+
+New service accounting is523 chat transmissions (518 successful,5 errors) and
+203 embedding transmissions (201 successful,2 errors), all failed payloads
+subsequently recovered within their original durable budgets. Successful model
+names match the expected routes. Chat uses4,249,985 prompt and125,984 completion
+tokens, including66,498 reasoning tokens; embedding uses1,412 tokens. Money is
+unverified. Historical imported baseline/vector work is separate. Post-score
+diagnostics ran with Provider/network forbidden; their verified replay changed
+none of8483 private file contents/mtimes and opened no validation/image/key file.

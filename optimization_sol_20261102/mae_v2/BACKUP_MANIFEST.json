@@ -1,25 +1,34 @@
 {
   "actual_credential_scan": {
+    "approved_demo_fixture_hashes": {
+      "demo/examples.json": "a9d2fc2546535f7c5717134685f04042187814afabb3138c705c00fb51b21819",
+      "optimization_sol_20261102/mae_v2/tools/demo_inputs.json": "105d9d36dafa2737761c5036df6a3d0ac4a2ed221c485589bfad08bc549287f2"
+    },
     "archive_members_scanned": 19,
     "credential_values_printed": false,
-    "files_scanned": 380,
+    "files_scanned": 385,
     "findings": 0,
     "full_and_prefix_suffix_lengths": [
       12,
       24
     ],
     "new_payload_generic_scans": "PASS",
-    "row_level_aggregate_check": "PASS_except_existing_approved_two_demo_inputs",
-    "status": "PASS"
+    "row_level_aggregate_check": "PASS_except_two_unchanged_approved_demo_fixtures",
+    "status": "PASS",
+    "unchanged_approved_legacy_package_assignment_exception": {
+      "covered_by_generic_history_and_actual_credential_scans": true,
+      "path": "code/rag_food_code.py",
+      "sha256": "e5ec9f8bf508d3ad843a22493d5be1c812b2483e27ed7985fa5941e9a2ff1736"
+    }
   },
   "credentials_included": false,
   "development_mae_pass": {
-    "asa24": 10,
+    "asa24": 1,
     "nutrition5k": 0,
-    "scope": "historical old ASA plus K N5 bookkeeping, not common M results",
+    "scope": "completed common M method; M0 passes6/20; neither passes coding guard or numerical tolerance",
     "total": 20
   },
-  "file_count": 256,
+  "file_count": 261,
   "files": {
     ".gitignore": {
       "bytes": 109,
@@ -34,8 +43,8 @@
       "sha256": "5deafa048129decb19bcad702e7e2f938ba9e9fa3d9033d6037dc8916014052e"
     },
     "CONTINUATION.md": {
-      "bytes": 17007,
-      "sha256": "9555c920417f3b8e4b778151b98d36aaf5ef8397f730341ce3d94f628b38c02d"
+      "bytes": 22112,
+      "sha256": "1a70f404b148466210545c51229afb9dd4151339a56a55423d589ff0ed78be06"
     },
     "MAC_DEMO.md": {
       "bytes": 13272,
@@ -790,16 +799,16 @@
       "sha256": "e3095cd3ce4df95610afac3c8f3d1d4e86044dcc3d687a673b1fe24e1b15cd50"
     },
     "round7/.gitignore": {
-      "bytes": 86,
-      "sha256": "fb92750512084475decddaf247b6fd5d577915a4961b7735ed0b8f533f4dd84e"
+      "bytes": 96,
+      "sha256": "68b2082d970a73d3b2e8e88252ea96091187dba58649aa6ceaf685b306493432"
     },
     "round7/CHECKLIST.md": {
-      "bytes": 3705,
-      "sha256": "edba4e96411c7506d8d46187eca815658c24ac9b7ebee6dbc20c04295918764a"
+      "bytes": 3833,
+      "sha256": "d3c4fdaa6ba261ece7feacf190f6072238814be9e2c423ceeb95e344f85a244e"
     },
     "round7/PROJECT_REVIEW.md": {
-      "bytes": 11917,
-      "sha256": "d8b6f8745d6a6f2a54e95ea3a4f890f152dfce934df01d3b7deca0439b1ec3be"
+      "bytes": 16464,
+      "sha256": "75e221d1d42f2f0bea8da89a1e18a3857cd487b726a0c86425ceccdf84a19a7f"
     },
     "round7/PROTOCOL.md": {
       "bytes": 13561,
@@ -810,12 +819,20 @@
       "sha256": "1a1d95ce72084a0045d0210c0a9235de3859985a2bfba5977c80bd3b3287c4e4"
     },
     "round7/README.md": {
-      "bytes": 2720,
-      "sha256": "8ae414d443139fbbb3ecf70b18084202d66718f8d019cb702556bdda377ffbe7"
+      "bytes": 4274,
+      "sha256": "df0a8e27d3caab139ec7e4cad8d5e4797a2ff579017705e54d7243f0ad133e33"
     },
     "round7/REVIEW.md": {
       "bytes": 8879,
       "sha256": "2a750a26a6bafd26e0e164f7c49c0a2977da3bcd633eb7cb85f37065317051a6"
+    },
+    "round7/development_checkpoint.json": {
+      "bytes": 80496,
+      "sha256": "8cb62e9a6b9bc8a8e0a7ed02bd1c45ca2474e8e572f489fc6381e3ed89ff4fc1"
+    },
+    "round7/development_diagnostic.json": {
+      "bytes": 163654,
+      "sha256": "5804af3f2871226221230ff8be5b3d8ff9bcaac310f76a31007c1286195d4295"
     },
     "round7/original_comparison_diagnostic.json": {
       "bytes": 6280,
@@ -861,6 +878,10 @@
       "bytes": 15841,
       "sha256": "bc88b350e187b2feb55e9539e301ed466cea92ca384b487ab8908188c8fa77d5"
     },
+    "round7/tests/test_completed_diagnostic.py": {
+      "bytes": 8062,
+      "sha256": "0df745ff117cf86d46e9aa8645066049a43e97a18fe7ed318e7e90f03a65a623"
+    },
     "round7/tests/test_runner_m.py": {
       "bytes": 6923,
       "sha256": "867067a5ad421756c2229c6b901b7cd4d4d7c683ab1303b7dbcf8219af02eb6c"
@@ -873,9 +894,17 @@
       "bytes": 15169,
       "sha256": "174a720ebee67b8078b2a42d4c0b548650e749e2f50a4326ba5b4efe82b6a203"
     },
+    "round7/tools/diagnose_completed_m.py": {
+      "bytes": 15685,
+      "sha256": "41ba7c857f8d00c673ae697ff926b49fcc7cdb5928d134b928cad4d0f9e58f16"
+    },
     "round7/tools/diagnose_original_comparison.py": {
       "bytes": 13403,
       "sha256": "349b16608b45e4a1e1d753a16c3cbc8317819526f51ea7b78ea606ff2ec37a42"
+    },
+    "round7/tools/watch_and_score.py": {
+      "bytes": 3215,
+      "sha256": "9e6328fa2f44aee7ce441552e208826cf6292f827f3a715d61922af6f5effd81"
     },
     "setup.sh": {
       "bytes": 2619,
@@ -1051,11 +1080,11 @@
   "generic_publication_scan": {
     "issues": 0,
     "phase": "precommit_history_and_complete_worktree",
-    "publishable_files_scanned": 380,
-    "reachable_blobs_scanned": 403,
+    "publishable_files_scanned": 385,
+    "reachable_blobs_scanned": 429,
     "status": "PASS"
   },
-  "latest_local_checkpoint": "4e86c69be83ef51a945767ecf478b6daba871e9b",
+  "latest_local_checkpoint": "28bed4d065ac85452838414b93d13b0110ed9e54",
   "new_research_data_included": false,
   "old_local_git_history_included": false,
   "purpose": "Preserve completed failed development methods, full J and K scoring, and aggregate diagnostics; continue optimization with validation sealed and final reports deferred.",
@@ -1251,40 +1280,73 @@
     "validation_opened": false
   },
   "round7": {
-    "complete_accuracy_result_available": false,
+    "asa_exact_n": {
+      "M": 9,
+      "M0": 9
+    },
+    "asa_population_n": 99,
+    "complete_accuracy_result_available": true,
     "development_populations": {
       "asa24": 99,
       "nutrition5k": 84
     },
+    "diagnostic_tests_passed": 11,
+    "exact_groups": {
+      "M": 7,
+      "M0": 7
+    },
     "explicit_historical_embedding_imports": 3159,
+    "failed_checks": {
+      "M": {
+        "asa24": 9,
+        "nutrition5k": 10
+      },
+      "M0": {
+        "asa24": 4,
+        "nutrition5k": 10
+      }
+    },
     "freeze_sha256": "b2d832529ed8453d2c5d9bebf645e8716f3d39185e0e3070e78cd4b3b486261b",
     "fresh_same_method_ASA_and_N5_required": true,
     "guarded_real_preflight": "PASS_no_Provider_credentials_query_labels_validation_or_writes",
     "historical_joint_scores": "old_ASA_plus_new_N5_are_not_common_method_evidence",
     "imported_raw_c": 84,
     "independent_review_count": 1,
+    "monetary_billing_verified": false,
     "new_user_target": "at_most_two_failed_absolute_or_per_unit_checks_out_of_ten_per_dataset",
     "offline_synthetic_tests_passed": 38,
     "paid_requests_started": true,
+    "paired_records_completed": 183,
+    "post_score_diagnostics": "PASS_guarded_replay_preserved8483_files",
     "project_review": "round7/PROJECT_REVIEW.md",
     "public_copy_offline_tests": {
       "actual_api_calls": 0,
-      "count": 38,
+      "count": 49,
+      "fixtures": "synthetic only",
       "network_disabled": true,
       "research_images_read": false,
-      "seconds": 0.851,
+      "seconds": 0.859,
       "status": "PASS"
     },
     "required_fixes_resolved": [
       "R7-G-1"
     ],
     "review_model": "gpt-6.1-sol",
-    "status": "implemented_reviewed_fixed_frozen_development_running",
+    "service_errors": {
+      "chat": 5,
+      "embedding": 2
+    },
+    "service_transmissions": {
+      "chat": 523,
+      "embedding": 203
+    },
+    "status": "completed_failed_no_selected_profile",
     "strict_20_of_20_target_retained_for_reporting": true,
-    "validation_opened": false
+    "validation_opened": false,
+    "zero_provider_completed_replay": "PASS"
   },
   "secret_scan": "PASS_reachable_history_and_worktree_generic_scan_plus_coordinator_reported_actual_credentials_in_memory",
-  "source_state": "M common-method source passed one independent Sol review, required fix and frozen real offline preflight. Both-dataset paired development is now running; no complete M score exists. Historical J/K combined scores use old ASA and are not same-method dual-dataset evidence. L remains unexecuted and shelved. Validation stays sealed; final reports remain deferred.",
+  "source_state": "M completed both datasets, passed offline replay and was rejected. Complete metrics and post-score diagnostics are preserved. No method selected; independent validation stays sealed. Continue optimization without a per-iteration formal report.",
   "subagent_model_policy": {
     "astra_allowed": false,
     "explicit_spawn_model_required": true,

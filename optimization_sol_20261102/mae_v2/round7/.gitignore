@@ -2,6 +2,7 @@ diagnostics/
 preflight_archives/
 runs/
 prepared/
+provider/
 launch/
 evidence/
 __pycache__/

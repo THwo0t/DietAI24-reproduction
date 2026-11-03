@@ -251,3 +251,80 @@ HTTP200 and the expected reported model names for both Sol chat and official
 embedding. No complete M score is available. All-science completion precedes
 offline verification and paired full-population scoring; source files remain
 unchanged while this run is active.
+
+Remote-verified source backup is now
+`edfdd148be171af569520e119f55b9235f11633d` on the existing public backup branch.
+It contains256 explicit nested payloads,38 passing public-copy synthetic tests,
+zero actual full/truncated credential matches across380 files and19 archive
+members, and a clean postcommit429-blob scan. New research data/logs/local config
+are excluded. Private receipt:round7/evidence/github_frozen_backup.json.
+
+A persistent offline-only follower is now waiting for the existing M coordinator.
+Read round7/launch/automatic_followup.json and automatic_followup_launch.json
+before running any manual verify/score. After the entire base completion seal,
+it runs the frozen zero-Provider verify, then the separate post-seal scorer. It
+never starts paid inference or opens validation; incomplete base or any phase
+failure stops it with a private status receipt. Its source is
+round7/tools/watch_and_score.py, outside the frozen scientific module set.
+After scoring, inspect the complete two-dataset checkpoint, conduct the full
+project retrospective and choose the next registered step. Do not infer target
+achievement from running status, service success or synthetic tests.
+
+The separate post-score helper `round7/tools/diagnose_completed_m.py` is now
+implemented with eleven passing synthetic hand-calculation/negative tests. It
+requires the completed base, matching score/checkpoint and finished offline
+follower before loading dev labels; it introduces no model, calibration,
+bootstrap or selection. Its future private output is
+the sealed record under `round7/diagnostics/completed_m/`. Do not run it against partial
+M results. Frozen M method sources remain unchanged. New M provider artifacts
+are explicitly ignored by Git in addition to the public allowlist boundary.
+
+Two source-only helpers independently checked the original paper/code and old
+A-E scope while M runs. Facts for the eventual full retrospective: the released
+nutrition code averages multiple chosen FNDDS densities per food; the paper
+does not specify that averaging. The paper describes standard FNDDS portions
+with unit/count adjustment; M's free total-ratio quantity is a deviation.
+Old E tested catalog units on the old C/A identity, not current M. Old D
+reconsidered codes while holding the old structure and grams fixed; D+E was
+not tested. These source facts are not a new candidate decision or evidence
+about M accuracy, and no new method has been selected before complete scores.
+
+A read-only check of the nonfrozen diagnostic helper found R7-DIAG-1(P2): the
+initial output writer could follow a directory symlink. The helper now uses
+the existing private ArtifactStore, which rejects ancestor/record symlinks and
+seals the aggregate. Two synthetic tests verify that external data/permissions
+remain unchanged. This does not change or reopen M's completed method review.
+
+## M completed and rejected; continue optimization
+
+All183 paired records are complete. The automatic follower passed zero-Provider
+verification, scored both complete populations and ended `development_scored`.
+Do not start either coordinator or follower again. M0 fails4/10 ASA and10/10 N5;
+M fails9/10 ASA and10/10 N5. Both have9/99 Exact/7 groups, below15-record floor;
+neither is selected. N5 M five MAEs are87.273810/129.982346/8.989465/15.807168/
+11.334722, all worse than M0. See round7/development_checkpoint.json and the
+completed full-project retrospective appended to round7/PROJECT_REVIEW.md.
+
+The post-score diagnostic is sealed under round7/diagnostics/completed_m.
+Its guarded replay patched Path.open as well as io/builtins, forbidden Provider,
+credentials, network, validation and image reads, and preserved8483 file mtimes.
+Development labels were read only after complete scoring (six guarded opens,
+including hash verification). The first persistence attempt correctly refused
+the existing0755 diagnostic ancestor; it was made private0700, and the unchanged
+helper then sealed successfully. No scientific result or model request changed.
+An earlier guard patched only io/builtins and did not instrument Python3.10
+Path.open; its zero label-open count must not be described as no-label I/O.
+
+Independent read-only prediction auditing verified367 sealed records. Whole
+collapse occurs on0 ASA images and8 N5 images/10 parents. N5 code sets change
+on62/84 and total grams on82/84; this also includes new quantity draws, not only
+collapse. ASA54 pairs share exactly verified quantity request/response refs.
+Common Exact8 rows/6 groups have equal per-row absolute errors across arms.
+Largest10 N5 errors contribute only30.7–40.7%, so the failure is not a few
+outliers. Both signs coexist; mass and composition remain unresolved.
+
+No more M API request is needed. First safely back up this failed iteration's
+source/aggregate inventory, then register and implement one next shared method
+using the complete development evidence and paper/source differences. Do not
+choose from original-test or sealed-validation labels, splice old ASA scores,
+write a formal report, or claim target attainment. Continue autonomously.
