@@ -105,7 +105,7 @@ the existing authorization. Formal reports and Mac refresh remain deferred.
 ## Preparation status (no actual data run)
 
 Pure association/ambiguity/group-order helpers and a verified-loader prototype
-exist.37 unique synthetic tests pass in `unshare -Urn`; the integration fixture
+exist.58 unique synthetic tests pass in `unshare -Urn`; the integration fixture
 uses actual temporary ArtifactStores, original TaskGate and MockTransport.
 Repeated conditional validation uses one full identity proof, with exact same
 payload as the uncached gate. Source/image/catalog/manifest drift, altered
@@ -186,3 +186,49 @@ prove complete source/member coverage and stop on new dev/validation bridges.
 New links merging old development folds also require an explicitly registered
 fold repair before the enlarged phase; never silently preserve leaking folds
 or rewrite the current O/core bindings. No real metadata or archive was opened.
+
+The N5 fixed identity reader and pool-computation path now exist as prototypes:
+`n5_sources.py` authenticates exactly15 named seals/audit/metadata sources through
+fixed or seal-bound hashes. It never follows arbitrary paths in old source
+inventories, nor opens validation manifests, images, labels or credentials.
+It projects only identity/fingerprint fields from training audits. The captured
+raw CSVs are consumed by `n5_preparation.py`, which reproduces the original
+variable-width parser, rebuilds the supplied identity closure first, then parses
+the five numerical targets ONLY for unblocked original-frame candidates.
+Official object-name/size and recipe-dedup rules remain; individual zero nutrient
+values are valid and all-four-zero missing nutrition is excluded.
+
+Thirteen new synthetic tests include a complete restricted-reader→pool path,
+original parser equivalence, poisoned protected targets, arbitrary inventory
+paths, symlink/same-size drift, ambiguous pins, duplicate/nonfinite JSON,
+listing mismatch and a new validation bridge that refuses before candidate
+target parsing. These functions have no real-data CLI, selection, download,
+inference or source-audit receipt. A reviewed phase runner, actual latest
+exposure inventory/discovery, source-completeness proof, ASA adapter, registered
+sampling rules and post-download dedup are still required. No production
+anchor override may be exposed by that runner; fixture overrides are for tests.
+All50 current unique preparation tests passed offline using synthetic inputs.
+
+`asa_eligibility.py` adds the pure legal-portion stage after an authenticated
+complete identity screen: preserve PORTION/ModCode0, exact FoodCode/PortionCode
+weight mapping, gram98, dominant portion code, one-percent consistency,
+single-weight portion descriptions and at least three distinct weights. The
+broader frame removes only top1000 membership. Same-code/same-byte conflicts
+are explicitly returned for source repair checks; missing portions and
+nonquantitative weights are not accepted. Protected codes are skipped before
+numerical conversion. Seven synthetic tests include differential comparison
+with original `asa24_proc.add_weights/select_image_links`, poison protection,
+exact one-percent boundary and invalid/conflicting units. Original core
+reference/fold pins still require a separate exact comparison before any real
+phase freeze; no old dataset is rewritten by this helper.
+
+The bounded P-B component scope is ready for its first independent review,
+tracked in CHECKLIST.md.57 unique tests passed. This is separate from the old
+P-A cache review and from the pending full P-C/P-D data/run integration review.
+
+The single bounded P-B component review is complete:0P1/1P2/0P3. R-PB-1 is
+fixed by checking exact-key conflicts before zero-only sentinel exclusion;
+both0/positive source orders refuse, identical duplicate mappings and gram98
+behavior remain. The added negative test catches2 old-source failures,0errors;
+all58 current unique tests pass. Actual-data completeness, phase guards,
+sampling/download and common-predictor integration remain unapproved/pending.

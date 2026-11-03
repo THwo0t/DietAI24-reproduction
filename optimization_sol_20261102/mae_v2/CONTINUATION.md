@@ -770,3 +770,64 @@ outcomes,717 HTTP200 and2 recovered transports. CPU4507s and increasing; same
 463390/463392. No full score. The original readonly monitor61144 is due to end
 around17:41; that is not termination of either O process. Renew only the
 readonly monitor if needed, never the experiment or follower.
+
+Public preparation backup was normally fast-forwarded and ls-remote verified:
+abe98ad388a0ead081384f2d39cc4f53031a2ba0 (from d49a387), sourcee74eb29.
+It includes21 new source/protocol/test/review payloads, handoff and manifest,
+358 nested payloads total. Public-copy37 preparation +6postscore tests passed
+in network namespaces;482files/19archive members/548reachable blobs scanned
+against generic/fullactual/12and24prefix-suffix credentials,0matches.
+No new data, labels, outputs, logs, local history or credentials published.
+Private immutable receipt round11/evidence/github_preparation_backup.json.
+Snapshot is NOT a real enlarged run or passing accuracy result. Its round10
+freeze metadata refers to the old frozen-source checkpoint, not live API use.
+
+Readonly monitor61144 ended normally at its80min limit. New readonly monitor
+session63987 runs the same /tmp/dietai24_o_monitor.py for another120samples.
+This did not restart base463390 or follower463392. Latest17:49:45UTC:54/183
+quantities,722reservations/outcomes,720HTTP200successes,2recovered transports,
+6conditionalcalls,3formatrepairs; no score/validation opening. O42pins unchanged.
+
+After public snapshot, N5 source-reader/pool prototypes added: n5_sources.py,
+n5_preparation.py plus two test files.50 combined unique preparation tests pass
+under unshare -Urn. Exactly15 fixed permitted source files are hash-bound;
+old inventories are not recursively chased into protected images/labels.
+Training audit is projected to identity/fingerprints only. Captured raw CSV
+parsing matches original variable-width/count variant; protected dish target
+values remain poison/uninterpreted; source/graph/validation checks precede
+unblocked target eligibility. Complete synthetic reader-to-pool integration
+passes. These functions have no real CLI/selection/download/API; production
+anchor overrides forbidden in the future runner. Actual latest exposure
+discovery/registry, phase guard, ASA reader, fixed sampling and postdownload
+closure remain pending, and full P-B scope is not yet formally reviewed.
+No actual source-audit data was read; do not run it before same O fully scores.
+
+P-B ASA legal_rows helper and7 tests added,57 combined unique tests pass.
+It preserves original portion/mapping/frequency/three-weight rules, changes
+only top1000 for broader frame, skips blocked code numerics and explicitly
+records same-code/byte reference ambiguity. Normal synthetic valid rows match
+the actual original asa24_proc add_weights/select_image_links code. Core
+exact-reference/fold comparison and real source reader remain pending.
+round11/CHECKLIST.md now distinguishes P-A fixed, P-B components ready for first
+bounded review, P-C actual phase/source/discovery/download freeze pending,
+P-D common predictor/runtime pending, and later acceptance/report/Mac. No actual
+new source audit or candidate choice has run; do not conflate component tests
+with expanded data/predictor approval. A fresh explicit Sol reviewer will write
+only round11/preparation/REVIEW.md for the new P-B scope; not a P-A/O rereview.
+
+P-B independent Sol component review is complete once. Review-only commit
+2b36454 records0P1/1P2/0P3. R-PB-1 fixed: retain zero mappings through exact-key
+consistency checks before zero-only sentinel exclusion. Both0/10 and10/0 now
+refuse; identical positive duplicates, zero-only nonquantitative exclusion and
+gram98 override remain. Root's new negative case catches2 failures0errors on
+2b36454, all58 current unique tests pass in network namespace. Coordinator
+response appended to preparation/REVIEW.md; CHECKLIST P-B fixed. No rereview.
+This is component-only; P-C actual source/exposure discovery/phase/cohort/
+download and P-D predictor/run integration remain pending, not authorized by
+the component approval alone. Do not open actual new sources before O scores.
+
+Latest O host observation17:58:21UTC still55/183,723reservations/outcomes,
+721HTTP200successes,2recovered transport errors,6conditionalcalls,3formatrepairs.
+Samebase463390/follower463392, CPU5675.7s continues; no fullscore/val opening.
+Public remote remainsabe98ad (sourcee74eb29), newer local reader/eligibility/
+review fixes not in that public snapshot yet. Readonly monitor session63987.
