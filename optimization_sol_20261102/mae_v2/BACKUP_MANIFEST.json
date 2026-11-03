@@ -1,7 +1,7 @@
 {
   "actual_credential_scan": {
     "credential_values_printed": false,
-    "files_scanned": 293,
+    "files_scanned": 305,
     "findings": 0,
     "full_and_prefix_suffix_lengths": [
       12,
@@ -15,7 +15,7 @@
     "nutrition5k": 0,
     "total": 20
   },
-  "file_count": 169,
+  "file_count": 181,
   "files": {
     ".gitignore": {
       "bytes": 109,
@@ -26,12 +26,12 @@
       "sha256": "9657cfd44261114a116fead62313a165b947397c2b41dea7c467de1643bbbeaa"
     },
     "CHECKLIST.md": {
-      "bytes": 3969,
-      "sha256": "b65b0cecf546735a4eb786b4472abc044f1ff7f301f7cac02e5df8db80b498c5"
+      "bytes": 4182,
+      "sha256": "6875f5c18b5b8d6363bf6d24d298c963b3a9c07d7a1cd542ec38fd57d3f11683"
     },
     "CONTINUATION.md": {
-      "bytes": 4770,
-      "sha256": "3d116977f9b1fecf2b993665a14723ae9ae1b2fa51049b86307d2111ed96ebe5"
+      "bytes": 6194,
+      "sha256": "2f20ba23f62bd77679193cf10c7818a70268343bc705602c374ee9cf5c2c57fd"
     },
     "MAC_DEMO.md": {
       "bytes": 13272,
@@ -366,12 +366,56 @@
       "sha256": "83518727c63bd371e6fce4d398ed31b45ca8a12639ce50c3222250ea2043a79a"
     },
     "round4/README.md": {
-      "bytes": 4219,
-      "sha256": "c54cc831da215346c996333b90e7a4cd4dbcb14664c8eccf6b8d2e4cddbd77de"
+      "bytes": 5558,
+      "sha256": "7e49326dfddc45a939631799d761ba718404435028c7f2839f9cc0e266de8cec"
     },
     "round4/TRAINING_DATA_EXCEPTION.md": {
       "bytes": 3062,
       "sha256": "8ed93e2e2b3ddd86241142ad32ad232b4992f8c26df052ccb6c037d109380874"
+    },
+    "round4/continuation/.gitignore": {
+      "bytes": 29,
+      "sha256": "46cac65301be73feabc151fa17e2e8e7a3ad69767505e0149ba91d1aed685854"
+    },
+    "round4/continuation/REVIEW.md": {
+      "bytes": 9226,
+      "sha256": "72ca9661416162cec2166147e1185bec611bdb5c99d9d54529a00f62a6fddfe4"
+    },
+    "round4/continuation/SERVICE_CONTINUATION_PROTOCOL.md": {
+      "bytes": 6442,
+      "sha256": "83b65db41001b1c6730178df0131ca02e852a5a0a63411a45cd7db62d59365d3"
+    },
+    "round4/continuation/evaluate.py": {
+      "bytes": 14281,
+      "sha256": "71a59169bec9bc2687fbb8020615a2bc6810004747cbdb4b2c82a3f3af0fc0c3"
+    },
+    "round4/continuation/integrity.py": {
+      "bytes": 15034,
+      "sha256": "27dcea9c61bc32e19c2fb58414188be28dfbc9ffdd4a37b2760c0eb05b87e67d"
+    },
+    "round4/continuation/provider.py": {
+      "bytes": 11031,
+      "sha256": "ccc61a8985cf4abcdb35d79b1b5a52b34db34aa1492806b927a2a6a66df30d3b"
+    },
+    "round4/continuation/readiness.json": {
+      "bytes": 1915,
+      "sha256": "a30ba8166bee1a97b397979bea854e584446ed9fbf730292bbc16ca337d6e3f9"
+    },
+    "round4/continuation/runner.py": {
+      "bytes": 14539,
+      "sha256": "3b564351de691b557d134584512fd0dd037f47042f58d68d5eb015ef049863fd"
+    },
+    "round4/continuation/tests/test_evaluate.py": {
+      "bytes": 15891,
+      "sha256": "1d20ea48f6d6ea67cc477c4286ed6cbf542945d7284014b795495709ea2831f4"
+    },
+    "round4/continuation/tests/test_provider.py": {
+      "bytes": 15337,
+      "sha256": "0d907649caf2477e31fd838a75934a9102bd73c0ba4f1bf0a29859db6d8475f8"
+    },
+    "round4/continuation/tests/test_runner.py": {
+      "bytes": 14184,
+      "sha256": "bb1758f289039aa61adbb5715b1689d3a7e706475d91122ddff3247e37f68b1d"
     },
     "round4/execution_readiness.json": {
       "bytes": 4564,
@@ -412,6 +456,10 @@
     "round4/readiness.json": {
       "bytes": 4665,
       "sha256": "1587f31a3ecfa5ac50056a892062f3147e359c533933ad81c8be8ec19398a482"
+    },
+    "round4/service_interruption.json": {
+      "bytes": 2472,
+      "sha256": "b56af746a3b1873a614633ace41d06b389aad2ae03247320ec90277488874ab9"
     },
     "round4/src/artifacts.py": {
       "bytes": 21952,
@@ -695,7 +743,7 @@
     }
   },
   "formal_validation": "not_run_sealed",
-  "latest_local_checkpoint": "af80b04",
+  "latest_local_checkpoint": "99c9772",
   "new_research_data_included": false,
   "old_local_git_history_included": false,
   "purpose": "Preserve completed failed development methods and the active independent-training J implementation; final reports remain deferred.",
@@ -714,9 +762,26 @@
     "capability_probe_images": 13,
     "capability_probe_status": "passed",
     "capability_request_count": 1,
+    "continuation_offline_tests": {
+      "actual_api_calls": 0,
+      "count": 36,
+      "network_disabled": true,
+      "seconds": 41.418,
+      "status": "PASS"
+    },
+    "continuation_public_copy_offline_tests": {
+      "actual_api_calls": 0,
+      "command": "unshare -rn <existing-project-venv>/bin/python -B -m unittest discover -s round4/continuation/tests",
+      "count": 36,
+      "fixtures": "synthetic only",
+      "network_disabled": true,
+      "seconds": 44.695,
+      "status": "PASS"
+    },
+    "continuation_review": "R-SC-1/2/3 fixed; one independent review; no validation access",
     "formal_reports_deferred": true,
     "implementation_commit": "27a31bd",
-    "latest_local_checkpoint": "af80b04",
+    "latest_local_checkpoint": "99c9772",
     "new_images_downloaded": 230,
     "public_copy_offline_tests": {
       "actual_api_calls": 0,
@@ -731,10 +796,21 @@
       "seconds": 39.31,
       "status": "PASS"
     },
+    "real_import_preflight": {
+      "complete_queries": 52,
+      "development_labels_read": false,
+      "new_run_created": false,
+      "provider_constructed": false,
+      "remaining_queries": 32,
+      "sealed_stages": 263,
+      "status": "PASS",
+      "validation_opened": false
+    },
     "registered_source_mass_exceptions": 1,
-    "research_api_request_note": "J is active; usage totals are not final. Completed training-only probe used one request.",
+    "research_api_request_note": "Baseline usage in round4/service_interruption.json; continuation usage remains active and unfinalized.",
     "research_api_requests": null,
-    "status": "J_running_unscored_training_release_and_probe_complete",
+    "service_interruption": "one exact payload exhausted three read timeouts; explicit singleton fourth attempt registered",
+    "status": "service_continuation_running_unscored",
     "synthetic_tests_passed": 213,
     "training_catalog_size": 164,
     "training_groups": 230,
@@ -742,5 +818,5 @@
     "validation_opened": false
   },
   "secret_scan": "PASS_reachable_history_and_worktree_generic_scan_plus_actual_credentials_in_memory",
-  "source_state": "Completed round 3 plus frozen round 4 external-training source. J is running and has not been scored."
+  "source_state": "Original J stopped on service timeouts; reviewed continuation is running and unscored. Completed predictions are reused."
 }

@@ -47,10 +47,33 @@ reports every threshold at full precision. It neither fits nor selects a model.
 
 ## Engineering checks
 
+The original gallery completed all 230 records. The original J base then stopped
+on one rerank payload after three read timeouts, with 52 estimation stages
+preserved. Do not restart the original base command or reset its request ledger.
+The separately registered service continuation keeps the scientific inputs and
+old successful stages, extends only that exact failed payload to four cumulative
+transmissions, and uses a 600-second read timeout with at most two workers.
+Its private registration is generated locally from the preserved run; private
+run artifacts are intentionally absent from the public source backup.
+
+After its source and registration are frozen, use these continuation entry points:
+
+```bash
+../../.venv/bin/python -B -m round4.continuation.runner base --allow-paid --workers 2
+../../.venv/bin/python -B -m round4.continuation.runner verify
+../../.venv/bin/python -B -m round4.continuation.evaluate
+```
+
+The evaluator opens development labels only after the complete continuation seal
+passes verification. The original J remains stopped, and its artifacts are never
+rewritten. See `continuation/SERVICE_CONTINUATION_PROTOCOL.md` for the precise
+service departure and `continuation/REVIEW.md` for the independent offline review.
+
 The synthetic suite runs with network disabled on this Linux host:
 
 ```bash
 unshare -rn ../../.venv/bin/python -B -m unittest discover -s round4/tests
+unshare -rn ../../.venv/bin/python -B -m unittest discover -s round4/continuation/tests
 ```
 
 It covers isolation, official versus third-party routing, exact image payloads,

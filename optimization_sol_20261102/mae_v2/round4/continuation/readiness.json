@@ -1,0 +1,50 @@
+{
+  "accuracy_tested": false,
+  "formal_reports_deferred": true,
+  "offline_tests": {
+    "actual_api_calls": 0,
+    "count": 36,
+    "network_disabled": true,
+    "seconds": 41.418,
+    "status": "PASS"
+  },
+  "original_artifact_files": 792,
+  "original_attempt_snapshots": 213,
+  "original_source_files": 35,
+  "original_source_unchanged": true,
+  "original_successful_caches": 212,
+  "policy_summary": {
+    "default_max_cumulative_attempts": 3,
+    "exception_max_cumulative_attempts": 4,
+    "exception_payload_count": 1,
+    "max_workers": 2,
+    "read_timeout_seconds": 600
+  },
+  "protocol_sha256": "83b65db41001b1c6730178df0131ca02e852a5a0a63411a45cd7db62d59365d3",
+  "real_import_preflight": {
+    "complete_queries": 52,
+    "development_labels_read": false,
+    "new_run_created": false,
+    "provider_constructed": false,
+    "remaining_queries": 32,
+    "sealed_stages": 263,
+    "status": "PASS",
+    "validation_opened": false
+  },
+  "review_findings_fixed": [
+    "R-SC-1",
+    "R-SC-2",
+    "R-SC-3"
+  ],
+  "source_sha256": {
+    "round4/continuation/evaluate.py": "71a59169bec9bc2687fbb8020615a2bc6810004747cbdb4b2c82a3f3af0fc0c3",
+    "round4/continuation/integrity.py": "27dcea9c61bc32e19c2fb58414188be28dfbc9ffdd4a37b2760c0eb05b87e67d",
+    "round4/continuation/provider.py": "ccc61a8985cf4abcdb35d79b1b5a52b34db34aa1492806b927a2a6a66df30d3b",
+    "round4/continuation/runner.py": "3b564351de691b557d134584512fd0dd037f47042f58d68d5eb015ef049863fd",
+    "round4/continuation/tests/test_evaluate.py": "1d20ea48f6d6ea67cc477c4286ed6cbf542945d7284014b795495709ea2831f4",
+    "round4/continuation/tests/test_provider.py": "0d907649caf2477e31fd838a75934a9102bd73c0ba4f1bf0a29859db6d8475f8",
+    "round4/continuation/tests/test_runner.py": "bb1758f289039aa61adbb5715b1689d3a7e706475d91122ddff3247e37f68b1d"
+  },
+  "status": "ready_for_registered_service_continuation",
+  "validation_opened": false
+}

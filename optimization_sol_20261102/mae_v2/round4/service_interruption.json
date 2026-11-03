@@ -1,0 +1,86 @@
+{
+  "actual_usage": {
+    "J": {
+      "chat": {
+        "completion_tokens": 75660,
+        "connection_errors": 8,
+        "http_attempts": 167,
+        "http_successes": 159,
+        "prompt_tokens": 1683251,
+        "total_tokens": 1758911
+      },
+      "embedding": {
+        "completion_tokens": 0,
+        "connection_errors": 0,
+        "http_attempts": 53,
+        "http_successes": 53,
+        "prompt_tokens": 7682,
+        "total_tokens": 7682
+      }
+    },
+    "J_gallery": {
+      "chat": {
+        "completion_tokens": 80073,
+        "connection_errors": 0,
+        "http_attempts": 230,
+        "http_successes": 230,
+        "prompt_tokens": 268180,
+        "total_tokens": 348253
+      },
+      "embedding": {
+        "completion_tokens": 0,
+        "connection_errors": 0,
+        "http_attempts": 230,
+        "http_successes": 230,
+        "prompt_tokens": 31594,
+        "total_tokens": 31594
+      }
+    },
+    "capability": {
+      "chat": {
+        "completion_tokens": 565,
+        "connection_errors": 0,
+        "http_attempts": 1,
+        "http_successes": 1,
+        "prompt_tokens": 8430,
+        "total_tokens": 8995
+      },
+      "embedding": {
+        "completion_tokens": 0,
+        "connection_errors": 0,
+        "http_attempts": 0,
+        "http_successes": 0,
+        "prompt_tokens": 0,
+        "total_tokens": 0
+      }
+    }
+  },
+  "base_completion_seal_exists": false,
+  "base_expected_population": 84,
+  "base_progress_events_completed": 49,
+  "base_scored": false,
+  "calibration_run": false,
+  "cause": "one_exact_payload_exhausted_three_persistent_ReadTimeout_attempts",
+  "cost_note": "Price unverified; token totals from returned responses only; timed-out requests can have unreported server-side usage. Reasoning tokens are already included in completion tokens.",
+  "gallery_completed": 230,
+  "public_source_backup_commit": "cd07790b0cbf582698d2b257c19b6ea536f201b3",
+  "recorded_utc": "2026-11-03T02:10:03.805282+00:00",
+  "retry_budget_reset": false,
+  "sealed_stage_counts": {
+    "description": 53,
+    "embedding": 53,
+    "estimate": 52,
+    "rerank": 52,
+    "retrieval": 53
+  },
+  "source_bindings_unchanged": true,
+  "stage_hash_bindings_verified": true,
+  "status": "stopped_service_timeout_before_complete_base_seal",
+  "third_party_cost_usd": null,
+  "training_images": 230,
+  "unfinished_stage_counts": {
+    "rerank": 1
+  },
+  "user_download_confirmation_recorded": true,
+  "validation_opened": false
+}

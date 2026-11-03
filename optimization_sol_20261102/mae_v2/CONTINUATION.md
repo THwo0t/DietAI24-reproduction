@@ -64,9 +64,29 @@ See `round4/README.md` for the resumable command sequence. Raw J is followed onl
 by the separately preregistered grouped OOF aggregate calibration candidate;
 formal validation stays sealed and reports remain deferred.
 
+The gallery subsequently completed all 230. J stopped after its coordinator
+reported 49/84, because one rerank payload exhausted three ReadTimeout attempts.
+Outstanding workers left 52 sealed estimate stages, 53 descriptions/embeddings/
+retrievals and 52 reranks. No full J seal, score or calibration exists. Preserve
+this failed run and every successful answer. `round4/service_interruption.json`
+records safe counts/usage. A separate service continuation is registered in
+`round4/continuation/SERVICE_CONTINUATION_PROTOCOL.md`: 600-second read timeout,
+one extra transmission only for the exact exhausted payload (cumulative cap 4),
+all other payloads retain cap 3, and original stage/counter provenance is kept.
+Its new runner/evaluator must be tested and frozen before actual continuation.
+
+The continuation implementation has now passed its one independent review, with
+R-SC-1/2/3 fixed and 36 offline tests passing. A network-isolated real import
+preflight validated all 263 sealed stages and 52 complete old predictions without
+creating a provider or new run. The private registration binds 35 old source
+files, 7 new source files, 792 old artifacts, 213 original counters and 212
+successful response caches. Only the remaining 32 queries require completion.
+Use the separate continuation entry points in `round4/README.md`; do not change
+the original J or open validation. Full-population scoring is still pending.
+
 The public backup branch is `codex/mae-v2-backup-20261103` in
-`THwo0t/DietAI24-reproduction`. Source commit `4d37980` is confirmed pushed and
-contains completed round 3 comparisons plus tested round 4 source, with 163
+`THwo0t/DietAI24-reproduction`. Source commit `cd07790` is confirmed pushed and
+contains completed round 3 comparisons plus tested round 4 source, with 169
 explicitly allowlisted members. Reachable-history/worktree scans and exact plus
 truncated checks against both actual credentials passed. New research data,
 per-query outputs and API logs remain private. Final reports remain deferred.
