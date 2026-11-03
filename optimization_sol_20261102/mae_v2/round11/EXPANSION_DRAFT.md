@@ -232,3 +232,70 @@ both0/positive source orders refuse, identical duplicate mappings and gram98
 behavior remain. The added negative test catches2 old-source failures,0errors;
 all58 current unique tests pass. Actual-data completeness, phase guards,
 sampling/download and common-predictor integration remain unapproved/pending.
+
+P-C exact-content extension (source-only, no actual audit): byte SHA alone does
+not detect a PNG saved with different compression or text metadata but identical
+pixels. `asa_content_identity.py` therefore retains complete metadata inventory
+names, including names with no code association, and adds dimension-bound exact
+decoded-RGB edges alongside byte edges. Historical RGB anchors are explicit;
+missing/unmatched evidence blocks the corresponding global completeness claim.
+All ZIP PNG members, including unassociated files, must enter the real adapter.
+This companion does not modify the already reviewed byte-only helper and does
+not authenticate the source/exposure universe.
+
+The registered prototype algorithm is `png-rgb-u32be-v1`: RGB/L/opaque palette
+PNG, one frame, bounded bytes/pixels, no alpha/transparency, nontrivial EXIF
+orientation or ICC rendering. It verifies PNG structure then hashes a versioned
+prefix, big-endian dimensions and decoded RGB bytes. Unsupported rendering or
+decode failure must stop real preparation, never quietly become an eligible
+unknown. This is exact pixel equality, not perceptual/resize/crop deduplication.
+The future isolated adapter must additionally bind source/decoder/dependency
+versions and preserve protected anchor completeness.
+
+Thirteen new synthetic tests demonstrate a pixel bridge between core and
+validation despite distinct PNG bytes, isolated metadata names without bytes,
+unassociated ZIP image pixel anchors, mismatched dimensions/algorithms, corrupt
+or unsupported images, detached private results and reference ambiguity. For
+legal-portion consistency use each image's exact RGB digest, never a full
+code-connected group ID (all portions of a code share that group). A fixture
+shows a/d images with identical pixels but10/40g references being rejected,
+where byte-only checking would accept four apparent distinct portions.
+All71 preparation tests pass with external networking disabled. This is not a
+real ASA content audit, completed P-C review, cohort repair or paid-run approval.
+
+`asa_archive.py` supplies the next source-only reader component. Its only path
+is ASA24/Asa24PortionImages.zip under the supplied canonical root. A future
+phase entry point must authenticate its expected source hash and permissions;
+this helper cannot do that. The bounded regular file is hashed before parsing,
+all PNG members are read by ZipInfo (including uppercase and unassociated PNGs),
+and the original fd/current fixed path are rehashed before returning. Duplicate
+same-name identical members remain explicit; conflicting basename bytes refuse.
+Unsafe/symlink/special members, unsupported PNG semantics, CRC/decode errors and
+size/count excesses stop the whole capture. No extraction occurs. The returned
+fingerprints/member inventory is private; counts alone may be surfaced.
+Nine synthetic ZIP tests include same-size/restored-mtime changes and a real
+member CRC fault; all80 current tests pass with external networking disabled.
+No actual archive, workbook, CSV, image, validation or API was opened. Actual
+workbook/code projection, complete exposure anchors and phase permissions are
+still missing, and the full P-C scope has not had its first formal review.
+
+Captured-byte ASA workbook/CSV prototypes now complement the ZIP reader. They
+verify supplied content pins before parsing but do not authenticate the pins or
+grant a real-data phase permit. Identity projection keeps all AssociatedCodes
+code/photo edges without ImageType/ModCode/portion filtering and all image names
+from both sheets. Uncoded image rows remain explicit, inventory duplicates are
+retained, and fractional/nonfinite/boolean/formula identities refuse. Food codes
+are exact eight-digit strings or exact finite integer-valued spreadsheet codes.
+No basename/case/whitespace normalization silently changes filename joins.
+
+Only after a future caller proves complete blind isolation may it request the
+permitted-code deferred projection. Protected rows' formula/poison quantity
+fields are skipped, as are their reference portion texts. openpyxl mechanically
+decodes the source workbook privately; no deferred value is used for topology,
+selection, comparison or a model request. CSV membership uses exact Food code;
+weight values stay unconverted strings and preserve every duplicate/zero row
+for the reviewed legal_rows conflict rule. Fourteen new synthetic tests cover
+these boundaries; all94 current tests pass offline. No actual workbook, CSV,
+archive, image, validation or API has been read. The complete fixed-path reader,
+source/exposure authentication, phase/cohort/fold registration and first full
+P-C review remain pending.

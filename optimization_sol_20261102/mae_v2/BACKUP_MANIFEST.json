@@ -9,7 +9,7 @@
       24
     ],
     "status": "PASS",
-    "working_files_scanned": 490
+    "working_files_scanned": 498
   },
   "credentials_included": false,
   "development_mae_pass": {
@@ -18,7 +18,7 @@
     "scope": "completed common M method; M0 passes6/20; neither passes coding guard or numerical tolerance",
     "total": 20
   },
-  "file_count": 366,
+  "file_count": 374,
   "files": {
     ".gitignore": {
       "bytes": 109,
@@ -33,8 +33,8 @@
       "sha256": "5deafa048129decb19bcad702e7e2f938ba9e9fa3d9033d6037dc8916014052e"
     },
     "CONTINUATION.md": {
-      "bytes": 56274,
-      "sha256": "28e2eda35df4093a86eeab72df82dce9708939b0c6c033e9435f1cd917781685"
+      "bytes": 61836,
+      "sha256": "2f11bbed5121824aacf19d6969019821909316dafccdc80590856b02c09ac7e3"
     },
     "MAC_DEMO.md": {
       "bytes": 13272,
@@ -297,12 +297,20 @@
       "sha256": "f419b33bdb4d3aa2b1579ffcc3faa64dfb1f4e3b3be0cbab3766879652fc8ef1"
     },
     "round11/CHECKLIST.md": {
-      "bytes": 2704,
-      "sha256": "535148f7da3f58d1e3e8f5b89d747a47d522359c7ecb19883b8bf1c8ea68a9c7"
+      "bytes": 4825,
+      "sha256": "7e2644070b4a7cfd5d8017b9359b5c073cc84ab1587fd57a8af508244a607886"
     },
     "round11/EXPANSION_DRAFT.md": {
-      "bytes": 15839,
-      "sha256": "ea59e1675ba3ad7f2692843724f84451e8dd9a0416f08083c0786d60ed8db2eb"
+      "bytes": 20507,
+      "sha256": "4e5041f9fa21c59c7140882d023d38ddf39483d3c0115ede3749d0dadfb29708"
+    },
+    "round11/asa_archive.py": {
+      "bytes": 5176,
+      "sha256": "93a9f2414bd9e792b9162480ff6a607d522372d0853253a4f2c51bbf2ab88b68"
+    },
+    "round11/asa_content_identity.py": {
+      "bytes": 8663,
+      "sha256": "f61dfdc4e5a43050f9b0abeb77838713d5d583d9ac4481a4a95f301d15da3d8f"
     },
     "round11/asa_eligibility.py": {
       "bytes": 5839,
@@ -311,6 +319,14 @@
     "round11/asa_identity.py": {
       "bytes": 4781,
       "sha256": "c35806b698020506c9424594a02d13707d0bd1ea65edb4733af2f749341caa63"
+    },
+    "round11/asa_tables.py": {
+      "bytes": 2735,
+      "sha256": "000a56376bfdd6ed6573fc299d239ebc947acd303645cc8d75427eccaf75976d"
+    },
+    "round11/asa_workbook.py": {
+      "bytes": 5587,
+      "sha256": "617e4a7064d69873c6e865d97acbe9563ed5cafce1ea08187269cf01e108752f"
     },
     "round11/engineering/REVIEW.md": {
       "bytes": 8914,
@@ -344,6 +360,14 @@
       "bytes": 4333,
       "sha256": "b6ceea7613a29c847c4879b71a6ed54edce2cc8e6f2e39897fde484c6f16e510"
     },
+    "round11/test_asa_archive.py": {
+      "bytes": 7463,
+      "sha256": "f8a63b73326e76a65339d0df8c0afcda06c3c61ef2b87c4bc9369f79093c185d"
+    },
+    "round11/test_asa_content_identity.py": {
+      "bytes": 9518,
+      "sha256": "b35b1c20bb85405092f3934c522edde56e25db5a67dfef5df4e400ed6463bdc8"
+    },
     "round11/test_asa_eligibility.py": {
       "bytes": 6719,
       "sha256": "2abeb3b533ad04c6293e712ad83f7d18b576b191a39d7638ca5c033b73ccd571"
@@ -351,6 +375,14 @@
     "round11/test_asa_identity.py": {
       "bytes": 3767,
       "sha256": "7f6e55d04555ad9a8de657eba0fa770f39b21b052751eb76abaca78adea9c00e"
+    },
+    "round11/test_asa_tables.py": {
+      "bytes": 3130,
+      "sha256": "e10cd9bbd25d9407c670513b444443112642ba046290548824da58ef4dcbbfa1"
+    },
+    "round11/test_asa_workbook.py": {
+      "bytes": 6366,
+      "sha256": "1eb7c899d05d87e6622dcd458ee145290d4afaa3efc1f56b59f8dc51a622132e"
     },
     "round11/test_identity_gate.py": {
       "bytes": 8327,
@@ -1504,7 +1536,7 @@
     "reachable_blobs_scanned": 429,
     "status": "PASS"
   },
-  "latest_local_checkpoint": "414fb718d61b53fc40b5f1d6087d1d1163935171",
+  "latest_local_checkpoint": "16135c9a458897659c821f092c2b308aede75748",
   "new_research_data_included": false,
   "old_local_git_history_included": false,
   "purpose": "Preserve completed failed development methods, full J and K scoring, and aggregate diagnostics; continue optimization with validation sealed and final reports deferred.",
@@ -1537,13 +1569,14 @@
     "full_preparer_formal_reviews": 0,
     "new_api_calls": 0,
     "new_downloads": 0,
-    "offline_unique_tests": 58,
+    "offline_unique_tests": 94,
+    "pc_components_formal_reviews": 0,
     "preparation_component_formal_reviews": 1,
     "preparation_component_unresolved_p1_p2": 0,
     "private_inputs_or_outputs_included": false,
     "review_fix": "R-PB-1",
     "selected_new_samples": 0,
-    "stage": "synthetic_components_reviewed_fixed_not_real_phase_ready",
+    "stage": "synthetic_preparation_only_not_approved_for_real_run",
     "validation": "sealed"
   },
   "round3": {
@@ -1843,7 +1876,7 @@
     "validation": "sealed"
   },
   "secret_scan": "PASS_reachable_history_and_worktree_generic_scan_plus_coordinator_reported_actual_credentials_in_memory",
-  "source_state": "O remains frozen and running; no full O accuracy result yet. P-B synthetic source/pool components reviewed once and R-PB-1 fixed. Actual new source discovery, cohort selection/download and predictor integration remain pending. Validation sealed.",
+  "source_state": "O remains frozen and running. No complete O accuracy result. P-C source-only ASA archive/content/workbook/table prototypes use synthetic bytes only; actual source audits, exposure inventory, phase permissions, selection, downloads and predictor integration remain pending. Validation sealed.",
   "subagent_model_policy": {
     "astra_allowed": false,
     "explicit_spawn_model_required": true,

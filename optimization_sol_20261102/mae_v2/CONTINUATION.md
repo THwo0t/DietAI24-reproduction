@@ -831,3 +831,82 @@ Latest O host observation17:58:21UTC still55/183,723reservations/outcomes,
 Samebase463390/follower463392, CPU5675.7s continues; no fullscore/val opening.
 Public remote remainsabe98ad (sourcee74eb29), newer local reader/eligibility/
 review fixes not in that public snapshot yet. Readonly monitor session63987.
+
+Updated reviewed-component source backup is now20ea39e5674ca936d6237ef20ea13feea8eb13df,
+source414fb718d61b53fc40b5f1d6087d1d1163935171, normalFF fromabe98ad and
+ls-remote verified.366 nested payloads; public-copy58 prep tests pass.490files,
+19archive members and559reachable blobs scanned for generic/fullactual/12and24
+credential prefixes/suffixes,0matches. Private immutable receipt:
+round11/evidence/github_preparation_reviewed_backup.json. No research data/
+labels/outputs/logs/localhistory published; P-C/P-D still pending. Older zero
+O-API count is now explicitly labeled the frozen-source checkpoint, not live use.
+
+Latest observation18:01:49UTC stillsame463390/463392,55/183 quantities,
+724reservations/outcomes,722HTTP200successes,2recovered transports,
+7conditionalcalls,3formatrepairs. No fullscore/validation opening. O42source
+pins remain equal. Do NOT patch/restart O despite repeated full-proof overhead.
+Wait through this SAME base, existing offline follower and fullscore; only then
+run the already reviewed postscore guarded diagnostic once (check receipt first),
+perform full-project retrospective and proceed with preregistered expanded data.
+
+Source-only method advice was deduplicated before any next-phase selection.
+Whole mass times item fractions/conservation already exists in v2 C
+(study.py483–489, pipeline_v2.py415–451) and K (round5 component_estimator.py245–306).
+Primary-only and equal-mean code density also already exist. Do not rebrand
+these as new interventions. Potentially new, still unselected mechanisms are
+fixed-code/fixed-gram visual evidence weighting, or pairing EACH code's legal
+portion with its own density instead of primary-code portion times mean density.
+They require separate controlled comparisons, not simultaneous changes. Aspect
+preservation/higher resolution must also be isolated from food-inventory prompt
+changes. No mechanism is selected or promised to achieve the caps before O score.
+metrics_v2.fit_mass already uses worst normalized error then mean error; do not
+claim minimax selection as new. Existing few-shot/supervised-calibration guard
+must remain until nested OOF or independently external support provenance is
+explicitly designed and reviewed. R9 oracle query weights remain forbidden.
+
+Future P-C phase-guard source advice is recorded, not implemented: success status
+alone is insufficient. Verify the same freeze, full identity/development stores,
+zero-Provider replay, scoring store/checkpoint, guarded diagnostic completion and
+content-bound full-project retrospective before granting a specific next action.
+Bind all current hashes and revalidate before use. Audit permission must not
+implicitly grant sampling/download/inference; each needs its registered rules.
+Do not modify the already reviewed O/postscore code to add this guard; implement
+the new phase boundary separately with synthetic stale/mixed/tampered/escape
+fixtures. No actual phase evidence or new source files were opened by the advice.
+
+Fresh readonly host observation18:31:09UTC: O61/183 quantities,733reservations/
+outcomes,731HTTP200successes,2previous recovered transports; same463390/463392.
+No development seal, score or validation opening. O remains unchanged.
+
+New P-C source-only ASA content prototype adds exact decoded-RGB edges and
+explicit orphan metadata image names. Old ASA audits/P-B covered bytes only;
+PNG compression/text changes can preserve pixels while changing bytes. New
+asa_content_identity.py and13 synthetic tests leave old reviewed modules intact;
+all71 combined tests pass offline. Per-image RGB SHA detects conflicting legal
+reference weights; do not pass a whole code-connected group as image identity.
+No actual source image/workbook/archive, validation or API has been opened.
+The prototype and pending real source/phase/exposure integration still need
+their first full P-C review; existing P-B approval does not authorize them.
+
+P-C now also has asa_archive.py and9 synthetic ZIP tests. The fixed local path
+reader hashes the pinned archive, reads every PNG by ZipInfo without extracting,
+retains duplicate member evidence, rejects conflicting basenames/CRC/path/
+decoder/bound faults, and rehashes the current fixed path at the end (an old
+buffered fd can retain old bytes). All80 preparation tests pass offline. The
+function grants no phase permission, authenticates no caller-supplied pin and
+claims no workbook/exposure completeness. No actual archive or image was read.
+Workbook/source/exposure integration and the first full P-C review remain
+pending. O remains unmodified;18:38:55UTC still61/183 but735outcomes,733success,
+2old recovered errors and12conditional service calls, samebase/follower.
+
+P-C captured-byte ASA workbook and CSV components now preserve raw metadata
+topology, exact code identities and duplicate mapping evidence before numeric
+eligibility. Protected deferred poison/formula fields are not exported to the
+legal stage. Fourteen added synthetic tests bring the combined total to94;
+no actual workbook/table/image/source audit or paid call is part of this work.
+All real phase/source/exposure/core/fold registration and full P-C review remain
+pending; no component prototype is a ready real-data preparer. Source advice
+also confirms the N5 fixed15-slot/8-anchor reader is historical identity evidence,
+not a current complete exposure registry. J(round4), prior/K(round5), shelved
+L(round6), M/N/O(round7/8/10) source contracts use the same external training230
+and/or currentcore84; actual O-cutoff input/discovery evidence is still required.

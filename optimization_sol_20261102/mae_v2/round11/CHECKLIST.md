@@ -8,7 +8,7 @@ run is claimed here. Independent validation remains sealed.
 |---|---|---|
 | P-A | Verified identity cache and strict graph primitives, synthetic runner/restart equivalence | fixed; one bounded engineering review completed |
 | P-B | Restricted N5 identity sources and pure pool computation; ASA metadata/byte inventory and legal portion eligibility | fixed; one bounded review, R-PB-1 corrected and confirmed offline |
-| P-C | Actual source/ZIP readers and latest exposure discovery, phase guard, cohort/fold registration, private freeze and post-download closure | pending; no real data run |
+| P-C | Actual source/ZIP readers and latest exposure discovery, phase guard, cohort/fold registration, private freeze and post-download closure | pending; source-only ASA RGB graph prototype added, no real data run |
 | P-D | Common predictor chosen after complete O diagnosis; expanded runtime/slots, provenance, fallback, OOF and stopping rules | pending |
 | P-E | Independent full-scope run review/fixes, frozen paid development on both datasets, offline replay and scoring | pending |
 | P-F | Qualification decision, independent acceptance if warranted, final reports and Mac transfer package | pending |
@@ -34,3 +34,33 @@ catches2 negative failures,0 errors. Identical duplicates and zero-only sentinel
 behavior are preserved. The review approves only these component contracts;
 all actual source/exposure discovery, cohort/download and predictor integration
 remain pending P-C/P-D and their own first full-scope checkpoint.
+
+P-C now has an additional, not-yet-reviewed content identity prototype in
+`asa_content_identity.py` and13 synthetic tests. This does not change the
+previous P-B byte-only module. All71 current preparation tests pass with network
+disabled. Full-workbook metadata image names (including unassociated inventory
+names), every ZIP PNG, byte and exact decoded-RGB identities must be reconciled
+before claiming image-content isolation. RGB fingerprints from future real
+sources must use the registered decoder; unrecognized rendering semantics,
+missing bytes/pixels or unmatched historical anchors block the complete claim.
+No actual source reader/audit, phase permit, sampling or predictor is implemented
+by this prototype, and no approval of the full P-C stage is implied.
+
+The fixed-path `asa_archive.py` source-reader prototype is also present, with9
+additional synthetic ZIP tests; all80 current preparation tests pass offline.
+Every PNG member is consumed by ZipInfo without extraction or last-name
+overwrite. Hash pins, fresh final-path rehash, CRC/size/count bounds, symlinks,
+unsafe paths, duplicate basenames and unsupported images are checked. This
+reader does not grant phase permission or authenticate the expected source pin,
+workbook coverage or current exposure registry. No real archive was opened;
+the full P-C review/integration and actual audit remain pending.
+
+Captured-byte `asa_workbook.py` and `asa_tables.py` now add14 synthetic checks;
+all94 current preparation tests pass offline. Workbook topology preserves SIZE,
+modified codes, uncoded image names, inventory-only names and duplicate rows.
+Numeric codes must be exact finite eight-digit identities. Permitted-code
+projection precedes deferred formula/quantity validation; protected poison
+fields never reach eligibility. CSV weights remain strings and retain exact-key
+zero/positive conflicts for the existing legal-stage check. These functions
+consume supplied synthetic bytes only: real fixed-path source capture, trusted
+pins, phase permission, exposure closure and core/fold comparisons are pending.
