@@ -1,0 +1,61 @@
+{
+  "K_queries_started_as_of_this_receipt": 0,
+  "accuracy_tested": false,
+  "development_groups": 78,
+  "offline_tests": {
+    "api_calls": 0,
+    "count": 154,
+    "network_disabled": true,
+    "seconds": 33.855,
+    "status": "PASS"
+  },
+  "parent_completion_sha256": "11fc4c720a3bd9c5b59cd5f3cca8fb291b0865e9ebc8e32e8643498d3ae22b1f",
+  "protocol_sha256": "255a965f4340e5aa9c74b4864f9b5f853a8e1bb7a2a09ca04e4e286a8849f467",
+  "public_copy_tests": {
+    "api_calls": 0,
+    "count": 154,
+    "network_disabled": true,
+    "seconds": 33.116,
+    "status": "PASS"
+  },
+  "real_preflight": {
+    "api_calls": 0,
+    "n": 84,
+    "status": "component_preflight_pass",
+    "training_n": 230,
+    "validation_opened": false
+  },
+  "reports_deferred": true,
+  "review": {
+    "all_required_fixed": true,
+    "independent_reviews": 1,
+    "ledger_sha256": "b414f8862f45cf710b9348bb79c9afef7eadb5b4bfaf5fc2dacbcc748cabc353",
+    "required_findings": [
+      "R5-K4-1"
+    ]
+  },
+  "reviewed_source_commit": "5b73b0a",
+  "schema_version": 1,
+  "scoring_source_sha256": {
+    "round5/src/score_component.py": "1c50b3b700c5010529edb4000b095f69f961f3a353337158b0d0d46564477e9c",
+    "round5/tests/test_score_component.py": "ebb9b75bcd9ddd310256c4f29a5375d17b9bb1253cf284b15da6680aba5ea95e"
+  },
+  "source_sha256": {
+    "round5/K_PROTOCOL.md": "255a965f4340e5aa9c74b4864f9b5f853a8e1bb7a2a09ca04e4e286a8849f467",
+    "round5/src/component_estimator.py": "e17f31bb6c20c472ebd755ebf1334423e1970d1e9bc3506b53b5bb51721f766a",
+    "round5/src/component_runtime.py": "ec7f54c9d2b210d6bdd11313c62c62669b6ee2e7f301479d028dff4333327eb4",
+    "round5/src/component_supports.py": "819b23eb5bcbf0153f631d8b545e068158bfc8dbaf05f4c88e510abeee091f07",
+    "round5/src/run_component.py": "d335e287fee47db37e672925ce2f9ab895114a75ff0c405e6e9f4c7b7693de37",
+    "round5/src/service_evidence.py": "4bc431727bd7ad82ee94d2d3c3fc979af752bb66e8288dff403ccb4f67a618ec",
+    "round5/src/verified_j_prefix.py": "95d25e2a983aef2f1ad068895646d2165c09b5e286026a1e9e6d0ea932874202",
+    "round5/tests/test_component_estimator.py": "7da9bd32f2796c6d9a5a35bb1abb561996c15256300365193d82a0168e80ce2e",
+    "round5/tests/test_component_runtime.py": "6c193b4fcb2f0a9441603b2111dd33c5a1fad161a3fca320dea21afb99ad34d7",
+    "round5/tests/test_component_supports.py": "c7fe8a95568cdd2386fe40731d3358b50cf4bb4b0f75c167fd7259ed1d97651b",
+    "round5/tests/test_run_component.py": "53b6022e074555e9e106497226278526460c50fab02810136a5688976030db23",
+    "round5/tests/test_service_evidence.py": "e5323690b491c78df6312c92d6d3734c52d272873775c72bc8216ec70411a1ae",
+    "round5/tests/test_verified_j_prefix.py": "a16fad6105e41bff0d653d6426192934821fccb7c2d1bb9995494958b6fb0ee6"
+  },
+  "status": "READY_FOR_DEVELOPMENT_NOT_ACCURACY_TESTED",
+  "training_freeze_sha256": "885f8d1a0573313e9e09771f3c38ec938b807e9ffcc9525d706867d3d0d081cb",
+  "validation_opened": false
+}

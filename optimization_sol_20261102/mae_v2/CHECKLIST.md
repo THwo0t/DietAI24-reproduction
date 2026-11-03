@@ -52,3 +52,18 @@ published physical plate identifier.
 fixed CHI median improves all five MAEs relative to the original selected v2 C,
 but fails the acceptance gate. Original selection and all member records remain
 immutable. Continue development; do not open validation or generate final reports.
+
+## K: component comparisons and conserved mass
+
+| Item | Deliverable | Status |
+|---|---|---|
+| R5-K1 | Fixed two-stage protocol, ten-ratio N5 profile ranking, unchanged joint hard gate | approved; registered before inference |
+| R5-K2 | Whitelisted completed-J prefix and deterministic training identity comparisons | approved; 14 + 18 synthetic tests pass |
+| R5-K3 | Image/crop identity hypotheses and conserved parent/leaf mass estimator | approved; 27 synthetic tests pass |
+| R5-K4 | Image-bound request receipts and independent resumable K runner | fixed R5-K4-1; 154 tests pass locally and public copy; post-fix real preflight passed |
+| R5-K5 | Sealed complete-population scorer and strict whole-profile comparison to raw J | approved; 17 synthetic tests pass |
+| R5-K6 | Run K on all 84 development records, score only after seal, diagnose and back up | ready to run; source frozen, 154 tests and post-fix real preflight passed; validation stays sealed |
+
+K independent review is recorded once in `round5/REVIEW.md`. No K inference or
+scoring has run. The external-training prior remains a separate experiment and
+its dense ingredient predictions are not used by K. Final reports stay deferred.

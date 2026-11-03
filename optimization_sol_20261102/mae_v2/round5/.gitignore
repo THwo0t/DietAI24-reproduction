@@ -1,0 +1,7 @@
+launch/
+provider/
+runs/
+scoring/
+diagnostics/
+__pycache__/
+*.pyc

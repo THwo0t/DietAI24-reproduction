@@ -116,8 +116,27 @@ recognition result, and no Sol-prior experiment has been launched. All evidence
 is in `round5/training_checkpoint.json`; private OOF/fold records stay local.
 
 The public backup branch is `codex/mae-v2-backup-20261103` in
-`THwo0t/DietAI24-reproduction`. Source commit `a740851` is confirmed pushed and
-contains completed round 3 comparisons plus reviewed continuation source, with 181
-explicitly allowlisted members. Reachable-history/worktree scans and exact plus
+`THwo0t/DietAI24-reproduction`. Public commit `36be2b8` is confirmed pushed and
+contains completed J/scoring/diagnostics plus the separate training-prior source,
+with 193 explicitly allowlisted members. Reachable-history/worktree scans and exact plus
 truncated checks against both actual credentials passed. New research data,
 per-query outputs and API logs remain private. Final reports remain deferred.
+
+
+Candidate K is registered in `round5/K_PROTOCOL.md`: one image-grounded
+component-hypothesis stage, deterministic identity-specific training supports,
+then parent/leaf mass allocation with conserved totals. It reuses immutable J
+upstream data and the same 230 training / 84 development images. No dense ridge
+prior, extra calibration, target splicing, new download or validation access is
+part of K. Its one independent review approved K1/2/3/5 and required R5-K4-1.
+That fix is committed in `5b73b0a`: read-only cache/log/counter checks at resume
+and replay, scoped per-request audits, and a separate completion-provenance
+stage. All 154 synthetic tests pass with networking disabled, including actual
+MockTransport sealed-run tampering and interrupted-reservation budget tests.
+The original preflight passed before the engineering fix and remains an as-of
+receipt only; a post-fix persistent network-isolated preflight has passed all 84 queries
+and 230 training images, with zero API calls. Its hashes and the 154-test
+public-copy pass are recorded in `round5/readiness.json`.
+K inference and scoring have not started. Keep all inference sources/tests
+unchanged during preflight and execution. Follow `round5/README.md`; final
+reports remain deferred, and the validation cohort remains sealed.
