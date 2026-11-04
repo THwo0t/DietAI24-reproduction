@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "name": "C-reproduction-Sol-MultiQuery-mean-density-format-compatible",
+  "format_compatibility": "Ignore separator-only empty lines in existing query answers; no content rewrite or re-draw.",
+  "scope": {
+    "nutrition5k": 314,
+    "asa24": 529,
+    "unique_development_images": 843,
+    "complete_groups": {
+      "nutrition5k": 293,
+      "asa24": 43
+    },
+    "independent_acceptance": "sealed"
+  },
+  "models": {
+    "chat": "gpt-6.1-sol",
+    "embedding": "text-embedding-3-large",
+    "temperature": 1
+  },
+  "retrieval": {
+    "prompt": "release_original_literal_five_rewrites_plus_original_sixth",
+    "parser": "strip_and_split_newlines_drop_only_blank_separator_lines_keep_other_text",
+    "include_original": false,
+    "search": "original_Chroma_L2",
+    "k_per_query": 4,
+    "union": "first_seen_in_query_result_order",
+    "BM25": false,
+    "query_scope": "C_fixed_leaf_descriptions_or_ASA_single_item_description"
+  },
+  "N5": {
+    "layout": "existing_label_blind_C_layout",
+    "crops": false,
+    "image_mode": "native_max1024",
+    "portion_mode": "total_ratio",
+    "selected_codes_per_physical_leaf": "one_to_three",
+    "nutrition": "arithmetic_mean_density_times_one_gram_mass",
+    "completion_tokens": 8192,
+    "calibration": "other_fold_shared_mass_grid0.8_to1.25_half_shrinkage"
+  },
+  "ASA": {
+    "identity": "existing_optimized_prompt_with_MultiQuery_retrieval",
+    "image_mode": "square256",
+    "portion_mode": "continuous_option",
+    "completion_tokens": 4096,
+    "examples": false,
+    "calibration": "new_other_fold_raw_factor_full_without_half_shrinkage",
+    "primary": "conditional_Exact_reference_code_density_not_candidate_mean",
+    "E2E": "all529_separately"
+  },
+  "no_labeled_support_gallery": true,
+  "no_model_estimated_nutrient_densities": true,
+  "cumulative_transmissions_per_exact_request": 3,
+  "global_concurrent_requests": 32,
+  "selection": "one_whole_raw_profile_and_one_predeclared_corrected_profile_no_column_splicing",
+  "versions": {
+    "chromadb": "0.4.24",
+    "langchain": "0.1.9",
+    "langchain-community": "0.0.24",
+    "langchain-core": "0.1.35",
+    "numpy": "1.26.4"
+  },
+  "files": {
+    "optimization_sol_20261102/mae_v2/c_repro_sol_20261104_formatfix/run.py": "8bb598d5a4be682960501ec890b6bb0081d86578a4e5e22110c4cf7652ed921e",
+    "optimization_sol_20261102/mae_v2/c_repro_sol_20261104_formatfix/pipeline.py": "248d32f60c866ccfbcb9c9fc0d0a45ab40b43b87b783ee29344e9cc2916af066",
+    "optimization_sol_20261102/mae_v2/c_repro_sol_20261104_formatfix/score.py": "c888f21c6c1cc8f43dafda4bc27960e8f497533defdecb68fd01cb972ace0cf4",
+    "optimization_sol_20261102/mae_v2/c_repro_sol_20261104_formatfix/newcommon.py": "22a268e0a22d1ce5cd7d9209827c55223c1c7b4003d631205fef15da0340ca04",
+    "optimization_sol_20261102/mae_v2/c_repro_sol_20261104_formatfix/chroma_index.py": "f30348c30824a7773fd1890192396dae0aa547e9efec7831d3f5ec3227c8a28a",
+    "optimization_sol_20261102/mae_v2/deliverables/j_c_20261104/C/source/optimization_sol_20261102/mae_v2/src/legacy_adapter.py": "9461292a59673c9d556e3c6db1e86dab67e0c94f4f56aaa2517c1e6a2100d1a4",
+    "optimization_sol_20261102/mae_v2/deliverables/j_c_20261104/C/source/optimization_sol_20261102/mae_v2/src/opt_metrics.py": "4a0e6dbf729010399b151c6e6be98cd77eb18468dbd08d72ffbfc97a2d0af055",
+    "optimization_sol_20261102/mae_v2/deliverables/j_c_20261104/C/source/optimization_sol_20261102/mae_v2/src/metrics_v2.py": "b97451f19d994e39705136c2759ea91551c955887a46ca58b0775c899474edfc",
+    "optimization_sol_20261102/mae_v2/deliverables/j_c_20261104/C/source/optimization_sol_20261102/mae_v2/src/study.py": "081d445466fe5936e49df9b7e3983e1dff38ca12a662caef329cce0895457160",
+    "optimization_sol_20261102/mae_v2/deliverables/j_c_20261104/C/source/optimization_sol_20261102/mae_v2/src/opt_provider.py": "139917a2d6fc971a0461503fee75cec08534a2654ac5559ccedd9d0c11501367",
+    "optimization_sol_20261102/mae_v2/deliverables/j_c_20261104/C/source/optimization_sol_20261102/mae_v2/src/opt_pipeline.py": "940bcb7622c832820866406705fc7e9bc90d7e1bfce83ad33a7aa7d0db08f778",
+    "optimization_sol_20261102/mae_v2/deliverables/j_c_20261104/C/source/optimization_sol_20261102/mae_v2/src/validation_adapter.py": "c781d6c89969b74f7fe482f82b189f1ba44625934dfb9d5fdd85be2eed3a46a6",
+    "optimization_sol_20261102/mae_v2/deliverables/j_c_20261104/C/source/optimization_sol_20261102/mae_v2/src/cohorts_v2.py": "866bbcd1854bc362dc26bc7d4a3bca111488ee8fd9441d0c897869120a9b803f",
+    "optimization_sol_20261102/mae_v2/deliverables/j_c_20261104/C/source/optimization_sol_20261102/mae_v2/src/pipeline_v2.py": "9478dfec8afd3db189d6c15b7f31997fdca6cc1dab8d86ae2f2d9aba76881cfc",
+    "optimization_sol_20261102/mae_v2/src/opt_pipeline.py": "940bcb7622c832820866406705fc7e9bc90d7e1bfce83ad33a7aa7d0db08f778",
+    "optimization_sol_20261102/mae_v2/src/opt_provider.py": "139917a2d6fc971a0461503fee75cec08534a2654ac5559ccedd9d0c11501367",
+    "optimization_sol_20261102/mae_v2/src/opt_metrics.py": "15d71fd2c2379f7f723707cddfeb2e2868c0dd84b027edd12ef9185303a1e63e",
+    "optimization_sol_20261102/mae_v2/cj_full_20261104/score.py": "dea58853dbdef967bf625689374fa2b33a176cbf6463316c93dadad642d8e66d",
+    "optimization_sol_20261102/mae_v2/cj_full_20261104/common.py": "c55d909cd86c52d688c3c7b3da80a3db1267da1dd32224bed89c34f201fb56ed",
+    "optimization_sol_20261102/mae_v2/round4/src/artifacts.py": "c80f55cfeeeca87d670f0e517e540c07a1206dd7fd2e902f3e2d403c6254653c",
+    "code/rag_food_code.py": "e5ec9f8bf508d3ad843a22493d5be1c812b2483e27ed7985fa5941e9a2ff1736",
+    "code/nutrient_estimate_mix.py": "e84756e0d60284cc02d211fc6878f77c55bd4d77645d2055342ecadbc3bd8c6a",
+    "optimization_sol_20261102/mae_v2/round11/prepared/cohort/freeze.json": "402523eec6ff9ef412cd9e2b78fad1fedb47b1d4a2043b169887cec94c409847",
+    "optimization_sol_20261102/mae_v2/round11/prepared/cohort/dev.json": "23460f3958e2e53f23cb697e3d3bab08dbe03cc63104a270e35bf9fabf013c7f",
+    "optimization_sol_20261102/mae_v2/round11/prepared/cohort/dev_labels.json": "d5e74963a22742d89953991068c550c4f8963f7f935819c686a5c7c9100f9d25",
+    "optimization_sol_20261102/mae_v2/c_repro_sol_20261104_formatfix/prepared/context.json": "6d026f696e2632a0d644c6c18b23777e7d5dbb73aee05a76566acf41960357f3",
+    "optimization_sol_20261102/mae_v2/c_repro_sol_20261104_formatfix/prepared/chroma_source.json": "0f1c9bb35ad39172571cdfe82bb0e71bf77b263ec88cc89858fb36b6472dd564",
+    "optimization_sol_20261102/mae_v2/c_repro_sol_20261104_formatfix/authorization.json": "e431690d7bafbd88538a8fee25c8e87894e245b37dd10ab69d47ef2bde0b6d3b",
+    "optimization_sol_20261102/mae_v2/c_repro_sol_20261104_formatfix/format_fix_reason.json": "b87c2e2c3c8f6d5ef3c2c5bb9766dc2de7b8a8f13c90818e5f0429bb6c2a89a9",
+    "optimization_sol_20261102/mae_v2/data/vectors/manifest.json": "dd935def83bb995e910bc4dd6b16a8860d24209febaaae824082cad4c8fc5033",
+    "optimization_sol_20261102/mae_v2/data/vectors/collection.json": "9350a656edf7d1a0f5956b51b61eec4cda23d2db645263b20db69f1e55406c09",
+    "optimization_sol_20261102/mae_v2/data/vectors/codes.json": "175cd6254ca0e27eab48baaa445e1c3b7726d3a7b7b9932e398f3fc5faee62de",
+    "optimization_sol_20261102/mae_v2/data/vectors/embeddings.npy": "9756ffd8dd90fd097abe8541beb3e4af4f1b9b0e86b35d164e25626a1e3e8796",
+    "optimization_sol_20261102/mae_v2/data/catalog.json": "7409e752b0a686123c7e4961f261d356275516f484f0496a21f0abdd0ef02248",
+    "optimization_sol_20261102/mae_v2/round11/prepared/catalog.json": "e3e0be4a73bf4650d1ca04ae98e290e9f657c64ad80c70817b52770855f90499"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-04",
+  "authorization": "Explicit current user request to build and fully test the new C-based scheme.",
+  "current_instruction": "从C出发，恢复多个查询检索FNDDS、多个候选码营养取平均，保留结果修正，做新方案并全量测试。",
+  "prior_destination_consent": "同意按32并发发送843张开发图及允许参考信息到zicc，检索文字到官方OpenAI。",
+  "chat_destination": "https://api.zicc.cc/v1/chat/completions",
+  "embedding_destination": "https://api.openai.com/v1/embeddings",
+  "development_images": 843,
+  "global_concurrency": 32,
+  "independent_acceptance": "sealed",
+  "github_upload": false
+}

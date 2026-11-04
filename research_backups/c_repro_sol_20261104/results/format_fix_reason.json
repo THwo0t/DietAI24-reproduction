@@ -1,0 +1,18 @@
+{
+  "original_run": "c_repro_sol_20261104",
+  "original_run_preserved": true,
+  "observed_N5_empty_separator_failures": 43,
+  "observed_ASA_empty_separator_failures": 93,
+  "example_shape": {
+    "raw_lines": 11,
+    "actual_nonempty_queries": 6,
+    "empty_separators": 5
+  },
+  "change": "Drop separator-only blank lines; preserve every nonblank query string exactly. No extra query generation or quality retries.",
+  "model_prompts_changed": false,
+  "model_parameters_changed": false,
+  "retrieval_k_or_index_changed": false,
+  "nutrition_math_changed": false,
+  "source_response_cache_and_persistent_attempts": "unchanged namespaces and global stores; no reset",
+  "run_purpose": "Complete the user-authorized new Sol-adapted scheme after fixing a demonstrated parser compatibility error."
+}

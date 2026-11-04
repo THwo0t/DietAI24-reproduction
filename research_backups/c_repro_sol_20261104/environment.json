@@ -1,0 +1,15 @@
+{
+  "python": "3.10.13",
+  "observed_installed_packages": {
+    "chromadb": "0.4.24",
+    "langchain": "0.1.9",
+    "langchain-community": "0.0.24",
+    "langchain-core": "0.1.35",
+    "numpy": "1.26.4",
+    "pandas": "2.2.1",
+    "Pillow": "10.2.0",
+    "httpx": "0.26.0",
+    "python-dotenv": "1.0.1"
+  },
+  "note": "Original dependency files are preserved under source. These are observed versions, not a newly resolved lockfile."
+}

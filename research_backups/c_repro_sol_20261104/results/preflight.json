@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "offline_tests": 26,
+  "review": "compatibility-only diff independently checked; previous implementation review inherited",
+  "change": "ignore blank separator lines in cached query answers; no prompt/parameter/index/math changes or accuracy redraw",
+  "source_run_preserved": "c_repro_sol_20261104",
+  "new_preparation_api_calls": 0,
+  "independent_acceptance_opened": false
+}

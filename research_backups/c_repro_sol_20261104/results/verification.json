@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-11-04T12:30:49+00:00",
+  "scope": "all843_completed_development",
+  "frozen_method_unchanged": true,
+  "original_Chroma_unchanged": true,
+  "successful_N5_mean_arithmetic_checked": 310,
+  "N5_leaf_count_by_selected_codes": {
+    "1": 268,
+    "2": 444,
+    "3": 381
+  },
+  "MultiQuery_actual_query_counts": {
+    "6": 1637,
+    "5": 7
+  },
+  "MultiQuery_empty_line_failures": 0,
+  "ASA_legal_single_code_branches_checked": 599,
+  "ASA_calibration_applies_once": true,
+  "ASA_complete_identity_seal": 529,
+  "prediction_vectors_checked": 843,
+  "credential_scan_files": 2596,
+  "credential_scan_matched_files": 0,
+  "retained_passed_checks": 10,
+  "raw_passed_checks": 5,
+  "new_verification_api_calls": 0,
+  "independent_acceptance_opened": false,
+  "github_uploaded": false
+}
