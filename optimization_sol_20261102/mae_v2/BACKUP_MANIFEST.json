@@ -460,8 +460,8 @@
       "sha256": "e6f6e8a96ea925c4d40a89ef733aab2e5f122501eb374166083ccc2a2c071053"
     },
     "round11/direct_run/direct_ledger.py": {
-      "bytes": 8290,
-      "sha256": "fbc1e789136f63455fe546cd8b815ff76393bfdb8d574e88a6bef5331b0d7a6c"
+      "bytes": 8905,
+      "sha256": "fa9ca55af6cf6841b34bc7d0fc91bbb6e247e9268a6269fcfdc395621d83e4b7"
     },
     "round11/direct_run/direct_run.py": {
       "bytes": 9987,
@@ -2199,11 +2199,35 @@
     "reachable_blobs_scanned": 429,
     "status": "PASS"
   },
-  "latest_local_checkpoint": "ef3ffa4c0b75108bfa0b43a0f5bc161e80dc7144",
+  "latest_local_checkpoint": "0d52815861468f66d241019ec575039629349b3f",
   "latest_source_backup": {
     "added_or_updated_payloads": 20,
     "credential_scan": "generic credential patterns scanned on selected publication payloads; no credential files read; matches zero",
     "formal_report_added": false,
+    "publication_change_file_count": 21,
+    "publication_change_paths": [
+      "BACKUP_MANIFEST.json",
+      "round11/ACCEPTANCE_SCOPE_APPROVED.md",
+      "round11/CHECKLIST.md",
+      "round11/RESUME_RULES.md",
+      "round11/direct_run/direct_adapter.py",
+      "round11/direct_run/direct_ledger.py",
+      "round11/direct_run/direct_run.py",
+      "round11/direct_run/direct_scoring.py",
+      "round11/evidence/P_request_reconciliation_20261104.json",
+      "round11/evidence/acceptance_scope_approved_20261104.json",
+      "round11/parallel_acceleration/REVIEW.md",
+      "round11/parallel_acceleration/p_parallel_controller.py",
+      "round11/parallel_acceleration/p_parallel_execution.py",
+      "round11/parallel_acceleration/p_parallel_registration.py",
+      "round11/parallel_acceleration/p_parallel_transition.py",
+      "round11/parallel_acceleration/p_parallel_worker.py",
+      "round11/parallel_acceleration/test_p_parallel_controller.py",
+      "round11/parallel_acceleration/test_p_parallel_registration.py",
+      "round11/parallel_acceleration/test_p_parallel_transition.py",
+      "round11/parallel_acceleration/test_p_parallel_worker.py",
+      "round11/request_accounting.py"
+    ],
     "runtime_data_included": false,
     "scope": "parallel_acceleration_and_direct_run_source_only"
   },

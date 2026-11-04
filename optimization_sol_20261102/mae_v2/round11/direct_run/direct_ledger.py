@@ -45,7 +45,11 @@ class FastLedger(Ledger):
 
     @staticmethod
     def _dynamic(state):
-        return {key:deepcopy(value) for key, value in state.items() if key != 'allowed_slots'}
+        # Existing reservation/repair entries are append-only. Copy the mutable
+        # containers, not the entire growing history on every request.
+        return {'namespace':state['namespace'], 'binding':state['binding'],
+            'bindings':dict(state['bindings']), 'repairs':dict(state['repairs']),
+            'reservations':list(state['reservations']), 'outcomes':dict(state['outcomes'])}
 
     def _validate_dynamic(self, state):
         if (type(state) is not dict or set(state) != {
@@ -117,8 +121,13 @@ class FastLedger(Ledger):
                     self._local.snapshot_checked = False
 
     def _copy_state(self, state):
-        return {key:self.slots if key == 'allowed_slots' else deepcopy(value)
-                for key, value in state.items()}
+        value = self._dynamic(state)
+        value['allowed_slots'] = self.slots
+        value['reservations'] = [entry if isinstance(entry, _FrozenDict) else _FrozenDict(entry)
+                                 for entry in value['reservations']]
+        value['repairs'] = {sid:proof if isinstance(proof, _FrozenDict) else _FrozenDict(proof)
+                            for sid, proof in value['repairs'].items()}
+        return value
 
     def read(self):
         with self.lock('admission'):
