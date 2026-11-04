@@ -1,0 +1,716 @@
+{
+  "accounting_source_sha256": "3fe4d2bd52451c937145097599850c7584bd25b5fbfddce701d9037da78aaf7f",
+  "accounting_synthetic_tests": 11,
+  "answers_or_accuracy_used_for_selection": false,
+  "audit_api_calls": 0,
+  "audit_wrote_active_ledger_or_runtime_sources": false,
+  "comparison": {
+    "completed_same_slot": 4,
+    "different_payload_hash": 2,
+    "not_completed": 0,
+    "old_successful_slots": 4,
+    "same_payload_hash": 2
+  },
+  "continuation_contract": "retain same complete source/freeze/ledger/stores; never resend valid persisted successes; no server-side exactly-once guarantee for unknown outcomes",
+  "cumulative": {
+    "anchored_responses": 47,
+    "by_role": {
+      "chat": {
+        "anchored_responses": 26,
+        "kind_counts": {
+          "success": 26
+        },
+        "model_counts": {
+          "gpt-6.1-sol": 26
+        },
+        "pending": 0,
+        "reservations": 26,
+        "role_counts": {
+          "chat": 26
+        },
+        "status_counts": {
+          "200": 26
+        },
+        "usage": {
+          "cached_tokens": 0,
+          "completion_tokens": 7952,
+          "prompt_tokens": 39530,
+          "reasoning_tokens": 6442,
+          "total_tokens": 47482
+        },
+        "usage_field_observations": {
+          "cached_tokens": 0,
+          "completion_tokens": 26,
+          "prompt_tokens": 26,
+          "reasoning_tokens": 26,
+          "total_tokens": 26
+        },
+        "usage_state_counts": {
+          "complete": 26
+        }
+      },
+      "embedding": {
+        "anchored_responses": 21,
+        "kind_counts": {
+          "success": 21
+        },
+        "model_counts": {
+          "text-embedding-3-large": 21
+        },
+        "pending": 0,
+        "reservations": 21,
+        "role_counts": {
+          "embedding": 21
+        },
+        "status_counts": {
+          "200": 21
+        },
+        "usage": {
+          "cached_tokens": 0,
+          "completion_tokens": 0,
+          "prompt_tokens": 162,
+          "reasoning_tokens": 0,
+          "total_tokens": 162
+        },
+        "usage_field_observations": {
+          "cached_tokens": 0,
+          "completion_tokens": 0,
+          "prompt_tokens": 21,
+          "reasoning_tokens": 0,
+          "total_tokens": 21
+        },
+        "usage_state_counts": {
+          "complete": 21
+        }
+      }
+    },
+    "kind_counts": {
+      "success": 47
+    },
+    "model_counts": {
+      "gpt-6.1-sol": 26,
+      "text-embedding-3-large": 21
+    },
+    "pending": 0,
+    "reservations": 47,
+    "role_counts": {
+      "chat": 26,
+      "embedding": 21
+    },
+    "status_counts": {
+      "200": 47
+    },
+    "usage": {
+      "cached_tokens": 0,
+      "completion_tokens": 7952,
+      "prompt_tokens": 39692,
+      "reasoning_tokens": 6442,
+      "total_tokens": 47644
+    },
+    "usage_field_observations": {
+      "cached_tokens": 0,
+      "completion_tokens": 26,
+      "prompt_tokens": 47,
+      "reasoning_tokens": 26,
+      "total_tokens": 47
+    },
+    "usage_state_counts": {
+      "complete": 47
+    }
+  },
+  "cutoff_end_utc": "2026-11-04T00:00:50.557890+00:00",
+  "cutoff_start_utc": "2026-11-04T00:00:49.275521+00:00",
+  "ledgers": {
+    "active": {
+      "admission_sha256": "3722dc99997251e1f7dd7827e2c4a03ae5e179559212306cf6aaf2c2e632cd7f",
+      "anchored_responses": 43,
+      "by_role": {
+        "chat": {
+          "anchored_responses": 24,
+          "kind_counts": {
+            "success": 24
+          },
+          "model_counts": {
+            "gpt-6.1-sol": 24
+          },
+          "pending": 0,
+          "reservations": 24,
+          "role_counts": {
+            "chat": 24
+          },
+          "status_counts": {
+            "200": 24
+          },
+          "usage": {
+            "cached_tokens": 0,
+            "completion_tokens": 7422,
+            "prompt_tokens": 36105,
+            "reasoning_tokens": 6022,
+            "total_tokens": 43527
+          },
+          "usage_field_observations": {
+            "cached_tokens": 0,
+            "completion_tokens": 24,
+            "prompt_tokens": 24,
+            "reasoning_tokens": 24,
+            "total_tokens": 24
+          },
+          "usage_state_counts": {
+            "complete": 24
+          }
+        },
+        "embedding": {
+          "anchored_responses": 19,
+          "kind_counts": {
+            "success": 19
+          },
+          "model_counts": {
+            "text-embedding-3-large": 19
+          },
+          "pending": 0,
+          "reservations": 19,
+          "role_counts": {
+            "embedding": 19
+          },
+          "status_counts": {
+            "200": 19
+          },
+          "usage": {
+            "cached_tokens": 0,
+            "completion_tokens": 0,
+            "prompt_tokens": 147,
+            "reasoning_tokens": 0,
+            "total_tokens": 147
+          },
+          "usage_field_observations": {
+            "cached_tokens": 0,
+            "completion_tokens": 0,
+            "prompt_tokens": 19,
+            "reasoning_tokens": 0,
+            "total_tokens": 19
+          },
+          "usage_state_counts": {
+            "complete": 19
+          }
+        }
+      },
+      "freeze_sha256": "c635d873eaa342e5063bc44b68db633de5569de28b0663ecfffee3d3f4d6b7b5",
+      "kind_counts": {
+        "success": 43
+      },
+      "model_counts": {
+        "gpt-6.1-sol": 24,
+        "text-embedding-3-large": 19
+      },
+      "pending": 0,
+      "reservations": 43,
+      "role_counts": {
+        "chat": 24,
+        "embedding": 19
+      },
+      "science_sha256": "b4696222218a4f86e14cccf14895fce2c26eba3ab88bae6703a5091f7a1650ab",
+      "source_hashes_replayed": false,
+      "status_counts": {
+        "200": 43
+      },
+      "usage": {
+        "cached_tokens": 0,
+        "completion_tokens": 7422,
+        "prompt_tokens": 36252,
+        "reasoning_tokens": 6022,
+        "total_tokens": 43674
+      },
+      "usage_field_observations": {
+        "cached_tokens": 0,
+        "completion_tokens": 24,
+        "prompt_tokens": 43,
+        "reasoning_tokens": 24,
+        "total_tokens": 43
+      },
+      "usage_state_counts": {
+        "complete": 43
+      }
+    },
+    "archived": {
+      "admission_sha256": "46a575afb3bcc6a2d5227e609dc779528015f660cadf987c3f73ea963ca19380",
+      "anchored_responses": 4,
+      "by_role": {
+        "chat": {
+          "anchored_responses": 2,
+          "kind_counts": {
+            "success": 2
+          },
+          "model_counts": {
+            "gpt-6.1-sol": 2
+          },
+          "pending": 0,
+          "reservations": 2,
+          "role_counts": {
+            "chat": 2
+          },
+          "status_counts": {
+            "200": 2
+          },
+          "usage": {
+            "cached_tokens": 0,
+            "completion_tokens": 530,
+            "prompt_tokens": 3425,
+            "reasoning_tokens": 420,
+            "total_tokens": 3955
+          },
+          "usage_field_observations": {
+            "cached_tokens": 0,
+            "completion_tokens": 2,
+            "prompt_tokens": 2,
+            "reasoning_tokens": 2,
+            "total_tokens": 2
+          },
+          "usage_state_counts": {
+            "complete": 2
+          }
+        },
+        "embedding": {
+          "anchored_responses": 2,
+          "kind_counts": {
+            "success": 2
+          },
+          "model_counts": {
+            "text-embedding-3-large": 2
+          },
+          "pending": 0,
+          "reservations": 2,
+          "role_counts": {
+            "embedding": 2
+          },
+          "status_counts": {
+            "200": 2
+          },
+          "usage": {
+            "cached_tokens": 0,
+            "completion_tokens": 0,
+            "prompt_tokens": 15,
+            "reasoning_tokens": 0,
+            "total_tokens": 15
+          },
+          "usage_field_observations": {
+            "cached_tokens": 0,
+            "completion_tokens": 0,
+            "prompt_tokens": 2,
+            "reasoning_tokens": 0,
+            "total_tokens": 2
+          },
+          "usage_state_counts": {
+            "complete": 2
+          }
+        }
+      },
+      "freeze_sha256": "c23c5968a8769fb44307b18c996bdd5d23d872b0b7b9a49567c2c2f290701435",
+      "kind_counts": {
+        "success": 4
+      },
+      "model_counts": {
+        "gpt-6.1-sol": 2,
+        "text-embedding-3-large": 2
+      },
+      "pending": 0,
+      "reservations": 4,
+      "role_counts": {
+        "chat": 2,
+        "embedding": 2
+      },
+      "science_sha256": "a55484a9655ee5e3f704930f1a69d75a8dded6eb1f80937551272a803c80ccfd",
+      "source_hashes_replayed": false,
+      "status_counts": {
+        "200": 4
+      },
+      "usage": {
+        "cached_tokens": 0,
+        "completion_tokens": 530,
+        "prompt_tokens": 3440,
+        "reasoning_tokens": 420,
+        "total_tokens": 3970
+      },
+      "usage_field_observations": {
+        "cached_tokens": 0,
+        "completion_tokens": 2,
+        "prompt_tokens": 4,
+        "reasoning_tokens": 2,
+        "total_tokens": 4
+      },
+      "usage_state_counts": {
+        "complete": 4
+      }
+    }
+  },
+  "live_batch_cutoff": true,
+  "monetary_cost": "unverified; recorded requests and provider-reported tokens only",
+  "old_records_preserved": true,
+  "old_results_imported": false,
+  "private_capture": "round11/accounting/cutoff_20261104T000050Z",
+  "reason": "reviewed integrity-cache engineering replacement uses a distinct source freeze and a fresh ledger; old answers are not imported under the registered fresh-P-only policy",
+  "reasoning_not_added_to_total": true,
+  "reported_token_arithmetic_consistent": true,
+  "same_freeze_cross_slot_probe_passed": true,
+  "same_freeze_recovery_offline_tests": 53,
+  "same_namespace": true,
+  "same_scientific_binding": false,
+  "same_slot_reexecution_usage": {
+    "active_four": {
+      "anchored_responses": 4,
+      "by_role": {
+        "chat": {
+          "anchored_responses": 2,
+          "kind_counts": {
+            "success": 2
+          },
+          "model_counts": {
+            "gpt-6.1-sol": 2
+          },
+          "pending": 0,
+          "reservations": 2,
+          "role_counts": {
+            "chat": 2
+          },
+          "status_counts": {
+            "200": 2
+          },
+          "usage": {
+            "cached_tokens": 0,
+            "completion_tokens": 514,
+            "prompt_tokens": 3385,
+            "reasoning_tokens": 409,
+            "total_tokens": 3899
+          },
+          "usage_field_observations": {
+            "cached_tokens": 0,
+            "completion_tokens": 2,
+            "prompt_tokens": 2,
+            "reasoning_tokens": 2,
+            "total_tokens": 2
+          },
+          "usage_state_counts": {
+            "complete": 2
+          }
+        },
+        "embedding": {
+          "anchored_responses": 2,
+          "kind_counts": {
+            "success": 2
+          },
+          "model_counts": {
+            "text-embedding-3-large": 2
+          },
+          "pending": 0,
+          "reservations": 2,
+          "role_counts": {
+            "embedding": 2
+          },
+          "status_counts": {
+            "200": 2
+          },
+          "usage": {
+            "cached_tokens": 0,
+            "completion_tokens": 0,
+            "prompt_tokens": 11,
+            "reasoning_tokens": 0,
+            "total_tokens": 11
+          },
+          "usage_field_observations": {
+            "cached_tokens": 0,
+            "completion_tokens": 0,
+            "prompt_tokens": 2,
+            "reasoning_tokens": 0,
+            "total_tokens": 2
+          },
+          "usage_state_counts": {
+            "complete": 2
+          }
+        }
+      },
+      "kind_counts": {
+        "success": 4
+      },
+      "model_counts": {
+        "gpt-6.1-sol": 2,
+        "text-embedding-3-large": 2
+      },
+      "pending": 0,
+      "reservations": 4,
+      "role_counts": {
+        "chat": 2,
+        "embedding": 2
+      },
+      "status_counts": {
+        "200": 4
+      },
+      "usage": {
+        "cached_tokens": 0,
+        "completion_tokens": 514,
+        "prompt_tokens": 3396,
+        "reasoning_tokens": 409,
+        "total_tokens": 3910
+      },
+      "usage_field_observations": {
+        "cached_tokens": 0,
+        "completion_tokens": 2,
+        "prompt_tokens": 4,
+        "reasoning_tokens": 2,
+        "total_tokens": 4
+      },
+      "usage_state_counts": {
+        "complete": 4
+      }
+    },
+    "archived_four": {
+      "anchored_responses": 4,
+      "by_role": {
+        "chat": {
+          "anchored_responses": 2,
+          "kind_counts": {
+            "success": 2
+          },
+          "model_counts": {
+            "gpt-6.1-sol": 2
+          },
+          "pending": 0,
+          "reservations": 2,
+          "role_counts": {
+            "chat": 2
+          },
+          "status_counts": {
+            "200": 2
+          },
+          "usage": {
+            "cached_tokens": 0,
+            "completion_tokens": 530,
+            "prompt_tokens": 3425,
+            "reasoning_tokens": 420,
+            "total_tokens": 3955
+          },
+          "usage_field_observations": {
+            "cached_tokens": 0,
+            "completion_tokens": 2,
+            "prompt_tokens": 2,
+            "reasoning_tokens": 2,
+            "total_tokens": 2
+          },
+          "usage_state_counts": {
+            "complete": 2
+          }
+        },
+        "embedding": {
+          "anchored_responses": 2,
+          "kind_counts": {
+            "success": 2
+          },
+          "model_counts": {
+            "text-embedding-3-large": 2
+          },
+          "pending": 0,
+          "reservations": 2,
+          "role_counts": {
+            "embedding": 2
+          },
+          "status_counts": {
+            "200": 2
+          },
+          "usage": {
+            "cached_tokens": 0,
+            "completion_tokens": 0,
+            "prompt_tokens": 15,
+            "reasoning_tokens": 0,
+            "total_tokens": 15
+          },
+          "usage_field_observations": {
+            "cached_tokens": 0,
+            "completion_tokens": 0,
+            "prompt_tokens": 2,
+            "reasoning_tokens": 0,
+            "total_tokens": 2
+          },
+          "usage_state_counts": {
+            "complete": 2
+          }
+        }
+      },
+      "kind_counts": {
+        "success": 4
+      },
+      "model_counts": {
+        "gpt-6.1-sol": 2,
+        "text-embedding-3-large": 2
+      },
+      "pending": 0,
+      "reservations": 4,
+      "role_counts": {
+        "chat": 2,
+        "embedding": 2
+      },
+      "status_counts": {
+        "200": 4
+      },
+      "usage": {
+        "cached_tokens": 0,
+        "completion_tokens": 530,
+        "prompt_tokens": 3440,
+        "reasoning_tokens": 420,
+        "total_tokens": 3970
+      },
+      "usage_field_observations": {
+        "cached_tokens": 0,
+        "completion_tokens": 2,
+        "prompt_tokens": 4,
+        "reasoning_tokens": 2,
+        "total_tokens": 4
+      },
+      "usage_state_counts": {
+        "complete": 4
+      }
+    },
+    "combined_eight": {
+      "anchored_responses": 8,
+      "by_role": {
+        "chat": {
+          "anchored_responses": 4,
+          "kind_counts": {
+            "success": 4
+          },
+          "model_counts": {
+            "gpt-6.1-sol": 4
+          },
+          "pending": 0,
+          "reservations": 4,
+          "role_counts": {
+            "chat": 4
+          },
+          "status_counts": {
+            "200": 4
+          },
+          "usage": {
+            "cached_tokens": 0,
+            "completion_tokens": 1044,
+            "prompt_tokens": 6810,
+            "reasoning_tokens": 829,
+            "total_tokens": 7854
+          },
+          "usage_field_observations": {
+            "cached_tokens": 0,
+            "completion_tokens": 4,
+            "prompt_tokens": 4,
+            "reasoning_tokens": 4,
+            "total_tokens": 4
+          },
+          "usage_state_counts": {
+            "complete": 4
+          }
+        },
+        "embedding": {
+          "anchored_responses": 4,
+          "kind_counts": {
+            "success": 4
+          },
+          "model_counts": {
+            "text-embedding-3-large": 4
+          },
+          "pending": 0,
+          "reservations": 4,
+          "role_counts": {
+            "embedding": 4
+          },
+          "status_counts": {
+            "200": 4
+          },
+          "usage": {
+            "cached_tokens": 0,
+            "completion_tokens": 0,
+            "prompt_tokens": 26,
+            "reasoning_tokens": 0,
+            "total_tokens": 26
+          },
+          "usage_field_observations": {
+            "cached_tokens": 0,
+            "completion_tokens": 0,
+            "prompt_tokens": 4,
+            "reasoning_tokens": 0,
+            "total_tokens": 4
+          },
+          "usage_state_counts": {
+            "complete": 4
+          }
+        }
+      },
+      "kind_counts": {
+        "success": 8
+      },
+      "model_counts": {
+        "gpt-6.1-sol": 4,
+        "text-embedding-3-large": 4
+      },
+      "pending": 0,
+      "reservations": 8,
+      "role_counts": {
+        "chat": 4,
+        "embedding": 4
+      },
+      "status_counts": {
+        "200": 8
+      },
+      "usage": {
+        "cached_tokens": 0,
+        "completion_tokens": 1044,
+        "prompt_tokens": 6836,
+        "reasoning_tokens": 829,
+        "total_tokens": 7880
+      },
+      "usage_field_observations": {
+        "cached_tokens": 0,
+        "completion_tokens": 4,
+        "prompt_tokens": 8,
+        "reasoning_tokens": 4,
+        "total_tokens": 8
+      },
+      "usage_state_counts": {
+        "complete": 8
+      }
+    }
+  },
+  "schema_version": 1,
+  "scope": "two P engineering phases only; historical O excluded",
+  "single_existing_process_preserved": true,
+  "stages": [
+    {
+      "new_reserved_attempts": 1,
+      "old_reserved_attempts": 1,
+      "role": "chat",
+      "same_full_request_hash": true,
+      "same_slot_identity_and_image": true,
+      "stage": "identify"
+    },
+    {
+      "new_reserved_attempts": 1,
+      "old_reserved_attempts": 1,
+      "role": "chat",
+      "same_full_request_hash": false,
+      "same_slot_identity_and_image": true,
+      "stage": "select"
+    },
+    {
+      "new_reserved_attempts": 1,
+      "old_reserved_attempts": 1,
+      "role": "embedding",
+      "same_full_request_hash": false,
+      "same_slot_identity_and_image": true,
+      "stage": "embed_00"
+    },
+    {
+      "new_reserved_attempts": 1,
+      "old_reserved_attempts": 1,
+      "role": "embedding",
+      "same_full_request_hash": true,
+      "same_slot_identity_and_image": true,
+      "stage": "embed_01"
+    }
+  ],
+  "status": "P_engineering_restart_request_metadata_reconciled",
+  "validation_opened": false
+}

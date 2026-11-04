@@ -1,0 +1,46 @@
+{
+  "all_1_3_times_MAE_thresholds_unchanged": true,
+  "api_calls": 0,
+  "approval_sha256": "da67f93bd00d9ff9092936e5fa6f65bc8dcf4276500ea2d3408d8e7c46231050",
+  "approval_source": "direct human response to call_e19176b445eb4b5fbd4b396a11d8d71a",
+  "association_groups_used_for_bootstrap": true,
+  "development_manifest_at_designation_sha256": "23460f3958e2e53f23cb697e3d3bab08dbe03cc63104a270e35bf9fabf013c7f",
+  "formal_validation_started": false,
+  "global_source_or_API_exposure_completeness_claimed": false,
+  "grants_inference_by_itself": false,
+  "historical_reserved_source_reuse": true,
+  "identities_sha256": "6d797ac49a58f77c0e888da5f816d3f5dd1755c6cb691d28f8bedfe8c04f7eae",
+  "identity_proposal_fingerprints_recomputed_and_matched": true,
+  "known_development_sample_image_hash_and_association_disjointness_verified": true,
+  "legacy_group_counts": {
+    "asa24": 22,
+    "nutrition5k": 97
+  },
+  "method_selection_completed": false,
+  "new_downloads": 0,
+  "old_complete_validation_changed_by_registration": false,
+  "original_identity_proposal_sha256": {
+    "asa24": "d4c18204c6b54ecdd478883c99a9f722d662276bcb5504f15f8d0b6b555ed2cc",
+    "nutrition5k": "945967722b4eff24b4c554ffd433afe1de26c95a799cad053486f3a684db7cad"
+  },
+  "original_proposal_and_development_freeze_files_unchanged": true,
+  "population": {
+    "asa24": {
+      "association_groups": 22,
+      "records": 75
+    },
+    "nutrition5k": {
+      "association_groups": 92,
+      "records": 102
+    }
+  },
+  "recorded_at_asia_singapore": "2026-11-04T11:40:59.567568+08:00",
+  "schema_version": 1,
+  "seal_sha256": "5a54fda3e5b6428468b9068c3e0a02a658b8997dcff9f0490206a55acc4290e2",
+  "source_closure_sha256": "3532f6689a8ee89cf6fcc7eab66e52e5568333dc189cea2fae7923bbeb5d383c",
+  "source_proposal_document_sha256": "e969ce86b912529b56042b29a7fa82c9fa3bd6db808cda92be042730ab4fe385",
+  "source_proposal_evidence_sha256": "45cc6e55db031b5f1457c618e9c1c706cc99b922f329478da802d7cc5fb663ab",
+  "status": "approved_independent_population_identity_sealed_only",
+  "validation_images_opened": false,
+  "validation_targets_opened": false
+}

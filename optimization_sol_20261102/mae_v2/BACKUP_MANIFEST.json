@@ -33,7 +33,7 @@
     "scope": "completed common M method; M0 passes6/20; neither passes coding guard or numerical tolerance",
     "total": 20
   },
-  "file_count": 517,
+  "file_count": 536,
   "files": {
     ".gitignore": {
       "bytes": 109,
@@ -323,6 +323,10 @@
       "bytes": 188,
       "sha256": "f419b33bdb4d3aa2b1579ffcc3faa64dfb1f4e3b3be0cbab3766879652fc8ef1"
     },
+    "round11/ACCEPTANCE_SCOPE_APPROVED.md": {
+      "bytes": 2474,
+      "sha256": "1dee78b03c29ae5ff0c392ddd4a2cae6d883fc6a21fb44dac4ab2f4a19d6e3da"
+    },
     "round11/ACCEPTANCE_SCOPE_PROPOSAL.md": {
       "bytes": 2385,
       "sha256": "e969ce86b912529b56042b29a7fa82c9fa3bd6db808cda92be042730ab4fe385"
@@ -332,8 +336,8 @@
       "sha256": "bb70cacd7892b64baa3ce69f4b17988f642806d81fc395f17708f48a8e34bc45"
     },
     "round11/CHECKLIST.md": {
-      "bytes": 27403,
-      "sha256": "98076fb887efe489deaff494e4caa4233d590c1376b20031201bcb2d4e59580f"
+      "bytes": 32812,
+      "sha256": "6e66fdc5612c0a47dd92bc66630b220c6d83f9a5a40cf4c6a9394aa158815bdb"
     },
     "round11/COHORT_REPAIR_DESIGN.md": {
       "bytes": 5948,
@@ -374,6 +378,10 @@
     "round11/PREPARATION_PROTOCOL.md": {
       "bytes": 7824,
       "sha256": "f935178f1f7556f3495e54c16a593b4a471e5d2e1b32ca1627cb0a936abfb1ac"
+    },
+    "round11/RESUME_RULES.md": {
+      "bytes": 3784,
+      "sha256": "8c63675a604b133bf2ebe5e26d0ec8f00eabb2d4ea4f88d4f1b0045278ab1b8b"
     },
     "round11/REVIEW.md": {
       "bytes": 15678,
@@ -447,6 +455,22 @@
       "bytes": 4585,
       "sha256": "bf07429ba82c7ca10bdc8acc86a86a19603d2b51df6f767638e3972d369281b3"
     },
+    "round11/direct_run/direct_adapter.py": {
+      "bytes": 1990,
+      "sha256": "e6f6e8a96ea925c4d40a89ef733aab2e5f122501eb374166083ccc2a2c071053"
+    },
+    "round11/direct_run/direct_ledger.py": {
+      "bytes": 8290,
+      "sha256": "fbc1e789136f63455fe546cd8b815ff76393bfdb8d574e88a6bef5331b0d7a6c"
+    },
+    "round11/direct_run/direct_run.py": {
+      "bytes": 9987,
+      "sha256": "a523c195ad9ede105d90eccac72dde13cb4a4a46bf4d677143a763b5dca8369d"
+    },
+    "round11/direct_run/direct_scoring.py": {
+      "bytes": 6392,
+      "sha256": "724e6b7f853cf4820d2569a41fe5ffec2d5353e08b8a9b619fcc1206d4874e6b"
+    },
     "round11/engine_p.py": {
       "bytes": 5263,
       "sha256": "16121a85ac54286e498fd893ac546bdf5083770255c08f356e48c62bd1fa7108"
@@ -463,9 +487,17 @@
       "bytes": 1007,
       "sha256": "deac2a658b841bae60c5ce2e63045a0bda84b2d1c3be663f624b44507e23e990"
     },
+    "round11/evidence/P_request_reconciliation_20261104.json": {
+      "bytes": 18667,
+      "sha256": "1be3374b53adc954b85a473d1b935f26cc26dcf6d10b58cc4ccd25f14b3a12da"
+    },
     "round11/evidence/acceptance_boundary_proposal.json": {
       "bytes": 579,
       "sha256": "45cc6e55db031b5f1457c618e9c1c706cc99b922f329478da802d7cc5fb663ab"
+    },
+    "round11/evidence/acceptance_scope_approved_20261104.json": {
+      "bytes": 2111,
+      "sha256": "1fc2665af558ac18dc2039a0cda5a34496aadc91f269095fc4f855f3e80f8e16"
     },
     "round11/evidence/caller_registration.json": {
       "bytes": 835,
@@ -607,6 +639,46 @@
       "bytes": 3202,
       "sha256": "b50d1099c12cc82849574bead873e14de2f5a66757611d56aa2639569e610dce"
     },
+    "round11/parallel_acceleration/REVIEW.md": {
+      "bytes": 4515,
+      "sha256": "c24b90ec4b3f2665546182b8ac68a71c7c7c9671415e24f98049e4d662de0416"
+    },
+    "round11/parallel_acceleration/p_parallel_controller.py": {
+      "bytes": 11981,
+      "sha256": "3bf5418b7b2bd0a70bc3d78db76954105a77de18b1ff32a7e66cc4bd6534fdce"
+    },
+    "round11/parallel_acceleration/p_parallel_execution.py": {
+      "bytes": 3317,
+      "sha256": "574d1c5f698678f083e8aa46774c3d09eedefc61206453fbec6db4f7abf51fc5"
+    },
+    "round11/parallel_acceleration/p_parallel_registration.py": {
+      "bytes": 8789,
+      "sha256": "018d8d879f4640856f0c253ce50248c2b4b0ae6e2094116ee7afe4acf3827637"
+    },
+    "round11/parallel_acceleration/p_parallel_transition.py": {
+      "bytes": 6477,
+      "sha256": "3791b35a9df3e3fdcdfc153a633d610104d73b3b725c1c8cb4e645038e752ec6"
+    },
+    "round11/parallel_acceleration/p_parallel_worker.py": {
+      "bytes": 10749,
+      "sha256": "e244a4b0329e4914362657949203dc9f81cdaa4ccbb072b59ca858e769914a23"
+    },
+    "round11/parallel_acceleration/test_p_parallel_controller.py": {
+      "bytes": 12936,
+      "sha256": "ae6cecb9ad11c01553789262abe962c02ef9ebba695e8b3df452af60ad17a3ea"
+    },
+    "round11/parallel_acceleration/test_p_parallel_registration.py": {
+      "bytes": 7551,
+      "sha256": "16fe3ecee110d106c24ecb46da13fc295428c5d78d0a212b9fa82e80b6533955"
+    },
+    "round11/parallel_acceleration/test_p_parallel_transition.py": {
+      "bytes": 10969,
+      "sha256": "cebd6e59b7fd2c169044ee5ab4c88e87276dde4364e64d698124b68c3c6b1307"
+    },
+    "round11/parallel_acceleration/test_p_parallel_worker.py": {
+      "bytes": 5233,
+      "sha256": "85386ffe9906a8ed66a2b7e963b83e5d10ff0cd2b63ac58c60d7153fe78467f9"
+    },
     "round11/postscore_p.py": {
       "bytes": 10890,
       "sha256": "9ef015821d0669e7bdf8a73e6f08e3501e8a25dfa9fa8b7e8720dfbb3f92f711"
@@ -726,6 +798,10 @@
     "round11/records_p.py": {
       "bytes": 16098,
       "sha256": "8241409314e8b331cbfe803e41d8f10ea880810813252f5c0a3bba0b313ba362"
+    },
+    "round11/request_accounting.py": {
+      "bytes": 8282,
+      "sha256": "3fe4d2bd52451c937145097599850c7584bd25b5fbfddce701d9037da78aaf7f"
     },
     "round11/retrospective/O_AGGREGATES.json": {
       "bytes": 179656,
@@ -2123,7 +2199,14 @@
     "reachable_blobs_scanned": 429,
     "status": "PASS"
   },
-  "latest_local_checkpoint": "5011091717797cb567d0345c119d03bf285452ed",
+  "latest_local_checkpoint": "ef3ffa4c0b75108bfa0b43a0f5bc161e80dc7144",
+  "latest_source_backup": {
+    "added_or_updated_payloads": 20,
+    "credential_scan": "generic credential patterns scanned on selected publication payloads; no credential files read; matches zero",
+    "formal_report_added": false,
+    "runtime_data_included": false,
+    "scope": "parallel_acceleration_and_direct_run_source_only"
+  },
   "manifest_coverage_history": [
     {
       "cause": "Ignored round11/evidence JSON files were copied and listed but excluded from ordinary git add. Exact safe whitelist files are now explicitly staged with -f.",
@@ -2533,7 +2616,7 @@
     "validation": "sealed"
   },
   "secret_scan": "PASS_reachable_history_and_worktree_generic_scan_plus_coordinator_reported_actual_credentials_in_memory",
-  "source_state": "Source-only engineering snapshot after four archived P requests. The unchanged843-row O/Q/D/Q+D method has an equivalent integrity-cache amendment. Its first bounded review R-PI-1 is fixed; all523 root offline tests pass. Previous requests/freezes/ledgers remain private and are not pooled. No response accuracy or new MAE was inspected for this amendment. Replacement inference is separately authorized; this snapshot does not claim completed inference, better MAE, independent acceptance or Mac hardware verification. Explicit ID-free evidence only; no private data, targets, predictions, raw logs or private Git history.",
+  "source_state": "Source-only backup of process-parallel continuation and the user-authorized direct lightweight runner/scorer while development remains in progress. Original scientific prompts, models and development cohort are retained; the direct path intentionally omits repeated provenance replay and source hashing at user request. This publication does not assert completed inference, improved MAE, independent acceptance or Mac verification. Runtime freezes, gates, admission/response stores, records, identities, contexts, images, labels, credentials and raw logs remain private. Only explicitly selected source, review/checklist and ID-free aggregate evidence are added; no final report is added.",
   "subagent_model_policy": {
     "astra_allowed": false,
     "explicit_spawn_model_required": true,

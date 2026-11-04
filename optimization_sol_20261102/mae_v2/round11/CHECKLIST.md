@@ -10,8 +10,28 @@ run is claimed here. Independent validation remains sealed.
 | P-B | Restricted N5 identity sources and pure pool computation; ASA metadata/byte inventory and legal portion eligibility | fixed; one bounded review, R-PB-1 corrected and confirmed offline |
 | P-C | Actual source/ZIP readers and latest exposure discovery, phase guard, cohort/fold registration, private freeze and post-download closure | partial mechanical audits and provisional repair; complete inventory/roles/cohorts pending |
 | P-D | Common predictor chosen after complete O diagnosis; expanded runtime/slots, provenance, fallback, OOF and stopping rules | blind stages, pure composition and ledger/engine prototypes; full runtime/freeze pending |
-| P-E | Independent full-scope run review/fixes, frozen paid development on both datasets, offline replay and scoring | pending |
-| P-F | Qualification decision, independent acceptance if warranted, final reports and Mac transfer package | pending |
+| P-E | Independent full-scope run review/fixes, frozen paid development on both datasets, offline replay and scoring | reviews fixed; 843-row frozen development running; scoring pending |
+| P-F | Qualification decision, independent acceptance if warranted, final reports and Mac transfer package | 102/75 identity-only acceptance population approved and sealed; qualification, validation and final delivery pending |
+| P-E2 | Process-parallel continuation of the same P batch | fixed; independent engineering review and 30 offline tests passed; 32-worker continuation started, paid completion and scoring pending |
+| P-E3 | User-requested direct execution without repeated provenance replays | running; original scientific functions and cached successes retained; complete MAE scoring pending |
+
+P-E2 changes scheduling only. The original science freeze, prompts, images,
+ledger, stores, successful response UUIDs, failure rules, and scoring remain
+unchanged. The original serial process exited at a host-observed zero-pending
+admission boundary, preserving all 941 reservations and outcomes. The separate
+engineering freeze binds the reviewed continuation source. Review findings
+R-PA-1 and R-PA-2 were fixed and verified offline within this bounded node.
+No new MAE result or 20-minute completion claim follows from launch alone.
+
+The user subsequently instructed the implementation to stop repeated full
+verification and run immediately. P-E2 was stopped with all 941 requests
+anchored and no request in flight. `direct_run/` now uses 32 threads, the same
+ledger and cache, and the unchanged scientific stages. It omits repeated
+source scans, Gate reconstruction for normal requests, full snapshot replays,
+and bootstrap intervals. Actual response/model parsing, persistent attempts,
+failure/fallback behavior, isolated ASA code-only adapter, and original OOF
+MAE calculation remain. This direct development path does not claim the old
+complete provenance seals or independent acceptance success.
 
 P-B review scope is the new `n5_identity.py`, `n5_pool.py`, `n5_sources.py`,
 `n5_preparation.py`, `asa_identity.py`, `asa_eligibility.py`, their six test files,
@@ -399,3 +419,53 @@ new mandatory source pins. A distinct replacement freeze/fresh ledger and
 correctly network-isolated postscore child are being registered before paid
 resumption; the original four requests stay in eventual usage accounting.
 Independent acceptance boundaries and old validation remain sealed/pending.
+
+Replacement engineering freeze completed with939 pinned files,843 rows and
+129624 maximum transport attempts. A direct old/new freeze comparison confirms
+only the reviewed integrity implementation/receipts and two new review/protocol
+sources changed; all non-source freeze fields and cohort/preparation assets,
+prompts, models, repair/scoring rules and slot namespace are identical. Fresh
+paid development started using its new ledger; one blind identity record is
+complete after four responses. No new MAE or completed prediction population
+is claimed. The postscore wrapper now starts the fixed completed-run verifier
+in a separate clean-environment `unshare -Urn` child; two synthetic success/failure
+wrapper cases and an independent real isolation/import sentinel check passed.
+Evidence: `evidence/P_integrity2_frozen.json`. The source-only GitHub snapshot
+5c87684 contains517/517 committed manifest payloads, passes523 isolated public
+checkout tests and779 reachable-blob/19 archive-entry zero-match credential
+scans; the remote branch was independently verified. Private live data/results
+are excluded. The first four archived requests remain separately accounted.
+
+Request reconciliation completed at2026-11-04 08:00:50 Singapore time. The
+four archived successful slots were executed once each in the distinct-binding
+replacement batch; identify/embed_01 have identical full request hashes, while
+embed_00/select hashes differ. Equal stage names are not claimed as equal
+requests. Both original ledgers remain intact; no answers were imported, pooled
+or selected for accuracy. At the pinned cutoff: old4calls/3970tokens plus
+active43calls/43674tokens =47successful responses/47644reported total tokens,
+zero pending at that cutoff. All eight calls across the four repeated stages
+are separately accounted at7880tokens; no duplicate cost is subtracted. Money
+is unverified, and historical O usage is outside this receipt's scope.
+`evidence/P_request_reconciliation_20261104.json` binds immutable private
+admission/freeze snapshots and anchored outcome metadata. The standalone
+read-only helper passed11 synthetic tests; an independent53-test recovery pass
+plus a cross-slot cache probe confirms the same-freeze local contract. See
+`RESUME_RULES.md`: retain the entire original freeze/ledger/stores, reject blank
+replacement recovery, and do not call unknown outcomes free or exactly-once.
+No runtime source, active ledger, paid process or validation data was changed
+by this reconciliation, and no new API calls were made by the audit itself.
+
+P-F1 population approval recorded on2026-11-04: direct user confirmation accepts
+N5102 observations/92 complete association groups and ASA75/22, with all twenty
+1.3-times MAE thresholds unchanged. Canonical fingerprints of both retained
+lists match the original proposal. A separate private write-once identity seal
+binds the exact rows, authoritative association maps and approval; the current
+development manifest's sample IDs, image hashes and complete groups are disjoint.
+N5 legacy row group IDs retain97 distinct values; bootstrap uses the sealed92
+association groups instead. The original pending proposal/preparation records
+remain historical and unchanged. `ACCEPTANCE_SCOPE_APPROVED.md` and the ID-free
+`evidence/acceptance_scope_approved_20261104.json` register the current state.
+This opened no validation images/targets, made no download/API call, changed no
+active science source or process, and does not qualify/select a method or start
+formal acceptance. Old complete validation remains untouched; the single frozen
+acceptance batch still follows qualified development and method freezing.
