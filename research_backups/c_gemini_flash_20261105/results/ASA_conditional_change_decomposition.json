@@ -1,0 +1,214 @@
+{
+  "scope": "completed_development_only; no_new_inference",
+  "groups": {
+    "common_old": {
+      "n": 63,
+      "metrics": {
+        "weight": {
+          "mae": 30.876984126984127,
+          "reference_mean": 140.70198412698412,
+          "per_unit": 0.21944952886462157
+        },
+        "energy": {
+          "mae": 28.842539682539684,
+          "reference_mean": 150.5834722222222,
+          "per_unit": 0.1915385484004218
+        },
+        "fat": {
+          "mae": 0.9935916666666667,
+          "reference_mean": 5.840208333333333,
+          "per_unit": 0.17012949024364143
+        },
+        "carbs": {
+          "mae": 4.637762301587301,
+          "reference_mean": 22.093699841269842,
+          "per_unit": 0.20991333886614189
+        },
+        "protein": {
+          "mae": 0.8539801587301588,
+          "reference_mean": 4.884401904761905,
+          "per_unit": 0.1748382249006978
+        }
+      }
+    },
+    "common_new": {
+      "n": 63,
+      "metrics": {
+        "weight": {
+          "mae": 40.94345238095238,
+          "reference_mean": 140.70198412698412,
+          "per_unit": 0.29099413654323986
+        },
+        "energy": {
+          "mae": 29.800406746031747,
+          "reference_mean": 150.5834722222222,
+          "per_unit": 0.19789958556709372
+        },
+        "fat": {
+          "mae": 0.7875271825396825,
+          "reference_mean": 5.840208333333333,
+          "per_unit": 0.13484573453395912
+        },
+        "carbs": {
+          "mae": 5.460198809523809,
+          "reference_mean": 22.093699841269842,
+          "per_unit": 0.2471382723922252
+        },
+        "protein": {
+          "mae": 0.8496335317460317,
+          "reference_mean": 4.884401904761905,
+          "per_unit": 0.173948325365631
+        }
+      }
+    },
+    "new_only": {
+      "n": 113,
+      "metrics": {
+        "weight": {
+          "mae": 53.839982300884955,
+          "reference_mean": 154.97373451327434,
+          "per_unit": 0.34741359540686084
+        },
+        "energy": {
+          "mae": 67.37203132743363,
+          "reference_mean": 239.81618548672566,
+          "per_unit": 0.28093196124647235
+        },
+        "fat": {
+          "mae": 2.7136607309734515,
+          "reference_mean": 11.154067322123893,
+          "per_unit": 0.24328889656161157
+        },
+        "carbs": {
+          "mae": 8.772877520353981,
+          "reference_mean": 28.923561373451328,
+          "per_unit": 0.30331249347483624
+        },
+        "protein": {
+          "mae": 2.4599716513274332,
+          "reference_mean": 7.660614897345132,
+          "per_unit": 0.3211193467224103
+        }
+      }
+    },
+    "old_only": {
+      "n": 10,
+      "metrics": {
+        "weight": {
+          "mae": 27.865,
+          "reference_mean": 133.115,
+          "per_unit": 0.20933027833076662
+        },
+        "energy": {
+          "mae": 60.87484999999999,
+          "reference_mean": 250.00584999999998,
+          "per_unit": 0.24349370224736738
+        },
+        "fat": {
+          "mae": 3.4037404999999996,
+          "reference_mean": 11.412328,
+          "per_unit": 0.2982511981779703
+        },
+        "carbs": {
+          "mae": 3.8682599999999994,
+          "reference_mean": 23.363865,
+          "per_unit": 0.1655659284112453
+        },
+        "protein": {
+          "mae": 3.6308019999999996,
+          "reference_mean": 13.373401999999999,
+          "per_unit": 0.2714942689975221
+        }
+      }
+    }
+  },
+  "common_weight_bias": {
+    "Sol_raw": {
+      "n": 63,
+      "signed_mean_g": -47.70793650793651,
+      "mae_g": 48.08888888888889,
+      "under_n": 46,
+      "over_n": 1,
+      "equal_n": 16
+    },
+    "Sol_retained": {
+      "n": 63,
+      "signed_mean_g": -25.78968253968254,
+      "mae_g": 30.876984126984127,
+      "under_n": 30,
+      "over_n": 7,
+      "equal_n": 26
+    },
+    "Gemini_raw": {
+      "n": 63,
+      "signed_mean_g": -57.683571428571426,
+      "mae_g": 58.36611111111111,
+      "under_n": 49,
+      "over_n": 2,
+      "equal_n": 12
+    },
+    "Gemini_retained": {
+      "n": 63,
+      "signed_mean_g": -38.08829365079365,
+      "mae_g": 40.94345238095238,
+      "under_n": 37,
+      "over_n": 6,
+      "equal_n": 20
+    }
+  },
+  "code_counts": {
+    "Sol": {
+      "mean_final_code_n": 1.99054820415879,
+      "distribution": {
+        "1": 143,
+        "3": 138,
+        "2": 248
+      }
+    },
+    "Gemini": {
+      "mean_final_code_n": 2.4669187145557654,
+      "distribution": {
+        "3": 269,
+        "2": 238,
+        "1": 22
+      }
+    }
+  },
+  "sequential_mae_decomposition": {
+    "weight": {
+      "old_own": 30.464383561643835,
+      "remove_old_only": 0.4126005653402913,
+      "change_prediction_on_common": 10.066468253968253,
+      "add_new_only": 8.280158414502168,
+      "new_own": 49.22361079545455
+    },
+    "energy": {
+      "old_own": 33.230527397260275,
+      "remove_old_only": -4.387987714720591,
+      "change_prediction_on_common": 0.9578670634920634,
+      "add_new_only": 24.12269078237734,
+      "new_own": 53.92309752840909
+    },
+    "fat": {
+      "old_own": 1.3237490410958903,
+      "remove_old_only": -0.33015737442922366,
+      "change_prediction_on_common": -0.2060644841269842,
+      "add_new_only": 1.2366652896194084,
+      "new_own": 2.0241924721590907
+    },
+    "carbs": {
+      "old_own": 4.53235102739726,
+      "remove_old_only": 0.10541127419004148,
+      "change_prediction_on_common": 0.8224365079365077,
+      "add_new_only": 2.126890308658009,
+      "new_own": 7.587089118181818
+    },
+    "protein": {
+      "old_own": 1.2343667123287672,
+      "remove_old_only": -0.3803865535986084,
+      "change_prediction_on_common": -0.004346626984127022,
+      "add_new_only": 1.0339102699585134,
+      "new_own": 1.8835438017045452
+    }
+  }
+}

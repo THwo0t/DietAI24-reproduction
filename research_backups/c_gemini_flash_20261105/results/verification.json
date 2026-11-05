@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-11-05T03:55:09+00:00",
+  "scope": "all843_completed_development",
+  "frozen_method_unchanged": true,
+  "original_Chroma_unchanged": true,
+  "fresh_Gemini_layouts": 314,
+  "observed_calls_by_model": {
+    "gemini-3.8-flash": 2630,
+    "gpt-6.1-sol": 1615,
+    "text-embedding-3-large": 9692
+  },
+  "successful_N5_mean_arithmetic_checked": 313,
+  "N5_leaf_count_by_selected_codes": {
+    "2": 247,
+    "3": 650,
+    "1": 189
+  },
+  "MultiQuery_actual_query_counts": {
+    "6": 1613,
+    "7": 2
+  },
+  "MultiQuery_empty_line_failures": 0,
+  "ASA_legal_single_code_branches_checked": 704,
+  "ASA_calibration_applies_once": true,
+  "ASA_complete_identity_seal": 529,
+  "prediction_vectors_checked": 843,
+  "credential_scan_files": 2968,
+  "credential_scan_matched_files": 0,
+  "retained_passed_checks": 10,
+  "raw_passed_checks": 4,
+  "new_verification_api_calls": 0,
+  "independent_acceptance_opened": false,
+  "github_uploaded": false
+}

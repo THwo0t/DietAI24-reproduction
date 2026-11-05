@@ -1,0 +1,21 @@
+{
+  "profile": "N5",
+  "new_transmissions": {
+    "chat": {
+      "requests": 1496,
+      "errors": 27,
+      "prompt_tokens": 3164718,
+      "completion_tokens": 961045,
+      "total_tokens": 4125763
+    },
+    "embedding": {
+      "requests": 2822,
+      "errors": 7,
+      "prompt_tokens": 50343,
+      "completion_tokens": 0,
+      "total_tokens": 50343
+    }
+  },
+  "third_party_cost_usd": null,
+  "cost_notice": "Third-party price unverified; completion tokens include reasoning."
+}

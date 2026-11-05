@@ -1,0 +1,21 @@
+{
+  "profile": "ASA",
+  "new_transmissions": {
+    "chat": {
+      "requests": 1358,
+      "errors": 14,
+      "prompt_tokens": 1601944,
+      "completion_tokens": 483477,
+      "total_tokens": 2085421
+    },
+    "embedding": {
+      "requests": 1426,
+      "errors": 3,
+      "prompt_tokens": 26644,
+      "completion_tokens": 0,
+      "total_tokens": 26644
+    }
+  },
+  "third_party_cost_usd": null,
+  "cost_notice": "Third-party price unverified; completion tokens include reasoning."
+}

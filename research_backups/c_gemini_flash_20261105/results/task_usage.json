@@ -1,0 +1,45 @@
+{
+  "models": {
+    "gemini-3.8-flash": {
+      "requests": 2124,
+      "errors": 33,
+      "prompt_tokens": 4645349,
+      "completion_tokens": 1352044,
+      "total_tokens": 5997393,
+      "reasoning_tokens": 0
+    },
+    "gpt-6.1-sol": {
+      "requests": 732,
+      "errors": 8,
+      "prompt_tokens": 124584,
+      "completion_tokens": 93425,
+      "total_tokens": 218009,
+      "reasoning_tokens": 0
+    },
+    "text-embedding-3-large": {
+      "requests": 4248,
+      "errors": 10,
+      "prompt_tokens": 76987,
+      "completion_tokens": 0,
+      "total_tokens": 76987,
+      "reasoning_tokens": 0
+    }
+  },
+  "request_log_paths": [
+    "preformat_snapshot/run/N5/provider/requests.jsonl",
+    "run/ASA/provider/requests.jsonl",
+    "run/N5/provider/requests.jsonl"
+  ],
+  "includes_archived_preformat_two_calls": true,
+  "total_transmissions": 7104,
+  "total_errors": 51,
+  "error_statuses": {
+    "429": 11,
+    "None": 40
+  },
+  "max_cumulative_attempt_in_logs": 3,
+  "successful_exact_payload_retransmissions": 0,
+  "third_party_cost_usd": null,
+  "price_verified": false,
+  "token_notice": "Recorded response usage only; failed network calls may have unreturned usage."
+}

@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "utc": "2026-11-05T03:22:57+00:00",
+  "model": "gemini-3.8-flash",
+  "cache_replay_only": true,
+  "new_transmissions": 0,
+  "prior_preflight_chat_transmissions": 2,
+  "prior_failed_snapshot_preserved": true,
+  "layout_status": "ok",
+  "sample_id": "nutrition5k-dish_1556575124"
+}

@@ -1,0 +1,1008 @@
+{
+  "scope": "existing843_development_results_only",
+  "per_unit_definition": "target_MAE / same_scored_population_target_reference_mean",
+  "paper_sources": {
+    "ASA": "paper.txt Table1 lines309-326",
+    "N5": "paper.txt Table2 lines334-350"
+  },
+  "references": {
+    "nutrition5k": {
+      "weight": {
+        "paper_mae": 45.1,
+        "paper_per_unit": 0.156,
+        "limit_mae": 58.63,
+        "limit_per_unit": 0.2028
+      },
+      "energy": {
+        "paper_mae": 68.2,
+        "paper_per_unit": 0.197,
+        "limit_mae": 88.66,
+        "limit_per_unit": 0.2561
+      },
+      "fat": {
+        "paper_mae": 4.01,
+        "paper_per_unit": 0.226,
+        "limit_mae": 5.213,
+        "limit_per_unit": 0.2938
+      },
+      "carbs": {
+        "paper_mae": 5.98,
+        "paper_per_unit": 0.212,
+        "limit_mae": 7.774,
+        "limit_per_unit": 0.2756
+      },
+      "protein": {
+        "paper_mae": 3.88,
+        "paper_per_unit": 0.188,
+        "limit_mae": 5.044,
+        "limit_per_unit": 0.2444
+      }
+    },
+    "asa24": {
+      "weight": {
+        "paper_mae": 49.4,
+        "paper_per_unit": 0.348,
+        "limit_mae": 64.22,
+        "limit_per_unit": 0.4524
+      },
+      "energy": {
+        "paper_mae": 47.7,
+        "paper_per_unit": 0.196,
+        "limit_mae": 62.01,
+        "limit_per_unit": 0.2548
+      },
+      "fat": {
+        "paper_mae": 1.8,
+        "paper_per_unit": 0.174,
+        "limit_mae": 2.34,
+        "limit_per_unit": 0.2262
+      },
+      "carbs": {
+        "paper_mae": 6.95,
+        "paper_per_unit": 0.208,
+        "limit_mae": 9.035,
+        "limit_per_unit": 0.2704
+      },
+      "protein": {
+        "paper_mae": 1.38,
+        "paper_per_unit": 0.233,
+        "limit_mae": 1.794,
+        "limit_per_unit": 0.3029
+      }
+    }
+  },
+  "N5": {
+    "raw": {
+      "new": {
+        "n": 314,
+        "metrics": {
+          "weight": {
+            "mae": 51.754777070063696,
+            "reference_mean": 236.61783439490446,
+            "per_unit": 0.2187272874101591
+          },
+          "energy": {
+            "mae": 82.79949925389627,
+            "reference_mean": 284.76969084394904,
+            "per_unit": 0.2907595222248198
+          },
+          "fat": {
+            "mae": 6.12102642858312,
+            "reference_mean": 14.381476426751592,
+            "per_unit": 0.4256187784167375
+          },
+          "carbs": {
+            "mae": 7.63422049175785,
+            "reference_mean": 24.01666981210191,
+            "per_unit": 0.3178717345695861
+          },
+          "protein": {
+            "mae": 5.9741933270410215,
+            "reference_mean": 17.682420748407644,
+            "per_unit": 0.33786060246185556
+          }
+        }
+      },
+      "baseline": {
+        "n": 314,
+        "metrics": {
+          "weight": {
+            "mae": 78.45222929936305,
+            "reference_mean": 236.61783439490446,
+            "per_unit": 0.3315567040835554
+          },
+          "energy": {
+            "mae": 115.42680413878612,
+            "reference_mean": 284.76969084394904,
+            "per_unit": 0.4053338815542658
+          },
+          "fat": {
+            "mae": 7.81632362202136,
+            "reference_mean": 14.381476426751592,
+            "per_unit": 0.5434993869949185
+          },
+          "carbs": {
+            "mae": 14.927474637128721,
+            "reference_mean": 24.01666981210191,
+            "per_unit": 0.6215463989768816
+          },
+          "protein": {
+            "mae": 8.799747609129158,
+            "reference_mean": 17.682420748407644,
+            "per_unit": 0.4976551420382643
+          }
+        }
+      },
+      "paired": {
+        "n": 314,
+        "metrics": {
+          "weight": {
+            "new_minus_old_mae": -26.69745222929936,
+            "new_minus_old_per_unit": -0.11282941667339633,
+            "improved_n": 192,
+            "worse_n": 116,
+            "tied_n": 6
+          },
+          "energy": {
+            "new_minus_old_mae": -32.62730488488985,
+            "new_minus_old_per_unit": -0.11457435932944599,
+            "improved_n": 190,
+            "worse_n": 124,
+            "tied_n": 0
+          },
+          "fat": {
+            "new_minus_old_mae": -1.6952971934382406,
+            "new_minus_old_per_unit": -0.117880608578181,
+            "improved_n": 194,
+            "worse_n": 120,
+            "tied_n": 0
+          },
+          "carbs": {
+            "new_minus_old_mae": -7.293254145370872,
+            "new_minus_old_per_unit": -0.30367466440729546,
+            "improved_n": 210,
+            "worse_n": 103,
+            "tied_n": 1
+          },
+          "protein": {
+            "new_minus_old_mae": -2.8255542820881363,
+            "new_minus_old_per_unit": -0.1597945395764087,
+            "improved_n": 203,
+            "worse_n": 111,
+            "tied_n": 0
+          }
+        }
+      }
+    },
+    "retained": {
+      "new": {
+        "n": 314,
+        "metrics": {
+          "weight": {
+            "mae": 51.1631449044586,
+            "reference_mean": 236.61783439490446,
+            "per_unit": 0.21622691727906537
+          },
+          "energy": {
+            "mae": 83.24987477111917,
+            "reference_mean": 284.76969084394904,
+            "per_unit": 0.29234106524608783
+          },
+          "fat": {
+            "mae": 6.105498234177513,
+            "reference_mean": 14.381476426751592,
+            "per_unit": 0.4245390426549264
+          },
+          "carbs": {
+            "mae": 7.756479566492817,
+            "reference_mean": 24.01666981210191,
+            "per_unit": 0.32296232688282017
+          },
+          "protein": {
+            "mae": 5.963712053666035,
+            "reference_mean": 17.682420748407644,
+            "per_unit": 0.3372678514169552
+          }
+        }
+      },
+      "baseline": {
+        "n": 314,
+        "metrics": {
+          "weight": {
+            "mae": 67.94196337579618,
+            "reference_mean": 236.61783439490446,
+            "per_unit": 0.287137964682764
+          },
+          "energy": {
+            "mae": 105.01620214681482,
+            "reference_mean": 284.76969084394904,
+            "per_unit": 0.36877591093204737
+          },
+          "fat": {
+            "mae": 7.5504030466256475,
+            "reference_mean": 14.381476426751592,
+            "per_unit": 0.5250088949546811
+          },
+          "carbs": {
+            "mae": 13.009136569735373,
+            "reference_mean": 24.01666981210191,
+            "per_unit": 0.5416711255771238
+          },
+          "protein": {
+            "mae": 8.475654108971646,
+            "reference_mean": 17.682420748407644,
+            "per_unit": 0.4793265712634343
+          }
+        }
+      },
+      "paired": {
+        "n": 314,
+        "metrics": {
+          "weight": {
+            "new_minus_old_mae": -16.77881847133758,
+            "new_minus_old_per_unit": -0.07091104740369861,
+            "improved_n": 197,
+            "worse_n": 117,
+            "tied_n": 0
+          },
+          "energy": {
+            "new_minus_old_mae": -21.766327375695653,
+            "new_minus_old_per_unit": -0.07643484568595954,
+            "improved_n": 190,
+            "worse_n": 124,
+            "tied_n": 0
+          },
+          "fat": {
+            "new_minus_old_mae": -1.4449048124481347,
+            "new_minus_old_per_unit": -0.10046985229975464,
+            "improved_n": 194,
+            "worse_n": 120,
+            "tied_n": 0
+          },
+          "carbs": {
+            "new_minus_old_mae": -5.252657003242557,
+            "new_minus_old_per_unit": -0.21870879869430365,
+            "improved_n": 201,
+            "worse_n": 112,
+            "tied_n": 1
+          },
+          "protein": {
+            "new_minus_old_mae": -2.511942055305611,
+            "new_minus_old_per_unit": -0.1420587198464791,
+            "improved_n": 205,
+            "worse_n": 109,
+            "tied_n": 0
+          }
+        }
+      }
+    }
+  },
+  "ASA": {
+    "recognition": {
+      "new": {
+        "n": 529,
+        "candidate_coverage_n": 226,
+        "candidate_coverage_rate": 0.42722117202268434,
+        "exact_n": 176,
+        "exact_rate": 0.332703213610586,
+        "first_n": 120,
+        "first_rate": 0.22684310018903592
+      },
+      "baseline": {
+        "n": 529,
+        "candidate_coverage_n": 127,
+        "candidate_coverage_rate": 0.24007561436672967,
+        "exact_n": 73,
+        "exact_rate": 0.13799621928166353,
+        "first_n": 50,
+        "first_rate": 0.0945179584120983
+      }
+    },
+    "own_Exact_warning": "Own Exact populations differ; use the intersection for paired comparison.",
+    "common_Exact_n": 63,
+    "new_only_Exact_n": 113,
+    "baseline_only_Exact_n": 10,
+    "own_Exact": {
+      "raw": {
+        "new": {
+          "n": 176,
+          "metrics": {
+            "weight": {
+              "mae": 64.64720454545454,
+              "reference_mean": 149.8650965909091,
+              "per_unit": 0.4313693182470886
+            },
+            "energy": {
+              "mae": 74.96932778409091,
+              "reference_mean": 207.87493017045455,
+              "per_unit": 0.36064631614123505
+            },
+            "fat": {
+              "mae": 3.059017699431818,
+              "reference_mean": 9.251947343181818,
+              "per_unit": 0.33063500968649023
+            },
+            "carbs": {
+              "mae": 10.021085001704545,
+              "reference_mean": 26.47878139318182,
+              "per_unit": 0.3784571824851779
+            },
+            "protein": {
+              "mae": 2.5926749011363635,
+              "reference_mean": 6.6668568375,
+              "per_unit": 0.3888901418361023
+            }
+          }
+        },
+        "baseline": {
+          "n": 73,
+          "metrics": {
+            "weight": {
+              "mae": 46.5027397260274,
+              "reference_mean": 139.6626712328767,
+              "per_unit": 0.3329647021320942
+            },
+            "energy": {
+              "mae": 50.24690410958904,
+              "reference_mean": 164.20297602739726,
+              "per_unit": 0.30600483210003054
+            },
+            "fat": {
+              "mae": 1.8868290410958906,
+              "reference_mean": 6.603512397260274,
+              "per_unit": 0.28573112725262934
+            },
+            "carbs": {
+              "mae": 7.146282739726027,
+              "reference_mean": 22.26769506849315,
+              "per_unit": 0.3209260194081513
+            },
+            "protein": {
+              "mae": 1.84926301369863,
+              "reference_mean": 6.0472786301369865,
+              "per_unit": 0.30580086131350287
+            }
+          }
+        }
+      },
+      "retained": {
+        "new": {
+          "n": 176,
+          "metrics": {
+            "weight": {
+              "mae": 49.22361079545455,
+              "reference_mean": 149.8650965909091,
+              "per_unit": 0.32845280132052096
+            },
+            "energy": {
+              "mae": 53.92309752840909,
+              "reference_mean": 207.87493017045455,
+              "per_unit": 0.25940163868819055
+            },
+            "fat": {
+              "mae": 2.0241924721590907,
+              "reference_mean": 9.251947343181818,
+              "per_unit": 0.218785559091061
+            },
+            "carbs": {
+              "mae": 7.587089118181818,
+              "reference_mean": 26.47878139318182,
+              "per_unit": 0.2865346786742785
+            },
+            "protein": {
+              "mae": 1.8835438017045452,
+              "reference_mean": 6.6668568375,
+              "per_unit": 0.2825235110959506
+            }
+          }
+        },
+        "baseline": {
+          "n": 73,
+          "metrics": {
+            "weight": {
+              "mae": 30.464383561643835,
+              "reference_mean": 139.6626712328767,
+              "per_unit": 0.21812831798732268
+            },
+            "energy": {
+              "mae": 33.230527397260275,
+              "reference_mean": 164.20297602739726,
+              "per_unit": 0.20237469625225163
+            },
+            "fat": {
+              "mae": 1.3237490410958903,
+              "reference_mean": 6.603512397260274,
+              "per_unit": 0.2004613547246613
+            },
+            "carbs": {
+              "mae": 4.53235102739726,
+              "reference_mean": 22.26769506849315,
+              "per_unit": 0.20353929822804795
+            },
+            "protein": {
+              "mae": 1.2343667123287672,
+              "reference_mean": 6.0472786301369865,
+              "per_unit": 0.20411937134452915
+            }
+          }
+        }
+      }
+    },
+    "common_Exact": {
+      "raw": {
+        "new": {
+          "n": 63,
+          "metrics": {
+            "weight": {
+              "mae": 58.36611111111111,
+              "reference_mean": 140.70198412698412,
+              "per_unit": 0.41482081061796156
+            },
+            "energy": {
+              "mae": 47.78934761904762,
+              "reference_mean": 150.5834722222222,
+              "per_unit": 0.3173611745950639
+            },
+            "fat": {
+              "mae": 1.4048122619047618,
+              "reference_mean": 5.840208333333333,
+              "per_unit": 0.24054146388694955
+            },
+            "carbs": {
+              "mae": 8.22622461111111,
+              "reference_mean": 22.093699841269842,
+              "per_unit": 0.37233350096234064
+            },
+            "protein": {
+              "mae": 1.4753552142857143,
+              "reference_mean": 4.884401904761905,
+              "per_unit": 0.3020544261207006
+            }
+          }
+        },
+        "baseline": {
+          "n": 63,
+          "metrics": {
+            "weight": {
+              "mae": 48.08888888888889,
+              "reference_mean": 140.70198412698412,
+              "per_unit": 0.3417783280546241
+            },
+            "energy": {
+              "mae": 46.272619047619045,
+              "reference_mean": 150.5834722222222,
+              "per_unit": 0.3072888303394455
+            },
+            "fat": {
+              "mae": 1.5857825396825398,
+              "reference_mean": 5.840208333333333,
+              "per_unit": 0.27152841973660297
+            },
+            "carbs": {
+              "mae": 7.261895873015873,
+              "reference_mean": 22.093699841269842,
+              "per_unit": 0.3286862736974023
+            },
+            "protein": {
+              "mae": 1.5303288888888888,
+              "reference_mean": 4.884401904761905,
+              "per_unit": 0.3133093710812248
+            }
+          }
+        },
+        "paired": {
+          "n": 63,
+          "metrics": {
+            "weight": {
+              "new_minus_old_mae": 10.277222222222221,
+              "new_minus_old_per_unit": 0.07304248256333745,
+              "improved_n": 6,
+              "worse_n": 23,
+              "tied_n": 34
+            },
+            "energy": {
+              "new_minus_old_mae": 1.5167285714285725,
+              "new_minus_old_per_unit": 0.010072344255618426,
+              "improved_n": 6,
+              "worse_n": 23,
+              "tied_n": 34
+            },
+            "fat": {
+              "new_minus_old_mae": -0.18097027777777797,
+              "new_minus_old_per_unit": -0.030986955849653414,
+              "improved_n": 6,
+              "worse_n": 23,
+              "tied_n": 34
+            },
+            "carbs": {
+              "new_minus_old_mae": 0.9643287380952374,
+              "new_minus_old_per_unit": 0.04364722726493836,
+              "improved_n": 6,
+              "worse_n": 23,
+              "tied_n": 34
+            },
+            "protein": {
+              "new_minus_old_mae": -0.054973674603174594,
+              "new_minus_old_per_unit": -0.011254944960524205,
+              "improved_n": 6,
+              "worse_n": 23,
+              "tied_n": 34
+            }
+          }
+        }
+      },
+      "retained": {
+        "new": {
+          "n": 63,
+          "metrics": {
+            "weight": {
+              "mae": 40.94345238095238,
+              "reference_mean": 140.70198412698412,
+              "per_unit": 0.29099413654323986
+            },
+            "energy": {
+              "mae": 29.800406746031747,
+              "reference_mean": 150.5834722222222,
+              "per_unit": 0.19789958556709372
+            },
+            "fat": {
+              "mae": 0.7875271825396825,
+              "reference_mean": 5.840208333333333,
+              "per_unit": 0.13484573453395912
+            },
+            "carbs": {
+              "mae": 5.460198809523809,
+              "reference_mean": 22.093699841269842,
+              "per_unit": 0.2471382723922252
+            },
+            "protein": {
+              "mae": 0.8496335317460317,
+              "reference_mean": 4.884401904761905,
+              "per_unit": 0.173948325365631
+            }
+          }
+        },
+        "baseline": {
+          "n": 63,
+          "metrics": {
+            "weight": {
+              "mae": 30.876984126984127,
+              "reference_mean": 140.70198412698412,
+              "per_unit": 0.21944952886462157
+            },
+            "energy": {
+              "mae": 28.842539682539684,
+              "reference_mean": 150.5834722222222,
+              "per_unit": 0.1915385484004218
+            },
+            "fat": {
+              "mae": 0.9935916666666667,
+              "reference_mean": 5.840208333333333,
+              "per_unit": 0.17012949024364143
+            },
+            "carbs": {
+              "mae": 4.637762301587301,
+              "reference_mean": 22.093699841269842,
+              "per_unit": 0.20991333886614189
+            },
+            "protein": {
+              "mae": 0.8539801587301588,
+              "reference_mean": 4.884401904761905,
+              "per_unit": 0.1748382249006978
+            }
+          }
+        },
+        "paired": {
+          "n": 63,
+          "metrics": {
+            "weight": {
+              "new_minus_old_mae": 10.066468253968253,
+              "new_minus_old_per_unit": 0.07154460767861828,
+              "improved_n": 8,
+              "worse_n": 23,
+              "tied_n": 32
+            },
+            "energy": {
+              "new_minus_old_mae": 0.9578670634920634,
+              "new_minus_old_per_unit": 0.006361037166671912,
+              "improved_n": 8,
+              "worse_n": 23,
+              "tied_n": 32
+            },
+            "fat": {
+              "new_minus_old_mae": -0.2060644841269842,
+              "new_minus_old_per_unit": -0.03528375570968231,
+              "improved_n": 8,
+              "worse_n": 23,
+              "tied_n": 32
+            },
+            "carbs": {
+              "new_minus_old_mae": 0.8224365079365077,
+              "new_minus_old_per_unit": 0.037224933526083304,
+              "improved_n": 8,
+              "worse_n": 23,
+              "tied_n": 32
+            },
+            "protein": {
+              "new_minus_old_mae": -0.004346626984127022,
+              "new_minus_old_per_unit": -0.000889899535066796,
+              "improved_n": 8,
+              "worse_n": 23,
+              "tied_n": 32
+            }
+          }
+        }
+      }
+    },
+    "all529_E2E": {
+      "raw": {
+        "new": {
+          "n": 529,
+          "metrics": {
+            "weight": {
+              "mae": 71.37619508506616,
+              "reference_mean": 145.1573066162571,
+              "per_unit": 0.491716171572119
+            },
+            "energy": {
+              "mae": 130.2943748241966,
+              "reference_mean": 259.397536147448,
+              "per_unit": 0.5022961156814305
+            },
+            "fat": {
+              "mae": 7.289958503251418,
+              "reference_mean": 12.399494913913044,
+              "per_unit": 0.587923827048117
+            },
+            "carbs": {
+              "mae": 15.051527699621928,
+              "reference_mean": 25.736588465973536,
+              "per_unit": 0.5848299482086222
+            },
+            "protein": {
+              "mae": 6.753394742722117,
+              "reference_mean": 12.242033578941399,
+              "per_unit": 0.5516562831798817
+            }
+          }
+        },
+        "baseline": {
+          "n": 529,
+          "metrics": {
+            "weight": {
+              "mae": 78.43134782608696,
+              "reference_mean": 145.1573066162571,
+              "per_unit": 0.5403196687400021
+            },
+            "energy": {
+              "mae": 134.8261339773157,
+              "reference_mean": 259.397536147448,
+              "per_unit": 0.5197664402667154
+            },
+            "fat": {
+              "mae": 8.71989615920605,
+              "reference_mean": 12.399494913913044,
+              "per_unit": 0.7032460773399533
+            },
+            "carbs": {
+              "mae": 15.793670729867674,
+              "reference_mean": 25.736588465973536,
+              "per_unit": 0.6136660556525804
+            },
+            "protein": {
+              "mae": 7.0705007068052925,
+              "reference_mean": 12.242033578941399,
+              "per_unit": 0.5775593296009156
+            }
+          }
+        },
+        "paired": {
+          "n": 529,
+          "metrics": {
+            "weight": {
+              "new_minus_old_mae": -7.055152741020805,
+              "new_minus_old_per_unit": -0.04860349716788315,
+              "improved_n": 244,
+              "worse_n": 187,
+              "tied_n": 98
+            },
+            "energy": {
+              "new_minus_old_mae": -4.531759153119083,
+              "new_minus_old_per_unit": -0.017470324585284858,
+              "improved_n": 257,
+              "worse_n": 222,
+              "tied_n": 50
+            },
+            "fat": {
+              "new_minus_old_mae": -1.4299376559546317,
+              "new_minus_old_per_unit": -0.11532225029183629,
+              "improved_n": 294,
+              "worse_n": 185,
+              "tied_n": 50
+            },
+            "carbs": {
+              "new_minus_old_mae": -0.7421430302457459,
+              "new_minus_old_per_unit": -0.028836107443958148,
+              "improved_n": 220,
+              "worse_n": 242,
+              "tied_n": 67
+            },
+            "protein": {
+              "new_minus_old_mae": -0.3171059640831757,
+              "new_minus_old_per_unit": -0.025903046421033915,
+              "improved_n": 251,
+              "worse_n": 228,
+              "tied_n": 50
+            }
+          }
+        }
+      },
+      "retained": {
+        "new": {
+          "n": 529,
+          "metrics": {
+            "weight": {
+              "mae": 71.37619508506616,
+              "reference_mean": 145.1573066162571,
+              "per_unit": 0.491716171572119
+            },
+            "energy": {
+              "mae": 130.2943748241966,
+              "reference_mean": 259.397536147448,
+              "per_unit": 0.5022961156814305
+            },
+            "fat": {
+              "mae": 7.289958503251418,
+              "reference_mean": 12.399494913913044,
+              "per_unit": 0.587923827048117
+            },
+            "carbs": {
+              "mae": 15.051527699621928,
+              "reference_mean": 25.736588465973536,
+              "per_unit": 0.5848299482086222
+            },
+            "protein": {
+              "mae": 6.753394742722117,
+              "reference_mean": 12.242033578941399,
+              "per_unit": 0.5516562831798817
+            }
+          }
+        },
+        "baseline": {
+          "n": 529,
+          "metrics": {
+            "weight": {
+              "mae": 78.43134782608696,
+              "reference_mean": 145.1573066162571,
+              "per_unit": 0.5403196687400021
+            },
+            "energy": {
+              "mae": 134.8261339773157,
+              "reference_mean": 259.397536147448,
+              "per_unit": 0.5197664402667154
+            },
+            "fat": {
+              "mae": 8.71989615920605,
+              "reference_mean": 12.399494913913044,
+              "per_unit": 0.7032460773399533
+            },
+            "carbs": {
+              "mae": 15.793670729867674,
+              "reference_mean": 25.736588465973536,
+              "per_unit": 0.6136660556525804
+            },
+            "protein": {
+              "mae": 7.0705007068052925,
+              "reference_mean": 12.242033578941399,
+              "per_unit": 0.5775593296009156
+            }
+          }
+        },
+        "paired": {
+          "n": 529,
+          "metrics": {
+            "weight": {
+              "new_minus_old_mae": -7.055152741020805,
+              "new_minus_old_per_unit": -0.04860349716788315,
+              "improved_n": 244,
+              "worse_n": 187,
+              "tied_n": 98
+            },
+            "energy": {
+              "new_minus_old_mae": -4.531759153119083,
+              "new_minus_old_per_unit": -0.017470324585284858,
+              "improved_n": 257,
+              "worse_n": 222,
+              "tied_n": 50
+            },
+            "fat": {
+              "new_minus_old_mae": -1.4299376559546317,
+              "new_minus_old_per_unit": -0.11532225029183629,
+              "improved_n": 294,
+              "worse_n": 185,
+              "tied_n": 50
+            },
+            "carbs": {
+              "new_minus_old_mae": -0.7421430302457459,
+              "new_minus_old_per_unit": -0.028836107443958148,
+              "improved_n": 220,
+              "worse_n": 242,
+              "tied_n": 67
+            },
+            "protein": {
+              "new_minus_old_mae": -0.3171059640831757,
+              "new_minus_old_per_unit": -0.025903046421033915,
+              "improved_n": 251,
+              "worse_n": 228,
+              "tied_n": 50
+            }
+          }
+        }
+      }
+    }
+  },
+  "retained_checks": [
+    {
+      "dataset": "asa24",
+      "target": "weight",
+      "statistic": "mae",
+      "value": 49.223610795454555,
+      "threshold": 64.22,
+      "pass": true
+    },
+    {
+      "dataset": "asa24",
+      "target": "weight",
+      "statistic": "per_unit",
+      "value": 0.32845280132052096,
+      "threshold": 0.4524,
+      "pass": true
+    },
+    {
+      "dataset": "asa24",
+      "target": "energy",
+      "statistic": "mae",
+      "value": 53.92309752840909,
+      "threshold": 62.01,
+      "pass": true
+    },
+    {
+      "dataset": "asa24",
+      "target": "energy",
+      "statistic": "per_unit",
+      "value": 0.25940163868819055,
+      "threshold": 0.2548,
+      "pass": false
+    },
+    {
+      "dataset": "asa24",
+      "target": "fat",
+      "statistic": "mae",
+      "value": 2.024192472159092,
+      "threshold": 2.34,
+      "pass": true
+    },
+    {
+      "dataset": "asa24",
+      "target": "fat",
+      "statistic": "per_unit",
+      "value": 0.21878555909106104,
+      "threshold": 0.2262,
+      "pass": true
+    },
+    {
+      "dataset": "asa24",
+      "target": "carbs",
+      "statistic": "mae",
+      "value": 7.587089118181815,
+      "threshold": 9.035,
+      "pass": true
+    },
+    {
+      "dataset": "asa24",
+      "target": "carbs",
+      "statistic": "per_unit",
+      "value": 0.28653467867427845,
+      "threshold": 0.2704,
+      "pass": false
+    },
+    {
+      "dataset": "asa24",
+      "target": "protein",
+      "statistic": "mae",
+      "value": 1.8835438017045445,
+      "threshold": 1.794,
+      "pass": false
+    },
+    {
+      "dataset": "asa24",
+      "target": "protein",
+      "statistic": "per_unit",
+      "value": 0.2825235110959505,
+      "threshold": 0.3029,
+      "pass": true
+    },
+    {
+      "dataset": "nutrition5k",
+      "target": "weight",
+      "statistic": "mae",
+      "value": 51.16314490445858,
+      "threshold": 58.63,
+      "pass": true
+    },
+    {
+      "dataset": "nutrition5k",
+      "target": "weight",
+      "statistic": "per_unit",
+      "value": 0.2162269172790653,
+      "threshold": 0.2028,
+      "pass": false
+    },
+    {
+      "dataset": "nutrition5k",
+      "target": "energy",
+      "statistic": "mae",
+      "value": 83.24987477111915,
+      "threshold": 88.66,
+      "pass": true
+    },
+    {
+      "dataset": "nutrition5k",
+      "target": "energy",
+      "statistic": "per_unit",
+      "value": 0.2923410652460878,
+      "threshold": 0.2561,
+      "pass": false
+    },
+    {
+      "dataset": "nutrition5k",
+      "target": "fat",
+      "statistic": "mae",
+      "value": 6.105498234177516,
+      "threshold": 5.213,
+      "pass": false
+    },
+    {
+      "dataset": "nutrition5k",
+      "target": "fat",
+      "statistic": "per_unit",
+      "value": 0.42453904265492654,
+      "threshold": 0.2938,
+      "pass": false
+    },
+    {
+      "dataset": "nutrition5k",
+      "target": "carbs",
+      "statistic": "mae",
+      "value": 7.756479566492812,
+      "threshold": 7.774,
+      "pass": true
+    },
+    {
+      "dataset": "nutrition5k",
+      "target": "carbs",
+      "statistic": "per_unit",
+      "value": 0.3229623268828202,
+      "threshold": 0.2756,
+      "pass": false
+    },
+    {
+      "dataset": "nutrition5k",
+      "target": "protein",
+      "statistic": "mae",
+      "value": 5.963712053666034,
+      "threshold": 5.044,
+      "pass": false
+    },
+    {
+      "dataset": "nutrition5k",
+      "target": "protein",
+      "statistic": "per_unit",
+      "value": 0.3372678514169551,
+      "threshold": 0.2444,
+      "pass": false
+    }
+  ],
+  "new_API_calls": 0,
+  "independent_acceptance_opened": false
+}

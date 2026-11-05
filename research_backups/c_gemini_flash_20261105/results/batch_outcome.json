@@ -1,0 +1,12 @@
+{
+  "status": "completed_offline_verified",
+  "prediction_records": 843,
+  "prediction_profiles_completed": true,
+  "offline_score_exit": 0,
+  "offline_verify_exit": 0,
+  "offline_compare_exit": 0,
+  "automatic_shutdown_issue": "Child interpreters did not exit after completion; only this job tree stopped after sealed records and offline verification.",
+  "finished_utc": "2026-11-05T03:57:16+00:00",
+  "independent_acceptance_opened": false,
+  "github_uploaded": false
+}

@@ -1,0 +1,16 @@
+{
+  "utc": "2026-11-05T03:56:13+00:00",
+  "reason": "prediction completion seals and offline verification passed, but child interpreters did not exit; stop idle job tree only",
+  "verified_complete_records": 843,
+  "stopped_pids": [
+    937384,
+    937386,
+    937419,
+    937420
+  ],
+  "prediction_artifacts_unchanged": true,
+  "paid_requests_after_completion": 0,
+  "offline_score_exit": 0,
+  "offline_verify_exit": 0,
+  "offline_compare_exit": 0
+}

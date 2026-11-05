@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-05",
+  "authorization": "Explicit user request to replace only visualmodel with Gemini and run full C.",
+  "text_model": "gpt-6.1-sol",
+  "visual_model": "gemini-3.8-flash",
+  "chat_destination": "https://api.zicc.cc/v1/chat/completions",
+  "embedding_destination": "https://api.openai.com/v1/embeddings",
+  "development_images": 843,
+  "global_concurrency": 32,
+  "independent_acceptance": "sealed",
+  "github_upload": false
+}
