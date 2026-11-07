@@ -1,0 +1,16 @@
+{
+  "status": "completed",
+  "started": "2026-11-05T06:30:44+00:00",
+  "workers": 32,
+  "scope": "843_development",
+  "online_scope": "ASA_portions_only",
+  "N5_reused": 314,
+  "ASA_identity_reused": 529,
+  "exit_codes": {
+    "ASA_worker": 0,
+    "score": 0,
+    "verify": 0,
+    "compare": 0
+  },
+  "finished": "2026-11-05T06:33:17+00:00"
+}

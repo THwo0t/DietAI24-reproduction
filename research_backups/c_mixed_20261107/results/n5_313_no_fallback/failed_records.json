@@ -1,0 +1,11 @@
+[
+  {
+    "sample_id": "N5-0188",
+    "dataset": "nutrition5k",
+    "status": "failed",
+    "reason": "identity_failed",
+    "raw_prediction": null,
+    "scoring_included": false,
+    "median_imputation_used": false
+  }
+]

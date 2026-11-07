@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "kind": "independent_agent_report",
+  "agent": "gemini_provider_tests",
+  "mae_and_per_unit_values_checked": 120,
+  "paired_delta_values_checked": 60,
+  "N5_raw_OOF_and_fold_parameters_identical": true,
+  "ASA_population_and_codes_unchanged": true,
+  "identical_ASA_Exact_n": 176,
+  "all529_E2E_notice": "Energy/fat improve; weight/carbs/protein slightly worse.",
+  "no_API": true,
+  "independent_acceptance_opened": false,
+  "source_sha256": {
+    "comparison.json": "13c55778c26a2f8a0a856556a375a5ea4e01830899515d8d7b02c7ed81395fb0",
+    "summary.json": "11129ac4690f5e9ecffce6e3962941afbc03b60719076aab337c98805b0566a5",
+    "N5_calibrated_oof.json": "0de7dc87931b00d197a57fae6c4dfa08ebfcaa4a03550caaf6bb03771c2d4932",
+    "ASA_calibrated_oof.json": "c08671f49fbac72169224c519cdf5283f7323089b850a6642806ba1168067b05",
+    "run/N5/records.json": "2fb06087ee62b9203b83d82cff0e1014ac59ef911914ea49f65599f83ec8b3d1",
+    "run/ASA/records.json": "8ba419be7520c3a8d554317fbb24d83936ef98da2c73f8fa26200b625254b28c"
+  }
+}

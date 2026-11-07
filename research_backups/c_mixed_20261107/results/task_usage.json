@@ -1,0 +1,31 @@
+{
+  "scope": "this_stage_split_run_only",
+  "models": {
+    "gpt-6.1-sol": {
+      "requests": 307,
+      "errors": 1,
+      "prompt_tokens": 63773,
+      "completion_tokens": 42075,
+      "total_tokens": 105848,
+      "reasoning_tokens": 0
+    }
+  },
+  "transmissions": 307,
+  "errors": 1,
+  "errors_by_status": {
+    "502": 1
+  },
+  "returned_exact_requests": 584,
+  "cache_hits": 278,
+  "inherited_legacy_exact_cache": 6,
+  "new_successful_payloads": 306,
+  "successful_payload_retransmissions": 0,
+  "max_logged_attempt": 2,
+  "new_Gemini_transmissions": 0,
+  "new_embedding_transmissions": 0,
+  "reused_N5_records": 314,
+  "reused_ASA_identities": 529,
+  "third_party_cost_usd": null,
+  "cost_notice": "Price unverified; prior cached charges are not charged again or counted as new transmissions.",
+  "independent_acceptance_opened": false
+}
